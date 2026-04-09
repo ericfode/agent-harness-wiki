@@ -1,10 +1,27 @@
 ---
 title: Gas Town
 created: 2026-04-07
-updated: 2026-04-07
+updated: 2026-04-09
 type: entity
 tags: [gas-town, orchestration, work-management]
-sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-future-of-coding-agents.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/yegge-birthday-blog.md]
+sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-future-of-coding-agents.md, raw/articles/yegge-gas-town-emergency-user-manual.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/yegge-birthday-blog.md]
+formal:
+  harness_id: gas_town
+  session_model: swarm_sessions
+  memory_model: git_beads
+  work_model: bead_graph
+  evaluation_model: federated_oversight
+  surface_model: orchestrator_factory
+  topology: factory_swarm
+  work_primitives: [bead, epic, molecule, protomolecule, formula, wisp]
+  surfaces: [tmux]
+  durable_stores: [git, dolt]
+  evaluation_primitives: [validator_role, tool_observation]
+  coordination_roles: [orchestrator, mayor, polecat, sheriff, witness, deacon, reviewer]
+  explicit_protocol_boundary: false
+  fresh_session_resets: false
+  skill_learning: false
+  observability_hooks: true
 ---
 
 # Gas Town
@@ -13,7 +30,7 @@ sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-future-o
 Gas Town is Steve Yegge's orchestrator for running swarms of coding agents. The essential move is to stop treating the coding agent as a heroic individual and instead treat it as labor inside a factory: mayors, polecats, witness roles, merge queues, and a ledger of work items. If this sounds industrial, that is because it is trying to be.
 
 ## Operating model
-Gas Town distinguishes human oversight from worker roles. The Mayor is the chief-of-staff interface, polecats do project work, the Refinery manages merge flow, and the Witness or Deacon family watches for stuck or unhealthy states. This makes Gas Town more structurally explicit than most chat-first harnesses. See [[work-management-primitives]] and [[harness-architecture-comparison]].
+Gas Town distinguishes human oversight from worker roles. The Mayor is the chief-of-staff interface, polecats do project work, the Refinery manages merge flow, and the Witness or Deacon family watches for stuck or unhealthy states. The emergency manual adds convoys and PR sheriffs, which makes Gas Town feel less like a clever metaphor and more like a literal operating procedure. See [[work-management-primitives]] and [[harness-architecture-comparison]].
 
 ## MEOW stack
 The central abstraction is the MEOW stack: beads, epics, molecules, protomolecules, formulas, and wisps. These are not merely task names; they are the durable substrate that lets work survive crashes, handoffs, and sheer agent volatility. The system is tightly coupled to [[memory-persistence]] because the work graph doubles as a design-intent record.
@@ -25,7 +42,7 @@ The central abstraction is the MEOW stack: beads, epics, molecules, protomolecul
 - Direct line of development toward [[gas-city]].
 
 ## Weaknesses and limits
-The Yegge material is candid about cost, instability, and velocity-induced chaos. Gas Town optimizes for throughput and experimentation more than for gentle operator ergonomics. It is closer to a machine shop than a valet.
+The Yegge material is candid about cost, instability, and velocity-induced chaos. Gas Town optimizes for throughput and experimentation more than for gentle operator ergonomics. It is also now partly superseded by its own successor story: the v1.0 material positions Gas Town as entering maintenance mode while new design energy moves to [[gas-city]].
 
 ## Relationships
 Gas Town is the precursor to [[gas-city]], the main source for [[work-management-primitives]], and a counterpoint to [[codex-cli]] and [[claude-code]] in [[harness-quality-comparison]].

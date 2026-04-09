@@ -1,7 +1,7 @@
 ---
 title: Wiki Schema
 created: 2026-04-07
-updated: 2026-04-07
+updated: 2026-04-09
 type: schema
 tags: [meta, schema]
 ---
@@ -21,6 +21,7 @@ Agent harnesses: the software infrastructure that wraps LLMs to enable reliable,
 - When updating a page, always bump the `updated` date
 - Every new content page must be added to `index.md` under the correct section
 - Every action must be appended to `log.md`
+- Run `scripts/lint-wiki.sh` after structural edits or before committing wiki changes
 
 ## Frontmatter
 
@@ -32,8 +33,58 @@ updated: YYYY-MM-DD
 type: entity | concept | comparison | query
 tags: [from taxonomy below]
 sources: [raw/articles/source-name.md]
+formal:   # optional except for harness entity pages used by the Lean extractor
+  harness_id: codex_cli
+  session_model: thread_turn_item
+  memory_model: repo_artifacts
+  work_model: plans
+  evaluation_model: repo_checks
+  surface_model: cli_ide_web_protocol
+  topology: single_session
+  work_primitives: [plan]
+  surfaces: [cli]
+  durable_stores: [repo_artifacts]
+  evaluation_primitives: [repo_check]
+  coordination_roles: [generator, reviewer]
+  explicit_protocol_boundary: true
+  fresh_session_resets: false
+  skill_learning: false
+  observability_hooks: true
 ---
 ```
+
+## Formal extraction block
+
+The `formal:` block exists so the harness wiki can act as an actual typed source for the Lean formalization instead of forcing semantics back into prose notes.
+
+Rules:
+- It is currently required for the harness entity pages that feed the repo extractor:
+  - `entities/codex-cli.md`
+  - `entities/claude-code.md`
+  - `entities/hermes-agent.md`
+  - `entities/gas-town.md`
+  - `entities/gas-city.md`
+  - `entities/openclaw.md`
+- It should use stable snake_case enum values.
+- Every list value must use inline YAML list syntax, e.g. `[cli, ide, web]`.
+- Prose may elaborate on the formal facts, but the extractor does not infer semantics from prose.
+- If a new enum value is needed, update this schema and the repo extractor before using it.
+
+Current enum domains used by the extractor:
+- `harness_id`: `claude_code`, `codex_cli`, `gas_town`, `gas_city`, `hermes_agent`, `openclaw`
+- `session_model`: `thread_turn_item`, `fresh_session_handoff`, `persistent_conversation`, `swarm_sessions`, `service_runtime`
+- `memory_model`: `transcript_only`, `repo_artifacts`, `searchable_personal_memory`, `git_beads`, `service_state`
+- `work_model`: `none`, `plans`, `sprint_contracts`, `tasks_skills_cron`, `bead_graph`, `ecosystem_skills`
+- `evaluation_model`: `self_review_only`, `repo_checks`, `tool_verification`, `separate_evaluator`, `federated_oversight`
+- `surface_model`: `cli_only`, `coding_surface`, `cli_ide_web_protocol`, `cli_gateway_mcp`, `orchestrator_factory`, `multi_channel_service`
+- `topology`: `single_session`, `session_team`, `factory_swarm`, `federated_exchange`, `service_hub`
+- `work_primitives`: `plan`, `feature_list`, `progress_log`, `sprint_contract`, `task`, `skill`, `cron_job`, `automation`, `bead`, `epic`, `molecule`, `protomolecule`, `formula`, `wisp`, `wanted_board`, `ecosystem_skill`
+- `surfaces`: `cli`, `terminal`, `ide`, `browser`, `desktop`, `web`, `app`, `cloud`, `sdk`, `slack`, `messaging`, `mcp`, `http_api`, `tmux`
+- `durable_stores`: `transcript`, `repo_artifacts`, `shared_client_state`, `searchable_memory`, `git`, `dolt`, `service_workspace`, `workspace_files`, `session_database`
+- `evaluation_primitives`: `self_review`, `repo_check`, `tool_observation`, `separate_evaluator`, `ci_review`, `browser_evaluation`, `validator_role`, `federated_trust`
+- `coordination_roles`: `planner`, `generator`, `evaluator`, `reviewer`, `orchestrator`, `mayor`, `polecat`, `sheriff`, `witness`, `deacon`, `validator`, `scheduler`, `memory_manager`
+
+`sources` should name the immediate inputs for the page. Usually these are files under `raw/`; synthesis or design pages may instead cite existing wiki pages when those pages are the direct source material.
 
 ## Tag Taxonomy
 
@@ -41,6 +92,7 @@ sources: [raw/articles/source-name.md]
 - `codex-cli` — OpenAI Codex CLI / harness
 - `claude-code` — Anthropic Claude Code
 - `hermes-agent` — Nous Research Hermes Agent
+- `memento-skills` — Memento-Teams self-evolving skill-memory agent system
 - `gas-town` — Steve Yegge's Gas Town orchestrator
 - `gas-city` — Gas Town's modular successor
 - `openclaw` — OpenClaw persistent agent
@@ -62,6 +114,12 @@ sources: [raw/articles/source-name.md]
 - `comparison` — Side-by-side analyses
 - `benchmark` — Performance measurement
 - `code-quality` — Codebase quality analysis
+
+### Semantics & Formalization
+- `formal-methods` — Specifications, verification, proof systems, certified reasoning
+- `semantics` — Formal semantics, abstraction layers, interpretation maps
+- `epistemics` — Knowledge, belief, uncertainty, update logics
+- `concurrency` — Partial orders, event structures, pomsets, scheduling semantics
 
 ### Meta
 - `survey` — Survey / overview articles

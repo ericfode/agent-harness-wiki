@@ -1,16 +1,16 @@
 ---
 title: New Harness Design Notes
 created: 2026-04-07
-updated: 2026-04-07
+updated: 2026-04-09
 type: query
 tags: [opinion, orchestration, memory, code-quality]
-sources: [raw/articles/openai-unlocking-codex-harness.md, raw/articles/openai-harness-engineering.md, raw/articles/hermes-agent-github.md, raw/articles/newstack-openclaw-vs-hermes.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/yegge-welcome-to-the-wasteland.md, raw/articles/anthropic-harness-design-long-running-apps.md]
+sources: [raw/articles/openai-unlocking-codex-harness.md, raw/articles/openai-harness-engineering.md, raw/articles/openai-codex-chatgpt-plan.md, raw/articles/hermes-agent-github.md, raw/articles/newstack-openclaw-vs-hermes.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/yegge-welcome-to-the-wasteland.md, raw/articles/anthropic-harness-design-long-running-apps.md, raw/articles/anthropic-claude-code-agent-teams.md, raw/articles/anthropic-claude-code-subagents.md, concepts/non-hierarchical-coordination-patterns.md, concepts/fission-fusion-orchestration.md]
 ---
 
 # New Harness Design Notes
 
 ## Goal
-Design a harness that combines three virtues the current landscape tends to separate: Codex's architectural cleanliness, Hermes's durable learning loop, and Gas City's orchestration ambition. The missing fourth ingredient is Anthropic's insistence on evaluator-driven reality checks.
+Design a harness that combines three virtues the current landscape tends to separate: Codex's architectural cleanliness, Hermes's durable learning loop, and Gas City's orchestration ambition. The missing fourth ingredient is Anthropic's insistence on evaluator-driven reality checks. The scored argument for that blend now lives in [[harness-decision-matrix]].
 
 ## What to borrow from Codex
 - A thin, explicit protocol layer between harness core and user surfaces.
@@ -32,15 +32,23 @@ Design a harness that combines three virtues the current landscape tends to sepa
 - Modular orchestration parts rather than one fixed swarm topology.
 - Federation as a long-term possibility once local rigor exists.
 
+## What not to borrow from anyone
+- The reflex to turn every coordination problem into one manager session with a stack of subordinates.
+- One universal control shape for routing, memory, task allocation, and review.
+- Implicit coalition logic hidden in chat transcripts instead of explicit work objects.
+
 ## Provisional architecture
 1. Core runtime: App-Server-like protocol with durable threads and tool events.
-2. Memory plane: searchable personal memory plus project-scoped handoff artifacts.
-3. Work plane: bead-like task graph with explicit state transitions.
-4. Evaluation plane: dedicated reviewer agents with browser/log/metric access.
-5. Surface plane: CLI first, then IDE and messaging clients against the same core.
+2. Formalization plane: a typed gate that routes problems into the right formal space, as argued in [[formal-cognition-loop]].
+3. Memory plane: searchable personal memory plus project-scoped handoff artifacts.
+4. Work plane: bead-like task graph with explicit state transitions, plus a mix of shared-workspace, bidding, and coalition patterns from [[non-hierarchical-coordination-patterns]] rather than one default hierarchy.
+5. Evaluation plane: dedicated reviewer agents with browser/log/metric access.
+6. Surface plane: CLI as the exact textual kernel, then IDE and other clients against the same core, with non-linear control surfaces layered on top where they earn their keep; see [[non-linear-interface-options-for-next-harness]].
+
+For work that repeatedly alternates between scouting, tight collaboration, and reaggregation, the right local pattern may be [[fission-fusion-orchestration]] rather than a permanent manager-worker tree.
 
 ## Main caution
 Every extra layer must earn its existence. The landscape is full of beautiful abstractions that mostly manufacture new failure modes. A harness should become more modular only when the previous monolith has already become legible. Otherwise one is merely arranging confusions into neighborhoods.
 
 ## Related pages
-This synthesis depends on [[harness-architecture-comparison]], [[harness-quality-comparison]], [[memory-persistence]], and [[work-management-primitives]].
+This synthesis depends on [[formal-cognition-loop]], [[theorem-proving-as-cognitive-kernel]], [[harness-architecture-comparison]], [[harness-quality-comparison]], [[orchestration-topologies]], [[non-hierarchical-coordination-patterns]], [[fission-fusion-orchestration]], [[memory-persistence]], [[work-management-primitives]], and [[non-linear-interface-options-for-next-harness]].

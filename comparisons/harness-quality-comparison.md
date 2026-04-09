@@ -1,10 +1,10 @@
 ---
 title: Harness Quality Comparison
 created: 2026-04-07
-updated: 2026-04-07
+updated: 2026-04-09
 type: comparison
 tags: [comparison, benchmark, code-quality]
-sources: [raw/articles/openai-harness-engineering.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-harness-design-long-running-apps.md, raw/articles/hermes-agent-github.md, raw/articles/yegge-future-of-coding-agents.md]
+sources: [raw/articles/openai-harness-engineering.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-harness-design-long-running-apps.md, raw/articles/anthropic-claude-code-overview.md, raw/articles/hermes-agent-github.md, raw/articles/hermes-agent-api-server-docs.md, raw/articles/yegge-future-of-coding-agents.md, raw/articles/yegge-gas-town-emergency-user-manual.md]
 ---
 
 # Harness Quality Comparison
@@ -16,9 +16,9 @@ This page compares the harnesses in the source set on the engineering qualities 
 | System | Primary quality bet | Where it looks strongest | Typical weakness |
 | :--- | :--- | :--- | :--- |
 | [[codex-cli]] | Clean protocol architecture and repo legibility | Reusable harness core, App Server, enforcement of taste and invariants | Less emphasis on lifelong personal memory |
-| [[claude-code]] | Long-running task coherence through explicit handoffs and evaluators | Recovery from context loss, UI validation, structured progress | Higher operator and compute overhead |
-| [[hermes-agent]] | Persistent usefulness through memory and skill accumulation | Long-term recall, profiles, self-improvement loop | Public architecture looks less protocol-clean than Codex |
-| [[gas-town]] | Throughput through factory orchestration | Large-swarm coordination and explicit work graphs | Cost, rough edges, operator complexity |
+| [[claude-code]] | Long-running task coherence through explicit handoffs and evaluators | Recovery from context loss, UI validation, structured progress, policy-aware orchestration | Higher operator and compute overhead |
+| [[hermes-agent]] | Persistent usefulness through memory and skill accumulation | Long-term recall, profiles, self-improvement loop, reusable API surface | Public architecture looks less protocol-clean than Codex |
+| [[gas-town]] | Throughput through factory orchestration | Large-swarm coordination, explicit work graphs, PR governance | Cost, rough edges, operator complexity |
 | [[gas-city]] | Modular orchestration primitives | Custom topologies and federated work exchange | Early-stage instability and migration risk |
 | [[openclaw]] | Ecosystem breadth | Integrations, public skill marketplace, cross-channel presence | Security and supply-chain exposure |
 
@@ -32,4 +32,4 @@ No single system dominates all dimensions because they are not optimizing the sa
 - If your taste runs to swarms and ledgers, the Yegge line of [[gas-town]] and [[gas-city]] is the interesting frontier.
 
 ## Related pages
-This page pairs with [[harness-architecture-comparison]] and draws heavily on [[harness-engineering]], [[context-engineering]], and [[evaluation-and-review-loops]].
+This page pairs with [[harness-architecture-comparison]] and [[harness-decision-matrix]], and draws heavily on [[harness-engineering]], [[context-engineering]], and [[evaluation-and-review-loops]].
