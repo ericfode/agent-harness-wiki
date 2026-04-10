@@ -1,7 +1,7 @@
 ---
 title: Memory Persistence
 created: 2026-04-07
-updated: 2026-04-09
+updated: 2026-04-10
 type: concept
 tags: [memory, context-engineering, error-recovery]
 sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-claude-code-memory.md, raw/articles/hermes-agent-github.md, raw/articles/hermes-agent-memory-docs.md, raw/articles/openclaw-agent-runtime-docs.md, raw/articles/newstack-openclaw-vs-hermes.md, raw/papers/arxiv-zhou-2026-memento-skills.md, raw/articles/memento-skills-github.md]
@@ -27,8 +27,11 @@ Anthropic's approach is narrower but practical: `feature_list.json`, progress lo
 ## Workspace-injected memory
 [[openclaw]] adds another variant: bootstrap files such as `AGENTS.md`, `SOUL.md`, `TOOLS.md`, and `USER.md` are injected into the runtime context from the workspace itself. This is memory as working environment rather than only as logs or learned summaries.
 
+## Procedural memory
+Recent workflow papers push memory one step further: experience becomes procedure. [[self-evolving-workflows]] collects the systems where trajectories are turned into reusable routines, skill packages, or instruction rewrites. This is why [[memento-skills]] and the current question in [[gas-city-but-its-just-codex]] are not merely about remembering more facts; they are about remembering how to operate better next time.
+
 ## Design tension
 Persistent memory is not one thing. A harness must decide whether it primarily needs resumable project state, reusable personal knowledge, workspace bootstrap context, or a federated work ledger. Confusing these layers tends to produce baroque systems that remember everything except the one thing required. The neighboring problem is [[instruction-layering]]: some durable files are memory, some are policy, and some are both depending on how the harness reads them. The more formal nearby question is epistemic: what does each memory surface actually justify? That is where [[probabilistic-epistemic-updates]] becomes relevant.
 
 ## Related pages
-This page grounds [[context-engineering]], [[instruction-layering]], extends into [[work-management-primitives]], and is a primary comparison dimension in [[harness-architecture-comparison]].
+This page grounds [[context-engineering]], [[instruction-layering]], extends into [[work-management-primitives]], and is a primary comparison dimension in [[harness-architecture-comparison]]. It now also touches [[self-evolving-workflows]].

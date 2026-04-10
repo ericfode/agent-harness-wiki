@@ -296,6 +296,27 @@
 - Two separate query-page ingests landed on 2026-04-09 (`queries/web-patterns-for-non-linear-harness-interfaces.md` and `queries/arxiv-under-explored-coordination-strategies.md`), so the later page-bump note undercounted by one.
 - `index.md` now records the repaired total while preserving the earlier historical note as written.
 
+## [2026-04-09] ingest | legacy distributed-systems ideas and studio architecture spec
+- Added 11 raw source summaries:
+  - raw/articles/virtual-synchrony.md
+  - raw/articles/chandy-lamport-algorithm.md
+  - raw/articles/vector-clock.md
+  - raw/articles/failure-detector.md
+  - raw/articles/jif.md
+  - raw/articles/session-type.md
+  - raw/articles/viewstamped-replication-revisited.md
+  - raw/articles/optimistic-replication.md
+  - raw/articles/self-certifying-file-system.md
+  - raw/papers/session-guarantees-weakly-consistent-replicated-data.md
+  - raw/papers/escrow-transactional-method.md
+- Created 2 content pages:
+  - queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md
+  - queries/moldable-operations-studio-architecture-spec.md
+- Updated existing synthesis pages so the new semantics layer participates in the main design graph:
+  - queries/new-harness-design-notes.md
+  - queries/web-patterns-for-non-linear-harness-interfaces.md
+- Updated index.md to include the new queries and bump total pages from 36 to 38.
+
 ## [2026-04-09] lint | maintenance pass
 - Ran `scripts/lint-wiki.sh` and a structural audit across the content corpus.
 - Fixed invalid YAML frontmatter quoting in:
@@ -312,4 +333,230 @@
 - Adjusted `scripts/lint-wiki.sh` so the `updated:` check inspects staged modified content pages when a commit is in flight, rather than only unstaged worktree edits.
 - Limited that `updated:` rule to modified tracked pages (`--diff-filter=M`), so newly introduced historical pages can keep their original creation/update dates.
 - Guarded the git-diff branch so staged-tree audits outside a git checkout do not emit misleading repo warnings.
+
+## [2026-04-09] ingest | schema pass and sci-fi audit for moldable operations studio
+- Added 11 raw source summaries:
+  - raw/articles/star-trek-lcars.md
+  - raw/articles/battlestar-galactica-dradis.md
+  - raw/articles/minority-report-film.md
+  - raw/articles/wargames.md
+  - raw/articles/foundation-prime-radiant.md
+  - raw/articles/machineries-of-empire.md
+  - raw/articles/ancillary-justice.md
+  - raw/articles/quantum-thief.md
+  - raw/articles/embassytown.md
+  - raw/articles/the-city-and-the-city.md
+  - raw/articles/diaspora-novel.md
+- Created 2 content pages:
+  - queries/moldable-operations-studio-schema-pass.md
+  - queries/sci-fi-audit-for-moldable-operations-studio.md
+- Updated existing synthesis pages so the new concrete and speculative layers participate in the main design graph:
+  - queries/moldable-operations-studio-architecture-spec.md
+  - queries/web-patterns-for-non-linear-harness-interfaces.md
+- Updated index.md to include the new queries and bump total pages from 38 to 40.
 - Re-ran lint after the fix: pass.
+
+## [2026-04-09] ingest | grounded research for moldable operations studio ideas
+- Added 20 raw source summaries:
+  - raw/papers/yang-wigdor-2014-panelrama.md
+  - raw/papers/klokmose-et-al-2015-webstrates.md
+  - raw/papers/bragdon-et-al-2011-code-space.md
+  - raw/papers/danielsson-alvinius-larsson-2014-common-operating-picture.md
+  - raw/papers/nandiganahalli-et-al-2014-mode-confusion-detection.md
+  - raw/papers/honarmand-torrellas-2014-replay-debugging.md
+  - raw/papers/ko-myers-2009-java-whyline.md
+  - raw/papers/stasko-gorg-liu-2008-jigsaw.md
+  - raw/papers/andrews-north-2012-analysts-workspace.md
+  - raw/papers/groth-streefkerk-2006-provenance-annotation-visual-exploration.md
+  - raw/papers/amershi-et-al-2015-modeltracker.md
+  - raw/papers/wexler-et-al-2019-what-if-tool.md
+  - raw/papers/malkhi-lamport-zhou-2008-stoppable-paxos.md
+  - raw/articles/rfc-9420-mls-protocol.md
+  - raw/articles/rivest-lampson-1996-sdsi.md
+  - raw/papers/birgisson-et-al-2014-macaroons.md
+  - raw/papers/efstathopoulos-et-al-2005-asbestos.md
+  - raw/papers/finkelstein-et-al-1992-viewpoints.md
+  - raw/papers/foster-et-al-2007-bidirectional-tree-transformations.md
+  - raw/papers/green-karvounarakis-tannen-2007-provenance-semirings.md
+- Created 1 content page:
+  - queries/grounding-moldable-operations-studio-ideas-in-real-research.md
+- Updated existing synthesis pages so the grounded-research layer participates in the main design graph:
+  - queries/moldable-operations-studio-architecture-spec.md
+  - queries/moldable-operations-studio-schema-pass.md
+  - queries/sci-fi-audit-for-moldable-operations-studio.md
+- Updated index.md to include the new query and bump total pages from 40 to 41.
+
+## [2026-04-09] ingest | wireframe pass for moldable operations studio
+- Added 1 asset:
+  - raw/assets/moldable-operations-studio-wireframes.excalidraw
+- Created 1 content page:
+  - queries/moldable-operations-studio-wireframes.md
+- Updated existing synthesis pages so the wireframe layer participates in the main design graph:
+  - queries/moldable-operations-studio-architecture-spec.md
+  - queries/moldable-operations-studio-schema-pass.md
+  - queries/grounding-moldable-operations-studio-ideas-in-real-research.md
+  - queries/sci-fi-audit-for-moldable-operations-studio.md
+- Updated index.md to include the new query; total pages now 42.
+
+## [2026-04-09] update | page-count recovery after concurrent studio additions
+- The content-page total is 44, not 42.
+- Concurrent additions landed in the corpus while the wireframe pass was in flight, including `concepts/self-evolving-workflows.md` and `queries/arxiv-self-evolving-workflows-for-codex-control-plane.md`.
+- `index.md` now records the repaired total while preserving the earlier line-level history.
+
+## [2026-04-09] ingest | self-evolving workflows for gas-city-but-its-just-codex
+- Added 16 raw source summaries:
+  - raw/articles/gas-city-but-its-just-codex-repo-2026-04-09.md
+  - raw/papers/arxiv-zhang-2024-aflow.md
+  - raw/papers/arxiv-li-2024-autoflow.md
+  - raw/papers/arxiv-wang-2024-agent-workflow-memory.md
+  - raw/papers/arxiv-hu-2024-automated-design-of-agentic-systems.md
+  - raw/papers/arxiv-wang-2025-evoagentx.md
+  - raw/papers/arxiv-wang-2026-learning-to-compose-agentic-workflow-generation.md
+  - raw/papers/arxiv-xu-2026-hyevo.md
+  - raw/papers/arxiv-zhao-2025-a2flow.md
+  - raw/papers/arxiv-shen-2026-skillfoundry.md
+  - raw/papers/arxiv-zhang-2026-evoskills.md
+  - raw/papers/arxiv-wang-2026-skillx.md
+  - raw/papers/arxiv-ma-2026-scaling-coding-agents-via-atomic-skills.md
+  - raw/papers/arxiv-rhodes-2026-compiled-memory.md
+  - raw/papers/arxiv-shinn-2023-reflexion.md
+  - raw/papers/arxiv-zhao-2023-expel.md
+- Created 2 content pages:
+  - concepts/self-evolving-workflows.md
+  - queries/arxiv-self-evolving-workflows-for-codex-control-plane.md
+- Updated existing pages to connect the new workflow-evolution layer into the main graph:
+  - queries/gas-city-but-its-just-codex.md
+  - concepts/work-management-primitives.md
+  - concepts/memory-persistence.md
+- Updated index.md to include the new concept and query and bump total pages from 41 to 43.
+- Re-ran lint after the ingest: pass, 43 content pages checked.
+
+## [2026-04-09] ingest | broader arxiv sweep for self-evolving workflows
+- Added 19 additional raw source summaries to widen the literature map beyond the first direct-hit pass:
+  - raw/papers/arxiv-qiao-2024-benchmarking-agentic-workflow-generation.md
+  - raw/papers/arxiv-zheng-2025-mermaidflow.md
+  - raw/papers/arxiv-wang-2026-query-level-workflows.md
+  - raw/papers/arxiv-ma-2026-judgeflow.md
+  - raw/papers/arxiv-wang-2025-dyflow.md
+  - raw/papers/arxiv-wang-2025-self-improving-agent-skill-library.md
+  - raw/papers/arxiv-ye-2026-meta-context-engineering.md
+  - raw/papers/arxiv-du-2025-bottom-up-skill-evolution.md
+  - raw/papers/arxiv-zhai-2025-agentevolver.md
+  - raw/papers/arxiv-qian-2025-metaagent.md
+  - raw/papers/arxiv-banerjee-2026-severa.md
+  - raw/papers/arxiv-ye-2025-sop-agent.md
+  - raw/papers/arxiv-li-2025-sopbench.md
+  - raw/papers/arxiv-huo-2026-atommem.md
+  - raw/papers/arxiv-liu-2026-graph-of-skills.md
+  - raw/papers/arxiv-ni-2026-trace2skill.md
+  - raw/papers/arxiv-zhang-2026-memskill.md
+  - raw/papers/arxiv-xia-2026-metaclaw.md
+  - raw/papers/arxiv-xu-2025-robustflow.md
+- Expanded the main synthesis pages so the literature map now includes evaluator loops, robustness, retrieval over large skill libraries, and learnable memory/context routines:
+  - concepts/self-evolving-workflows.md
+  - queries/arxiv-self-evolving-workflows-for-codex-control-plane.md
+  - queries/gas-city-but-its-just-codex.md
+  - index.md
+- Re-ran lint after the broader sweep: pass, 43 content pages checked.
+
+## [2026-04-09] ingest | rl gyms and executable environments for ai harnesses
+- Added 20 raw source summaries for executable benchmark and training environments:
+  - raw/papers/arxiv-zhou-2023-webarena.md
+  - raw/papers/arxiv-chezelles-2024-browsergym-ecosystem.md
+  - raw/papers/arxiv-koh-2024-visualwebarena.md
+  - raw/papers/arxiv-drouin-2024-workarena.md
+  - raw/papers/arxiv-boisvert-2024-workarena-plus-plus.md
+  - raw/papers/arxiv-pan-2024-webcanvas.md
+  - raw/papers/arxiv-xie-2024-osworld.md
+  - raw/papers/arxiv-bonatti-2024-windows-agent-arena.md
+  - raw/papers/arxiv-trivedi-2024-appworld.md
+  - raw/papers/arxiv-ma-2024-agentboard.md
+  - raw/papers/arxiv-xi-2024-agentgym.md
+  - raw/papers/arxiv-nathani-2025-mlgym.md
+  - raw/papers/arxiv-pan-2024-swe-gym.md
+  - raw/papers/arxiv-yao-2024-tau-bench.md
+  - raw/papers/arxiv-chuang-2026-proxy-state-based-evaluation.md
+  - raw/papers/arxiv-chen-2025-rl-long-horizon-interactive-llm-agents.md
+  - raw/papers/arxiv-lai-2025-computerrl.md
+  - raw/papers/arxiv-mehta-2026-enterprisebench-corecraft.md
+  - raw/papers/arxiv-mialon-2023-gaia.md
+  - raw/papers/arxiv-yao-2022-webshop.md
+- Created 1 content page:
+  - queries/rl-gyms-and-executable-environments-for-ai-harnesses.md
+- Updated existing concept pages so environment substrates connect back into the main harness graph:
+  - concepts/evaluation-and-review-loops.md
+  - concepts/harness-engineering.md
+- Updated index.md to include the new query and corrected the total page count from 43 to 45 after a recount.
+- Re-ran lint after the gym sweep: pass, 45 content pages checked.
+
+## [2026-04-10] ingest | neural-native programming via internal-layer interfaces
+- Added 35 raw source notes to resolve the user-provided NNPL draft into explicit bibliography entries:
+  - raw/articles/neural-native-programming-direct-internal-layer-interfaces-draft-2026-04-10.md
+  - raw/articles/transformer-circuits-mathematical-framework.md
+  - raw/articles/logit-lens-lesswrong.md
+  - raw/articles/anthropic-toy-models-of-superposition.md
+  - raw/articles/anthropic-monosemantic-features.md
+  - raw/articles/nnsight-docs.md
+  - raw/articles/baukit-github.md
+  - raw/articles/doug-github.md
+  - raw/papers/arxiv-vaswani-2017-attention-is-all-you-need.md
+  - raw/papers/geva-2021-transformer-feed-forward-layers-are-key-value-memories.md
+  - raw/papers/arxiv-belrose-2023-tuned-lens.md
+  - raw/papers/arxiv-hewitt-2019-structural-probe.md
+  - raw/papers/arxiv-meng-2022-locating-and-editing-factual-associations-in-gpt.md
+  - raw/papers/arxiv-turner-2023-steering-language-models-with-activation-engineering.md
+  - raw/papers/arxiv-panickssery-2023-steering-llama-2-via-contrastive-activation-addition.md
+  - raw/papers/arxiv-dathathri-2019-pplm.md
+  - raw/papers/arxiv-wu-2024-pyvene.md
+  - raw/papers/arxiv-li-2023-inference-time-intervention.md
+  - raw/papers/arxiv-zou-2023-representation-engineering.md
+  - raw/papers/arxiv-burns-2022-discovering-latent-knowledge.md
+  - raw/papers/arxiv-hu-2021-lora.md
+  - raw/papers/arxiv-reed-2015-neural-programmer-interpreters.md
+  - raw/papers/arxiv-kusner-2017-grammar-variational-autoencoder.md
+  - raw/papers/arxiv-van-den-oord-2017-neural-discrete-representation-learning.md
+  - raw/papers/arxiv-hong-2020-latent-programmer.md
+  - raw/papers/arxiv-macfarlane-2024-searching-latent-program-spaces.md
+  - raw/papers/kanerva-2009-hyperdimensional-computing.md
+  - raw/papers/plate-1995-holographic-reduced-representations.md
+  - raw/papers/arxiv-gayler-2004-vector-symbolic-architectures.md
+  - raw/papers/arxiv-weiss-2021-thinking-like-transformers.md
+  - raw/papers/arxiv-lindner-2023-tracr.md
+  - raw/papers/arxiv-tomkins-flanagan-2025-differentiable-vector-symbolic-types.md
+  - raw/papers/arxiv-chen-2021-evaluating-llms-trained-on-code.md
+  - raw/papers/arxiv-austin-2021-program-synthesis-with-large-language-models.md
+  - raw/papers/arxiv-hendrycks-2021-measuring-coding-challenge-competence-with-apps.md
+- Extended SCHEMA.md with `mechanistic-interpretability` and `program-synthesis` tags so the new material can be filed without abusing older categories.
+- Created 2 content pages:
+  - concepts/neural-native-programming.md
+  - queries/neural-native-programming-via-direct-interfaces-to-transformer-internal-layers.md
+- Updated existing synthesis pages so the new topic participates in the current harness graph:
+  - concepts/formal-cognition-loop.md
+  - queries/new-harness-design-notes.md
+  - queries/non-linear-interface-options-for-next-harness.md
+- Updated navigation/meta files:
+  - SCHEMA.md
+  - index.md
+
+## [2026-04-10] lint | neural-native programming ingest maintenance pass
+- Ran `scripts/lint-wiki.sh` after the ingest.
+- Initial lint failed because several already-modified tracked pages still carried `updated: 2026-04-09` even though the worktree date had advanced.
+- Bumped `updated` to 2026-04-10 on the following pages to restore schema consistency:
+  - concepts/evaluation-and-review-loops.md
+  - concepts/harness-engineering.md
+  - concepts/memory-persistence.md
+  - concepts/work-management-primitives.md
+  - queries/gas-city-but-its-just-codex.md
+  - queries/web-patterns-for-non-linear-harness-interfaces.md
+- Re-ran lint: pass, 47 content pages checked.
+
+## [2026-04-10] create | neural-native programming research program
+- Added queries/neural-native-programming-research-program.md as a tighter staged plan with explicit promotion gates, kill criteria, benchmark order, and first-quarter deliverables.
+- Cross-linked the new plan page from:
+  - concepts/neural-native-programming.md
+  - queries/neural-native-programming-via-direct-interfaces-to-transformer-internal-layers.md
+- Updated index.md to include the new query and bump total pages from 47 to 48.
+
+## [2026-04-10] lint | neural-native research-program follow-up
+- Re-ran `scripts/lint-wiki.sh` after adding the research-program page.
+- Result: pass, 48 content pages checked.

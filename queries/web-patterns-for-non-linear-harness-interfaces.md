@@ -1,7 +1,7 @@
 ---
 title: Web Patterns for Non-Linear Harness Interfaces
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 type: query
 tags: [comparison, orchestration, context-engineering, work-management]
 sources: [raw/articles/sketch-n-sketch.md, raw/articles/glamorous-toolkit-moldable-development-environment.md, raw/papers/arxiv-omar-2018-live-functional-programming-with-typed-holes.md, raw/papers/arxiv-doderlein-2026-spacetime-programming.md, raw/articles/pernosco-omniscient-printf-debugging.md, raw/articles/plutojl-interactive-programming-environment.md, raw/articles/vistrails-aosa.md, raw/articles/spatial-hypertext.md, raw/articles/langgraph-studio-first-agent-ide.md, raw/articles/temporal-web-ui.md, raw/articles/windmill-suspend-approval-prompts.md, raw/articles/trigger-dev-product.md, raw/articles/airflow-ui-overview.md, raw/articles/dagster-scaling-dag-visualization.md, queries/non-linear-interface-options-for-next-harness.md]
@@ -13,7 +13,7 @@ sources: [raw/articles/sketch-n-sketch.md, raw/articles/glamorous-toolkit-moldab
 After the first arXiv-heavy pass, what additional interface patterns emerge from the broader web of live-programming systems, workflow control planes, moldable tools, and alternative knowledge-work environments?
 
 ## Short answer
-The next harness should look less like "chat with some tools" and more like a moldable operations studio: one durable state model, many task-specific projections, first-class provenance, and explicit human control nodes.
+The next harness should look less like "chat with some tools" and more like a moldable operations studio: one durable state model, many task-specific projections, first-class provenance, and explicit human control nodes. The follow-on distributed-systems pass sharpens the semantic layer beneath this in [[legacy-distributed-systems-ideas-for-moldable-operations-studio]] and [[moldable-operations-studio-architecture-spec]], while the speculative-design pass checks the control metaphors against [[sci-fi-audit-for-moldable-operations-studio]].
 
 ## Additional patterns worth stealing
 
@@ -68,4 +68,4 @@ The first non-linear surface pass already argued for branchable graphs, checkpoi
 A harness should not become a carnival of disconnected surfaces. All of these patterns only help if they are projections over one coherent underlying model of work, execution, provenance, and approval. Otherwise one merely invents a more colorful way to become desynchronized.
 
 ## Related pages
-Read this with [[non-linear-interface-options-for-next-harness]], [[new-harness-design-notes]], [[work-management-primitives]], [[partial-order-trace-semantics]], [[evaluation-and-review-loops]], and [[harness-engineering]].
+Read this with [[non-linear-interface-options-for-next-harness]], [[legacy-distributed-systems-ideas-for-moldable-operations-studio]], [[moldable-operations-studio-architecture-spec]], [[moldable-operations-studio-schema-pass]], [[sci-fi-audit-for-moldable-operations-studio]], [[new-harness-design-notes]], [[work-management-primitives]], [[partial-order-trace-semantics]], [[evaluation-and-review-loops]], and [[harness-engineering]].

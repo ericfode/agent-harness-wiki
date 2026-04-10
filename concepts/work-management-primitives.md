@@ -1,7 +1,7 @@
 ---
 title: Work Management Primitives
 created: 2026-04-07
-updated: 2026-04-09
+updated: 2026-04-10
 type: concept
 tags: [work-management, orchestration, error-recovery]
 sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/yegge-vibe-maintainer.md, raw/articles/anthropic-effective-harnesses.md]
@@ -37,5 +37,8 @@ Anthropic's feature lists, init scripts, and progress logs are much simpler prim
 ## Operational lesson
 The right primitive is the one that survives interruption and guides the next action. In that respect, a dull `feature_list.json` can beat a flamboyant swarm if the former actually causes the next session to test the right thing. The same logic applies when work becomes scheduled or unattended: the primitive still needs a clear owner, cadence, and review destination, which is where [[automation-and-background-work]] enters the picture. The next formal question is whether these primitives should be modeled as serial lists at all, or as the richer dependency objects discussed in [[partial-order-trace-semantics]].
 
+## Learnable workflow objects
+Recent systems increasingly treat the workflow artifact itself as mutable. [[self-evolving-workflows]] names the point where a work primitive stops being only a record of coordination and becomes a learned procedural asset. [[memento-skills]] does this through evolving skill packages, while [[gas-city-but-its-just-codex]] is beginning to do it through versioned formula families and explicit selection policy.
+
 ## Related pages
-Work primitives are where [[memory-persistence]] meets orchestration. See [[automation-and-background-work]], [[gas-town]], [[gas-city]], and [[claude-code]], then compare approaches in [[harness-architecture-comparison]].
+Work primitives are where [[memory-persistence]] meets orchestration. See [[automation-and-background-work]], [[gas-town]], [[gas-city]], and [[claude-code]], then compare approaches in [[harness-architecture-comparison]]. The newest pressure here comes from [[self-evolving-workflows]].

@@ -1,10 +1,10 @@
 ---
 title: Non-Linear Interface Options for the Next Harness
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-10
 type: query
 tags: [comparison, orchestration, context-engineering, work-management]
-sources: [raw/articles/openai-unlocking-codex-harness.md, raw/articles/openai-introducing-codex-app.md, raw/papers/arxiv-sarkar-2023-code-relevant-ui.md, raw/papers/arxiv-angert-2023-spellburst.md, raw/papers/arxiv-rein-2024-live-programmers.md, raw/papers/arxiv-krause-glau-2023-code-proximal-dynamic-software-visualization.md, raw/papers/arxiv-kuhn-2010-spatial-software-visualization-ide.md, raw/papers/arxiv-li-2024-kishu-time-traveling-notebooks.md, raw/papers/arxiv-fang-2025-code-data-space-versioning.md, raw/papers/arxiv-chen-2022-nl2interface.md, raw/papers/arxiv-krause-glau-2024-code-review-software-city.md]
+sources: [raw/articles/openai-unlocking-codex-harness.md, raw/articles/openai-introducing-codex-app.md, raw/papers/arxiv-sarkar-2023-code-relevant-ui.md, raw/papers/arxiv-angert-2023-spellburst.md, raw/papers/arxiv-rein-2024-live-programmers.md, raw/papers/arxiv-krause-glau-2023-code-proximal-dynamic-software-visualization.md, raw/papers/arxiv-kuhn-2010-spatial-software-visualization-ide.md, raw/papers/arxiv-li-2024-kishu-time-traveling-notebooks.md, raw/papers/arxiv-fang-2025-code-data-space-versioning.md, raw/papers/arxiv-chen-2022-nl2interface.md, raw/papers/arxiv-krause-glau-2024-code-review-software-city.md, concepts/neural-native-programming.md]
 ---
 
 # Non-Linear Interface Options for the Next Harness
@@ -22,7 +22,7 @@ The papers point toward five especially credible interface families:
 4. spatial system and review maps
 5. query-driven generated control panels
 
-For a broader web-systems follow-on that adds moldable tools, provenance/query interfaces, and durable mission-control surfaces, see [[web-patterns-for-non-linear-harness-interfaces]].
+For a broader web-systems follow-on that adds moldable tools, provenance/query interfaces, and durable mission-control surfaces, see [[web-patterns-for-non-linear-harness-interfaces]]. For a more radical companion direction that changes the model-facing IR itself rather than only the operator-facing surface, see [[neural-native-programming]] and [[neural-native-programming-via-direct-interfaces-to-transformer-internal-layers]].
 
 ## Why this matters now
 The current harness corpus already suggests that transcripts are the wrong place to store all meaning. [[gas-town]] and [[gas-city]] move work into durable graph objects; [[codex-cli]] and [[codex-app-server]] move execution into typed protocol items; [[hermes-agent]] moves durable learning into memory and skills. The surface layer is therefore the obvious next place to stop pretending that one scrolling transcript should bear the entire cognitive load.

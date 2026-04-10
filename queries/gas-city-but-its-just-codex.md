@@ -1,10 +1,10 @@
 ---
 title: Gas City But It's Just Codex
 created: 2026-04-07
-updated: 2026-04-08
+updated: 2026-04-10
 type: query
 tags: [codex-cli, gas-city, orchestration, tool-execution, work-management]
-sources: [entities/codex-app-server.md, entities/codex-cli.md, entities/gas-city.md, concepts/work-management-primitives.md, queries/new-harness-design-notes.md]
+sources: [raw/articles/gas-city-but-its-just-codex-repo-2026-04-09.md, entities/codex-app-server.md, entities/codex-cli.md, entities/gas-city.md, concepts/work-management-primitives.md, queries/new-harness-design-notes.md]
 ---
 
 # Gas City But It's Just Codex
@@ -33,5 +33,8 @@ That is enough to test whether Codex can act coherently against external durable
 ## Main caution
 Do not force Gas City's work graph into Codex thread items. Threads should remain execution history. Once work state is confused with transcript state, recovery becomes folklore instead of infrastructure.
 
+## 2026-04-09 update
+The repository has now moved well past the original toy spike. It already has a durable `redb` ledger, formula lineage and evolution policy, top-level and in-turn formula mutation or assessment surfaces, and frontier benchmarks that isolate autonomy debt. The broader arXiv pass suggests the current problem actually decomposes into three layers: workflow generation, evaluator-and-promotion plumbing, and a likely future skill layer beside formulas. The immediate bottleneck is still the middle one: benchmark evidence is not yet the routine source of `formula_assess` plus `formula_select` decisions. Read this note now beside [[self-evolving-workflows]] and [[arxiv-self-evolving-workflows-for-codex-control-plane]].
+
 ## Related pages
-This note extends [[new-harness-design-notes]] with a narrower conclusion about Codex-specific execution seams and depends on [[codex-cli]], [[codex-app-server]], and [[work-management-primitives]].
+This note extends [[new-harness-design-notes]] with a narrower conclusion about Codex-specific execution seams and depends on [[codex-cli]], [[codex-app-server]], and [[work-management-primitives]]. It should now also be read with [[self-evolving-workflows]] and [[arxiv-self-evolving-workflows-for-codex-control-plane]].

@@ -1,7 +1,7 @@
 ---
 title: Wiki Schema
 created: 2026-04-07
-updated: 2026-04-09
+updated: 2026-04-10
 type: schema
 tags: [meta, schema]
 ---
@@ -114,6 +114,10 @@ Current enum domains used by the extractor:
 - `comparison` — Side-by-side analyses
 - `benchmark` — Performance measurement
 - `code-quality` — Codebase quality analysis
+
+### Model internals & synthesis
+- `mechanistic-interpretability` — Residual streams, feature discovery, activation interventions, model editing
+- `program-synthesis` — Program induction, latent program representations, executable IR design
 
 ### Semantics & Formalization
 - `formal-methods` — Specifications, verification, proof systems, certified reasoning
