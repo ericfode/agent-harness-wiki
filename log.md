@@ -606,5 +606,6 @@
   - .github/workflows/pages.yml
   - README.md updates for local preview and published-site usage
   - .gitignore rules for generated site directories and local virtualenvs
+- Enabled GitHub Pages in workflow-deployment mode and updated the Pages workflow to current action major versions to avoid stale Node 20 warnings.
 - Verified the docs build locally after preparing the generated docs tree.
 - Re-ran lint after the publishing-layer pass: pass, 70 content pages checked.
