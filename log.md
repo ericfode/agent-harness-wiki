@@ -560,3 +560,51 @@
 ## [2026-04-10] lint | neural-native research-program follow-up
 - Re-ran `scripts/lint-wiki.sh` after adding the research-program page.
 - Result: pass, 48 content pages checked.
+
+## [2026-04-10] ingest | rl gym entity pages and atropos fit analysis
+- Added 2 repo-grounded raw source summaries for local harness integration state:
+  - raw/articles/hermes-atropos-integration-2026-04-09.md
+  - raw/articles/another-harness-repo-2026-04-09.md
+- Created 21 entity pages for the executable-environment and gym layer:
+  - entities/agentboard.md
+  - entities/agentgym.md
+  - entities/appworld.md
+  - entities/atropos.md
+  - entities/browsergym.md
+  - entities/computer-rl.md
+  - entities/enterprisebench-corecraft.md
+  - entities/gaia.md
+  - entities/mlgym.md
+  - entities/osworld.md
+  - entities/proxy-state-based-evaluation.md
+  - entities/sopbench.md
+  - entities/swe-gym.md
+  - entities/tau-bench.md
+  - entities/visualwebarena.md
+  - entities/webarena.md
+  - entities/webcanvas.md
+  - entities/webshop.md
+  - entities/windows-agent-arena.md
+  - entities/workarena.md
+  - entities/workarena-plus-plus.md
+- Created 1 synthesis page:
+  - queries/another-harness-and-atropos.md
+- Updated the main gym synthesis and surrounding concept pages so the new environment layer participates in the harness graph:
+  - queries/rl-gyms-and-executable-environments-for-ai-harnesses.md
+  - concepts/evaluation-and-review-loops.md
+  - concepts/harness-engineering.md
+  - index.md
+- Recounted content pages and updated index total from 48 to 70.
+- Re-ran lint after the entity-page pass: pass, 70 content pages checked.
+
+## [2026-04-10] update | public repo rename and github pages publishing layer
+- Renamed the public GitHub repository from `wiki` to `agent-harness-wiki`.
+- Added a lightweight MkDocs publishing layer with:
+  - mkdocs.yml
+  - docs-requirements.txt
+  - scripts/prepare_site_docs.py
+  - .github/workflows/pages.yml
+  - README.md updates for local preview and published-site usage
+  - .gitignore rules for generated site directories and local virtualenvs
+- Verified the docs build locally after preparing the generated docs tree.
+- Re-ran lint after the publishing-layer pass: pass, 70 content pages checked.

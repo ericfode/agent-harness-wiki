@@ -2,18 +2,39 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-04-10 | Total pages: 48
+> Last updated: 2026-04-10 | Total pages: 70
 
 ## Entities
 
+- [[agentboard]] — Analytical evaluation board for multi-turn agents with progress metrics across many task settings.
+- [[agentgym]] — Multi-environment suite for evolving LLM agents across diverse tasks rather than one narrow world.
+- [[appworld]] — Controllable multi-app world with state-based grading for interactive coding and tool-use agents.
+- [[atropos]] — Hermes-facing RL environment and rollout substrate for multi-turn tool-calling agent tasks.
+- [[browsergym]] — Unified gym-like substrate that standardizes action and observation surfaces across web-agent benchmarks.
 - [[claude-code]] — Anthropic's coding agent and harness research program for long-running, evaluator-driven development.
 - [[codex-app-server]] — The durable protocol layer that lets Codex span CLI, IDE, web, and app clients.
 - [[codex-cli]] — OpenAI's terminal coding agent with an App Server architecture and strong repo-legibility discipline.
+- [[computer-rl]] — Distributed RL infrastructure for training desktop and computer-use agents at scale.
+- [[enterprisebench-corecraft]] — High-fidelity enterprise RL environment with rubric-based rewards and transfer-focused evaluation.
+- [[gaia]] — Broad benchmark for general AI assistants requiring reasoning, browsing, multimodality, and tool use.
 - [[gas-city]] — Modular successor to Gas Town, oriented around composable orchestration primitives and Wasteland federation.
 - [[gas-town]] — Steve Yegge's multi-agent coding factory built around the MEOW stack and durable work objects.
 - [[hermes-agent]] — Persistent self-improving agent centered on searchable memory, skills, and multi-surface continuity.
 - [[memento-skills]] — Self-evolving agent framework that treats skills as writable memory and learns by rewriting them.
+- [[mlgym]] — Gym framework for AI-research agents working on open-ended machine-learning tasks.
 - [[openclaw]] — Ecosystem-first persistent agent runtime with broad integrations and a large public skill marketplace.
+- [[osworld]] — Real-computer benchmark environment for open-ended multimodal agents across operating systems.
+- [[proxy-state-based-evaluation]] — Scalable reward and grading approach for tool-calling agents without fully deterministic backends.
+- [[sopbench]] — Executable benchmark for agents following standard operating procedures, constraints, and tool-use rules.
+- [[swe-gym]] — Executable software-engineering training environment for agents and verifiers over real codebases.
+- [[tau-bench]] — Benchmark for multi-turn tool-agent-user interaction under domain rules and dynamic conversation.
+- [[visualwebarena]] — Realistic multimodal web benchmark for visually grounded browsing tasks.
+- [[webarena]] — Realistic multi-domain web environment for autonomous long-horizon browser tasks.
+- [[webcanvas]] — Online web-agent benchmark framework that stays live under interface drift.
+- [[webshop]] — Early grounded web-interaction environment with real products and RL-compatible task structure.
+- [[windows-agent-arena]] — Scalable Windows-specific environment for evaluating multimodal OS agents.
+- [[workarena]] — Enterprise knowledge-work benchmark built on BrowserGym for routine professional web tasks.
+- [[workarena-plus-plus]] — More compositional and reasoning-heavy extension of WorkArena for enterprise workflows.
 
 ## Concepts
 
@@ -45,6 +66,7 @@
 
 ## Queries
 
+- [[another-harness-and-atropos]] — Fit analysis for whether a thinner Codex-native harness should adopt Atropos now, later, or not at all.
 - [[arxiv-round-two-formal-semantics-for-agent-harnesses]] — Targeted arXiv scouting on formal methods, epistemic updates, and partial-order semantics for harness theory.
 - [[arxiv-self-evolving-workflows-for-codex-control-plane]] — ArXiv map of workflow search, evaluator loops, skill evolution, and memory compilation for Codex-native control planes.
 - [[arxiv-under-explored-coordination-strategies]] — Verified arXiv pass on coordination strategies that still look thinner than manager-worker and debate loops.
@@ -55,11 +77,11 @@
 - [[moldable-operations-studio-architecture-spec]] — A concrete state-model and projection spec for turning the harness into a moldable operations studio.
 - [[moldable-operations-studio-schema-pass]] — Concrete event, object, checkpoint, view, and promotion schemas for the moldable operations studio.
 - [[moldable-operations-studio-wireframes]] — Concrete screen models and interaction loops for the wallboard, graph, evidence, queue, canvas, and pocket surfaces.
-- [[neural-native-programming-via-direct-interfaces-to-transformer-internal-layers]] — Research synthesis on typed latent IRs, activation-level interfaces, and execution-first evaluation for neural-native programming.
 - [[neural-native-programming-research-program]] — Kill-happy staged experiment plan with promotion gates, benchmark order, and no-go criteria for neural-native programming.
+- [[neural-native-programming-via-direct-interfaces-to-transformer-internal-layers]] — Research synthesis on typed latent IRs, activation-level interfaces, and execution-first evaluation for neural-native programming.
+- [[new-harness-design-notes]] — Synthesis notes on combining Codex cleanliness, Hermes learning loops, Anthropic evaluators, Gas City orchestration, and now a formalization plane.
 - [[non-hierarchical-agent-orchestration]] — Direct answer to the question of what to use instead of a default manager hierarchy.
 - [[non-linear-interface-options-for-next-harness]] — ArXiv-backed surface ideas for moving beyond the flat transcript into graphs, checkpoints, runtime overlays, and generated control panels.
 - [[rl-gyms-and-executable-environments-for-ai-harnesses]] — Map of browser, desktop, tool-use, coding, and research-agent gym substrates for harness evaluation and training.
 - [[sci-fi-audit-for-moldable-operations-studio]] — Science-fiction control-room and distributed-cognition ideas translated into harness primitives and cautions.
 - [[web-patterns-for-non-linear-harness-interfaces]] — Broader web-system patterns for moldable views, provenance-rich traces, and durable mission-control surfaces around harness work.
-- [[new-harness-design-notes]] — Synthesis notes on combining Codex cleanliness, Hermes learning loops, Anthropic evaluators, Gas City orchestration, and now a formalization plane.

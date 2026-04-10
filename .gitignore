@@ -1,4 +1,7 @@
 .obsidian/
+.site-docs/
+site/
+.venv/
 
 # Local scratch notes not intended for publication
 arxiv_workflow_skill_research_2026-04-09.txt
