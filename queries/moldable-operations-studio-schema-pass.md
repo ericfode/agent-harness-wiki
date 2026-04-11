@@ -1,7 +1,7 @@
 ---
 title: Moldable Operations Studio Schema Pass
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-11
 type: query
 tags: [orchestration, work-management, semantics, concurrency]
 sources: [queries/moldable-operations-studio-architecture-spec.md, queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md, queries/non-linear-interface-options-for-next-harness.md, queries/web-patterns-for-non-linear-harness-interfaces.md, concepts/work-management-primitives.md, concepts/partial-order-trace-semantics.md]
@@ -452,4 +452,4 @@ The studio does not need universal strong consistency everywhere, but it does ne
    - Opening checkpoint `X` from CLI, graph, queue, or evidence view must resolve the same `cut_frontier` and the same manifest.
 
 ## Related pages
-Read this with [[moldable-operations-studio-wireframes]], [[grounding-moldable-operations-studio-ideas-in-real-research]], [[moldable-operations-studio-architecture-spec]], [[legacy-distributed-systems-ideas-for-moldable-operations-studio]], [[non-linear-interface-options-for-next-harness]], [[web-patterns-for-non-linear-harness-interfaces]], [[work-management-primitives]], and [[partial-order-trace-semantics]].
+Read this with [[sovereign-identity-and-observed-goals-schema-pass]], [[moldable-operations-studio-wireframes]], [[grounding-moldable-operations-studio-ideas-in-real-research]], [[moldable-operations-studio-architecture-spec]], [[legacy-distributed-systems-ideas-for-moldable-operations-studio]], [[non-linear-interface-options-for-next-harness]], [[web-patterns-for-non-linear-harness-interfaces]], [[work-management-primitives]], and [[partial-order-trace-semantics]].

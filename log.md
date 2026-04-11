@@ -883,26 +883,37 @@
 
 ## [2026-04-11] create | three more prompt-optimizer branches
 - Added 5 raw paper notes for the runtime-adaptation, RL-over-program, and planning/evolution optimizer branches:
-  - raw/papers/arxiv-zhang-2022-tempera.md
-  - raw/papers/azim-2025-autodspy.md
-  - raw/papers/arxiv-yang-2023-opro.md
-  - raw/papers/arxiv-fernando-2023-promptbreeder.md
-  - raw/papers/arxiv-wang-2023-promptagent.md
+  - [[arxiv-zhang-2022-tempera|raw/papers/arxiv-zhang-2022-tempera.md]]
+  - [[azim-2025-autodspy|raw/papers/azim-2025-autodspy.md]]
+  - [[arxiv-yang-2023-opro|raw/papers/arxiv-yang-2023-opro.md]]
+  - [[arxiv-fernando-2023-promptbreeder|raw/papers/arxiv-fernando-2023-promptbreeder.md]]
+  - [[arxiv-wang-2023-promptagent|raw/papers/arxiv-wang-2023-promptagent.md]]
 - Created 5 entity pages so these optimizer families now have first-class wiki nodes:
-  - entities/tempera.md
-  - entities/autodspy.md
-  - entities/opro.md
-  - entities/promptbreeder.md
-  - entities/promptagent.md
+  - [[tempera|entities/tempera.md]]
+  - [[autodspy|entities/autodspy.md]]
+  - [[opro|entities/opro.md]]
+  - [[promptbreeder|entities/promptbreeder.md]]
+  - [[promptagent|entities/promptagent.md]]
 - Created 1 synthesis page that turns the newly covered systems into a regime map for harness design:
-  - queries/prompt-optimizer-regimes-for-harnesses.md
+  - [[prompt-optimizer-regimes-for-harnesses|queries/prompt-optimizer-regimes-for-harnesses.md]]
 - Updated the central DSPy and prompt-optimization pages so the new systems resolve as concrete entities and the optimizer-family map is more explicit:
-  - entities/dspy.md
-  - entities/rlprompt.md
-  - queries/prompt-optimization-and-dspy-follow-ups.md
-  - queries/prompt-optimization-timeline-and-harness-lessons.md
-  - queries/prompt-program-representation-and-optimizer-open-questions.md
-  - queries/prompt-program-deployment-open-questions.md
-  - queries/research-on-open-questions-in-prompt-optimization-and-language-programs.md
-  - index.md
+  - [[dspy|entities/dspy.md]]
+  - [[rlprompt|entities/rlprompt.md]]
+  - [[prompt-optimization-and-dspy-follow-ups|queries/prompt-optimization-and-dspy-follow-ups.md]]
+  - [[prompt-optimization-timeline-and-harness-lessons|queries/prompt-optimization-timeline-and-harness-lessons.md]]
+  - [[prompt-program-representation-and-optimizer-open-questions|queries/prompt-program-representation-and-optimizer-open-questions.md]]
+  - [[prompt-program-deployment-open-questions|queries/prompt-program-deployment-open-questions.md]]
+  - [[research-on-open-questions-in-prompt-optimization-and-language-programs|queries/research-on-open-questions-in-prompt-optimization-and-language-programs.md]]
+  - [[index|index.md]]
 - Updated index total from 120 to 126.
+
+## [2026-04-11] create | repo architecture plans from the ten prompt-program questions
+- Created 2 repo-grounded plan documents that translate the ten cross-cutting prompt-program questions into concrete architecture stances and sequencing ladders:
+  - `/Users/ericfode/src/another-harness/docs/plans/2026-04-11-another-harness-prompt-program-architecture-plan.md`
+  - `/Users/ericfode/src/gas-city-but-its-just-codex/docs/plans/2026-04-11-gascity-prompt-program-architecture-plan.md`
+- Added 1 wiki synthesis page summarizing both repo plans and their main divergence in design center:
+  - [[prompt-program-architecture-plans-for-another-harness-and-gas-city|queries/prompt-program-architecture-plans-for-another-harness-and-gas-city.md]]
+- Updated prompt-program navigation so the new cross-repo plan page is indexed from the query catalog and linked from the umbrella question map:
+  - [[open-questions-in-prompt-optimization-and-language-programs|queries/open-questions-in-prompt-optimization-and-language-programs.md]]
+  - [[index|index.md]]
+- Updated index total from 126 to 127.

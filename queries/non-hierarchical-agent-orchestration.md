@@ -1,7 +1,7 @@
 ---
 title: Serious Alternatives to Hierarchical Agent Orchestration
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-11
 type: query
 tags: [opinion, orchestration, work-management, subagents]
 sources: [concepts/non-hierarchical-coordination-patterns.md, concepts/fission-fusion-orchestration.md, concepts/orchestration-topologies.md, queries/new-harness-design-notes.md]
@@ -51,4 +51,4 @@ This is closer to a market-plus-blackboard runtime with coalition memory than to
 - Which state transitions deserve quorum semantics, and which only need review?
 
 ## Related pages
-Read this with [[non-hierarchical-coordination-patterns]], [[fission-fusion-orchestration]], [[orchestration-topologies]], [[work-management-primitives]], [[evaluation-and-review-loops]], and [[new-harness-design-notes]].
+Read this with [[non-hierarchical-coordination-patterns]], [[fission-fusion-orchestration]], [[orchestration-topologies]], [[work-management-primitives]], [[evaluation-and-review-loops]], [[new-harness-design-notes]], and [[multiplayer-agent-harnesses-and-p2p-networks]].
