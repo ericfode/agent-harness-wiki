@@ -18,6 +18,7 @@ Agent harnesses: the software infrastructure that wraps LLMs to enable reliable,
 - Every content page under `entities/`, `concepts/`, `comparisons/`, and `queries/` starts with YAML frontmatter (see below)
 - Top-level meta files (`SCHEMA.md`, `index.md`, `log.md`) may omit `sources` and are exempt from the outbound-wikilink minimum
 - Use `[[wikilinks]]` to link between content pages (minimum 2 outbound links per page)
+- `log.md` should also use native Obsidian `[[wikilinks]]` for any internal page or source reference; when the precise repo path matters, use an alias such as `[[codex-cli|entities/codex-cli.md]]`
 - When updating a page, always bump the `updated` date
 - Every new content page must be added to `index.md` under the correct section
 - Every action must be appended to `log.md`
@@ -99,6 +100,7 @@ Current enum domains used by the extractor:
 - `langchain` — LangChain / LangGraph
 - `crewai` — CrewAI multi-agent framework
 - `cursor` — Cursor IDE agent
+- `dspy` — Declarative Self-improving Python / LM-program compilation and optimization framework
 
 ### Architecture & Patterns
 - `orchestration` — Multi-agent coordination

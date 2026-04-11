@@ -147,6 +147,36 @@ while IFS= read -r f; do
   fi
 done < "$modified_pages_file"
 
+while IFS= read -r bare_log_path; do
+  [ -z "$bare_log_path" ] && continue
+  error "log.md contains bare internal path $bare_log_path (use [[wikilinks]] with an alias if you want the repo path shown)"
+done < <(
+  python3 - <<'PY'
+from pathlib import Path
+import re
+
+root = Path('.')
+text = (root / 'log.md').read_text(encoding='utf-8')
+text = re.sub(r'\[\[[^\]]+\]\]', '', text)
+
+internal_paths = set()
+for name in ['index.md', 'SCHEMA.md', 'log.md', 'README.md']:
+    if (root / name).exists():
+        internal_paths.add(name)
+for dirname in ['entities', 'concepts', 'comparisons', 'queries', 'raw']:
+    base = root / dirname
+    if not base.exists():
+        continue
+    for path in base.rglob('*.md'):
+        internal_paths.add(path.relative_to(root).as_posix())
+
+pattern = re.compile(r'(?<![\w/])(?:[A-Za-z0-9_.-]+/)*[A-Za-z0-9_.-]+\.md\b')
+found = sorted({m.group(0) for m in pattern.finditer(text) if m.group(0) in internal_paths})
+for item in found:
+    print(item)
+PY
+)
+
 if [ "$errors" -gt 0 ]; then
   printf 'wiki lint failed with %s error(s)\n' "$errors" >&2
   exit 1
