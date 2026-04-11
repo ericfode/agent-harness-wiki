@@ -1,0 +1,403 @@
+:root {
+  --wiki-bg: #07111f;
+  --wiki-bg-elevated: rgba(11, 18, 32, 0.82);
+  --wiki-bg-panel: rgba(15, 23, 42, 0.88);
+  --wiki-bg-panel-strong: #111b31;
+  --wiki-border: rgba(148, 163, 184, 0.22);
+  --wiki-border-strong: rgba(125, 211, 252, 0.28);
+  --wiki-text: #d9e3f0;
+  --wiki-text-soft: #aebcd3;
+  --wiki-heading: #f8fbff;
+  --wiki-accent: #7dd3fc;
+  --wiki-accent-strong: #c084fc;
+  --wiki-code: #0b1426;
+  --wiki-shadow: 0 24px 60px rgba(3, 8, 20, 0.45);
+  --wiki-radius: 22px;
+  --wiki-radius-sm: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: var(--wiki-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.72;
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.10), transparent 28%),
+    radial-gradient(circle at top right, rgba(192, 132, 252, 0.12), transparent 24%),
+    linear-gradient(180deg, #07111f 0%, #0a1325 48%, #0c1528 100%);
+}
+
+body::before {
+  display: none;
+}
+
+body.homepage {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(125, 211, 252, 0.18), transparent 20%),
+    radial-gradient(circle at 85% 8%, rgba(192, 132, 252, 0.18), transparent 20%),
+    linear-gradient(180deg, #06101d 0%, #091323 48%, #0d1729 100%);
+}
+
+.navbar.fixed-top {
+  width: min(1680px, calc(100% - 28px));
+  margin: 14px auto 0;
+  top: 0.65rem;
+  border: 1px solid var(--wiki-border);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(12, 19, 34, 0.88), rgba(13, 24, 43, 0.70)) !important;
+  backdrop-filter: blur(18px);
+  box-shadow: var(--wiki-shadow);
+}
+
+.navbar.fixed-top .container {
+  max-width: 100%;
+  padding-inline: 1.2rem;
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-text {
+  color: var(--wiki-heading);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  border-radius: 999px;
+  margin-inline: 0.15rem;
+  padding-inline: 0.9rem;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--wiki-heading);
+  background: rgba(125, 211, 252, 0.12);
+  transform: translateY(-1px);
+}
+
+.navbar-dark .dropdown-menu {
+  background: rgba(10, 18, 33, 0.96);
+  border: 1px solid var(--wiki-border);
+  border-radius: 16px;
+  box-shadow: var(--wiki-shadow);
+}
+
+.navbar-dark .dropdown-item {
+  color: var(--wiki-text);
+}
+
+.navbar-dark .dropdown-item:hover,
+.navbar-dark .dropdown-item:focus {
+  color: var(--wiki-heading);
+  background: rgba(125, 211, 252, 0.14);
+}
+
+body > .container {
+  width: min(1680px, calc(100% - 28px));
+  max-width: none;
+  margin-top: 7rem;
+  margin-bottom: 2.5rem;
+}
+
+body > .container > .row {
+  --bs-gutter-x: 2rem;
+  align-items: flex-start;
+}
+
+.bs-sidebar.affix {
+  top: 7rem;
+}
+
+.bs-sidebar.card,
+#toc-collapse.card,
+#toc-collapse.bg-body-tertiary {
+  background: var(--wiki-bg-panel) !important;
+  border: 1px solid var(--wiki-border);
+  border-radius: var(--wiki-radius);
+  box-shadow: var(--wiki-shadow);
+}
+
+.bs-sidebar .nav > li > a {
+  color: var(--wiki-text-soft);
+  border-right: 2px solid transparent;
+  border-radius: 10px;
+  margin: 0.2rem 0.55rem;
+  padding: 0.48rem 0.9rem;
+}
+
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus,
+.bs-sidebar .nav > li > a.active {
+  color: var(--wiki-heading);
+  background: rgba(125, 211, 252, 0.08);
+  border-right-color: var(--wiki-accent);
+}
+
+[role="main"] {
+  position: relative;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.82));
+  border: 1px solid var(--wiki-border);
+  border-radius: calc(var(--wiki-radius) + 2px);
+  box-shadow: var(--wiki-shadow);
+  padding: clamp(1.35rem, 1.8vw, 2.4rem);
+  overflow: hidden;
+}
+
+[role="main"]::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--wiki-accent), var(--wiki-accent-strong));
+  opacity: 0.9;
+}
+
+.homepage [role="main"] {
+  padding-top: 2.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--wiki-heading);
+  font-family: Iowan Old Style, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 4vw, 4.1rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.homepage h1 {
+  max-width: 14ch;
+}
+
+h2 {
+  margin-top: 2.7rem;
+  padding-top: 0.25rem;
+  font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 4.5rem;
+  height: 2px;
+  margin-top: 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--wiki-accent), transparent);
+}
+
+h3 {
+  font-size: 1.28rem;
+  margin-top: 2rem;
+}
+
+p,
+li,
+dd,
+dt,
+blockquote {
+  color: var(--wiki-text);
+}
+
+body.homepage [role="main"] > p:first-of-type {
+  max-width: 72ch;
+  color: var(--wiki-text-soft);
+  font-size: 1.06rem;
+}
+
+strong {
+  color: var(--wiki-heading);
+}
+
+a {
+  color: var(--wiki-accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #b8e8ff;
+  text-decoration: underline;
+  text-decoration-color: rgba(125, 211, 252, 0.35);
+  text-underline-offset: 0.18em;
+}
+
+hr {
+  border-top: 1px solid var(--wiki-border);
+}
+
+pre {
+  background: var(--wiki-code);
+  border: 1px solid var(--wiki-border);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+code {
+  background: rgba(125, 211, 252, 0.08);
+  border: 1px solid rgba(125, 211, 252, 0.14);
+  border-radius: 8px;
+  color: #d3f2ff;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  color: #dbeafe;
+}
+
+table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--wiki-border);
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+}
+
+thead th {
+  background: rgba(29, 78, 216, 0.20);
+  color: var(--wiki-heading);
+  border-bottom: 1px solid var(--wiki-border);
+}
+
+td,
+th {
+  padding: 0.8rem 0.95rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+tbody tr:hover {
+  background: rgba(125, 211, 252, 0.04);
+}
+
+blockquote {
+  margin: 1.25rem 0;
+  padding: 0.8rem 1rem 0.8rem 1.1rem;
+  border-left: 3px solid var(--wiki-accent);
+  background: rgba(125, 211, 252, 0.05);
+  border-radius: 0 14px 14px 0;
+}
+
+.admonition,
+details {
+  background: rgba(15, 23, 42, 0.86);
+  border: 1px solid var(--wiki-border);
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.mermaid {
+  margin: 1.6rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--wiki-border-strong);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top, rgba(125, 211, 252, 0.10), transparent 30%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(8, 15, 30, 0.92));
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.source-links {
+  float: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.source-links .label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(125, 211, 252, 0.12);
+  color: #d9f3ff;
+  border: 1px solid rgba(125, 211, 252, 0.16);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.modal-content,
+.modal-header,
+.modal-footer {
+  background: #0f172a;
+  color: var(--wiki-text);
+  border-color: var(--wiki-border);
+}
+
+.form-control,
+.form-select {
+  background: rgba(8, 15, 30, 0.92);
+  color: var(--wiki-text);
+  border-color: var(--wiki-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(125, 211, 252, 0.65);
+  box-shadow: 0 0 0 0.2rem rgba(125, 211, 252, 0.12);
+}
+
+footer {
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+  color: var(--wiki-text-soft);
+}
+
+footer a {
+  color: var(--wiki-accent);
+}
+
+@media (max-width: 991.98px) {
+  .navbar.fixed-top {
+    width: calc(100% - 18px);
+    margin-top: 9px;
+    border-radius: 16px;
+  }
+
+  body > .container {
+    width: calc(100% - 18px);
+    margin-top: 6.4rem;
+  }
+
+  .bs-sidebar.affix {
+    position: static;
+    top: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  [role="main"] {
+    padding: 1.15rem;
+  }
+}

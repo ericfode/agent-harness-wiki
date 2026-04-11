@@ -8,17 +8,41 @@ site_dir: site
 use_directory_urls: true
 
 theme:
-  name: material
-  features:
-    - navigation.instant
-    - navigation.sections
-    - navigation.top
-    - search.highlight
-    - content.code.copy
+  name: mkdocs
+  color_mode: dark
+  user_color_mode_toggle: false
+  nav_style: dark
+  navigation_depth: 3
+  hljs_style: github
+  hljs_style_dark: github-dark
 
 plugins:
   - search
-  - mermaid2
+  - mermaid2:
+      arguments:
+        theme: base
+        startOnLoad: true
+        securityLevel: loose
+        flowchart:
+          useMaxWidth: true
+          curve: basis
+        themeVariables:
+          darkMode: true
+          background: '#0f172a'
+          primaryColor: '#1d4ed8'
+          primaryTextColor: '#e2e8f0'
+          primaryBorderColor: '#334155'
+          lineColor: '#7dd3fc'
+          tertiaryColor: '#111827'
+          mainBkg: '#111827'
+          secondBkg: '#0f172a'
+          tertiaryBkg: '#1e293b'
+          nodeBorder: '#475569'
+          clusterBkg: '#0b1220'
+          clusterBorder: '#334155'
+          edgeLabelBackground: '#0f172a'
+          textColor: '#dbe4f0'
+          fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif'
 
 markdown_extensions:
   - admonition
@@ -30,7 +54,5 @@ markdown_extensions:
   - toc:
       permalink: true
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/ericfode/agent-harness-wiki
+extra_css:
+  - assets/stylesheets/wiki.css

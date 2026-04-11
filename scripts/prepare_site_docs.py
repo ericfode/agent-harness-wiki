@@ -11,6 +11,7 @@ OUT = ROOT / ".site-docs"
 
 ROOT_FILES = ["index.md", "SCHEMA.md", "log.md", "README.md"]
 TREE_DIRS = ["entities", "concepts", "comparisons", "queries", "raw"]
+STATIC_DIRS = ["site_assets"]
 
 WIKILINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
 FENCED_BLOCK_RE = re.compile(r"(```.*?```)", re.S)
@@ -64,6 +65,18 @@ def copy_non_markdown_assets() -> None:
             if src.suffix.lower() == ".md":
                 continue
             rel = src.relative_to(ROOT)
+            dest = OUT / rel
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dest)
+
+    for dirname in STATIC_DIRS:
+        base = ROOT / dirname
+        if not base.exists():
+            continue
+        for src in sorted(base.rglob("*")):
+            if src.is_dir():
+                continue
+            rel = Path("assets") / src.relative_to(base)
             dest = OUT / rel
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dest)
