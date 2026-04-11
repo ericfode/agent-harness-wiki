@@ -26,21 +26,28 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install docs dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r docs-requirements.txt
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: .quartz-site/package-lock.json
 
-      - name: Prepare docs tree
-        run: python scripts/prepare_site_docs.py
+      - name: Prepare Quartz content tree
+        run: python scripts/prepare_quartz_content.py
 
-      - name: Build site
-        run: mkdocs build --strict
+      - name: Install Quartz dependencies
+        working-directory: .quartz-site
+        run: npm ci
+
+      - name: Build Quartz site
+        working-directory: .quartz-site
+        run: npx quartz build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: site
+          path: .quartz-site/public
 
   deploy:
     environment:

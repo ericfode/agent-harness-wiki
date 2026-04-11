@@ -2,7 +2,7 @@
 
 An interlinked markdown wiki on agent harnesses: coding-agent runtimes, orchestration patterns, durable memory, formal methods, non-linear interfaces, and adjacent research threads.
 
-This repository is organized as a plain markdown knowledge base first, with a lightweight MkDocs publishing layer on top for GitHub Pages.
+This repository is organized as a plain markdown knowledge base first, with a Quartz 4 publishing layer on top for GitHub Pages.
 
 Published site:
 - https://ericfode.github.io/agent-harness-wiki/
@@ -23,9 +23,10 @@ Open the repo in any markdown editor, or in Obsidian, to browse the graph direct
 
 Local preview:
 ```bash
-python scripts/prepare_site_docs.py
-python -m pip install -r docs-requirements.txt
-mkdocs serve
+python3 scripts/prepare_quartz_content.py
+cd .quartz-site
+npm ci
+npx quartz build --serve --port 8787
 ```
 
 The GitHub Pages workflow rebuilds the site automatically on pushes to `main`.

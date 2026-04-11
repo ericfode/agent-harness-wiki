@@ -907,6 +907,12 @@
   - [[index|index.md]]
 - Updated index total from 120 to 126.
 
+## [2026-04-11] update | quartz publishing migration
+- Replaced the GitHub Pages publishing path from MkDocs with Quartz 4 while keeping the repository-root markdown corpus canonical.
+- Added `scripts/prepare_quartz_content.py` to materialize the wiki into `.quartz-site/content/`, synthesize titles for root meta pages, and sanitize frontmatter for Quartz consumption.
+- Vendored Quartz under `.quartz-site/` from upstream commit `59b5807`, customized the local Quartz config/layout, and switched `.github/workflows/pages.yml` to a Node 22 + Quartz build.
+- Verified the Quartz build locally; the explorer/sidebar navigation replaces the brittle top dropdown navbar, and Mermaid diagrams render with built-in expand/zoom controls.
+
 ## [2026-04-11] create | repo architecture plans from the ten prompt-program questions
 - Created 2 repo-grounded plan documents that translate the ten cross-cutting prompt-program questions into concrete architecture stances and sequencing ladders:
   - `/Users/ericfode/src/another-harness/docs/plans/2026-04-11-another-harness-prompt-program-architecture-plan.md`
