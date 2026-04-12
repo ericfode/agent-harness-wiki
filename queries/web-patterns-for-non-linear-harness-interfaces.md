@@ -1,7 +1,7 @@
 ---
 title: Web Patterns for Non-Linear Harness Interfaces
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 type: query
 tags: [comparison, orchestration, context-engineering, work-management]
 sources: [raw/articles/sketch-n-sketch.md, raw/articles/glamorous-toolkit-moldable-development-environment.md, raw/papers/arxiv-omar-2018-live-functional-programming-with-typed-holes.md, raw/papers/arxiv-doderlein-2026-spacetime-programming.md, raw/articles/pernosco-omniscient-printf-debugging.md, raw/articles/plutojl-interactive-programming-environment.md, raw/articles/vistrails-aosa.md, raw/articles/spatial-hypertext.md, raw/articles/langgraph-studio-first-agent-ide.md, raw/articles/temporal-web-ui.md, raw/articles/windmill-suspend-approval-prompts.md, raw/articles/trigger-dev-product.md, raw/articles/airflow-ui-overview.md, raw/articles/dagster-scaling-dag-visualization.md, queries/non-linear-interface-options-for-next-harness.md]
@@ -27,7 +27,7 @@ The next harness should look less like "chat with some tools" and more like a mo
 [[arxiv-omar-2018-live-functional-programming-with-typed-holes]] is a sharp corrective to the common habit of turning partially built states into dead zones. A harness should continue to expose useful structure even when code, plans, or proofs are unfinished. Draft branches and provisional evidence should still be explorable.
 
 ### 4. Provenance should be queryable, not archival
-[[vistrails-aosa]], [[arxiv-doderlein-2026-spacetime-programming]], and [[pernosco-omniscient-printf-debugging]] all point in the same direction: execution and derivation history should be searchable as data. This goes beyond "show me the transcript." The stronger model is: show me the lineage of this result, the alternative branches that almost happened, and the first point at which the invariant failed.
+[[vistrails-aosa]], [[arxiv-doderlein-2026-spacetime-programming]], and [[pernosco-omniscient-printf-debugging]] all point in the same direction: execution and derivation history should be searchable as data. This goes beyond "show me the transcript." The stronger model is: show me the lineage of this result, the alternative branches that almost happened, and the first point at which the invariant failed. A more explicit operator-facing design for this now lives in [[context-assembly-visualization-for-harnesses]].
 
 ### 5. Dependency-driven interactivity beats hidden-state notebooks
 [[plutojl-interactive-programming-environment]] makes the appealing spreadsheet move: recompute by dependency, not by opaque historical accident. That is highly relevant to harness workbooks, review panes, and debugging boards, which otherwise tend to accumulate hidden state and ceremonial reruns.
@@ -69,3 +69,4 @@ A harness should not become a carnival of disconnected surfaces. All of these pa
 
 ## Related pages
 Read this with [[non-linear-interface-options-for-next-harness]], [[legacy-distributed-systems-ideas-for-moldable-operations-studio]], [[moldable-operations-studio-architecture-spec]], [[moldable-operations-studio-schema-pass]], [[sci-fi-audit-for-moldable-operations-studio]], [[new-harness-design-notes]], [[work-management-primitives]], [[partial-order-trace-semantics]], [[evaluation-and-review-loops]], and [[harness-engineering]].
+

@@ -398,7 +398,7 @@
   - [[sci-fi-audit-for-moldable-operations-studio|queries/sci-fi-audit-for-moldable-operations-studio.md]]
 - Updated [[index|index.md]] to include the new query; total pages now 42.
 
-## [2026-04-09] update | page-count recovery after concurrent studio additions
+
 - The content-page total is 44, not 42.
 - Concurrent additions landed in the corpus while the wireframe pass was in flight, including [[self-evolving-workflows|concepts/self-evolving-workflows.md]] and [[arxiv-self-evolving-workflows-for-codex-control-plane|queries/arxiv-self-evolving-workflows-for-codex-control-plane.md]].
 - [[index|index.md]] now records the repaired total while preserving the earlier line-level history.
@@ -799,7 +799,7 @@
 - Confirmed the updated query/index metadata and the new raw note pass the current wiki structural checks.
 
 ## [2026-04-11] create | self-evolving workflow tool coverage
-- Created 25 entity pages so the systems and benchmarks named in [[arxiv-self-evolving-workflows-for-codex-control-plane|queries/arxiv-self-evolving-workflows-for-codex-control-plane.md]] are first-class wiki nodes:
+
   - [[aflow|entities/aflow.md]]
   - [[agent-workflow-memory|entities/agent-workflow-memory.md]]
   - [[agentevolver|entities/agentevolver.md]]
@@ -881,6 +881,19 @@
 - Ran `scripts/lint-wiki.sh` after the 0032 sync.
 - Confirmed the new raw note, query page, and index update pass the current wiki structural checks.
 
+## [2026-04-11] create | another-harness resume-recover environment
+- Added 1 raw repository-synthesis note:
+  - [[raw/articles/another-harness-resume-recover-environment-2026-04-11.md|raw/articles/another-harness-resume-recover-environment-2026-04-11.md]]
+- Created 1 query page capturing the repo's first executable recovery family:
+  - [[queries/another-harness-resume-recover-environment.md|queries/another-harness-resume-recover-environment.md]]
+- Updated navigation so the new page is indexed alongside the other another-harness slices:
+  - [[index.md|index.md]]
+- Updated index total from 129 to 130.
+
+## [2026-04-11] lint | wiki pass after resume-recover sync
+- Ran `scripts/lint-wiki.sh` after the 0036 sync.
+- Confirmed the new raw note, query page, and index update pass the current wiki structural checks.
+
 ## [2026-04-11] create | three more prompt-optimizer branches
 - Added 5 raw paper notes for the runtime-adaptation, RL-over-program, and planning/evolution optimizer branches:
   - [[arxiv-zhang-2022-tempera|raw/papers/arxiv-zhang-2022-tempera.md]]
@@ -923,3 +936,24 @@
   - [[open-questions-in-prompt-optimization-and-language-programs|queries/open-questions-in-prompt-optimization-and-language-programs.md]]
   - [[index|index.md]]
 - Updated index total from 126 to 127.
+
+## [2026-04-11] create | context visualization for harnesses
+- Added 1 raw research batch note covering provenance/trust visualization, context-assembly UX, and attention/attribution caveats:
+  - [[context-visualization-research-2026-04-11|raw/articles/context-visualization-research-2026-04-11.md]]
+- Created 2 synthesis pages: one for the overall context/provenance/trust surface and one for the narrower attention/attribution question:
+  - [[context-assembly-visualization-for-harnesses|queries/context-assembly-visualization-for-harnesses.md]]
+  - [[attention-and-attribution-views-for-llm-harnesses|queries/attention-and-attribution-views-for-llm-harnesses.md]]
+- Updated nearby context/provenance pages so the new research is linked into the existing moldable-operations and context-engineering graph:
+  - [[context-engineering|concepts/context-engineering.md]]
+  - [[web-patterns-for-non-linear-harness-interfaces|queries/web-patterns-for-non-linear-harness-interfaces.md]]
+  - [[index|index.md]]
+- Updated index total from 127 to 129.
+
+## [2026-04-12] update | repo recovery and scratch hygiene
+- Recovered the stranded local wiki additions from the older `spike/quartz-nav-rescue` worktree onto `main`, including the resume-recover and context-visualization query pages, their supporting raw notes, and one additional workflow-visualization research note.
+- Updated [[context-engineering|concepts/context-engineering.md]] and [[web-patterns-for-non-linear-harness-interfaces|queries/web-patterns-for-non-linear-harness-interfaces.md]] so the new research is connected into the existing graph, and normalized [[index|index.md]] to 130 pages.
+- Added repo ignore rules for local scratch directories and moved the generated Quartz content tree to local git excludes so builds stop cluttering status without hiding the content from Quartz itself.
+
+## [2026-04-12] lint | recovery pass
+- Ran `scripts/lint-wiki.sh` after the recovery merge and ignore cleanup.
+- Result: pass, 130 content pages checked.

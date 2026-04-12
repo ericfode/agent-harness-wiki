@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-04-11 | Total pages: 127
+> Last updated: 2026-04-12 | Total pages: 130
 
 ## Entities
 
@@ -105,12 +105,15 @@
 - [[another-harness-and-atropos]] — Fit analysis for whether a thinner Codex-native harness should adopt Atropos now, later, or not at all, including why current run history stays derived rather than canonical.
 - [[another-harness-atropos-environment-schema]] — Concrete repo-artifact-first episode and reward schema for a later Atropos sidecar in another-harness.
 - [[another-harness-model-docs-drift-checker]] — Why the repo's first Lean-backed docs/model drift fence targets the attempt-vs-stream grounding distinction instead of pretending to compare everything.
+- [[another-harness-resume-recover-environment]] — First executable recovery family in another-harness, separating honest re-orientation from resumed work that can actually return to reviewed.
 - [[another-harness-evaluator-discipline-environment]] — First live evaluator-side environment prototype under another-harness's Atropos sidecar design.
 - [[another-harness-work-item-closure-environment]] — First live builder-side environment prototype under another-harness's Atropos sidecar design.
+- [[attention-and-attribution-views-for-llm-harnesses]] — Honest UI guidance for attention, attribution, and what can actually be shown about model focus.
 - [[arxiv-round-two-formal-semantics-for-agent-harnesses]] — Targeted arXiv scouting on formal methods, epistemic updates, and partial-order semantics for harness theory.
 - [[arxiv-self-evolving-workflows-for-codex-control-plane]] — ArXiv map of workflow search, evaluator loops, skill evolution, and memory compilation for Codex-native control planes.
 - [[arxiv-under-explored-coordination-strategies]] — Verified arXiv pass on coordination strategies that still look thinner than manager-worker and debate loops.
 - [[commitment-governance-semantics-for-multiplayer-harness]] — Concrete commitment, case, and governance primitives for a sovereignty-preserving multiplayer harness.
+- [[context-assembly-visualization-for-harnesses]] — Design memo for showing assembled context, source trust, and influence without collapsing them into one score.
 - [[formal-core-agent-architecture]] — Synthesis of how to put a formalization gate and witness-first reasoning at the core of agent cognition.
 - [[gas-city-but-its-just-codex]] — Practical design notes for rebuilding Gas City's control plane value with Codex-native seams.
 - [[grounding-moldable-operations-studio-ideas-in-real-research]] — Concrete HCI, provenance, security, and distributed-systems research that makes the studio ideas implementable rather than merely tasteful.
@@ -141,3 +144,4 @@
 - [[rl-gyms-and-executable-environments-for-ai-harnesses]] — Map of browser, desktop, tool-use, coding, and research-agent gym substrates for harness evaluation and training.
 - [[sci-fi-audit-for-moldable-operations-studio]] — Science-fiction control-room and distributed-cognition ideas translated into harness primitives and cautions.
 - [[web-patterns-for-non-linear-harness-interfaces]] — Broader web-system patterns for moldable views, provenance-rich traces, and durable mission-control surfaces around harness work.
+

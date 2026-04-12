@@ -7,3 +7,5 @@ site/
 arxiv_workflow_skill_research_2026-04-09.txt
 self_evolving_workflows_research.txt
 test_note.txt
+.spikes/
+.tmp_*/
