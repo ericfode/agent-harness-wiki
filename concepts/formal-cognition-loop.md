@@ -1,10 +1,10 @@
 ---
 title: Formal Cognition Loop
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-15
 type: concept
 tags: [formal-methods, semantics, context-engineering]
-sources: [raw/papers/arxiv-lahiri-2026-intent-formalization.md, raw/papers/arxiv-endres-2023-natural-language-to-postconditions.md, raw/papers/arxiv-murphy-2024-llm-codegen-formal-spec-reactive-synthesis.md, raw/papers/arxiv-burigana-2026-epddl.md, concepts/neural-native-programming.md]
+sources: [raw/papers/arxiv-lahiri-2026-intent-formalization.md, raw/papers/arxiv-endres-2023-natural-language-to-postconditions.md, raw/papers/arxiv-murphy-2024-llm-codegen-formal-spec-reactive-synthesis.md, raw/papers/arxiv-burigana-2026-epddl.md, concepts/neural-native-programming.md, raw/articles/math-ai-org-mathcode-github.md]
 ---
 
 # Formal Cognition Loop
@@ -43,6 +43,8 @@ Lahiri's intent-formalization argument and the nl2postcond work by Endres et al.
 - **Reactive or domain-specific synthesis languages** when implementation can be generated from a stronger spec.
 - **Typed latent IRs** when the right narrowing move is a constrained model-facing program object rather than ordinary text; see [[neural-native-programming]].
 
+[[mathcode]] is a concrete example of the proof-goal branch: informal mathematics is translated into Lean, solved through iterative proof search and compile feedback, and then retained as theorem-library or declaration-library artifacts for later reuse.
+
 ## Design lesson
 The interesting design choice is not whether to use formal methods in the abstract, but which formal space is the right narrowing move for a given problem. The formal space should be strong enough to rule out nonsense, but not so grandiose that the translation cost exceeds the value of the task. That is why [[theorem-proving-as-cognitive-kernel]] is a special case rather than the whole story.
 
@@ -53,4 +55,4 @@ The interesting design choice is not whether to use formal methods in the abstra
 - The system uses a formal layer only as post-hoc decoration rather than as the actual reasoning substrate.
 
 ## Related pages
-Read this with [[formal-core-agent-architecture]], [[formal-methods-for-agent-harnesses]], [[theorem-proving-as-cognitive-kernel]], [[probabilistic-epistemic-updates]], [[partial-order-trace-semantics]], [[neural-native-programming]], and [[new-harness-design-notes]].
+Read this with [[formal-core-agent-architecture]], [[formal-methods-for-agent-harnesses]], [[theorem-proving-as-cognitive-kernel]], [[mathcode]], [[probabilistic-epistemic-updates]], [[partial-order-trace-semantics]], [[neural-native-programming]], and [[new-harness-design-notes]].

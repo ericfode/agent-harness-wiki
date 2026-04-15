@@ -957,3 +957,35 @@
 ## [2026-04-12] lint | recovery pass
 - Ran `scripts/lint-wiki.sh` after the recovery merge and ignore cleanup.
 - Result: pass, 130 content pages checked.
+
+## [2026-04-14] ingest | mathcode
+- Added 1 raw source summary for the MathCode GitHub repository:
+  - [[math-ai-org-mathcode-github|raw/articles/math-ai-org-mathcode-github.md]]
+- Added 1 entity page for the mathematical coding agent itself:
+  - [[mathcode|entities/mathcode.md]]
+- Updated formal-methods synthesis pages so MathCode is linked as a concrete harness example:
+  - [[theorem-proving-as-cognitive-kernel|concepts/theorem-proving-as-cognitive-kernel.md]]
+  - [[formal-cognition-loop|concepts/formal-cognition-loop.md]]
+- Extended the schema tag taxonomy with `mathcode` and updated navigation:
+  - [[SCHEMA|SCHEMA.md]]
+  - [[index|index.md]]
+- Updated index total from 130 to 131.
+
+## [2026-04-14] lint | mathcode ingest
+- Ran `scripts/lint-wiki.sh` after adding MathCode to the wiki.
+- Result: pass, 131 content pages checked.
+
+## [2026-04-14] update | wiki maintenance pass
+- Repaired dangling body links in [[dyflow|entities/dyflow.md]], [[how-to-build-a-multiplayer-harness-network|queries/how-to-build-a-multiplayer-harness-network.md]], and [[multiplayer-agent-harnesses-and-p2p-networks|queries/multiplayer-agent-harnesses-and-p2p-networks.md]] so they now resolve to real notes or plain prose rather than aspirational page names.
+- Added inbound graph links so the previously orphaned pages [[sybil-resistance-and-local-trust|concepts/sybil-resistance-and-local-trust.md]], [[another-harness-model-docs-drift-checker|queries/another-harness-model-docs-drift-checker.md]], [[another-harness-resume-recover-environment|queries/another-harness-resume-recover-environment.md]], and [[prompt-program-architecture-plans-for-another-harness-and-gas-city|queries/prompt-program-architecture-plans-for-another-harness-and-gas-city.md]] are now reattached to nearby synthesis pages.
+- Updated touched query/entity pages so their `updated` frontmatter matches the repair pass.
+
+## [2026-04-14] lint | wiki maintenance pass
+- Ran `scripts/lint-wiki.sh` after the repair pass.
+- Ran an additional cross-link audit for broken wikilinks and orphaned content pages.
+- Result: pass, 131 content pages checked, 0 broken wikilinks, 0 orphan pages.
+
+## [2026-04-15] lint | pre-commit wiki rerun
+- Re-ran `scripts/lint-wiki.sh` on the current wiki worktree before commit and push.
+- Normalized `updated` frontmatter on the previously touched query/entity/concept pages from `2026-04-14` to `2026-04-15` so the modified-page freshness rule reflects the actual edit date.
+- Result: pass, 131 content pages checked.

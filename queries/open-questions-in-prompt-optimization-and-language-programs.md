@@ -1,7 +1,7 @@
 ---
 title: "Open Questions in Prompt Optimization and Language Programs"
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-15
 type: query
 tags: [survey, comparison, context-engineering, program-synthesis]
 sources: [queries/prompt-optimization-eval-transfer-robustness-open-questions.md, queries/prompt-program-representation-and-optimizer-open-questions.md, queries/prompt-program-deployment-open-questions.md, queries/prompt-optimization-and-dspy-follow-ups.md, queries/prompt-optimization-timeline-and-harness-lessons.md]
@@ -142,7 +142,7 @@ This links the prompt-program lane directly to [[self-evolving-workflows]], [[me
 ## Bottom line
 The deepest open question in this lane is no longer “can prompts be optimized?” It is “what kind of system object is being optimized, and how should that object be evaluated, promoted, constrained, and maintained over time?”
 
-That is why this research now belongs as much to [[harness-engineering]], [[evaluation-and-review-loops]], [[instruction-layering]], and [[context-engineering]] as to classical prompt engineering.
+That is why this research now belongs as much to [[harness-engineering]], [[evaluation-and-review-loops]], [[instruction-layering]], and [[context-engineering]] as to classical prompt engineering. The repo-grounded consequence of that question set now lives in [[prompt-program-architecture-plans-for-another-harness-and-gas-city]].
 
 ## Related pages
 This page gathers and compresses [[research-on-open-questions-in-prompt-optimization-and-language-programs]], [[prompt-optimization-and-dspy-follow-ups]], [[prompt-optimization-timeline-and-harness-lessons]], [[prompt-optimization-eval-transfer-robustness-open-questions]], [[prompt-program-representation-and-optimizer-open-questions]], and [[prompt-program-deployment-open-questions]].

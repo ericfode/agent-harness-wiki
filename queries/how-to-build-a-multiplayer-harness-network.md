@@ -1,7 +1,7 @@
 ---
 title: How to Build a Multiplayer Harness Network
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-15
 type: query
 tags: [survey, orchestration, semantics, work-management, memory]
 sources: [queries/multiplayer-agent-harnesses-and-p2p-networks.md, queries/moldable-operations-studio-architecture-spec.md, queries/moldable-operations-studio-schema-pass.md, queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md, queries/grounding-moldable-operations-studio-ideas-in-real-research.md, concepts/non-hierarchical-coordination-patterns.md, concepts/partial-order-trace-semantics.md, raw/articles/google-agent2agent-protocol.md, raw/papers/arxiv-ehtesham-2025-survey-agent-interoperability-protocols.md, raw/papers/arxiv-zou-2025-blocka2a-secure-verifiable-interoperability.md, raw/papers/merkle-crdts.md, raw/articles/local-first-software.md, raw/papers/session-guarantees-weakly-consistent-replicated-data.md, raw/papers/escrow-transactional-method.md]
@@ -203,7 +203,7 @@ Required first surfaces:
 - shared artifact pane
 - presence / focus / follow mechanics
 
-This is where [[visual-studio-live-share]], [[jupyterlab-real-time-collaboration]], [[webstrates]], and [[panelrama]] stop being inspiration and start becoming requirements.
+This is where [[visual-studio-live-share]], [[jupyterlab-real-time-collaboration]], [[klokmose-et-al-2015-webstrates|webstrates]], and [[yang-wigdor-2014-panelrama|panelrama]] stop being inspiration and start becoming requirements.
 
 Acceptance test:
 - two humans and multiple agents can coordinate around the same work objects without relying on one scrolling transcript as the only operational surface

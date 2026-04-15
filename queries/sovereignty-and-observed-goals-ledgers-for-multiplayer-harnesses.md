@@ -1,7 +1,7 @@
 ---
 title: Sovereignty and Observed-Goals Ledgers for Multiplayer Harnesses
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-15
 type: query
 tags: [survey, orchestration, semantics, work-management, memory]
 sources: [queries/multiplayer-agent-harnesses-and-p2p-networks.md, queries/how-to-build-a-multiplayer-harness-network.md, queries/moldable-operations-studio-schema-pass.md, queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md, raw/articles/w3c-verifiable-credentials-data-model-v2.md, raw/papers/li-mitchell-winsborough-role-based-trust-management-framework.md, raw/papers/bauer-schneider-felten-appel-proof-carrying-authorization.md, raw/papers/claimchain.md, raw/papers/torres-arias-2019-in-toto.md, raw/articles/w3c-prov-dm.md, raw/papers/medina-mora-winograd-flores-flores-action-workflow-approach.md, raw/papers/fornara-colombetti-commitment-based-agent-communication-language.md, raw/papers/singh-chopra-computational-governance-violable-contracts.md, raw/papers/keren-gal-karpas-goal-recognition-design.md, raw/papers/ramirez-geffner-probabilistic-plan-recognition.md, raw/papers/erickson-et-al-socially-translucent-systems.md, raw/articles/self-certifying-file-system.md, raw/articles/rivest-lampson-1996-sdsi.md, raw/papers/birgisson-et-al-2014-macaroons.md, raw/articles/rfc-9420-mls-protocol.md, raw/papers/efstathopoulos-et-al-2005-asbestos.md, raw/articles/local-first-software.md]
@@ -29,7 +29,7 @@ The crucial move is this: the system should not ask "is this participant good?" 
 - what happened afterward?
 - under whose policy is this action acceptable?
 
-That is a much healthier question, and also a more truthful one.
+That is a much healthier question, and also a more truthful one. The anti-score reason for this becomes explicit in [[sybil-resistance-and-local-trust]].
 
 ## Why scalar reputation is the wrong abstraction
 A scalar reputation score collapses too many different things:

@@ -1,7 +1,7 @@
 ---
 title: "another-harness and Atropos"
 created: 2026-04-10
-updated: 2026-04-11
+updated: 2026-04-15
 type: query
 tags: [comparison, benchmark, tool-execution, work-management]
 sources: [raw/articles/another-harness-repo-2026-04-09.md, raw/articles/another-harness-atropos-environment-schema-2026-04-10.md, raw/articles/another-harness-work-item-closure-environment-2026-04-10.md, raw/articles/another-harness-evaluator-discipline-environment-2026-04-10.md, raw/articles/another-harness-run-history-decision-2026-04-11.md, raw/articles/hermes-atropos-integration-2026-04-09.md, raw/papers/arxiv-xi-2024-agentgym.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/papers/arxiv-mehta-2026-enterprisebench-corecraft.md]
@@ -94,4 +94,4 @@ For another-harness, the most useful neighboring systems are not the pure web gy
 Atropos looks like the right tool only after `another-harness` has a stable executable task suite. Before that, the repo should keep strengthening its current work/evaluation/handoff discipline. After that, Atropos becomes attractive as a training and rollout sidecar precisely because it can sit beneath those repo-native artifacts instead of replacing them.
 
 ## Related pages
-Read this with [[another-harness-work-item-closure-environment]], [[another-harness-evaluator-discipline-environment]], [[atropos]], [[rl-gyms-and-executable-environments-for-ai-harnesses]], [[evaluation-and-review-loops]], [[harness-engineering]], and [[swe-gym]].
+Read this with [[another-harness-work-item-closure-environment]], [[another-harness-evaluator-discipline-environment]], [[another-harness-resume-recover-environment]], [[another-harness-model-docs-drift-checker]], [[atropos]], [[rl-gyms-and-executable-environments-for-ai-harnesses]], [[evaluation-and-review-loops]], [[harness-engineering]], and [[swe-gym]].

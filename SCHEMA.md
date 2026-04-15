@@ -1,7 +1,7 @@
 ---
 title: Wiki Schema
 created: 2026-04-07
-updated: 2026-04-10
+updated: 2026-04-14
 type: schema
 tags: [meta, schema]
 ---
@@ -91,6 +91,7 @@ Current enum domains used by the extractor:
 
 ### Implementations
 - `codex-cli` — OpenAI Codex CLI / harness
+- `mathcode` — MathCode mathematical coding agent with Lean formalization and proof search
 - `claude-code` — Anthropic Claude Code
 - `hermes-agent` — Nous Research Hermes Agent
 - `memento-skills` — Memento-Teams self-evolving skill-memory agent system

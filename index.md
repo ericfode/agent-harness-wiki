@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-04-12 | Total pages: 130
+> Last updated: 2026-04-14 | Total pages: 131
 
 ## Entities
 
@@ -35,6 +35,7 @@
 - [[graph-of-skills]] — Dependency-aware retrieval layer for large executable skill libraries.
 - [[hermes-agent]] — Persistent self-improving agent centered on searchable memory, skills, and multi-surface continuity.
 - [[judgeflow]] — Block-level workflow-diagnosis system for targeted repair and promotion decisions.
+- [[mathcode]] — Terminal mathematical coding agent that translates natural-language problems into Lean proofs with reusable theorem and axiom stores.
 - [[memento-skills]] — Self-evolving agent framework that treats skills as writable memory and learns by rewriting them.
 - [[memskill]] — System that turns memory procedures into evolvable skills.
 - [[mermaidflow]] — Safety-constrained workflow-search system over statically structured Mermaid graphs.

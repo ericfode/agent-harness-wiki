@@ -1,7 +1,7 @@
 ---
 title: "Commitment and Governance Semantics for a Sovereignty-Preserving Multiplayer Harness"
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-15
 type: query
 tags: [survey, orchestration, semantics, work-management]
 sources: [queries/multiplayer-agent-harnesses-and-p2p-networks.md]
@@ -10,7 +10,7 @@ sources: [queries/multiplayer-agent-harnesses-and-p2p-networks.md]
 # Commitment and Governance Semantics for a Sovereignty-Preserving Multiplayer Harness
 
 ## Short answer
-If you want a serious alternative to scalar reputation, the best substrate is a commitment ledger plus explicit governance. The harness should log public facts, infer commitment state from those facts, allow commitments to be violated, and route violations into organizational procedures rather than into hidden trust scores.
+If you want a serious alternative to scalar reputation, and the anti-score constraint is spelled out more directly in [[sybil-resistance-and-local-trust]], the best substrate is a commitment ledger plus explicit governance. The harness should log public facts, infer commitment state from those facts, allow commitments to be violated, and route violations into organizational procedures rather than into hidden trust scores.
 
 ## Ranked sources
 

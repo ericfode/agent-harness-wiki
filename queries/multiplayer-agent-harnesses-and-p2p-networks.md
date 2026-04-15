@@ -1,7 +1,7 @@
 ---
 title: Multiplayer Agent Harnesses and P2P Networks
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-15
 type: query
 tags: [survey, orchestration, semantics, work-management, memory]
 sources: [queries/new-harness-design-notes.md, queries/non-hierarchical-agent-orchestration.md, queries/moldable-operations-studio-architecture-spec.md, queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md, queries/grounding-moldable-operations-studio-ideas-in-real-research.md, concepts/non-hierarchical-coordination-patterns.md, concepts/fission-fusion-orchestration.md, raw/articles/local-first-software.md, raw/articles/pushpin-peer-to-peer-collaboration.md, raw/articles/jupyterlab-real-time-collaboration.md, raw/articles/visual-studio-live-share.md, raw/articles/google-agent2agent-protocol.md, raw/papers/merkle-crdts.md, raw/papers/maymounkov-mazieres-2002-kademlia.md, raw/papers/arxiv-ehtesham-2025-survey-agent-interoperability-protocols.md, raw/papers/arxiv-pugachev-2025-codecrdt-observation-driven-coordination.md, raw/papers/arxiv-zou-2025-blocka2a-secure-verifiable-interoperability.md, raw/papers/session-guarantees-weakly-consistent-replicated-data.md, raw/papers/escrow-transactional-method.md, raw/articles/self-certifying-file-system.md, raw/articles/rfc-9420-mls-protocol.md, raw/papers/klokmose-et-al-2015-webstrates.md, raw/papers/yang-wigdor-2014-panelrama.md]
@@ -67,7 +67,7 @@ The best reading is not that one protocol has won. It is that a multiplayer harn
 A harness that tries to make one message format do all of this will become an elegant little confusion machine.
 
 ### 4. Human multiplayer surfaces over the same substrate
-[[visual-studio-live-share]], [[jupyterlab-real-time-collaboration]], [[webstrates]], and [[panelrama]] point toward the same conclusion: collaboration improves when people share runtime context and synchronized workspaces, not only files or chat.
+[[visual-studio-live-share]], [[jupyterlab-real-time-collaboration]], [[klokmose-et-al-2015-webstrates|webstrates]], and [[yang-wigdor-2014-panelrama|panelrama]] point toward the same conclusion: collaboration improves when people share runtime context and synchronized workspaces, not only files or chat.
 
 For a harness, this means the first-class surfaces should include:
 - shared artifact editing
