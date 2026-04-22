@@ -2,7 +2,11 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-04-14 | Total pages: 131
+> Last updated: 2026-04-21 | Total pages: 136
+
+## News
+
+- [[nightly-src-projects-desk-2026-04-21]] — First nightly local-projects desk: safe publishable work across the active src tree, from harness control planes to game/UI/runtime experiments.
 
 ## Entities
 
@@ -103,6 +107,7 @@
 
 ## Queries
 
+- [[nightly-src-projects-desk-2026-04-21]] — First nightly local-projects desk summarizing the safe publishable work currently moving across the src tree.
 - [[another-harness-and-atropos]] — Fit analysis for whether a thinner Codex-native harness should adopt Atropos now, later, or not at all, including why current run history stays derived rather than canonical.
 - [[another-harness-atropos-environment-schema]] — Concrete repo-artifact-first episode and reward schema for a later Atropos sidecar in another-harness.
 - [[another-harness-model-docs-drift-checker]] — Why the repo's first Lean-backed docs/model drift fence targets the attempt-vs-stream grounding distinction instead of pretending to compare everything.
@@ -114,9 +119,13 @@
 - [[arxiv-self-evolving-workflows-for-codex-control-plane]] — ArXiv map of workflow search, evaluator loops, skill evolution, and memory compilation for Codex-native control planes.
 - [[arxiv-under-explored-coordination-strategies]] — Verified arXiv pass on coordination strategies that still look thinner than manager-worker and debate loops.
 - [[commitment-governance-semantics-for-multiplayer-harness]] — Concrete commitment, case, and governance primitives for a sovereignty-preserving multiplayer harness.
+- [[codex-app-server-provider-vs-runtime-bridge]] — Why Codex app-server currently belongs in Hermes as a plugin-level runtime bridge rather than as a primary provider transport.
 - [[context-assembly-visualization-for-harnesses]] — Design memo for showing assembled context, source trust, and influence without collapsing them into one score.
 - [[formal-core-agent-architecture]] — Synthesis of how to put a formalization gate and witness-first reasoning at the core of agent cognition.
-- [[gas-city-but-its-just-codex]] — Practical design notes for rebuilding Gas City's control plane value with Codex-native seams.
+- [[gas-city-but-its-just-codex]] — Up-to-date deep dive on the repo's current ledger, formula, gRPC, operator, UI, and formal structure around Codex-native execution.
+- [[gas-city-control-plane-and-authority-split]] — Focused rendering of the repo's intended three-service authority split and the current sidecar/runtime duplication seam.
+- [[gas-city-live-ops-benchmarks-and-sandboxes]] — Operational tour of checkpoints, benchmarks, sandboxes, and the repo's current live center of gravity.
+- [[gas-city-operator-policy-and-formal-bridge]] — Focused rendering of the typed operator-policy runtime and the newer recipe/workflow/policy bridge work.
 - [[grounding-moldable-operations-studio-ideas-in-real-research]] — Concrete HCI, provenance, security, and distributed-systems research that makes the studio ideas implementable rather than merely tasteful.
 - [[high-impact-artifacts-for-multiplayer-harness-design]] — Prioritized inspection list of the pages and sources that most strongly constrain multiplayer harness design.
 - [[how-to-build-a-multiplayer-harness-network]] — Implementation ordering and adapter strategy for a federated multiplayer harness that other harnesses can jack into.

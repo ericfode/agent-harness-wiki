@@ -989,3 +989,44 @@
 - Re-ran `scripts/lint-wiki.sh` on the current wiki worktree before commit and push.
 - Normalized `updated` frontmatter on the previously touched query/entity/concept pages from `2026-04-14` to `2026-04-15` so the modified-page freshness rule reflects the actual edit date.
 - Result: pass, 131 content pages checked.
+
+## [2026-04-15] update | gas-city-but-its-just-codex current-structure deep dive
+- Added 1 fresh raw repository snapshot grounded in the live worktree rather than only the last clean commit:
+  - [[gas-city-but-its-just-codex-repo-2026-04-15|raw/articles/gas-city-but-its-just-codex-repo-2026-04-15.md]]
+- Rewrote [[gas-city-but-its-just-codex|queries/gas-city-but-its-just-codex.md]] from an early-spike design note into an up-to-date structure tour covering the ledger, formulas, app service, control surfaces, operator daemon, sidecar/UI path, operational center of gravity, and current structural tensions.
+- Updated [[index|index.md]] so the query summary and index header date reflect the refreshed deep dive.
+
+## [2026-04-15] lint | gas-city-but-its-just-codex deep dive refresh
+- Ran `scripts/lint-wiki.sh` after refreshing the raw note, query page, and index/log metadata.
+- Also re-checked broken wikilinks and orphaned content pages after the rewrite.
+- Result: pass, 131 content pages checked, 0 broken wikilinks, 0 orphan pages.
+
+## [2026-04-15] update | gas-city-but-its-just-codex documentation rendering pass
+- Added 1 raw documentation-and-operations bundle so the repo's architecture, usage, evidence, and implementation notes are preserved as a distinct wiki source layer:
+  - [[gas-city-but-its-just-codex-doc-architecture-and-ops-2026-04-15|raw/articles/gas-city-but-its-just-codex-doc-architecture-and-ops-2026-04-15.md]]
+- Added 3 focused query pages so the repo's documentation and interesting bits are rendered as separate, navigable wiki surfaces instead of being trapped in one large catch-all note:
+  - [[gas-city-control-plane-and-authority-split|queries/gas-city-control-plane-and-authority-split.md]]
+  - [[gas-city-operator-policy-and-formal-bridge|queries/gas-city-operator-policy-and-formal-bridge.md]]
+  - [[gas-city-live-ops-benchmarks-and-sandboxes|queries/gas-city-live-ops-benchmarks-and-sandboxes.md]]
+- Updated [[gas-city-but-its-just-codex|queries/gas-city-but-its-just-codex.md]] to point at the new focused subpages and updated [[index|index.md]] to 134 content pages.
+
+## [2026-04-15] lint | gas-city documentation rendering pass
+- Ran `scripts/lint-wiki.sh` after adding the new raw note, three focused query pages, and the navigation updates.
+- Also re-checked broken wikilinks and orphaned content pages after the rendering pass.
+- Result: pass, 134 content pages checked, 0 broken wikilinks, 0 orphan pages.
+
+## [2026-04-21] update | nightly src projects desk kickoff
+- Added 1 raw survey note grounding a public-safe snapshot of the local `/Users/ericfode/src` tree:
+  - [[nightly-src-projects-desk-2026-04-21|raw/articles/nightly-src-projects-desk-2026-04-21.md]]
+- Added 1 new query page for the first nightly project-news brief:
+  - [[nightly-src-projects-desk-2026-04-21|queries/nightly-src-projects-desk-2026-04-21.md]]
+- Added a generated editorial illustration under `queries/news-assets/` and wired it into the new desk page.
+- Updated [[index|index.md]] with a new `News` section and a corresponding query listing while bumping the header date/page count.
+
+## [2026-04-21] update | nightly journalist loop automation
+- Created a nightly Hermes cron job to resurvey `/Users/ericfode/src`, refresh the public-safe project desk, generate fresh editorial art, run wiki lint, commit the new desk update, and push the wiki repository.
+- The loop is configured to use 10 survey lanes over the `src/` tree, with recursive subagent fanout requested where the runtime exposes it and a documented parallel-inspection fallback when it does not.
+
+## [2026-04-21] lint | nightly src projects desk kickoff
+- Ran `scripts/lint-wiki.sh` after adding the raw survey note, the new desk page, the illustration asset, and the index/log updates.
+- Result: pass, 136 content pages checked.
