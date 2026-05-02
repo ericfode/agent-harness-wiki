@@ -2,10 +2,11 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-01 | Total pages: 138
+> Last updated: 2026-05-02 | Total pages: 139
 
 ## News
 
+- [[nightly-src-projects-desk-2026-05-02]] — Nightly local-projects desk: testing-RL and evidence environments move to the front, with FACEMUSIC, Dungeon Steward, Gas City, NNPL, and Gemma/tinygrad benches surveyed under the public-safety filter.
 - [[nightly-src-projects-desk-2026-04-21]] — First nightly local-projects desk: safe publishable work across the active src tree, from harness control planes to game/UI/runtime experiments.
 
 ## Entities
@@ -107,6 +108,7 @@
 
 ## Queries
 
+- [[nightly-src-projects-desk-2026-05-02]] — Nightly local-projects desk summarizing the safe publishable movement across the local src tree, led by testing-RL/evidence work, FACEMUSIC, Dungeon Steward, Gas City, NNPL, and Gemma/tinygrad benches.
 - [[nightly-src-projects-desk-2026-04-21]] — First nightly local-projects desk summarizing the safe publishable work currently moving across the src tree.
 - [[another-harness-and-atropos]] — Fit analysis for whether a thinner Codex-native harness should adopt Atropos now, later, or not at all, including why current run history stays derived rather than canonical.
 - [[another-harness-atropos-environment-schema]] — Concrete repo-artifact-first episode and reward schema for a later Atropos sidecar in another-harness.
