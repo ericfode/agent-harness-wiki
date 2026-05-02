@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-04-21 | Total pages: 136
+> Last updated: 2026-05-01 | Total pages: 137
 
 ## News
 
@@ -139,6 +139,7 @@
 - [[neural-native-programming-via-direct-interfaces-to-transformer-internal-layers]] — Research synthesis on typed latent IRs, activation-level interfaces, and execution-first evaluation for neural-native programming.
 - [[sovereign-identity-and-observed-goals-schema-pass]] — Concrete schema patch for sovereign identity, portable attestations, commitments, goal hypotheses, and governance objects.
 - [[sovereignty-and-observed-goals-ledgers-for-multiplayer-harnesses]] — Multi-round deep-dive on replacing scalar reputation with sovereign identity, commitments, provenance, and inferred-goal hypotheses.
+- [[software-verification-testing-environment-research-program]] — Project anchor for researching an agent-facing software verification and testing environment with formal lanes, evidence ledgers, and wiki update gates.
 - [[new-harness-design-notes]] — Synthesis notes on combining Codex cleanliness, Hermes learning loops, Anthropic evaluators, Gas City orchestration, and now a formalization plane.
 - [[non-hierarchical-agent-orchestration]] — Direct answer to the question of what to use instead of a default manager hierarchy.
 - [[non-linear-interface-options-for-next-harness]] — ArXiv-backed surface ideas for moving beyond the flat transcript into graphs, checkpoints, runtime overlays, and generated control panels.

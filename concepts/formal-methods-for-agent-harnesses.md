@@ -1,7 +1,7 @@
 ---
 title: Formal Methods for Agent Harnesses
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-05-01
 type: concept
 tags: [formal-methods, semantics, survey]
 sources: [raw/papers/arxiv-zhang-2024-formal-methods-trustworthy-ai-agents.md, raw/papers/arxiv-lahiri-2026-intent-formalization.md, raw/papers/arxiv-miculicich-2025-veriguard-verified-code-generation.md, raw/papers/arxiv-zou-2025-blocka2a-secure-verifiable-interoperability.md, raw/papers/arxiv-ben-khaled-2026-g2cp-graph-grounded-communication-protocol.md]
@@ -38,4 +38,4 @@ The present harness research agenda is already moving toward semantic layers: op
 - How should formal intent surfaces interact with [[probabilistic-epistemic-updates]] and [[partial-order-trace-semantics]]?
 
 ## Related pages
-Read this with [[formal-cognition-loop]], [[theorem-proving-as-cognitive-kernel]], [[arxiv-round-two-formal-semantics-for-agent-harnesses]], [[harness-engineering]], [[evaluation-and-review-loops]], [[work-management-primitives]], [[probabilistic-epistemic-updates]], [[partial-order-trace-semantics]], and [[new-harness-design-notes]].
+Read this with [[formal-cognition-loop]], [[theorem-proving-as-cognitive-kernel]], [[arxiv-round-two-formal-semantics-for-agent-harnesses]], [[software-verification-testing-environment-research-program]], [[harness-engineering]], [[evaluation-and-review-loops]], [[work-management-primitives]], [[probabilistic-epistemic-updates]], [[partial-order-trace-semantics]], and [[new-harness-design-notes]].

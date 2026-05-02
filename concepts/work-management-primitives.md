@@ -1,7 +1,7 @@
 ---
 title: Work Management Primitives
 created: 2026-04-07
-updated: 2026-04-10
+updated: 2026-05-01
 type: concept
 tags: [work-management, orchestration, error-recovery]
 sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/yegge-vibe-maintainer.md, raw/articles/anthropic-effective-harnesses.md]
@@ -41,4 +41,4 @@ The right primitive is the one that survives interruption and guides the next ac
 Recent systems increasingly treat the workflow artifact itself as mutable. [[self-evolving-workflows]] names the point where a work primitive stops being only a record of coordination and becomes a learned procedural asset. [[memento-skills]] does this through evolving skill packages, while [[gas-city-but-its-just-codex]] is beginning to do it through versioned formula families and explicit selection policy.
 
 ## Related pages
-Work primitives are where [[memory-persistence]] meets orchestration. See [[automation-and-background-work]], [[gas-town]], [[gas-city]], and [[claude-code]], then compare approaches in [[harness-architecture-comparison]]. The newest pressure here comes from [[self-evolving-workflows]].
+Work primitives are where [[memory-persistence]] meets orchestration. See [[automation-and-background-work]], [[gas-town]], [[gas-city]], and [[claude-code]], then compare approaches in [[harness-architecture-comparison]]. The newest pressure here comes from [[self-evolving-workflows]] and the verification-environment project anchor [[software-verification-testing-environment-research-program]].

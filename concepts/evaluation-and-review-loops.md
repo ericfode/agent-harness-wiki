@@ -1,7 +1,7 @@
 ---
 title: Evaluation and Review Loops
 created: 2026-04-07
-updated: 2026-04-10
+updated: 2026-05-01
 type: concept
 tags: [subagents, code-quality, orchestration]
 sources: [raw/articles/openai-harness-engineering.md, raw/articles/openai-introducing-codex-app.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-three-agent-harness-infoq.md, raw/articles/anthropic-claude-code-overview.md, raw/articles/yegge-gas-town-emergency-user-manual.md, raw/articles/yegge-vibe-maintainer.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/papers/arxiv-chuang-2026-proxy-state-based-evaluation.md]
@@ -28,4 +28,4 @@ The newer benchmark literature adds a more concrete substrate for review loops: 
 Good review loops cost more in tokens, time, and operator design. They also add coordination overhead. But without them, long-running systems drift toward premature victory, hidden regressions, and PR pileups. This is why evaluation belongs inside [[harness-engineering]] rather than as an afterthought bolted onto release time.
 
 ## Related pages
-Read with [[harness-engineering]], [[claude-code]], [[codex-cli]], and [[work-management-primitives]]. This concept also explains much of the ranking logic in [[harness-quality-comparison]] and the evaluation column in [[harness-architecture-comparison]]. The gym-style extension of this idea is [[rl-gyms-and-executable-environments-for-ai-harnesses]].
+Read with [[harness-engineering]], [[claude-code]], [[codex-cli]], and [[work-management-primitives]]. This concept also explains much of the ranking logic in [[harness-quality-comparison]] and the evaluation column in [[harness-architecture-comparison]]. The gym-style extension of this idea is [[rl-gyms-and-executable-environments-for-ai-harnesses]], and the new project anchor is [[software-verification-testing-environment-research-program]].

@@ -1030,3 +1030,19 @@
 ## [2026-04-21] lint | nightly src projects desk kickoff
 - Ran `scripts/lint-wiki.sh` after adding the raw survey note, the new desk page, the illustration asset, and the index/log updates.
 - Result: pass, 136 content pages checked.
+
+## [2026-05-01] create | software verification/testing environment project anchor
+- Created [[software-verification-testing-environment-research-program|queries/software-verification-testing-environment-research-program.md]] as the durable wiki anchor for the new Hermes Kanban research project.
+- Created a six-task Kanban DAG for parallel research, synthesis, wiki writing, and final lint repair:
+  - `t_7a29256d` formal verification foundations
+  - `t_77b7318b` testing and evidence primitives
+  - `t_2cf92f9b` agent-facing verifier/testing harness architecture
+  - `t_8b1eb08c` synthesis fan-in
+  - `t_78213be9` wiki writing
+  - `t_176aa99f` final lint gate
+- Added inbound links from [[formal-methods-for-agent-harnesses|concepts/formal-methods-for-agent-harnesses.md]], [[evaluation-and-review-loops|concepts/evaluation-and-review-loops.md]], and [[work-management-primitives|concepts/work-management-primitives.md]].
+- Updated [[index|index.md]] to 137 content pages.
+
+## [2026-05-01] lint | software verification/testing environment project anchor
+- Ran `scripts/lint-wiki.sh` after creating the project anchor page and inbound links.
+- Result: pass, 137 content pages checked.
