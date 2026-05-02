@@ -29,3 +29,5 @@ Good review loops cost more in tokens, time, and operator design. They also add 
 
 ## Related pages
 Read with [[harness-engineering]], [[claude-code]], [[codex-cli]], and [[work-management-primitives]]. This concept also explains much of the ranking logic in [[harness-quality-comparison]] and the evaluation column in [[harness-architecture-comparison]]. The gym-style extension of this idea is [[rl-gyms-and-executable-environments-for-ai-harnesses]], and the new project anchor is [[software-verification-testing-environment-research-program]].
+
+The architecture synthesis for treating verifiers and evidence as harness objects is in [[agent-facing-verifier-environment-architecture]].

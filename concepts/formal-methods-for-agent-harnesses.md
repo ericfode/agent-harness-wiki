@@ -39,3 +39,5 @@ The present harness research agenda is already moving toward semantic layers: op
 
 ## Related pages
 Read this with [[formal-cognition-loop]], [[theorem-proving-as-cognitive-kernel]], [[arxiv-round-two-formal-semantics-for-agent-harnesses]], [[software-verification-testing-environment-research-program]], [[harness-engineering]], [[evaluation-and-review-loops]], [[work-management-primitives]], [[probabilistic-epistemic-updates]], [[partial-order-trace-semantics]], and [[new-harness-design-notes]].
+
+The architecture synthesis for treating verifiers and evidence as harness objects is in [[agent-facing-verifier-environment-architecture]].

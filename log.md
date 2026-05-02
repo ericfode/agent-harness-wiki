@@ -1046,3 +1046,15 @@
 ## [2026-05-01] lint | software verification/testing environment project anchor
 - Ran `scripts/lint-wiki.sh` after creating the project anchor page and inbound links.
 - Result: pass, 137 content pages checked.
+
+## [2026-05-01] create | agent-facing-verifier-environment-architecture
+- Task: `t_2cf92f9b` — research lane C, agent-facing verifier/test harness architecture.
+- Sources consulted: [[agent-harness-anatomy|concepts/agent-harness-anatomy.md]], [[evaluation-and-review-loops|concepts/evaluation-and-review-loops.md]], [[work-management-primitives|concepts/work-management-primitives.md]], [[automation-and-background-work|concepts/automation-and-background-work.md]], [[formal-methods-for-agent-harnesses|concepts/formal-methods-for-agent-harnesses.md]], [[rl-gyms-and-executable-environments-for-ai-harnesses|queries/rl-gyms-and-executable-environments-for-ai-harnesses.md]], [[software-verification-testing-environment-research-program|queries/software-verification-testing-environment-research-program.md]], [[another-harness-work-item-closure-environment|queries/another-harness-work-item-closure-environment.md]], [[another-harness-evaluator-discipline-environment|queries/another-harness-evaluator-discipline-environment.md]], [[another-harness-atropos-environment-schema|queries/another-harness-atropos-environment-schema.md]].
+- External source ingested: [[code-tracer-towards-traceable-agent-states|raw/papers/code-tracer-towards-traceable-agent-states.md]] — traceable agent states, hierarchical trace trees, reflective replay, and failure-onset localization.
+- Page created: [[agent-facing-verifier-environment-architecture|queries/agent-facing-verifier-environment-architecture.md]]
+  - Candidate primitives: specification surface, evidence ledger, promotion gate, regression memory, trace tree node.
+  - Object model: versioned, hash-addressed append-only ledger and regression memory; mutable promotion gates with versioned transitions; write-once trace forest.
+  - State machine: proposed → tested → reviewed → proved | rejected | waived → accepted, with role-separation invariants.
+  - Six open design questions about specification authority, trace compression, formal lane depth, anti-gaming evidence, waiver governance, and regression decay.
+- Pages updated: [[software-verification-testing-environment-research-program|queries/software-verification-testing-environment-research-program.md]], [[formal-methods-for-agent-harnesses|concepts/formal-methods-for-agent-harnesses.md]], [[evaluation-and-review-loops|concepts/evaluation-and-review-loops.md]], [[work-management-primitives|concepts/work-management-primitives.md]].
+- [[index|index.md]] updated: total pages 137 → 138.

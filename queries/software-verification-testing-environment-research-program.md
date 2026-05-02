@@ -47,6 +47,8 @@ The first pass should answer four practical questions:
 ## Expected wiki outcome
 The later wiki-writing task should either expand this page or replace it with a more source-grounded successor. Likely adjacent updates include [[formal-methods-for-agent-harnesses]], [[evaluation-and-review-loops]], [[work-management-primitives]], [[harness-engineering]], and [[rl-gyms-and-executable-environments-for-ai-harnesses]]. If the research reveals reusable named systems, they may deserve entity pages; otherwise they should remain raw source notes and structured synthesis rather than ornamental nodes.
 
+The architecture synthesis for this project is now captured in [[agent-facing-verifier-environment-architecture]].
+
 ## Open risks
 - The environment can become a bag of tools instead of a coherent semantics for evidence.
 - Heavy formal methods may be over-applied where property tests or differential checks give better leverage.

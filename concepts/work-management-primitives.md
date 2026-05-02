@@ -42,3 +42,5 @@ Recent systems increasingly treat the workflow artifact itself as mutable. [[sel
 
 ## Related pages
 Work primitives are where [[memory-persistence]] meets orchestration. See [[automation-and-background-work]], [[gas-town]], [[gas-city]], and [[claude-code]], then compare approaches in [[harness-architecture-comparison]]. The newest pressure here comes from [[self-evolving-workflows]] and the verification-environment project anchor [[software-verification-testing-environment-research-program]].
+
+The architecture synthesis for treating verifiers and evidence as harness objects is in [[agent-facing-verifier-environment-architecture]].
