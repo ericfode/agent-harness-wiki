@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-02 | Total pages: 141
+> Last updated: 2026-05-02 | Total pages: 142
 
 ## News
 
@@ -145,6 +145,7 @@
 - [[sovereign-identity-and-observed-goals-schema-pass]] — Concrete schema patch for sovereign identity, portable attestations, commitments, goal hypotheses, and governance objects.
 - [[sovereignty-and-observed-goals-ledgers-for-multiplayer-harnesses]] — Multi-round deep-dive on replacing scalar reputation with sovereign identity, commitments, provenance, and inferred-goal hypotheses.
 - [[software-verification-testing-environment-research-program]] — Project anchor for researching an agent-facing software verification and testing environment with formal lanes, evidence ledgers, and wiki update gates.
+- [[specification-elaboration-naming-frame]] — Naming analysis for replacing "spec image" with Spec Gym / `specgym` as a collaborative spec verifiability environment.
 - [[agent-facing-verifier-environment-architecture]] — Architecture-oriented synthesis of candidate primitives, object model, state machine, and open design questions for agent-facing verifier/test harnesses.
 - [[new-harness-design-notes]] — Synthesis notes on combining Codex cleanliness, Hermes learning loops, Anthropic evaluators, Gas City orchestration, and now a formalization plane.
 - [[non-hierarchical-agent-orchestration]] — Direct answer to the question of what to use instead of a default manager hierarchy.
@@ -161,4 +162,3 @@
 - [[rl-gyms-and-executable-environments-for-ai-harnesses]] — Map of browser, desktop, tool-use, coding, and research-agent gym substrates for harness evaluation and training.
 - [[sci-fi-audit-for-moldable-operations-studio]] — Science-fiction control-room and distributed-cognition ideas translated into harness primitives and cautions.
 - [[web-patterns-for-non-linear-harness-interfaces]] — Broader web-system patterns for moldable views, provenance-rich traces, and durable mission-control surfaces around harness work.
-

@@ -1134,3 +1134,36 @@
   - [[software-verification-testing-environment-kanban-synthesis-handoff-2026-05-01|raw/transcripts/software-verification-testing-environment-kanban-synthesis-handoff-2026-05-01.md]]
   - [[software-verification-testing-environment-synthesis-supplement-2026-05-01|raw/transcripts/software-verification-testing-environment-synthesis-supplement-2026-05-01.md]]
 - Final live lint: pass, 141 content pages checked.
+
+## [2026-05-02] query | specification elaboration naming frame
+- Added raw research note [[specification-elaboration-naming-research|raw/articles/specification-elaboration-naming-research.md]] covering knowledge representation, formal concept analysis, Problem Frames, Moldable Development, and knowledge maps as naming constraints.
+- Created [[specification-elaboration-naming-frame|queries/specification-elaboration-naming-frame.md]].
+- Recommendation recorded: replace "spec image" with **Intent Lattice** as the working product frame, with `intent model`, `intent graph`, `viability critique`, `refinement packet`, and `adapter` as internal vocabulary.
+- Updated [[index|index.md]] to include the new query page and bump total pages from 141 to 142.
+
+## [2026-05-02] query update | specification elaboration naming frame
+- Incorporated the user's clarification that the project is about making specifications **more verifiable**, not imaging them.
+- Added NASA requirements-verifiability guidance, SpecRL negative-test reward framing, and LTL specification-mining context to [[specification-elaboration-naming-research|raw/articles/specification-elaboration-naming-research.md]].
+- Revised [[specification-elaboration-naming-frame|queries/specification-elaboration-naming-frame.md]]: **Claim Lattice** is now the working product/kernel name, and **collaborative spec verifiability environment** is the category phrase.
+- Added the future RL-environment boundary: observation, action, actor, reward, done, and safety invariant.
+- Added the human-play boundary: the human is a first-class actor whose refinements, overrides, rejections, and rationale are durable environment transitions.
+- Updated [[index|index.md]] to reflect the revised frame.
+
+## [2026-05-02] query update | process-first CLI naming
+- Incorporated the user's correction that **Claim Lattice** names the internal model, not the process, and is therefore a poor CLI name.
+- Revised [[specification-elaboration-naming-frame|queries/specification-elaboration-naming-frame.md]]: **Spec Gym** / `specgym` is now the recommended CLI/product name; **Claim Lattice** remains the internal model.
+- Added command vocabulary: `play`, `score`, `step`, `rollout`, and `export`.
+- Added practical npm registry checks in [[specification-elaboration-naming-research|raw/articles/specification-elaboration-naming-research.md]]: `specgym`, `spec-gym`, `speclab`, `spec-lab`, `proveout`, `spec-assay`, and `spec-trial` returned 404; `specforge`, `assay`, `sharpen`, and `spec-check` already exist.
+- Updated [[index|index.md]] to use the `specgym` frame.
+
+## [2026-05-02] decision | Spec Gym accepted
+- User accepted **Spec Gym** as the name.
+- Updated [[specification-elaboration-naming-frame|queries/specification-elaboration-naming-frame.md]] and [[specification-elaboration-naming-research|raw/articles/specification-elaboration-naming-research.md]] from recommendation language to accepted-name language.
+- Corrected CLI examples to use `--projection` for optional adapters; `ClaimLattice.lean` is a default core artifact rather than a Lean adapter export.
+
+## [2026-05-02] implementation | Spec Gym repo vocabulary migration
+- Propagated the accepted **Spec Gym** / `specgym` name into `/Users/ericfode/Documents/New project 4`.
+- The top-level repo spec now describes a collaborative spec verifiability environment, not a spec-imaging tool.
+- Primary artifacts are `claim-lattice.json`, `viability-critique.md`, `ClaimLattice.lean`, and `refinement-packet.md`.
+- The generated claim lattice now includes environment fields for observation, action, actor, reward signals, done states, safety invariant, and score.
+- Linear project renamed to **Spec Gym**; FOD-30 marked done after local verification.
