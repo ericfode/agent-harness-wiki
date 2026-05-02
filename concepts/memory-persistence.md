@@ -1,10 +1,10 @@
 ---
 title: Memory Persistence
 created: 2026-04-07
-updated: 2026-04-10
+updated: 2026-05-02
 type: concept
 tags: [memory, context-engineering, error-recovery]
-sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-claude-code-memory.md, raw/articles/hermes-agent-github.md, raw/articles/hermes-agent-memory-docs.md, raw/articles/openclaw-agent-runtime-docs.md, raw/articles/newstack-openclaw-vs-hermes.md, raw/papers/arxiv-zhou-2026-memento-skills.md, raw/articles/memento-skills-github.md]
+sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-claude-code-memory.md, raw/articles/hermes-agent-github.md, raw/articles/hermes-agent-memory-docs.md, raw/articles/openclaw-agent-runtime-docs.md, raw/articles/newstack-openclaw-vs-hermes.md, raw/papers/arxiv-zhou-2026-memento-skills.md, raw/articles/memento-skills-github.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md]
 ---
 
 # Memory Persistence
@@ -29,6 +29,9 @@ Anthropic's approach is narrower but practical: `feature_list.json`, progress lo
 
 ## Procedural memory
 Recent workflow papers push memory one step further: experience becomes procedure. [[self-evolving-workflows]] collects the systems where trajectories are turned into reusable routines, skill packages, or instruction rewrites. This is why [[memento-skills]] and the current question in [[gas-city-but-its-just-codex]] are not merely about remembering more facts; they are about remembering how to operate better next time.
+
+## Parameter-persistent memory
+[[on-policy-self-distillation]] adds a more aggressive persistence surface: learned behavior can survive context reset because feedback is written into weights, adapters, or another trainable policy layer. That is memory in the strongest operational sense, but also the least inspectable one. A harness using it needs checkpoint lineage, adapter scoping, promotion gates, and rollback rather than treating weight changes as a friendlier version of notes.
 
 ## Design tension
 Persistent memory is not one thing. A harness must decide whether it primarily needs resumable project state, reusable personal knowledge, workspace bootstrap context, or a federated work ledger. Confusing these layers tends to produce baroque systems that remember everything except the one thing required. The neighboring problem is [[instruction-layering]]: some durable files are memory, some are policy, and some are both depending on how the harness reads them. The more formal nearby question is epistemic: what does each memory surface actually justify? That is where [[probabilistic-epistemic-updates]] becomes relevant.

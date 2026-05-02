@@ -4,7 +4,7 @@ created: 2026-04-09
 updated: 2026-05-02
 type: concept
 tags: [work-management, memory, orchestration, context-engineering]
-sources: [raw/papers/arxiv-zhang-2024-aflow.md, raw/papers/arxiv-li-2024-autoflow.md, raw/papers/arxiv-wang-2024-agent-workflow-memory.md, raw/papers/arxiv-ma-2026-judgeflow.md, raw/papers/arxiv-xu-2025-robustflow.md, raw/papers/arxiv-rhodes-2026-compiled-memory.md, raw/papers/arxiv-shen-2026-skillfoundry.md, raw/papers/arxiv-zhang-2026-evoskills.md, raw/papers/arxiv-wang-2026-skillx.md, raw/papers/arxiv-zhou-2026-memento-skills.md, raw/papers/arxiv-huo-2026-atommem.md, raw/papers/arxiv-ye-2026-meta-context-engineering.md, raw/papers/arxiv-liu-2026-graph-of-skills.md, raw/articles/gas-city-but-its-just-codex-repo-2026-04-09.md]
+sources: [raw/papers/arxiv-zhang-2024-aflow.md, raw/papers/arxiv-li-2024-autoflow.md, raw/papers/arxiv-wang-2024-agent-workflow-memory.md, raw/papers/arxiv-ma-2026-judgeflow.md, raw/papers/arxiv-xu-2025-robustflow.md, raw/papers/arxiv-rhodes-2026-compiled-memory.md, raw/papers/arxiv-shen-2026-skillfoundry.md, raw/papers/arxiv-zhang-2026-evoskills.md, raw/papers/arxiv-wang-2026-skillx.md, raw/papers/arxiv-zhou-2026-memento-skills.md, raw/papers/arxiv-huo-2026-atommem.md, raw/papers/arxiv-ye-2026-meta-context-engineering.md, raw/papers/arxiv-liu-2026-graph-of-skills.md, raw/articles/gas-city-but-its-just-codex-repo-2026-04-09.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md]
 ---
 
 # Self-Evolving Workflows
@@ -20,6 +20,7 @@ The literature now splits into several distinct evolution surfaces:
 - **Skill libraries** — systems such as [[memento-skills]], [[skillfoundry|SkillFoundry]], [[evoskills|EvoSkills]], [[skillx|SkillX]], and [[trace2skill|Trace2Skill]] treat reusable skills as durable writable packages.
 - **Compiled instructions** — systems such as [[compiled-memory|Compiled Memory]] rewrite the operative instruction structure itself rather than only retrieving more context.
 - **Learnable control routines** — systems such as [[atommem|AtomMem]], [[memskill|MemSkill]], and Meta Context Engineering turn previously static memory or context pipelines into learnable procedures.
+- **Model policy or adapter weights** — [[on-policy-self-distillation]] updates the agent policy directly from trajectories and feedback, rather than only revising prompts, procedures, skills, or graph topology.
 
 These are related but not identical. A reflection buffer is not automatically a workflow language, and a skill library is not automatically a control plane, though papers are often tempted to claim both before breakfast.
 
@@ -54,6 +55,7 @@ Self-evolving workflows blur the line between [[memory-persistence]] and [[work-
 - Preserve lineage and rollback, because learned procedures are perfectly capable of becoming worse in novel and inventive ways.
 - Decide whether evolution acts on graphs, operators, skills, memory routines, or instruction kernels; otherwise the learning surface becomes vague and theatrical.
 - Treat context shaping as part of the evolution surface when the system compiles procedures into instructions, which is where [[context-engineering]] re-enters the room.
+- Preserve rich feedback, not just pass/fail outcomes, when trajectories may later feed [[on-policy-self-distillation]].
 - Plan for retrieval once the library grows; otherwise the reward for success is prompt collapse.
 
 ## Relevance to the current Codex control-plane work

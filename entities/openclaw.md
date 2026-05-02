@@ -1,10 +1,10 @@
 ---
 title: OpenClaw
 created: 2026-04-07
-updated: 2026-04-09
+updated: 2026-05-02
 type: entity
 tags: [openclaw, memory, safety]
-sources: [raw/articles/openclaw-agent-runtime-docs.md, raw/articles/newstack-openclaw-vs-hermes.md]
+sources: [raw/articles/openclaw-agent-runtime-docs.md, raw/articles/newstack-openclaw-vs-hermes.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md]
 formal:
   harness_id: openclaw
   session_model: service_runtime
@@ -31,6 +31,11 @@ OpenClaw is a persistent agent runtime optimized for breadth: many integrations,
 
 ## Integration model
 The current docs present OpenClaw as a single embedded agent runtime wrapped by OpenClaw-owned session, delivery, and discovery layers. The required workspace files (`AGENTS.md`, `SOUL.md`, `TOOLS.md`, `BOOTSTRAP.md`, and friends) make it architecturally interesting even apart from coding: it treats presence, persona, and workspace bootstrapping as first-class harness capabilities. See [[agent-harness-anatomy]], [[memory-persistence]], and [[instruction-layering]].
+
+## OpenClaw RL lead
+The 2026 self-distillation interview linked by 0xSero mentions **OpenClaw RL** as a library using on-policy self-distillation under the hood for agents that learn asynchronously from tool and environment feedback. This is a useful lead, not yet a hardened architecture fact for the main [[openclaw]] runtime page: the existing primary OpenClaw docs in this wiki cover workspace, skills, and session persistence, not the RL adaptation layer.
+
+Architecturally, the lead matters because it would connect OpenClaw's ecosystem surface to [[on-policy-self-distillation]], [[self-evolving-workflows]], and [[evaluation-and-review-loops]]. It should be verified against primary OpenClaw RL docs or code before being promoted into the `formal:` block.
 
 ## Strengths
 - Exceptional surface-area breadth.

@@ -1167,3 +1167,10 @@
 - Primary artifacts are `claim-lattice.json`, `viability-critique.md`, `ClaimLattice.lean`, and `refinement-packet.md`.
 - The generated claim lattice now includes environment fields for observation, action, actor, reward signals, done states, safety invariant, and score.
 - Linear project renamed to **Spec Gym**; FOD-30 marked done after local verification.
+
+## [2026-05-02] ingest | 0xSero self-distillation video
+- Resolved the user-supplied X post from `@0xSero` to the embedded YouTube source **Why Self-Distillation Is Taking Over LLM Post-Training (w/ the Researchers Behind It)**.
+- Added raw source note [[0xsero-self-distillation-video-2026-05-02|raw/articles/0xsero-self-distillation-video-2026-05-02.md]] and raw transcript [[deep-learning-yacine-self-distillation-transcript-2026-04-28|raw/transcripts/deep-learning-yacine-self-distillation-transcript-2026-04-28.md]].
+- Created [[on-policy-self-distillation|concepts/on-policy-self-distillation.md]] as the durable concept page for SDPO/SDFT-style feedback-conditioned self-distillation.
+- Updated [[memory-persistence|concepts/memory-persistence.md]], [[self-evolving-workflows|concepts/self-evolving-workflows.md]], [[evaluation-and-review-loops|concepts/evaluation-and-review-loops.md]], [[harness-engineering|concepts/harness-engineering.md]], [[context-engineering|concepts/context-engineering.md]], [[rl-gyms-and-executable-environments-for-ai-harnesses|queries/rl-gyms-and-executable-environments-for-ai-harnesses.md]], [[agent-facing-verifier-environment-architecture|queries/agent-facing-verifier-environment-architecture.md]], and [[openclaw|entities/openclaw.md]].
+- Updated [[index|index.md]] to include the new concept page and bump total pages from 142 to 143.

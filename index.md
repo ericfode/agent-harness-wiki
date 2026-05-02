@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-02 | Total pages: 142
+> Last updated: 2026-05-02 | Total pages: 143
 
 ## News
 
@@ -94,6 +94,7 @@
 - [[neural-native-programming]] — Model-facing latent IR design for direct read/write interfaces into transformer internals.
 - [[non-hierarchical-coordination-patterns]] — Serious coordination patterns for agents that do not collapse everything into a manager tree.
 - [[orchestration-topologies]] — When subagents, session teams, or swarm structures are the right coordination shape.
+- [[on-policy-self-distillation]] — Feedback-conditioned post-training loop where the same model acts as teacher and student, turning environment/user feedback into durable token-level updates.
 - [[partial-order-trace-semantics]] — Why concurrent and branching harness work wants pomsets or other partial-order models instead of a single serial transcript.
 - [[probabilistic-epistemic-updates]] — How richer belief/update layers can refine simpler harness quotients without discarding them.
 - [[safety-and-permissions]] — How harnesses bound tool execution, approvals, trust, and blast radius.

@@ -4,7 +4,7 @@ created: 2026-05-01
 updated: 2026-05-02
 type: query
 tags: [formal-methods, benchmark, tool-execution, work-management]
-sources: [concepts/formal-methods-for-agent-harnesses.md, concepts/evaluation-and-review-loops.md, concepts/work-management-primitives.md, queries/software-verification-testing-environment-research-program.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-pan-2024-swe-gym.md]
+sources: [concepts/formal-methods-for-agent-harnesses.md, concepts/evaluation-and-review-loops.md, concepts/work-management-primitives.md, queries/software-verification-testing-environment-research-program.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md]
 ---
 
 # Agent-Facing Verifier and Testing Harness Architecture
@@ -56,6 +56,7 @@ evidence_record:
   spec_ref: {kind, address, version}
   run_context: {command, env_hash, agent_turn}
   result: {status, counterexample, diff, log_ref}
+  feedback: {kind, payload_ref, teacher_context_ref, credit_scope, used_for_training}
   artifact_hash: sha256(files_at_time)
   reviewer_decision: {pending | accepted | rejected | waived}
   limitation: optional
@@ -63,6 +64,8 @@ evidence_record:
 ```
 
 This is the harness-level equivalent of what [[swe-gym]] and [[appworld]] do inside their evaluators, but lifted into a reusable ledger so that evidence survives beyond one benchmark run.
+
+The `feedback` field is the addition suggested by [[on-policy-self-distillation]]: the verifier should preserve not only the outcome, but the explanatory payload that might later condition a teacher model, reviewer replay, or adapter-training job. `used_for_training` must remain explicit so evaluation evidence does not quietly become a hidden training set.
 
 ### 3. Promotion gate
 A state object that tracks where a piece of work sits in the acceptance pipeline.
@@ -193,7 +196,9 @@ Important invariants:
 
 5. **Waiver semantics and governance.** A waiver is a decision to accept without evidence. It must be explicit, attributed, and reversible. But it also opens an attack surface: an agent that learns to petition for waivers instead of producing evidence. How should waiver patterns be detected and surfaced?
 
-6. **Regression item decay.** Not all historical failures deserve permanent memory. Some were fixed, some were accepted as expected behavior, and some were symptoms of transient environment drift. The regression memory needs a principled eviction or demotion policy rather than unbounded accumulation.
+6. **Distillable feedback governance.** If evidence records can become training examples, who approves that use? The harness needs consent, privacy filters, poisoning defenses, and adapter/checkpoint scoping before treating user follow-ups or reviewer comments as model-update material.
+
+7. **Regression item decay.** Not all historical failures deserve permanent memory. Some were fixed, some were accepted as expected behavior, and some were symptoms of transient environment drift. The regression memory needs a principled eviction or demotion policy rather than unbounded accumulation.
 
 ---
 

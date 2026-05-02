@@ -4,7 +4,7 @@ created: 2026-04-07
 updated: 2026-05-02
 type: concept
 tags: [orchestration, context-engineering, tool-execution, survey]
-sources: [raw/articles/openai-harness-engineering.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-harness-design-long-running-apps.md, raw/papers/arxiv-chezelles-2024-browsergym-ecosystem.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-xie-2024-osworld.md, raw/papers/arxiv-pan-2024-swe-gym.md]
+sources: [raw/articles/openai-harness-engineering.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-harness-design-long-running-apps.md, raw/papers/arxiv-chezelles-2024-browsergym-ecosystem.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-xie-2024-osworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md]
 ---
 
 # Harness Engineering
@@ -22,12 +22,18 @@ OpenAI's framing is especially blunt: when the agent fails, ask what capability 
 - Make validation observable through browser automation, logs, metrics, or screenshots.
 - Make branches, checkpoints, and runtime evidence navigable in the operator surface instead of burying them in transcript prose; see [[non-linear-interface-options-for-next-harness]].
 - Design error messages as remediation hints for future agent turns.
+- Shape verifier and tool feedback so it can become replayable learning material, not only terminal scolding.
 
 ## Formal turn
 The next turn of the discipline is not simply more scaffolding but more checkable semantics. The current arXiv pass suggests two especially relevant directions: [[formal-methods-for-agent-harnesses]] for intent surfaces and specification ladders, and [[probabilistic-epistemic-updates]] for stating what the harness and the agent are actually justified in believing at each step.
 
 ## Gym substrates
 The field is now adding a more experimental wing to harness engineering: executable worlds in which agents can be evaluated, diagnosed, and sometimes trained. [[rl-gyms-and-executable-environments-for-ai-harnesses]] collects the main families, but the practical point is simple. Once a harness has BrowserGym, AppWorld, OSWorld, SWE-Gym, or a similar environment beneath it, evaluation stops being a rhetorical art and starts looking more like systems work with resettable state and measurable reward.
+
+## Feedback as learning substrate
+The 2026 self-distillation work makes a quiet but important extension: error messages are not only hints for the next turn; they may become dense training signal. In a harness that supports [[on-policy-self-distillation]], environment design includes producing feedback with enough structure to support credit assignment: which token, trace node, artifact, or decision did the evidence actually constrain?
+
+This is another reason [[evaluation-and-review-loops]] belong inside harness design rather than after it. A review system that throws away rationale throws away future learning signal.
 
 ## Implication for software teams
 Engineering work shifts upward: fewer keystrokes in the hot path, more effort spent on invariant design, evaluation criteria, and legible documentation. This is why [[codex-cli]] and [[claude-code]] matter as much for their surrounding machinery as for their underlying models.
