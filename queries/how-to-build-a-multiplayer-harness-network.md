@@ -1,7 +1,7 @@
 ---
 title: How to Build a Multiplayer Harness Network
 created: 2026-04-10
-updated: 2026-04-15
+updated: 2026-05-02
 type: query
 tags: [survey, orchestration, semantics, work-management, memory]
 sources: [queries/multiplayer-agent-harnesses-and-p2p-networks.md, queries/moldable-operations-studio-architecture-spec.md, queries/moldable-operations-studio-schema-pass.md, queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md, queries/grounding-moldable-operations-studio-ideas-in-real-research.md, concepts/non-hierarchical-coordination-patterns.md, concepts/partial-order-trace-semantics.md, raw/articles/google-agent2agent-protocol.md, raw/papers/arxiv-ehtesham-2025-survey-agent-interoperability-protocols.md, raw/papers/arxiv-zou-2025-blocka2a-secure-verifiable-interoperability.md, raw/papers/merkle-crdts.md, raw/articles/local-first-software.md, raw/papers/session-guarantees-weakly-consistent-replicated-data.md, raw/papers/escrow-transactional-method.md]
@@ -116,7 +116,7 @@ At that point the protocol should be small and layered:
 #### Layer D: discovery
 - directory, federation registry, or DHT-style lookup later
 
-This matches the separation already visible in [[arxiv-ehtesham-2025-survey-agent-interoperability-protocols]]: tool access, peer delegation, and open-network discovery should not be collapsed into one shapeless "agent protocol."
+This matches the separation already visible in arxiv-ehtesham-2025-survey-agent-interoperability-protocols: tool access, peer delegation, and open-network discovery should not be collapsed into one shapeless "agent protocol."
 
 ## So: protocol first or not?
 Use this formulation instead:
@@ -203,7 +203,7 @@ Required first surfaces:
 - shared artifact pane
 - presence / focus / follow mechanics
 
-This is where [[visual-studio-live-share]], [[jupyterlab-real-time-collaboration]], [[klokmose-et-al-2015-webstrates|webstrates]], and [[yang-wigdor-2014-panelrama|panelrama]] stop being inspiration and start becoming requirements.
+This is where visual-studio-live-share, jupyterlab-real-time-collaboration, webstrates, and panelrama stop being inspiration and start becoming requirements.
 
 Acceptance test:
 - two humans and multiple agents can coordinate around the same work objects without relying on one scrolling transcript as the only operational surface
@@ -236,17 +236,17 @@ That is enough for a meaningful federation. It is also small enough that an adap
 ## Suggested technical stance
 
 ### Local-first internally
-Follow [[local-first-software]] as the product principle.
+Follow local-first-software as the product principle.
 Each node should stay useful offline and own its local state.
 
 ### CRDT/Merkle where concurrency is normal
-Use convergent replicated state for shared notes, artifact metadata, task state, and other collaborative objects where concurrent edits are expected. See [[merkle-crdts]].
+Use convergent replicated state for shared notes, artifact metadata, task state, and other collaborative objects where concurrent edits are expected. See merkle-crdts.
 
 ### Stronger semantics only for narrow control facts
 Approvals, budget grants, revocations, promotions, and checkpoint finalization should use stronger coordination semantics, as in [[moldable-operations-studio-architecture-spec]].
 
 ### Capability security from the beginning
-Do not bolt safety on later. [[escrow-transactional-method]] and [[arxiv-zou-2025-blocka2a-secure-verifiable-interoperability]] are the right warning here: bounded rights, audit, and revocation are core protocol semantics, not optional enterprise garnish.
+Do not bolt safety on later. escrow-transactional-method and arxiv-zou-2025-blocka2a-secure-verifiable-interoperability are the right warning here: bounded rights, audit, and revocation are core protocol semantics, not optional enterprise garnish.
 
 ## Prototype shape I would actually build
 If forced to choose a practical first implementation, I would build this:

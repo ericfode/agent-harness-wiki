@@ -1,7 +1,7 @@
 ---
 title: Self-Evolving Workflows
 created: 2026-04-09
-updated: 2026-04-11
+updated: 2026-05-02
 type: concept
 tags: [work-management, memory, orchestration, context-engineering]
 sources: [raw/papers/arxiv-zhang-2024-aflow.md, raw/papers/arxiv-li-2024-autoflow.md, raw/papers/arxiv-wang-2024-agent-workflow-memory.md, raw/papers/arxiv-ma-2026-judgeflow.md, raw/papers/arxiv-xu-2025-robustflow.md, raw/papers/arxiv-rhodes-2026-compiled-memory.md, raw/papers/arxiv-shen-2026-skillfoundry.md, raw/papers/arxiv-zhang-2026-evoskills.md, raw/papers/arxiv-wang-2026-skillx.md, raw/papers/arxiv-zhou-2026-memento-skills.md, raw/papers/arxiv-huo-2026-atommem.md, raw/papers/arxiv-ye-2026-meta-context-engineering.md, raw/papers/arxiv-liu-2026-graph-of-skills.md, raw/articles/gas-city-but-its-just-codex-repo-2026-04-09.md]
@@ -61,3 +61,5 @@ Self-evolving workflows blur the line between [[memory-persistence]] and [[work-
 
 ## Related pages
 Read this with [[gas-city-but-its-just-codex]], [[memento-skills]], [[memory-persistence]], [[work-management-primitives]], and [[context-engineering]]. The comparative architectural implications also show up in [[harness-architecture-comparison]].
+
+- **Architectural Link:** Self-evolving workflows often rely on a regression_memory, where prior failures are promoted into reusable spec objects with defined decay policies.

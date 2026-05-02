@@ -1,7 +1,7 @@
 ---
 title: Software Verification and Testing Environment Research Program
 created: 2026-05-01
-updated: 2026-05-01
+updated: 2026-05-02
 type: query
 tags: [formal-methods, code-quality, benchmark, work-management, tool-execution]
 sources: [concepts/formal-methods-for-agent-harnesses.md, concepts/evaluation-and-review-loops.md, concepts/work-management-primitives.md, queries/rl-gyms-and-executable-environments-for-ai-harnesses.md, concepts/harness-engineering.md]
@@ -56,3 +56,15 @@ The architecture synthesis for this project is now captured in [[agent-facing-ve
 - The agent-facing interface may need stronger provenance than ordinary CI logs provide.
 
 The useful test is simple: after a failure, can the next agent recover the exact claim, evidence, counterexample, and required next move without reading a theatrical transcript? If yes, we have an environment. If no, we have a vibes engine wearing a lab coat.
+
+
+## Synthesis: Research Map and Architecture
+The open questions above have been resolved through synthesis of three research lanes (formal foundations, testing primitives, agent architecture).
+
+**Findings:**
+1. **Verification Tools**: The verifier acts as an oracle, not a post-hoc linter. Tools like Lean, Dafny, and TLC (as in [[cobalt-tla]]) are worth integrating alongside PBT (Property-Based Testing) and agentic fuzzing (like FLARE).
+2. **Testing Techniques**: Techniques must preserve evidence types—counterexamples, mutant survival rates, coverage gaps, and metamorphic relation violations—rather than flattening them to pass/fail bits.
+3. **Object Model**: The minimum model requires `specification_surface`, `evidence_ledger`, `promotion_gate`, `regression_memory`, and `trace_tree_node`. 
+4. **Boundary**: Test lanes and formal lanes should run in parallel but remain distinct; a component can be "tested" without being "proved," explicitly managed by the promotion gate.
+
+*Note: This project now has a complete first-pass research foundation. See [[agent-facing-verifier-environment-architecture]] for the architecture map.*

@@ -1,7 +1,7 @@
 ---
 title: Evaluation and Review Loops
 created: 2026-04-07
-updated: 2026-05-01
+updated: 2026-05-02
 type: concept
 tags: [subagents, code-quality, orchestration]
 sources: [raw/articles/openai-harness-engineering.md, raw/articles/openai-introducing-codex-app.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-three-agent-harness-infoq.md, raw/articles/anthropic-claude-code-overview.md, raw/articles/yegge-gas-town-emergency-user-manual.md, raw/articles/yegge-vibe-maintainer.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/papers/arxiv-chuang-2026-proxy-state-based-evaluation.md]
@@ -31,3 +31,10 @@ Good review loops cost more in tokens, time, and operator design. They also add 
 Read with [[harness-engineering]], [[claude-code]], [[codex-cli]], and [[work-management-primitives]]. This concept also explains much of the ranking logic in [[harness-quality-comparison]] and the evaluation column in [[harness-architecture-comparison]]. The gym-style extension of this idea is [[rl-gyms-and-executable-environments-for-ai-harnesses]], and the new project anchor is [[software-verification-testing-environment-research-program]].
 
 The architecture synthesis for treating verifiers and evidence as harness objects is in [[agent-facing-verifier-environment-architecture]].
+
+
+## Advanced Evidence Primitives
+Evaluation loops can integrate richer evidence beyond simple pass/fail tests:
+- **Metamorphic relations**: Useful as a primary review technique for non-deterministic LLM pipelines, catching fact-conflicting hallucinations without strict ground-truth oracles.
+- **Agentic coverage-guided fuzzing**: Systems like FLARE and WhiteFox show that agents can drive fuzzing campaigns, exploring edge cases formally and returning concrete paths.
+- **Property-based testing (PBT)**: Serves as a continuous contract primitive, validating invariants on generated code across diverse inputs.

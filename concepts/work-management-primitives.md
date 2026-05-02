@@ -1,7 +1,7 @@
 ---
 title: Work Management Primitives
 created: 2026-04-07
-updated: 2026-05-01
+updated: 2026-05-02
 type: concept
 tags: [work-management, orchestration, error-recovery]
 sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/yegge-vibe-maintainer.md, raw/articles/anthropic-effective-harnesses.md]
@@ -44,3 +44,11 @@ Recent systems increasingly treat the workflow artifact itself as mutable. [[sel
 Work primitives are where [[memory-persistence]] meets orchestration. See [[automation-and-background-work]], [[gas-town]], [[gas-city]], and [[claude-code]], then compare approaches in [[harness-architecture-comparison]]. The newest pressure here comes from [[self-evolving-workflows]] and the verification-environment project anchor [[software-verification-testing-environment-research-program]].
 
 The architecture synthesis for treating verifiers and evidence as harness objects is in [[agent-facing-verifier-environment-architecture]].
+
+
+## Verification as Long-Running Primitives
+- **Fuzz campaigns and mutation sweeps**: These should be treated as long-running task primitives, preserving evidence like mutant survival rates and branch coverage gaps.
+- **Constraint/path solver offloads**: Hybrid concolic testing approaches show that solving path constraints can be offloaded to external solvers, freeing the agent to handle higher-level logic.
+
+
+See also [[nightly-src-projects-desk-2026-04-21]] for a periodic survey of active projects across the local source tree.

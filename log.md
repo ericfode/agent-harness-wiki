@@ -1059,10 +1059,78 @@
 - Pages updated: [[software-verification-testing-environment-research-program|queries/software-verification-testing-environment-research-program.md]], [[formal-methods-for-agent-harnesses|concepts/formal-methods-for-agent-harnesses.md]], [[evaluation-and-review-loops|concepts/evaluation-and-review-loops.md]], [[work-management-primitives|concepts/work-management-primitives.md]].
 - [[index|index.md]] updated: total pages 137 → 138.
 
+## [2026-05-01] update | agent-facing verifier architecture — t_2cf92f9b repairs
+- Fixed broken `[[app-world]]` links (3 occurrences) → `[[appworld]]` in [[agent-facing-verifier-environment-architecture|queries/agent-facing-verifier-environment-architecture.md]].
+- Replaced invalid `[[code-tracer-towards-traceable-agent-states|CodeTracer]]` wikilinks with plain text citations to the raw CodeTracer note.
+- Added `[[agent-facing-verifier-environment-architecture]]` inbound links to [[automation-and-background-work|concepts/automation-and-background-work.md]] and [[rl-gyms-and-executable-environments-for-ai-harnesses|queries/rl-gyms-and-executable-environments-for-ai-harnesses.md]].
+- Ran `scripts/lint-wiki.sh`: pass, 138 content pages checked.
+
+## [2026-05-01] ingest | software verification/testing environment research synthesis
+- Created raw sources:
+  - [[arxiv-2602.18307-verisoftbench|raw/papers/arxiv-2602.18307-verisoftbench.md]]
+  - [[arxiv-2604.16584-leetproof|raw/papers/arxiv-2604.16584-leetproof.md]]
+  - [[arxiv-2604.22601-nl2vc-60|raw/papers/arxiv-2604.22601-nl2vc-60.md]]
+  - [[arxiv-2511.00125-infer-dafny-assertions|raw/papers/arxiv-2511.00125-infer-dafny-assertions.md]]
+  - [[arxiv-2604.12172-cobalt-tla|raw/papers/arxiv-2604.12172-cobalt-tla.md]]
+  - [[arxiv-2604.08633-icepick-glacier|raw/papers/arxiv-2604.08633-icepick-glacier.md]]
+  - [[arxiv-2505.13452-autobug|raw/papers/arxiv-2505.13452-autobug.md]]
+  - [[arxiv-2511.14435-watchdogs-oracles|raw/papers/arxiv-2511.14435-watchdogs-oracles.md]]
+  - [[arxiv-2506.18315-property-generated-solver|raw/papers/arxiv-2506.18315-property-generated-solver.md]]
+  - [[arxiv-2307.04346-llm-pbt|raw/papers/arxiv-2307.04346-llm-pbt.md]]
+  - [[arxiv-2406.09843-llm-mutation-testing|raw/papers/arxiv-2406.09843-llm-mutation-testing.md]]
+  - [[arxiv-2308.16557-llm-test-generation-mutation|raw/papers/arxiv-2308.16557-llm-test-generation-mutation.md]]
+  - [[arxiv-2504.05289-flare|raw/papers/arxiv-2504.05289-flare.md]]
+  - [[arxiv-2310.15991-whitefox|raw/papers/arxiv-2310.15991-whitefox.md]]
+  - [[arxiv-2601.12274-hybrid-concolic-llm|raw/papers/arxiv-2601.12274-hybrid-concolic-llm.md]]
+  - [[arxiv-2504.17542-cottontail|raw/papers/arxiv-2504.17542-cottontail.md]]
+  - [[arxiv-2405.00648-drowzee|raw/papers/arxiv-2405.00648-drowzee.md]]
+  - [[arxiv-2511.02108-metamorphic-testing-llm-nlp|raw/papers/arxiv-2511.02108-metamorphic-testing-llm-nlp.md]]
+- Created entities:
+  - [[cobalt-tla|entities/cobalt-tla.md]]
+  - [[leetproof|entities/leetproof.md]]
+- Updated concepts:
+  - [[formal-methods-for-agent-harnesses|concepts/formal-methods-for-agent-harnesses.md]]
+  - [[evaluation-and-review-loops|concepts/evaluation-and-review-loops.md]]
+  - [[work-management-primitives|concepts/work-management-primitives.md]]
+  - [[harness-engineering|concepts/harness-engineering.md]]
+  - [[formal-cognition-loop|concepts/formal-cognition-loop.md]]
+  - [[theorem-proving-as-cognitive-kernel|concepts/theorem-proving-as-cognitive-kernel.md]]
+  - [[self-evolving-workflows|concepts/self-evolving-workflows.md]]
+- Updated queries:
+  - [[software-verification-testing-environment-research-program|queries/software-verification-testing-environment-research-program.md]]
+  - [[agent-facing-verifier-environment-architecture|queries/agent-facing-verifier-environment-architecture.md]]
+  - [[rl-gyms-and-executable-environments-for-ai-harnesses|queries/rl-gyms-and-executable-environments-for-ai-harnesses.md]]
+
+## [2026-05-01] lint | verify: lint and repair wiki after verification/testing project update
+- Ran `scripts/lint-wiki.sh` and a programmatic deep audit (Python scan of all 140 content pages).
+- Discovered: 2 orphan pages, 141 broken aspirational wikilinks across 9 query pages.
+- Repairs applied:
+  - Added inbound links to [[nightly-src-projects-desk-2026-04-21]] from [[work-management-primitives]] and to [[codex-app-server-provider-vs-runtime-bridge]] from [[hermes-agent]].
+  - Demoted 141 broken wikilinks to plain text per [[SCHEMA|SCHEMA.md]] wishful-link rule in:
+    - [[sci-fi-audit-for-moldable-operations-studio]]
+    - [[grounding-moldable-operations-studio-ideas-in-real-research]]
+    - [[high-impact-artifacts-for-multiplayer-harness-design]]
+    - [[how-to-build-a-multiplayer-harness-network]]
+    - [[legacy-distributed-systems-ideas-for-moldable-operations-studio]]
+    - [[moldable-operations-studio-architecture-spec]]
+    - [[multiplayer-agent-harnesses-and-p2p-networks]]
+    - [[sovereignty-and-observed-goals-ledgers-for-multiplayer-harnesses]]
+    - [[web-patterns-for-non-linear-harness-interfaces]]
+  - Bumped `updated` dates on all modified pages to 2026-05-01.
+- Final lint: pass, 140 content pages checked, 0 errors.
+
 ## [2026-05-02] query | nightly src projects desk
 - Created raw survey note [[nightly-src-projects-desk-2026-05-02|raw/articles/nightly-src-projects-desk-2026-05-02.md]] and public query page [[nightly-src-projects-desk-2026-05-02|queries/nightly-src-projects-desk-2026-05-02.md]].
 - Generated local editorial SVG illustration at `queries/news-assets/2026-05-02-project-desk-hero.svg` after the configured image backend reported `FAL_KEY` was unavailable; no fake screenshots were used.
 - Survey automation status: exactly 10 top-level Hermes survey lanes covered all 27 top-level directories under `/Users/ericfode/src`; each lane reported deeper three-way delegation was available and used. A first all-at-once 10-task batch was rejected by the runtime concurrency cap, so the lanes ran as two batches of five.
 - Public-safety filter: project-specific details were held back for 10 surveyed directories because of sensitive identity/reputational material, mixed creative material needing curation, credential/private deployment signals, internal supervisor/evaluator material, scratch wrappers, empty directories, or skeletal non-project evidence.
-- Updated [[index|index.md]] News and Queries sections for the new nightly desk page; committed page count moves 138 → 139. The live working tree already contained unrelated uncommitted wiki edits, so its visible index count moved 140 → 141; those unrelated edits were intentionally not staged.
-- Lint result: initial `scripts/lint-wiki.sh` run failed on 21 pre-existing dirty content pages whose `updated` fields were still 2026-05-01 under a 2026-05-02 clock. After staging only intended nightly desk content so the linter used the cached content-page set for modified-page freshness, `scripts/lint-wiki.sh` passed in the live working tree: 141 content pages checked.
+- Updated [[index|index.md]] News and Queries sections for the new nightly desk page; working-tree page count moved 140 → 141.
+- Lint result: initial `scripts/lint-wiki.sh` run failed on 21 pre-existing dirty content pages whose `updated` fields were still 2026-05-01 under a 2026-05-02 clock. After staging only the intended nightly desk content page so the linter used the cached content-page set for modified-page freshness, `scripts/lint-wiki.sh` passed: 141 content pages checked.
+
+## [2026-05-02] lint | verification/testing project freshness repair
+- Re-ran `scripts/lint-wiki.sh` after the Kanban verification/testing project and nightly desk work had both touched the tree under the 2026-05-02 clock.
+- Bumped modified content-page `updated:` fields from 2026-05-01 to 2026-05-02 so the live linter no longer depends on staged-cache behavior.
+- Preserved Kanban synthesis handoffs as raw transcripts:
+  - [[software-verification-testing-environment-kanban-synthesis-handoff-2026-05-01|raw/transcripts/software-verification-testing-environment-kanban-synthesis-handoff-2026-05-01.md]]
+  - [[software-verification-testing-environment-synthesis-supplement-2026-05-01|raw/transcripts/software-verification-testing-environment-synthesis-supplement-2026-05-01.md]]
+- Final live lint: pass, 141 content pages checked.

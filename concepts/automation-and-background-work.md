@@ -1,7 +1,7 @@
 ---
 title: Automation and Background Work
 created: 2026-04-07
-updated: 2026-04-07
+updated: 2026-05-02
 type: concept
 tags: [work-management, orchestration, tool-execution]
 sources: [raw/articles/openai-introducing-codex-app.md, raw/articles/openai-codex-chatgpt-plan.md, raw/articles/anthropic-claude-code-overview.md, raw/articles/anthropic-claude-code-scheduled-tasks.md, raw/articles/hermes-agent-github.md]
@@ -26,4 +26,4 @@ Automation and background work are the harness capabilities that let agents exec
 Background execution turns a harness from an interactive helper into an operating system for delegated work. That is powerful, but it also means automation quality depends on [[context-engineering]], [[evaluation-and-review-loops]], [[safety-and-permissions]], and the chosen [[orchestration-topologies]] rather than on model cleverness alone.
 
 ## Related pages
-Read this with [[work-management-primitives]], [[evaluation-and-review-loops]], [[orchestration-topologies]], [[codex-cli]], [[claude-code]], and [[hermes-agent]].
+Read this with [[work-management-primitives]], [[evaluation-and-review-loops]], [[orchestration-topologies]], [[agent-facing-verifier-environment-architecture]], [[codex-cli]], [[claude-code]], and [[hermes-agent]].

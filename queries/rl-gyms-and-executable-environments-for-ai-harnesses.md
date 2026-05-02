@@ -1,7 +1,7 @@
 ---
 title: "RL Gyms and Executable Environments for AI Harnesses"
 created: 2026-04-10
-updated: 2026-04-11
+updated: 2026-05-02
 type: query
 tags: [survey, benchmark, tool-execution, work-management]
 sources: [raw/articles/hermes-agent-github.md, raw/articles/newstack-openclaw-vs-hermes.md, raw/articles/hermes-atropos-integration-2026-04-09.md, raw/articles/another-harness-repo-2026-04-09.md, raw/articles/another-harness-work-item-closure-environment-2026-04-10.md, raw/articles/another-harness-evaluator-discipline-environment-2026-04-10.md, raw/papers/arxiv-zhou-2023-webarena.md, raw/papers/arxiv-chezelles-2024-browsergym-ecosystem.md, raw/papers/arxiv-koh-2024-visualwebarena.md, raw/papers/arxiv-drouin-2024-workarena.md, raw/papers/arxiv-boisvert-2024-workarena-plus-plus.md, raw/papers/arxiv-pan-2024-webcanvas.md, raw/papers/arxiv-xie-2024-osworld.md, raw/papers/arxiv-bonatti-2024-windows-agent-arena.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-ma-2024-agentboard.md, raw/papers/arxiv-xi-2024-agentgym.md, raw/papers/arxiv-nathani-2025-mlgym.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/papers/arxiv-yao-2024-tau-bench.md, raw/papers/arxiv-chuang-2026-proxy-state-based-evaluation.md, raw/papers/arxiv-chen-2025-rl-long-horizon-interactive-llm-agents.md, raw/papers/arxiv-lai-2025-computerrl.md, raw/papers/arxiv-mehta-2026-enterprisebench-corecraft.md, raw/papers/arxiv-mialon-2023-gaia.md, raw/papers/arxiv-yao-2022-webshop.md]
@@ -116,4 +116,6 @@ The Hermes-side signal is now grounded enough to be explicit: the repository not
 Yes — the RL-gym story for AI harnesses is now real enough to matter architecturally. The field is converging on executable worlds, state-based grading, trajectory capture, and increasingly trainable substrates. For harness design, the important question is no longer whether such environments exist, but which family of environments best matches the kind of competence the harness is supposed to accumulate.
 
 ## Related pages
-Read this with [[self-evolving-workflows]], [[evaluation-and-review-loops]], [[harness-engineering]], [[work-management-primitives]], [[gas-city-but-its-just-codex]], [[another-harness-work-item-closure-environment]], and [[another-harness-evaluator-discipline-environment]]. It is also a natural companion to [[arxiv-self-evolving-workflows-for-codex-control-plane]], [[another-harness-and-atropos]], and [[another-harness-atropos-environment-schema]].
+Read this with [[self-evolving-workflows]], [[evaluation-and-review-loops]], [[harness-engineering]], [[work-management-primitives]], [[agent-facing-verifier-environment-architecture]], [[gas-city-but-its-just-codex]], [[another-harness-work-item-closure-environment]], and [[another-harness-evaluator-discipline-environment]]. It is also a natural companion to [[arxiv-self-evolving-workflows-for-codex-control-plane]], [[another-harness-and-atropos]], and [[another-harness-atropos-environment-schema]].
+
+- **See also:** Systematic API testing via model checking (IcePick/Glacier).

@@ -1,7 +1,7 @@
 ---
 title: Formal Methods for Agent Harnesses
 created: 2026-04-08
-updated: 2026-05-01
+updated: 2026-05-02
 type: concept
 tags: [formal-methods, semantics, survey]
 sources: [raw/papers/arxiv-zhang-2024-formal-methods-trustworthy-ai-agents.md, raw/papers/arxiv-lahiri-2026-intent-formalization.md, raw/papers/arxiv-miculicich-2025-veriguard-verified-code-generation.md, raw/papers/arxiv-zou-2025-blocka2a-secure-verifiable-interoperability.md, raw/papers/arxiv-ben-khaled-2026-g2cp-graph-grounded-communication-protocol.md]
@@ -41,3 +41,11 @@ The present harness research agenda is already moving toward semantic layers: op
 Read this with [[formal-cognition-loop]], [[theorem-proving-as-cognitive-kernel]], [[arxiv-round-two-formal-semantics-for-agent-harnesses]], [[software-verification-testing-environment-research-program]], [[harness-engineering]], [[evaluation-and-review-loops]], [[work-management-primitives]], [[probabilistic-epistemic-updates]], [[partial-order-trace-semantics]], and [[new-harness-design-notes]].
 
 The architecture synthesis for treating verifiers and evidence as harness objects is in [[agent-facing-verifier-environment-architecture]].
+
+
+## Architectural Patterns from Software Verification
+Recent research highlights several key patterns for integrating formal methods into agent harnesses:
+- **Verifier as hallucination-free oracle**: Systems like [[cobalt-tla]] show that model checkers can act as first-class oracles, generating counterexamples that agents use to iteratively refine designs.
+- **Structural anchor + self-healing**: Approaches like NL2VC-60 demonstrate that agents can use formal specifications as structural anchors, repeatedly attempting to satisfy a verifier.
+- **Spec-first validation**: [[leetproof]] employs a pattern where specifications are validated before generating the full proof or implementation, reducing wasted effort on unprovable paths.
+- **Dependency burden**: Benchmarks like VeriSoftBench highlight the cognitive load of managing dependencies and imports in formal environments, which must be offloaded from the agent.

@@ -1,7 +1,7 @@
 ---
 title: Moldable Operations Studio Architecture Spec
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-05-02
 type: query
 tags: [orchestration, work-management, semantics, formal-methods]
 sources: [queries/non-linear-interface-options-for-next-harness.md, queries/web-patterns-for-non-linear-harness-interfaces.md, queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md, queries/new-harness-design-notes.md, raw/articles/openai-unlocking-codex-harness.md, raw/articles/openai-introducing-codex-app.md]
@@ -42,7 +42,7 @@ Every event should include:
 - affected objects
 - secrecy/integrity labels where relevant
 
-This imports the lessons of [[vector-clock]], [[virtual-synchrony]], and [[jif]].
+This imports the lessons of vector-clock, virtual-synchrony, and jif.
 
 ### 2. Control objects
 The minimum durable object family should be:

@@ -1,7 +1,7 @@
 ---
 title: Legacy Distributed-Systems Ideas for a Moldable Operations Studio
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-05-02
 type: query
 tags: [survey, comparison, orchestration, semantics]
 sources: [raw/articles/virtual-synchrony.md, raw/articles/chandy-lamport-algorithm.md, raw/articles/vector-clock.md, raw/articles/failure-detector.md, raw/articles/jif.md, raw/articles/session-type.md, raw/articles/viewstamped-replication-revisited.md, raw/articles/optimistic-replication.md, raw/articles/self-certifying-file-system.md, raw/papers/session-guarantees-weakly-consistent-replicated-data.md, raw/papers/escrow-transactional-method.md, queries/web-patterns-for-non-linear-harness-interfaces.md, queries/non-hierarchical-agent-orchestration.md]
@@ -27,37 +27,37 @@ The strongest old-world gifts are not new topologies so much as better semantics
 ## The most useful ideas
 
 ### 1. Causality as a first-class primitive
-[[vector-clock]] is the clean corrective to naïve timelines. A studio should know when two edits or observations are concurrent, not merely which wall-clock timestamp is larger.
+vector-clock is the clean corrective to naïve timelines. A studio should know when two edits or observations are concurrent, not merely which wall-clock timestamp is larger.
 
 ### 2. Consistent cuts for replay and audit
-[[chandy-lamport-algorithm]] gives the right mental model for snapshots: a review bundle or replay point should be a consistent cut, not an arbitrary mixture of local states.
+chandy-lamport-algorithm gives the right mental model for snapshots: a review bundle or replay point should be a consistent cut, not an arbitrary mixture of local states.
 
 ### 3. Membership views for live operator groups
-[[virtual-synchrony]] suggests that message delivery and group reconfiguration should share one semantics. Watchers, reviewers, and agent coalitions should move through explicit view epochs.
+virtual-synchrony suggests that message delivery and group reconfiguration should share one semantics. Watchers, reviewers, and agent coalitions should move through explicit view epochs.
 
 ### 4. Suspicion instead of mythological failure truth
-[[failure-detector]] is important because partial failure is epistemic before it is operational. The control plane should show suspected, unreachable, timed out, and confirmed-failed as distinct states.
+failure-detector is important because partial failure is epistemic before it is operational. The control plane should show suspected, unreachable, timed out, and confirmed-failed as distinct states.
 
 ### 5. Per-session monotonicity rather than universal strong consistency
-[[session-guarantees-weakly-consistent-replicated-data]] is one of the most directly reusable ideas here. Humans and agents need coherent local views across multiple surfaces even if the global system stays only causal or eventual.
+session-guarantees-weakly-consistent-replicated-data is one of the most directly reusable ideas here. Humans and agents need coherent local views across multiple surfaces even if the global system stays only causal or eventual.
 
 ### 6. Escrowed rights for delegated autonomy
-[[escrow-transactional-method]] is oddly modern. Instead of routing every sensitive action through a central lock, the system can pre-allocate bounded rights while preserving invariants.
+escrow-transactional-method is oddly modern. Instead of routing every sensitive action through a central lock, the system can pre-allocate bounded rights while preserving invariants.
 
 ### 7. Typed protocols for handoffs
-[[session-type]] suggests that handoffs between humans, agents, tools, and reviewers should be checked interaction protocols rather than loosely narrated custom.
+session-type suggests that handoffs between humans, agents, tools, and reviewers should be checked interaction protocols rather than loosely narrated custom.
 
 ### 8. Information-flow labels, not only RBAC
-[[jif]] shows how secrecy and integrity can travel with the data. That matters for traces, prompts, credentials, and derived artifacts in a serious studio.
+jif shows how secrecy and integrity can travel with the data. That matters for traces, prompts, credentials, and derived artifacts in a serious studio.
 
 ### 9. A replicated command log for the control plane
-[[viewstamped-replication-revisited]] sharpens the intuition that approval, cancellation, grant, and reconfiguration should be durable control commands, not merely mutable UI state.
+viewstamped-replication-revisited sharpens the intuition that approval, cancellation, grant, and reconfiguration should be durable control commands, not merely mutable UI state.
 
 ### 10. Tentative updates as a normal mode
-[[optimistic-replication]] and the Bayou-style logic behind [[session-guarantees-weakly-consistent-replicated-data]] argue for explicit tentative branches with later reconciliation rather than pretending disconnected or speculative work is an edge case.
+optimistic-replication and the Bayou-style logic behind session-guarantees-weakly-consistent-replicated-data argue for explicit tentative branches with later reconciliation rather than pretending disconnected or speculative work is an edge case.
 
 ### 11. Self-certifying references for cross-boundary trust
-[[self-certifying-file-system]] is useful wherever a harness passes artifacts or capabilities across machines or organizations. Cryptographic identity can live in the reference itself.
+self-certifying-file-system is useful wherever a harness passes artifacts or capabilities across machines or organizations. Cryptographic identity can live in the reference itself.
 
 ## What seems under-implemented
 What is striking is not that these ideas failed. Many succeeded inside infrastructure. What remains oddly thin is their translation into developer-facing control planes. Most programming tools still present:

@@ -1,7 +1,7 @@
 ---
 title: "Agent-Facing Verifier and Testing Harness Architecture"
 created: 2026-05-01
-updated: 2026-05-01
+updated: 2026-05-02
 type: query
 tags: [formal-methods, benchmark, tool-execution, work-management]
 sources: [concepts/formal-methods-for-agent-harnesses.md, concepts/evaluation-and-review-loops.md, concepts/work-management-primitives.md, queries/software-verification-testing-environment-research-program.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-pan-2024-swe-gym.md]
@@ -21,13 +21,13 @@ The model is not merely "APIs over pytest." It is a structured evidence surface 
 The modern harness survey frames an agent harness as six governance functions: **Execution (E), Tool Registry (T), Context (C), State Store (S), Lifecycle Hooks (L), Evaluation Interface (V).** The critical additions for verification are **S** and **V** when they are treated as structured objects rather than atmospheric logging. The state store `S` is where evidence survives, and the evaluation interface `V` is where evidence becomes legible enough to drive further action.
 
 ### From CodeTracer
-[[code-tracer-towards-traceable-agent-states|CodeTracer]] shows that raw agent run directories are insufficient. Heterogeneous traces must be normalized into typed records (action, observation, diff, verification) and then indexed into a **hierarchical trace tree** with exploration nodes and state-changing nodes. The important step for harness design is that failure-onset localization is not a human convenience; it is a structured signal that can be fed back into the agent as a **reflective replay** prefix, recovering failed runs deterministically under the same budget.
+CodeTracer shows that raw agent run directories are insufficient. Heterogeneous traces must be normalized into typed records (action, observation, diff, verification) and then indexed into a **hierarchical trace tree** with exploration nodes and state-changing nodes. The important step for harness design is that failure-onset localization is not a human convenience; it is a structured signal that can be fed back into the agent as a **reflective replay** prefix, recovering failed runs deterministically under the same budget.
 
 ### From another-harness
 The local prototypes in [[another-harness-work-item-closure-environment]] and [[another-harness-evaluator-discipline-environment]] validate a narrower but real version of the same idea: the environment is not a test runner but a **frozen contract with role-specific permissions.** Builder episodes may not approve completion. Evaluator episodes may not rewrite deliverables. This is the verifier-as-environment-object in concrete form.
 
 ### From SWE-Gym and AppWorld
-[[swe-gym]] pairs builder training with verifier training on the same trajectory substrate. [[app-world]] uses state-based evaluation with collateral-damage checks. The lesson is that the environment must reward not only the final artifact but the trace of interaction that produced it, and that verifier interaction traces are themselves learnable.
+[[swe-gym]] pairs builder training with verifier training on the same trajectory substrate. [[appworld]] uses state-based evaluation with collateral-damage checks. The lesson is that the environment must reward not only the final artifact but the trace of interaction that produced it, and that verifier interaction traces are themselves learnable.
 
 ---
 
@@ -62,7 +62,7 @@ evidence_record:
   timestamp: iso8601
 ```
 
-This is the harness-level equivalent of what [[swe-gym]] and [[app-world]] do inside their evaluators, but lifted into a reusable ledger so that evidence survives beyond one benchmark run.
+This is the harness-level equivalent of what [[swe-gym]] and [[appworld]] do inside their evaluators, but lifted into a reusable ledger so that evidence survives beyond one benchmark run.
 
 ### 3. Promotion gate
 A state object that tracks where a piece of work sits in the acceptance pipeline.
@@ -200,7 +200,10 @@ Important invariants:
 ## Bottom line
 The agent-facing verifier environment is not a bag of testing tools. It is a **structured substrate** for specifications, evidence, promotion, and regression, governed by a state machine that enforces role separation between builder, tester, reviewer, and formal verifier. The primitives are not exotic: ledgers, state machines, trees, and hashes. What matters is that they are exposed as addressable objects rather than hidden inside CI logs or human dashboards.
 
-The closest existing precedent is the combination of [[swe-gym]] (trajectory + verifier training), [[app-world]] (state-based grading), [[another-harness-work-item-closure-environment]] (frozen contract + role isolation), and [[code-tracer-towards-traceable-agent-states|CodeTracer]] (hierarchical trace indexing). The proposed architecture unifies these into a single object model that a harness can query, inspect, and learn from.
+The closest existing precedent is the combination of [[swe-gym]] (trajectory + verifier training), [[appworld]] (state-based grading), [[another-harness-work-item-closure-environment]] (frozen contract + role isolation), and CodeTracer (hierarchical trace indexing). The proposed architecture unifies these into a single object model that a harness can query, inspect, and learn from.
 
 ## Related pages
-Read this with [[software-verification-testing-environment-research-program]], [[formal-methods-for-agent-harnesses]], [[evaluation-and-review-loops]], [[work-management-primitives]], [[agent-harness-anatomy]], [[self-evolving-workflows]], [[another-harness-work-item-closure-environment]], [[another-harness-evaluator-discipline-environment]], [[swe-gym]], [[app-world]], [[code-tracer-towards-traceable-agent-states]].
+Read this with [[software-verification-testing-environment-research-program]], [[formal-methods-for-agent-harnesses]], [[evaluation-and-review-loops]], [[work-management-primitives]], [[agent-harness-anatomy]], [[self-evolving-workflows]], [[another-harness-work-item-closure-environment]], [[another-harness-evaluator-discipline-environment]], [[swe-gym]], [[appworld]], and the raw CodeTracer note under `raw/papers/code-tracer-towards-traceable-agent-states.md`.
+
+
+- **See also:** [[cobalt-tla]], [[leetproof]]

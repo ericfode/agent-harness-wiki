@@ -1,7 +1,7 @@
 ---
 title: Theorem Proving as Cognitive Kernel
 created: 2026-04-08
-updated: 2026-04-15
+updated: 2026-05-02
 type: concept
 tags: [formal-methods, semantics, survey]
 sources: [raw/papers/arxiv-song-2024-lean-copilot.md, raw/papers/arxiv-lin-2024-fvel.md, raw/papers/arxiv-allen-2025-sound-complete-neurosymbolic-reasoning.md, raw/articles/math-ai-org-mathcode-github.md]
@@ -34,3 +34,6 @@ A proof assistant is not automatically the right formal space for every task. Fo
 
 ## Related pages
 Read this with [[formal-methods-for-agent-harnesses]], [[formal-cognition-loop]], [[mathcode]], [[probabilistic-epistemic-updates]], and [[partial-order-trace-semantics]].
+
+
+- **Implementation Insight:** Managing dependency burden and imports is a significant challenge for autonomous theorem provers, as highlighted by benchmarks like VeriSoftBench.

@@ -1,7 +1,7 @@
 ---
 title: Hermes Agent
 created: 2026-04-07
-updated: 2026-04-09
+updated: 2026-05-02
 type: entity
 tags: [hermes-agent, memory, safety]
 sources: [raw/articles/hermes-agent-github.md, raw/articles/hermes-agent-memory-docs.md, raw/articles/hermes-agent-api-server-docs.md, raw/articles/newstack-openclaw-vs-hermes.md]
@@ -47,3 +47,6 @@ Relative to [[openclaw]], Hermes is less ecosystem-maximal. Relative to [[codex-
 
 ## Relationships
 Hermes Agent should be read with [[instruction-layering]], [[memory-persistence]], [[automation-and-background-work]], [[work-management-primitives]], [[safety-and-permissions]], and [[harness-architecture-comparison]]. It is one of the poles in [[harness-quality-comparison]] when the evaluation criterion is durable usefulness rather than only code-generation throughput.
+
+
+For the current provider-layer positioning of Codex App Server inside Hermes, see [[codex-app-server-provider-vs-runtime-bridge]].

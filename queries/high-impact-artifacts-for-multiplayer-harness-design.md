@@ -1,7 +1,7 @@
 ---
 title: High-Impact Artifacts for Multiplayer Harness Design
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-05-02
 type: query
 tags: [survey, orchestration, semantics, work-management, memory]
 sources: [queries/how-to-build-a-multiplayer-harness-network.md, queries/multiplayer-agent-harnesses-and-p2p-networks.md, queries/moldable-operations-studio-schema-pass.md, queries/moldable-operations-studio-architecture-spec.md, queries/another-harness-work-item-closure-environment.md, queries/another-harness-atropos-environment-schema.md, raw/articles/google-agent2agent-protocol.md, raw/papers/arxiv-ehtesham-2025-survey-agent-interoperability-protocols.md, raw/articles/local-first-software.md, raw/articles/pushpin-peer-to-peer-collaboration.md, raw/papers/merkle-crdts.md, raw/papers/session-guarantees-weakly-consistent-replicated-data.md, raw/papers/escrow-transactional-method.md, raw/articles/visual-studio-live-share.md, raw/articles/jupyterlab-real-time-collaboration.md]
@@ -67,7 +67,7 @@ Design question it answers:
 
 ## The next four high-impact things
 
-### 4. [[google-agent2agent-protocol]] plus [[arxiv-ehtesham-2025-survey-agent-interoperability-protocols]]
+### 4. google-agent2agent-protocol plus arxiv-ehtesham-2025-survey-agent-interoperability-protocols
 Why they matter:
 - These clarify that tool access, peer delegation, messaging, and open-network discovery are different seams.
 - That separation is probably the single most important protocol-design insight for your system.
@@ -81,7 +81,7 @@ What to look for:
 Design question they answer:
 - What should the adapter boundary expose, and what should remain local to each harness?
 
-### 5. [[local-first-software]] plus [[pushpin-peer-to-peer-collaboration]]
+### 5. local-first-software plus pushpin-peer-to-peer-collaboration
 Why they matter:
 - These decide whether your network is actually peer-oriented or just a cloud product with some polite peer rhetoric.
 - They force you to think about sovereignty, offline usefulness, sync, and real product ergonomics together.
@@ -95,7 +95,7 @@ What to look for:
 Design question they answer:
 - Is each harness node genuinely first-class on its own, or merely a cache for someone else's server?
 
-### 6. [[merkle-crdts]]
+### 6. merkle-crdts
 Why it matters:
 - This is the cleanest current pointer for how replicated state and artifact sync might actually scale beyond a toy two-user demo.
 - It turns "share state" into content-addressed, hash-verifiable anti-entropy rather than optimistic hand-waving.
@@ -108,7 +108,7 @@ What to look for:
 Design question it answers:
 - How should shared spaces synchronize without central serialization?
 
-### 7. [[session-guarantees-weakly-consistent-replicated-data]] plus [[escrow-transactional-method]]
+### 7. session-guarantees-weakly-consistent-replicated-data plus escrow-transactional-method
 Why they matter:
 - These are the sharpest old distributed-systems imports for human trust in the system.
 - They tell you what must feel consistent locally and what can remain only causally or eventually coordinated.
@@ -123,7 +123,7 @@ Design question they answer:
 
 ## Human-surface references with disproportionate leverage
 
-### 8. [[visual-studio-live-share]]
+### 8. visual-studio-live-share
 Why it matters:
 - It proves that collaboration becomes much stronger when runtime context is shared, not just source text.
 
@@ -135,7 +135,7 @@ What to look for:
 Design question it answers:
 - What should a multiplayer harness share besides files?
 
-### 9. [[jupyterlab-real-time-collaboration]]
+### 9. jupyterlab-real-time-collaboration
 Why it matters:
 - It shows what it means to make a structured computational artifact, not just a text file, genuinely multiplayer.
 
@@ -158,25 +158,25 @@ Goal:
 
 ### Session 2: adapter and protocol seams
 - [[how-to-build-a-multiplayer-harness-network]]
-- [[google-agent2agent-protocol]]
-- [[arxiv-ehtesham-2025-survey-agent-interoperability-protocols]]
+- google-agent2agent-protocol
+- arxiv-ehtesham-2025-survey-agent-interoperability-protocols
 
 Goal:
 - define the minimum capability card and adapter contract
 
 ### Session 3: replication and trust
-- [[local-first-software]]
-- [[pushpin-peer-to-peer-collaboration]]
-- [[merkle-crdts]]
-- [[session-guarantees-weakly-consistent-replicated-data]]
-- [[escrow-transactional-method]]
+- local-first-software
+- pushpin-peer-to-peer-collaboration
+- merkle-crdts
+- session-guarantees-weakly-consistent-replicated-data
+- escrow-transactional-method
 
 Goal:
 - decide what replicates, what stays local, and what needs stronger guarantees
 
 ### Session 4: human surfaces
-- [[visual-studio-live-share]]
-- [[jupyterlab-real-time-collaboration]]
+- visual-studio-live-share
+- jupyterlab-real-time-collaboration
 - [[grounding-moldable-operations-studio-ideas-in-real-research]]
 
 Goal:

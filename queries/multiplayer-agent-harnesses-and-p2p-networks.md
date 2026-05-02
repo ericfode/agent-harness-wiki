@@ -1,7 +1,7 @@
 ---
 title: Multiplayer Agent Harnesses and P2P Networks
 created: 2026-04-10
-updated: 2026-04-15
+updated: 2026-05-02
 type: query
 tags: [survey, orchestration, semantics, work-management, memory]
 sources: [queries/new-harness-design-notes.md, queries/non-hierarchical-agent-orchestration.md, queries/moldable-operations-studio-architecture-spec.md, queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md, queries/grounding-moldable-operations-studio-ideas-in-real-research.md, concepts/non-hierarchical-coordination-patterns.md, concepts/fission-fusion-orchestration.md, raw/articles/local-first-software.md, raw/articles/pushpin-peer-to-peer-collaboration.md, raw/articles/jupyterlab-real-time-collaboration.md, raw/articles/visual-studio-live-share.md, raw/articles/google-agent2agent-protocol.md, raw/papers/merkle-crdts.md, raw/papers/maymounkov-mazieres-2002-kademlia.md, raw/papers/arxiv-ehtesham-2025-survey-agent-interoperability-protocols.md, raw/papers/arxiv-pugachev-2025-codecrdt-observation-driven-coordination.md, raw/papers/arxiv-zou-2025-blocka2a-secure-verifiable-interoperability.md, raw/papers/session-guarantees-weakly-consistent-replicated-data.md, raw/papers/escrow-transactional-method.md, raw/articles/self-certifying-file-system.md, raw/articles/rfc-9420-mls-protocol.md, raw/papers/klokmose-et-al-2015-webstrates.md, raw/papers/yang-wigdor-2014-panelrama.md]
@@ -37,7 +37,7 @@ This is the point where [[non-hierarchical-agent-orchestration]] stops being a p
 ## The research converges on four layers
 
 ### 1. Local-first replicated workspaces
-[[local-first-software]] and [[pushpin-peer-to-peer-collaboration]] are the clearest statement of the product invariant: collaboration should not require giving up local ownership, offline usability, or durable agency over data.
+local-first-software and pushpin-peer-to-peer-collaboration are the clearest statement of the product invariant: collaboration should not require giving up local ownership, offline usability, or durable agency over data.
 
 For a harness, that implies:
 - each human or agent runs a locally useful harness node
@@ -47,7 +47,7 @@ For a harness, that implies:
 This fits the sovereignty concerns already present in [[new-harness-design-notes]] better than a centralized always-online control tower.
 
 ### 2. Convergent sync plus peer discovery
-[[merkle-crdts]] and [[arxiv-pugachev-2025-codecrdt-observation-driven-coordination]] suggest that concurrency should be handled with convergent shared state rather than manager-mediated locks or brittle merge rituals. [[maymounkov-mazieres-2002-kademlia]] adds the missing peer-discovery layer: a large network needs some way to locate peers, spaces, or replicas without routing everything through one permanent broker.
+merkle-crdts and arxiv-pugachev-2025-codecrdt-observation-driven-coordination suggest that concurrency should be handled with convergent shared state rather than manager-mediated locks or brittle merge rituals. maymounkov-mazieres-2002-kademlia adds the missing peer-discovery layer: a large network needs some way to locate peers, spaces, or replicas without routing everything through one permanent broker.
 
 The useful import is quite concrete:
 - sync operations and artifact graphs, not giant opaque chat blobs
@@ -56,7 +56,7 @@ The useful import is quite concrete:
 - separate discovery/rendezvous from the higher-level work protocol
 
 ### 3. Typed peer interoperability and bounded trust
-[[google-agent2agent-protocol]] plus [[arxiv-ehtesham-2025-survey-agent-interoperability-protocols]] make an important separation visible: tool access, peer messaging, peer delegation, and open-network discovery are different problems and want different protocol seams. [[arxiv-zou-2025-blocka2a-secure-verifiable-interoperability]] sharpens the security side by making identity, audit, revocation, and Byzantine suspicion part of the protocol story.
+google-agent2agent-protocol plus arxiv-ehtesham-2025-survey-agent-interoperability-protocols make an important separation visible: tool access, peer messaging, peer delegation, and open-network discovery are different problems and want different protocol seams. arxiv-zou-2025-blocka2a-secure-verifiable-interoperability sharpens the security side by making identity, audit, revocation, and Byzantine suspicion part of the protocol story.
 
 The best reading is not that one protocol has won. It is that a multiplayer harness should likely have a small stack:
 - MCP-like tool/context access inside a node
@@ -67,7 +67,7 @@ The best reading is not that one protocol has won. It is that a multiplayer harn
 A harness that tries to make one message format do all of this will become an elegant little confusion machine.
 
 ### 4. Human multiplayer surfaces over the same substrate
-[[visual-studio-live-share]], [[jupyterlab-real-time-collaboration]], [[klokmose-et-al-2015-webstrates|webstrates]], and [[yang-wigdor-2014-panelrama|panelrama]] point toward the same conclusion: collaboration improves when people share runtime context and synchronized workspaces, not only files or chat.
+visual-studio-live-share, jupyterlab-real-time-collaboration, webstrates, and panelrama point toward the same conclusion: collaboration improves when people share runtime context and synchronized workspaces, not only files or chat.
 
 For a harness, this means the first-class surfaces should include:
 - shared artifact editing
@@ -114,7 +114,7 @@ This continues the object model in [[moldable-operations-studio-architecture-spe
 For multiplayer work this is even more important. A shared harness must distinguish "Alice has not seen this yet" from "this does not exist," which is a philosophical difference only if one enjoys broken systems.
 
 ### 4. Trust model: self-certifying identity plus escrowed rights
-[[self-certifying-file-system]], [[rfc-9420-mls-protocol]], and [[escrow-transactional-method]] imply a strong trust architecture:
+self-certifying-file-system, rfc-9420-mls-protocol, and escrow-transactional-method imply a strong trust architecture:
 - self-certifying identities or cryptographically meaningful handles for cross-boundary references
 - explicit membership epochs for coalition or room changes
 - bounded delegated rights instead of universal ambient permission
@@ -151,7 +151,7 @@ Stronger semantics are worth paying for only on a few control-plane edges:
 - checkpoint finalization
 - publication of a view others will rely on operationally
 
-That matches both [[session-guarantees-weakly-consistent-replicated-data]] and the selective-linearizability stance in [[moldable-operations-studio-architecture-spec]].
+That matches both session-guarantees-weakly-consistent-replicated-data and the selective-linearizability stance in [[moldable-operations-studio-architecture-spec]].
 
 ## Main failure modes to avoid
 - Treating the transcript as the source of truth.

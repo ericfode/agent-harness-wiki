@@ -1,7 +1,7 @@
 ---
 title: Formal Cognition Loop
 created: 2026-04-08
-updated: 2026-04-15
+updated: 2026-05-02
 type: concept
 tags: [formal-methods, semantics, context-engineering]
 sources: [raw/papers/arxiv-lahiri-2026-intent-formalization.md, raw/papers/arxiv-endres-2023-natural-language-to-postconditions.md, raw/papers/arxiv-murphy-2024-llm-codegen-formal-spec-reactive-synthesis.md, raw/papers/arxiv-burigana-2026-epddl.md, concepts/neural-native-programming.md, raw/articles/math-ai-org-mathcode-github.md]
@@ -56,3 +56,6 @@ The interesting design choice is not whether to use formal methods in the abstra
 
 ## Related pages
 Read this with [[formal-core-agent-architecture]], [[formal-methods-for-agent-harnesses]], [[theorem-proving-as-cognitive-kernel]], [[mathcode]], [[probabilistic-epistemic-updates]], [[partial-order-trace-semantics]], [[neural-native-programming]], and [[new-harness-design-notes]].
+
+
+- **See also:** The spec-first validation pattern in [[leetproof]].

@@ -1,7 +1,7 @@
 ---
 title: Sovereignty and Observed-Goals Ledgers for Multiplayer Harnesses
 created: 2026-04-10
-updated: 2026-04-15
+updated: 2026-05-02
 type: query
 tags: [survey, orchestration, semantics, work-management, memory]
 sources: [queries/multiplayer-agent-harnesses-and-p2p-networks.md, queries/how-to-build-a-multiplayer-harness-network.md, queries/moldable-operations-studio-schema-pass.md, queries/legacy-distributed-systems-ideas-for-moldable-operations-studio.md, raw/articles/w3c-verifiable-credentials-data-model-v2.md, raw/papers/li-mitchell-winsborough-role-based-trust-management-framework.md, raw/papers/bauer-schneider-felten-appel-proof-carrying-authorization.md, raw/papers/claimchain.md, raw/papers/torres-arias-2019-in-toto.md, raw/articles/w3c-prov-dm.md, raw/papers/medina-mora-winograd-flores-flores-action-workflow-approach.md, raw/papers/fornara-colombetti-commitment-based-agent-communication-language.md, raw/papers/singh-chopra-computational-governance-violable-contracts.md, raw/papers/keren-gal-karpas-goal-recognition-design.md, raw/papers/ramirez-geffner-probabilistic-plan-recognition.md, raw/papers/erickson-et-al-socially-translucent-systems.md, raw/articles/self-certifying-file-system.md, raw/articles/rivest-lampson-1996-sdsi.md, raw/papers/birgisson-et-al-2014-macaroons.md, raw/articles/rfc-9420-mls-protocol.md, raw/papers/efstathopoulos-et-al-2005-asbestos.md, raw/articles/local-first-software.md]
@@ -44,32 +44,32 @@ A scalar reputation score collapses too many different things:
 - temporary failure
 - principled refusal
 
-The literature found in this deep-dive points in a different direction. Trustworthy multiplayer systems work better when they preserve structured social facts rather than compressing people into one number. [[erickson-et-al-socially-translucent-systems]] is the HCI version of this point. [[li-mitchell-winsborough-role-based-trust-management-framework]] and [[bauer-schneider-felten-appel-proof-carrying-authorization]] are the authorization version. [[fornara-colombetti-commitment-based-agent-communication-language]] and [[singh-chopra-computational-governance-violable-contracts]] are the protocol and governance version.
+The literature found in this deep-dive points in a different direction. Trustworthy multiplayer systems work better when they preserve structured social facts rather than compressing people into one number. erickson-et-al-socially-translucent-systems is the HCI version of this point. li-mitchell-winsborough-role-based-trust-management-framework and bauer-schneider-felten-appel-proof-carrying-authorization are the authorization version. fornara-colombetti-commitment-based-agent-communication-language and singh-chopra-computational-governance-violable-contracts are the protocol and governance version.
 
 ## Round 1 result: the strongest research clusters
 The broad pass converged on three source families.
 
 ### A. Sovereign identity and portable attestation
 The strongest line here is:
-- [[rivest-lampson-1996-sdsi]]
-- [[self-certifying-file-system]]
-- [[w3c-verifiable-credentials-data-model-v2]]
-- [[li-mitchell-winsborough-role-based-trust-management-framework]]
-- [[bauer-schneider-felten-appel-proof-carrying-authorization]]
-- [[claimchain]]
-- [[torres-arias-2019-in-toto]]
-- [[birgisson-et-al-2014-macaroons]]
+- rivest-lampson-1996-sdsi
+- self-certifying-file-system
+- w3c-verifiable-credentials-data-model-v2
+- li-mitchell-winsborough-role-based-trust-management-framework
+- bauer-schneider-felten-appel-proof-carrying-authorization
+- claimchain
+- torres-arias-2019-in-toto
+- birgisson-et-al-2014-macaroons
 
 The common lesson is that identity should be sovereign, authorization should be policy-evaluated, and important actions should carry evidence rather than asking for ambient trust.
 
 ### B. Provenance, commitments, and goal hypotheses
 The strongest line here is:
-- [[w3c-prov-dm]]
-- [[medina-mora-winograd-flores-flores-action-workflow-approach]]
-- [[fornara-colombetti-commitment-based-agent-communication-language]]
-- [[singh-chopra-computational-governance-violable-contracts]]
-- [[ramirez-geffner-probabilistic-plan-recognition]]
-- [[keren-gal-karpas-goal-recognition-design]]
+- w3c-prov-dm
+- medina-mora-winograd-flores-flores-action-workflow-approach
+- fornara-colombetti-commitment-based-agent-communication-language
+- singh-chopra-computational-governance-violable-contracts
+- ramirez-geffner-probabilistic-plan-recognition
+- keren-gal-karpas-goal-recognition-design
 
 The common lesson is that the system should separately represent:
 - observed facts
@@ -81,10 +81,10 @@ If those are collapsed, the ledger becomes manipulative very quickly.
 
 ### C. Human-facing accountability without moral scoring
 The strongest line here is:
-- [[erickson-et-al-socially-translucent-systems]]
-- [[local-first-software]]
-- [[rfc-9420-mls-protocol]]
-- [[efstathopoulos-et-al-2005-asbestos]]
+- erickson-et-al-socially-translucent-systems
+- local-first-software
+- rfc-9420-mls-protocol
+- efstathopoulos-et-al-2005-asbestos
 
 The common lesson is that collaboration works better when people can see relevant activity, retain local agency, and rely on scoped compartments and explicit epochs, rather than being silently judged by hidden systems.
 
@@ -92,7 +92,7 @@ The common lesson is that collaboration works better when people can see relevan
 The targeted pass sharpens the design considerably.
 
 ## 1. Identity layer: sovereign and locally named
-The identity substrate should follow the spirit of [[rivest-lampson-1996-sdsi]] and [[self-certifying-file-system]].
+The identity substrate should follow the spirit of rivest-lampson-1996-sdsi and self-certifying-file-system.
 
 ### Required primitives
 - `node_id`
@@ -108,7 +108,7 @@ The identity substrate should follow the spirit of [[rivest-lampson-1996-sdsi]] 
 Do not force one flattening global actor identity. A multiplayer harness should support linked local names and scoped memberships.
 
 ## 2. Attestation layer: portable claims, local policy
-The attestation substrate should follow [[w3c-verifiable-credentials-data-model-v2]], [[li-mitchell-winsborough-role-based-trust-management-framework]], [[bauer-schneider-felten-appel-proof-carrying-authorization]], and [[birgisson-et-al-2014-macaroons]].
+The attestation substrate should follow w3c-verifiable-credentials-data-model-v2, li-mitchell-winsborough-role-based-trust-management-framework, bauer-schneider-felten-appel-proof-carrying-authorization, and birgisson-et-al-2014-macaroons.
 
 ### Required primitives
 - `credential`
@@ -126,7 +126,7 @@ The attestation substrate should follow [[w3c-verifiable-credentials-data-model-
 The verifier remains sovereign. A credential does not force trust; it only carries evidence that local policy may accept.
 
 ## 3. Provenance layer: receipts before interpretations
-The substrate here is [[w3c-prov-dm]] plus the artifact lineage logic of [[torres-arias-2019-in-toto]].
+The substrate here is w3c-prov-dm plus the artifact lineage logic of torres-arias-2019-in-toto.
 
 ### Required primitives
 - `evidence_receipt`
@@ -142,7 +142,7 @@ The substrate here is [[w3c-prov-dm]] plus the artifact lineage logic of [[torre
 The system must keep raw evidence and provenance separate from later interpretation. Otherwise the newest story overwrites the past, which is efficient and barbaric.
 
 ## 4. Commitment layer: the real non-score social substrate
-This is where [[medina-mora-winograd-flores-flores-action-workflow-approach]], [[fornara-colombetti-commitment-based-agent-communication-language]], and [[singh-chopra-computational-governance-violable-contracts]] become central. The more concrete semantic extraction from this lane now lives in [[commitment-governance-semantics-for-multiplayer-harness]].
+This is where medina-mora-winograd-flores-flores-action-workflow-approach, fornara-colombetti-commitment-based-agent-communication-language, and singh-chopra-computational-governance-violable-contracts become central. The more concrete semantic extraction from this lane now lives in [[commitment-governance-semantics-for-multiplayer-harness]].
 
 ### Required primitives
 - `commitment`
@@ -160,7 +160,7 @@ This is where [[medina-mora-winograd-flores-flores-action-workflow-approach]], [
 Represent obligation, release, breach, and remedy explicitly. Do not turn a missed obligation into a hidden score decrement.
 
 ## 5. Goal-hypothesis layer: observed goals, not mind-reading
-The observed-goals part of the system should follow [[ramirez-geffner-probabilistic-plan-recognition]] and [[keren-gal-karpas-goal-recognition-design]].
+The observed-goals part of the system should follow ramirez-geffner-probabilistic-plan-recognition and keren-gal-karpas-goal-recognition-design.
 
 ### Required primitives
 - `hypothesis_set`
@@ -181,7 +181,7 @@ Inferred goals are hypotheses, not facts. They should always be:
 - accompanied by alternatives when ambiguity remains live
 
 ## 6. Governance layer: procedural justice, not reputation theater
-This is the main lesson from [[singh-chopra-computational-governance-violable-contracts]] together with the broader governance tradition already reflected in the wiki.
+This is the main lesson from singh-chopra-computational-governance-violable-contracts together with the broader governance tradition already reflected in the wiki.
 
 ### Required primitives
 - `policy_proposal`
@@ -197,7 +197,7 @@ This is the main lesson from [[singh-chopra-computational-governance-violable-co
 Governance must itself be on-ledger. If the system can sanction, revoke, or downgrade participants, the grounds, authority, and remedy path must be explicit and inspectable.
 
 ## 7. Human surface layer: socially translucent, not surveillance-heavy
-The UI principle comes from [[erickson-et-al-socially-translucent-systems]].
+The UI principle comes from erickson-et-al-socially-translucent-systems.
 
 The right surface shows:
 - what commitments are active

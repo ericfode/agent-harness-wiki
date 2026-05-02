@@ -1,7 +1,7 @@
 ---
 title: Grounding Moldable Operations Studio Ideas in Real Research
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-05-02
 type: query
 tags: [survey, comparison, orchestration, semantics]
 sources: [raw/papers/yang-wigdor-2014-panelrama.md, raw/papers/klokmose-et-al-2015-webstrates.md, raw/papers/bragdon-et-al-2011-code-space.md, raw/papers/danielsson-alvinius-larsson-2014-common-operating-picture.md, raw/papers/nandiganahalli-et-al-2014-mode-confusion-detection.md, raw/papers/honarmand-torrellas-2014-replay-debugging.md, raw/papers/ko-myers-2009-java-whyline.md, raw/papers/stasko-gorg-liu-2008-jigsaw.md, raw/papers/andrews-north-2012-analysts-workspace.md, raw/papers/groth-streefkerk-2006-provenance-annotation-visual-exploration.md, raw/papers/amershi-et-al-2015-modeltracker.md, raw/papers/wexler-et-al-2019-what-if-tool.md, raw/papers/malkhi-lamport-zhou-2008-stoppable-paxos.md, raw/articles/rfc-9420-mls-protocol.md, raw/articles/rivest-lampson-1996-sdsi.md, raw/papers/birgisson-et-al-2014-macaroons.md, raw/papers/efstathopoulos-et-al-2005-asbestos.md, raw/papers/finkelstein-et-al-1992-viewpoints.md, raw/papers/foster-et-al-2007-bidirectional-tree-transformations.md, raw/papers/green-karvounarakis-tannen-2007-provenance-semirings.md, queries/sci-fi-audit-for-moldable-operations-studio.md, queries/moldable-operations-studio-architecture-spec.md, queries/moldable-operations-studio-schema-pass.md]
@@ -29,7 +29,7 @@ The strongest result of this pass is that most of the desirable studio propertie
 The resulting screen model and interaction loops now live in [[moldable-operations-studio-wireframes]].
 
 ## 1. One state, many surfaces
-The combination of [[yang-wigdor-2014-panelrama]], [[klokmose-et-al-2015-webstrates]], [[bragdon-et-al-2011-code-space]], and [[danielsson-alvinius-larsson-2014-common-operating-picture]] gives a fairly complete answer to the LCARS/DRADIS impulse.
+The combination of yang-wigdor-2014-panelrama, klokmose-et-al-2015-webstrates, bragdon-et-al-2011-code-space, and danielsson-alvinius-larsson-2014-common-operating-picture gives a fairly complete answer to the LCARS/DRADIS impulse.
 
 The shared lesson is that one canonical operational substrate can support:
 - a public wallboard
@@ -40,7 +40,7 @@ The shared lesson is that one canonical operational substrate can support:
 without needing separate truth stores. The room view is the common operating picture; the personal view is a local staging and interpretation surface.
 
 ## 2. Mode clarity is a formal UI problem
-[[nandiganahalli-et-al-2014-mode-confusion-detection]] and [[honarmand-torrellas-2014-replay-debugging]] jointly sharpen the WarGames lesson. Live, replay, and simulation should not merely look different. They should be backed by different runtime semantics and validated mode transitions.
+nandiganahalli-et-al-2014-mode-confusion-detection and honarmand-torrellas-2014-replay-debugging jointly sharpen the WarGames lesson. Live, replay, and simulation should not merely look different. They should be backed by different runtime semantics and validated mode transitions.
 
 This suggests:
 - explicit mode enums on views and traces
@@ -48,7 +48,7 @@ This suggests:
 - replay opened from immutable checkpoint data in isolated execution
 
 ## 3. Evidence should answer why, not only what
-[[ko-myers-2009-java-whyline]], [[stasko-gorg-liu-2008-jigsaw]], [[andrews-north-2012-analysts-workspace]], and [[groth-streefkerk-2006-provenance-annotation-visual-exploration]] make the Minority Report idea practical.
+ko-myers-2009-java-whyline, stasko-gorg-liu-2008-jigsaw, andrews-north-2012-analysts-workspace, and groth-streefkerk-2006-provenance-annotation-visual-exploration make the Minority Report idea practical.
 
 The recipe is:
 - linked evidence views
@@ -59,7 +59,7 @@ The recipe is:
 The important move is to make the evidence workspace an active reasoning instrument rather than a graveyard of logs.
 
 ## 4. Counterfactual/model artifacts are not fantasy
-[[amershi-et-al-2015-modeltracker]] and [[wexler-et-al-2019-what-if-tool]] make the Prime Radiant idea much less mystical. The workable version is not an oracle but an inspectable artifact that binds:
+amershi-et-al-2015-modeltracker and wexler-et-al-2019-what-if-tool make the Prime Radiant idea much less mystical. The workable version is not an oracle but an inspectable artifact that binds:
 - aggregate metrics
 - concrete failing cases
 - editable inputs or assumptions
@@ -68,7 +68,7 @@ The important move is to make the evidence workspace an active reasoning instrum
 That suggests a model or branch inspector that is simultaneously evaluative, diagnostic, and counterfactual.
 
 ## 5. Epochs and identity can be explicit
-[[malkhi-lamport-zhou-2008-stoppable-paxos]], [[rfc-9420-mls-protocol]], and [[rivest-lampson-1996-sdsi]] fill in the Machineries-of-Empire and Ancillary Justice threads.
+malkhi-lamport-zhou-2008-stoppable-paxos, rfc-9420-mls-protocol, and rivest-lampson-1996-sdsi fill in the Machineries-of-Empire and Ancillary Justice threads.
 
 They suggest:
 - explicit stop-and-reconfigure barriers for policy or protocol epoch changes
@@ -78,7 +78,7 @@ They suggest:
 The studio can therefore represent reconfiguration, embodiment change, and membership rollover as formal control-plane events rather than vague settings churn.
 
 ## 6. Bounded delegated rights and labeled memory are real
-[[birgisson-et-al-2014-macaroons]] and [[efstathopoulos-et-al-2005-asbestos]] make the Quantum Thief idea concrete.
+birgisson-et-al-2014-macaroons and efstathopoulos-et-al-2005-asbestos make the Quantum Thief idea concrete.
 
 The practical recipe is:
 - caveated capabilities for delegated rights
@@ -87,7 +87,7 @@ The practical recipe is:
 This fits elegantly with the existing `authority_budget` and label-set objects in [[moldable-operations-studio-schema-pass]].
 
 ## 7. Multiple valid views over one substrate
-[[finkelstein-et-al-1992-viewpoints]], [[foster-et-al-2007-bidirectional-tree-transformations]], and [[green-karvounarakis-tannen-2007-provenance-semirings]] operationalize the The City & The City and Diaspora lines.
+finkelstein-et-al-1992-viewpoints, foster-et-al-2007-bidirectional-tree-transformations, and green-karvounarakis-tannen-2007-provenance-semirings operationalize the The City & The City and Diaspora lines.
 
 They imply that:
 - a view is a first-class viewpoint

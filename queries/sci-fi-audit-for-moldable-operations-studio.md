@@ -1,7 +1,7 @@
 ---
 title: Sci-Fi Audit for a Moldable Operations Studio
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-05-02
 type: query
 tags: [survey, comparison, orchestration, history]
 sources: [raw/articles/star-trek-lcars.md, raw/articles/battlestar-galactica-dradis.md, raw/articles/minority-report-film.md, raw/articles/wargames.md, raw/articles/foundation-prime-radiant.md, raw/articles/machineries-of-empire.md, raw/articles/ancillary-justice.md, raw/articles/quantum-thief.md, raw/articles/embassytown.md, raw/articles/the-city-and-the-city.md, raw/articles/diaspora-novel.md, queries/moldable-operations-studio-architecture-spec.md, queries/moldable-operations-studio-schema-pass.md]
@@ -18,31 +18,31 @@ The useful sci-fi lesson is not chrome. It is operational dramaturgy: shared sta
 ## The strongest patterns
 
 ### 1. One state, many surfaces
-[[star-trek-lcars]] is the clearest precedent for one coherent state model rendered into many role-specific surfaces. The good lesson is consistency of semantics, not pastel rectangles.
+star-trek-lcars is the clearest precedent for one coherent state model rendered into many role-specific surfaces. The good lesson is consistency of semantics, not pastel rectangles.
 
 ### 2. Shared overview plus specialist filters
-[[battlestar-galactica-dradis]] and [[wargames]] both insist on a room-scale operational picture. The useful import is that overview and specialist panes must stay synchronized, and that live versus simulated modes must be unmistakably different.
+battlestar-galactica-dradis and wargames both insist on a room-scale operational picture. The useful import is that overview and specialist panes must stay synchronized, and that live versus simulated modes must be unmistakably different.
 
 ### 3. Direct manipulation over evidence
-[[minority-report-film]] suggests that reviewing evidence should sometimes be an act of arrangement, scrubbing, and comparison rather than a sequence of passive reads.
+minority-report-film suggests that reviewing evidence should sometimes be an act of arrangement, scrubbing, and comparison rather than a sequence of passive reads.
 
 ### 4. Counterfactual models as artifacts
-[[foundation-prime-radiant]] makes forecasts inspectable as a shared artifact rather than a hidden backend oracle. The right modern form is a model inspector with provenance and authority boundaries.
+foundation-prime-radiant makes forecasts inspectable as a shared artifact rather than a hidden backend oracle. The right modern form is a model inspector with provenance and authority boundaries.
 
 ### 5. Protocol and policy epochs matter
-[[machineries-of-empire]] and [[embassytown]] both say, in different dialects, that protocol shifts are ontological events. A changed epoch or language can alter what the system itself permits or means.
+machineries-of-empire and embassytown both say, in different dialects, that protocol shifts are ontological events. A changed epoch or language can alter what the system itself permits or means.
 
 ### 6. Composite and distributed identity
-[[ancillary-justice]] is useful because it refuses the fantasy that one distributed actor remains semantically simple under partition. Identity, embodiment, and context can drift.
+ancillary-justice is useful because it refuses the fantasy that one distributed actor remains semantically simple under partition. Identity, embodiment, and context can drift.
 
 ### 7. Labeled memory and bounded rights
-[[quantum-thief]] contributes two excellent primitives: partitioned shared memory and bounded operational budgets. That maps cleanly to labeled artifacts and escrowed authority budgets.
+quantum-thief contributes two excellent primitives: partitioned shared memory and bounded operational budgets. That maps cleanly to labeled artifacts and escrowed authority budgets.
 
 ### 8. Multiple valid views over one substrate
-[[the-city-and-the-city]] is almost embarrassingly useful here. The studio should allow multiple legitimate projections over one event log, while making crossings between views explicit and auditable.
+the-city-and-the-city is almost embarrassingly useful here. The studio should allow multiple legitimate projections over one event log, while making crossings between views explicit and auditable.
 
 ### 9. Divergent lineage is not failure
-[[diaspora-novel]] is the reminder that copied agents and long-delay branches can remain legitimate lineages rather than errors, provided provenance and merge semantics are preserved.
+diaspora-novel is the reminder that copied agents and long-delay branches can remain legitimate lineages rather than errors, provided provenance and merge semantics are preserved.
 
 ## Good primitives to steal
 1. Shared semantic object model with multiple synchronized projections.

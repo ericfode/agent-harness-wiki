@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-02 | Total pages: 139
+> Last updated: 2026-05-02 | Total pages: 141
 
 ## News
 
@@ -19,16 +19,17 @@
 - [[appworld]] — Controllable multi-app world with state-based grading for interactive coding and tool-use agents.
 - [[atommem]] — Learnable memory-control system that decomposes memory management into atomic operations.
 - [[atropos]] — Hermes-facing RL environment and rollout substrate for multi-turn tool-calling agent tasks.
-- [[autoflow]] — Natural-language workflow-generation system that makes agent procedures explicit and iterable.
 - [[autodspy]] — RL-driven DSPy pipeline constructor that optimizes modules, signatures, and execution strategies.
+- [[autoflow]] — Natural-language workflow-generation system that makes agent procedures explicit and iterable.
 - [[browsergym]] — Unified gym-like substrate that standardizes action and observation surfaces across web-agent benchmarks.
 - [[claude-code]] — Anthropic's coding agent and harness research program for long-running, evaluator-driven development.
+- [[cobalt-tla]] — Neuro-symbolic verification architecture integrating an LLM with the TLA+ TLC model checker.
 - [[codex-app-server]] — The durable protocol layer that lets Codex span CLI, IDE, web, and app clients.
 - [[codex-cli]] — OpenAI's terminal coding agent with an App Server architecture and strong repo-legibility discipline.
 - [[compiled-memory]] — Instruction-compilation system that rewrites agent guidance from validated experience.
 - [[computer-rl]] — Distributed RL infrastructure for training desktop and computer-use agents at scale.
-- [[dspy]] — LM-program compilation and optimization framework that turns prompt engineering into modular program engineering.
 - [[dspy-assertions]] — Contract-bearing extension of DSPy that adds computational constraints and self-repair loops.
+- [[dspy]] — LM-program compilation and optimization framework that turns prompt engineering into modular program engineering.
 - [[dyflow]] — Runtime workflow-adaptation system that revises procedures from intermediate feedback.
 - [[enterprisebench-corecraft]] — High-fidelity enterprise RL environment with rubric-based rewards and transfer-focused evaluation.
 - [[evoskills]] — Skill-generation system with a co-evolving verifier lane for autonomous improvement.
@@ -40,6 +41,7 @@
 - [[graph-of-skills]] — Dependency-aware retrieval layer for large executable skill libraries.
 - [[hermes-agent]] — Persistent self-improving agent centered on searchable memory, skills, and multi-surface continuity.
 - [[judgeflow]] — Block-level workflow-diagnosis system for targeted repair and promotion decisions.
+- [[leetproof]] — Certified program synthesis framework with a multi-modal verifier pipeline.
 - [[mathcode]] — Terminal mathematical coding agent that translates natural-language problems into Lean proofs with reusable theorem and axiom stores.
 - [[memento-skills]] — Self-evolving agent framework that treats skills as writable memory and learns by rewriting them.
 - [[memskill]] — System that turns memory procedures into evolvable skills.
@@ -75,8 +77,9 @@
 - [[windows-agent-arena]] — Scalable Windows-specific environment for evaluating multimodal OS agents.
 - [[worfbench]] — Graph-aware benchmark for evaluating workflow-generation quality as workflow structure.
 - [[worfeval]] — Evaluation layer paired with WorfBench for structural, partial, and downstream workflow scoring.
-- [[workarena]] — Enterprise knowledge-work benchmark built on BrowserGym for routine professional web tasks.
 - [[workarena-plus-plus]] — More compositional and reasoning-heavy extension of WorkArena for enterprise workflows.
+- [[workarena]] — Enterprise knowledge-work benchmark built on BrowserGym for routine professional web tasks.
+
 ## Concepts
 
 - [[agent-harness-anatomy]] — Structural breakdown of session state, tools, memory, validation, and coordination layers in modern agent harnesses.

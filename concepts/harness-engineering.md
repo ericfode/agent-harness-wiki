@@ -1,7 +1,7 @@
 ---
 title: Harness Engineering
 created: 2026-04-07
-updated: 2026-04-10
+updated: 2026-05-02
 type: concept
 tags: [orchestration, context-engineering, tool-execution, survey]
 sources: [raw/articles/openai-harness-engineering.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-harness-design-long-running-apps.md, raw/papers/arxiv-chezelles-2024-browsergym-ecosystem.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-xie-2024-osworld.md, raw/papers/arxiv-pan-2024-swe-gym.md]
@@ -34,3 +34,8 @@ Engineering work shifts upward: fewer keystrokes in the hot path, more effort sp
 
 ## Related pages
 Harness engineering depends on [[context-engineering]], [[memory-persistence]], [[agent-harness-anatomy]], and [[evaluation-and-review-loops]]. It is compared concretely in [[harness-architecture-comparison]]. The current surface-design extension is [[non-linear-interface-options-for-next-harness]], and the environment-design extension is [[rl-gyms-and-executable-environments-for-ai-harnesses]].
+
+
+## Integrating Verification and Traces
+- **Property-based invariants**: Invariants and properties should be explicitly mapped into the formalization plane of the harness.
+- **Coverage and survival exposure**: There is an architectural need for exposing coverage feedback and mutant survival rates natively to the agent runtime, rather than hiding them in CI logs.
