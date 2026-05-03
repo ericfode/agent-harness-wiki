@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Nightly source-projects desk editorial illustration</title>
+  <desc id="desc">A symbolic editorial illustration of a nightly source-tree survey: a test lab, a deckbuilder table, a face-music instrument, a Codex control-plane graph, NNPL latent-boundary diagrams, a transformer benchmark rig, and a kettlebell biomechanics silhouette.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.48" stop-color="#182233"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#344155"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .panel{fill:#172033;stroke:#536173;stroke-width:3;rx:24;filter:url(#soft)}
+      .line{stroke:#8aa0b8;stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.82}
+      .thin{stroke:#8294aa;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.72}
+      .node{fill:#24364f;stroke:#93a9c4;stroke-width:3}
+      .green{fill:#5fcf97}.red{fill:#e57b7f}.gold{fill:#e4bd6a}.blue{fill:#70a7ff}.violet{fill:#a78bfa}.cyan{fill:#67e8f9}
+      .muted{fill:#9ca3af}.paper{fill:#e8dbc6;stroke:#7c6f61;stroke-width:3}.ink{stroke:#253041;stroke-width:4;fill:none;stroke-linecap:round}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1220" cy="150" r="250" fill="#1f3b57" opacity="0.22"/>
+  <circle cx="340" cy="165" r="210" fill="#3b2d59" opacity="0.18"/>
+  <path d="M0 690 C240 650 428 740 640 700 C900 650 1160 650 1600 715 L1600 900 L0 900 Z" fill="url(#desk)"/>
+
+  <!-- central evidence ledger / control-plane graph -->
+  <g transform="translate(545 240)">
+    <rect class="panel" width="510" height="310" rx="28"/>
+    <path class="thin" d="M56 78 H454 M56 136 H454 M56 194 H454 M56 252 H454"/>
+    <circle class="node blue" cx="96" cy="78" r="20"/>
+    <circle class="node violet" cx="250" cy="136" r="20"/>
+    <circle class="node green" cx="414" cy="194" r="20"/>
+    <circle class="node gold" cx="160" cy="252" r="20"/>
+    <path class="line" d="M116 78 C170 92 196 124 230 134"/>
+    <path class="line" d="M270 136 C326 148 363 174 394 190"/>
+    <path class="line" d="M398 207 C315 252 255 264 180 252"/>
+    <rect x="63" y="32" width="380" height="18" rx="9" fill="#d9c27d" opacity=".75"/>
+    <rect x="80" y="282" width="120" height="10" rx="5" fill="#93c5fd" opacity=".65"/>
+    <rect x="230" y="282" width="190" height="10" rx="5" fill="#93c5fd" opacity=".45"/>
+  </g>
+
+  <!-- testing / Lean proof lab -->
+  <g transform="translate(120 135)">
+    <rect class="panel" width="360" height="250" rx="24"/>
+    <rect x="42" y="54" width="70" height="92" rx="12" class="green" opacity=".95"/>
+    <rect x="130" y="54" width="70" height="92" rx="12" class="red" opacity=".95"/>
+    <rect x="218" y="54" width="70" height="92" rx="12" class="green" opacity=".95"/>
+    <path class="ink" d="M58 98 l16 18 l28 -42 M146 78 l38 46 M184 78 l-38 46 M234 98 l16 18 l28 -42"/>
+    <rect x="52" y="174" width="256" height="36" rx="12" fill="#22314a" stroke="#94a3b8" stroke-width="3"/>
+    <path class="thin" d="M82 192 H158 M184 192 H286"/>
+    <circle cx="310" cy="70" r="22" fill="#67e8f9" opacity=".75"/>
+    <path class="line" d="M315 92 C344 128 340 173 306 204" opacity=".5"/>
+  </g>
+
+  <!-- deckbuilder / Dungeon Steward -->
+  <g transform="translate(116 485)">
+    <rect class="panel" width="385" height="235" rx="24"/>
+    <rect x="38" y="54" width="86" height="126" rx="12" class="paper" transform="rotate(-8 81 117)"/>
+    <rect x="144" y="44" width="86" height="126" rx="12" class="paper" transform="rotate(2 187 107)"/>
+    <rect x="250" y="60" width="86" height="126" rx="12" class="paper" transform="rotate(9 293 123)"/>
+    <path class="ink" d="M60 84 h42 M58 112 h52 M170 78 h35 M162 106 h50 M274 96 h42 M272 126 h52"/>
+    <path d="M75 201 C115 180 168 211 204 192 C248 170 286 196 326 178" fill="none" stroke="#e4bd6a" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="210" cy="194" r="12" fill="#e57b7f"/>
+  </g>
+
+  <!-- face music -->
+  <g transform="translate(1070 130)">
+    <rect class="panel" width="390" height="250" rx="24"/>
+    <path d="M125 57 C76 78 62 133 84 177 C103 216 153 219 184 187 C211 159 205 114 174 88 C157 73 143 64 125 57 Z" fill="#e8dbc6" stroke="#6f6255" stroke-width="4"/>
+    <circle cx="142" cy="113" r="8" fill="#253041"/>
+    <path class="ink" d="M112 157 C132 170 159 168 177 151"/>
+    <path class="line" d="M210 92 C234 55 270 55 292 92 S350 128 367 91" stroke="#67e8f9"/>
+    <path class="line" d="M210 148 C238 116 271 180 300 148 S348 116 368 150" stroke="#a78bfa"/>
+    <path class="thin" d="M217 200 H346 M217 213 H316"/>
+  </g>
+
+  <!-- NNPL latent boundary diagrams -->
+  <g transform="translate(1065 465)">
+    <rect class="panel" width="405" height="245" rx="24"/>
+    <rect x="45" y="68" width="86" height="86" rx="18" fill="#263957" stroke="#67e8f9" stroke-width="4"/>
+    <rect x="276" y="68" width="86" height="86" rx="18" fill="#3a2f52" stroke="#a78bfa" stroke-width="4"/>
+    <rect x="163" y="50" width="80" height="122" rx="20" fill="#1e293b" stroke="#e4bd6a" stroke-width="4"/>
+    <path class="line" d="M131 111 H160 M243 111 H276"/>
+    <path class="thin" d="M88 181 C150 218 247 218 319 181" stroke="#5fcf97"/>
+    <circle cx="88" cy="111" r="12" class="cyan"/>
+    <circle cx="203" cy="111" r="12" class="gold"/>
+    <circle cx="319" cy="111" r="12" class="violet"/>
+  </g>
+
+  <!-- tinygrad/Gemma benchmarking rig -->
+  <g transform="translate(565 590)">
+    <rect class="panel" width="300" height="205" rx="24"/>
+    <rect x="72" y="45" width="156" height="116" rx="18" fill="#1f2937" stroke="#93c5fd" stroke-width="5"/>
+    <g opacity=".85">
+      <path class="thin" d="M96 74 H205 M96 100 H205 M96 126 H205"/>
+      <path class="thin" d="M115 58 V148 M150 58 V148 M185 58 V148"/>
+    </g>
+    <path d="M54 82 H22 M54 124 H22 M246 82 H278 M246 124 H278 M110 179 V196 M190 179 V196" stroke="#93c5fd" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="150" cy="103" r="20" fill="#e4bd6a" opacity=".9"/>
+  </g>
+
+  <!-- kettlebell biomechanics silhouette -->
+  <g transform="translate(895 604)">
+    <rect class="panel" width="145" height="190" rx="24"/>
+    <circle cx="70" cy="45" r="17" fill="#e8dbc6"/>
+    <path class="line" d="M70 63 L78 102 L55 142" stroke="#e8dbc6"/>
+    <path class="line" d="M77 101 L105 126" stroke="#e8dbc6"/>
+    <path class="line" d="M72 83 L44 112" stroke="#e8dbc6"/>
+    <path class="line" d="M55 142 L38 169 M55 142 L88 169" stroke="#e8dbc6"/>
+    <path d="M106 120 C91 120 87 136 96 146 C106 158 130 151 131 132 C132 122 122 119 106 120 Z" fill="#1f2937" stroke="#e4bd6a" stroke-width="5"/>
+    <path d="M105 119 C105 102 124 102 126 119" fill="none" stroke="#e4bd6a" stroke-width="5"/>
+  </g>
+
+  <!-- quiet newspaper footer bars -->
+  <g opacity=".55">
+    <rect x="112" y="804" width="1376" height="12" rx="6" fill="#d9c27d"/>
+    <rect x="192" y="832" width="500" height="8" rx="4" fill="#94a3b8"/>
+    <rect x="745" y="832" width="230" height="8" rx="4" fill="#94a3b8"/>
+    <rect x="1028" y="832" width="380" height="8" rx="4" fill="#94a3b8"/>
+  </g>
+</svg>
