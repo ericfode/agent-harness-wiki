@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-03 | Total pages: 144
+> Last updated: 2026-05-04 | Total pages: 146
 
 ## News
 
@@ -139,6 +139,8 @@
 - [[how-to-build-a-multiplayer-harness-network]] — Implementation ordering and adapter strategy for a federated multiplayer harness that other harnesses can jack into.
 - [[node-card-and-minimum-adapter-contract]] — Concrete node-card document and minimum honest adapter interface by which foreign harnesses can join the collaboration fabric.
 - [[legacy-distributed-systems-ideas-for-moldable-operations-studio]] — Old distributed-systems control-plane ideas that still look oddly underused in developer-facing harnesses.
+- [[llm-readable-spec-files]] — Research synthesis on `spec.md` files that LLM agents can follow, verify, and refine without collapsing into vague prompt residue.
+- [[spec-dataset-evolution-research-project]] — Kanban-backed research design for collecting public `spec.md` and spec-like files, preserving repo references, and measuring spec evolution, AI-era timing, project pressures, code/spec ratios, and code connectedness.
 - [[moldable-operations-studio-architecture-spec]] — A concrete state-model and projection spec for turning the harness into a moldable operations studio.
 - [[moldable-operations-studio-schema-pass]] — Concrete event, object, checkpoint, view, and promotion schemas for the moldable operations studio.
 - [[moldable-operations-studio-wireframes]] — Concrete screen models and interaction loops for the wallboard, graph, evidence, queue, canvas, and pocket surfaces.

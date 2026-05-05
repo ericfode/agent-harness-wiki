@@ -1182,3 +1182,31 @@
 - Public-safety filter: project-specific public detail was held back or reduced to category-only mention for 10 surveyed directories because of sensitive identity/reputational framing, local agent settings, empty/skeletal evidence, credential/private deployment signals, uncommitted internal workbenches, mixed creative material needing curation, hidden evaluator/supervisor surfaces, or prompt-bearing workflow residue.
 - Updated [[index|index.md]] News and Queries sections for the new nightly desk page; content-page count moved 143 → 144.
 - Lint result: `scripts/lint-wiki.sh` passed: 144 content pages checked.
+
+## [2026-05-04] query | LLM-readable spec files
+- Created raw source note [[llm-readable-spec-files-research-2026-05-04|raw/articles/llm-readable-spec-files-research-2026-05-04.md]] covering OpenAI prompting/evals guidance, Claude Code memory rules, GitHub Copilot instructions, GitHub Spec Kit, NASA/INCOSE requirements guidance, Microsoft LLM-judge reliability notes, and nl2postcond.
+- Created query page [[llm-readable-spec-files|queries/llm-readable-spec-files.md]].
+- Main conclusion: excellent `spec.md` files are compact executable contracts with stable IDs, glossary, scope, non-goals, behavioral requirements, invariants, examples/counterexamples, verification matrix, operational gates, and explicit unresolved questions.
+- Updated [[index|index.md]] to include the new query page and bump total pages from 144 to 145.
+
+## [2026-05-04] query | spec dataset evolution research project
+- Created Kanban board `spec-dataset-evolution` for the public `spec.md` / spec-like corpus project.
+- Created raw design note [[spec-dataset-evolution-kanban-design-2026-05-04|raw/articles/spec-dataset-evolution-kanban-design-2026-05-04.md]] from three methodology lanes: corpus discovery, longitudinal change analysis, and code/spec connectedness.
+- Created query page [[spec-dataset-evolution-research-project|queries/spec-dataset-evolution-research-project.md]].
+- Added scratch project brief at `/Users/ericfode/.hermes/gateway-scratch/spec-dataset-evolution/PROJECT_BRIEF.md`.
+- Kanban tasks created: `t_39d3ad17` through `t_d29a8854`; anchor task `t_39d3ad17` marked done, with four methodology tasks now ready.
+- Updated [[index|index.md]] to include the new query page and set content-page count to 146.
+- Lint result: `scripts/lint-wiki.sh` passed: 146 content pages checked.
+
+## [2026-05-04] update | spec dataset evolution deep-repo expansion
+- User clarified that the project should fan out more and deeply explore whole repositories, not merely design a file-level crawler.
+- Added scratch protocol `DEEP_REPO_EXPLORATION_PROTOCOL.md` requiring each scout to inspect 3–5 public repos, including whole-repo structure, spec inventory, git history, code/spec ratios, connectedness, pressure signals, compliance, and structured dossier artifacts.
+- Added Kanban tasks `SPEC-REPO-00` through `SPEC-REPO-14`; `SPEC-REPO-00` / `t_2d3d9d2f` was completed as the protocol anchor, and 12 scout tasks plus aggregation/review tasks were created.
+- Linked `SPEC-REPO-14` / `t_482593d1` as a parent of `SPEC-DATA-13` / `t_b5c6851b`, so the pilot report cannot complete without the deep-repo evidence review.
+- Updated [[spec-dataset-evolution-research-project|queries/spec-dataset-evolution-research-project.md]] to record the deep-repo wave and task IDs.
+
+## [2026-05-05] update | spec dataset evolution Kanban error repair
+- Mirrored scratch repair note into the wiki as [[spec-dataset-evolution-kanban-error-repair-2026-05-05|raw/articles/spec-dataset-evolution-kanban-error-repair-2026-05-05.md]].
+- Updated [[spec-dataset-evolution-research-project|queries/spec-dataset-evolution-research-project.md]] sources and operational repair notes.
+- Recorded root cause: default Kanban workers crash-looped because the globally enabled Basis plugin used top-level `anyOf` in tool parameter schemas rejected by OpenAI Codex.
+- Recorded repair: local Basis plugin source commit `0061d32` made the schemas Codex-compatible; `SPEC-DATA-JCODE` completed, `SPEC-DATA-21` was manually closed after verified artifacts, and `SPEC-DATA-22` intentionally blocked on unresolved human/adjudicated audit labels.
