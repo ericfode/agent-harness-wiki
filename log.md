@@ -1216,3 +1216,9 @@
 - The private corpus includes 1,741 artifact occurrence rows, 1,676 private raw-file copies, provenance manifests, dedup outputs, authored deep-dive dossiers, and validation scripts; 65 hard-quarantined raw rows remain metadata-only.
 - Created Hermes Kanban board `spec-deep-dive-wiki-ingest` with tasks `SPEC-WIKI-00` through `SPEC-WIKI-06` to ingest public-safe deep dives into the wiki.
 - Added [[spec-deep-dive-wiki-ingest-project]] and linked it from [[spec-dataset-evolution-research-project]].
+
+## [2026-05-05] update | spec deep-dive source map and safety policy
+- Expanded [[spec-deep-dive-wiki-ingest-project]] with the `SPEC-WIKI-00` source map, downstream task source routing, naming conventions, citation style, excerpt policy, fail-closed public-safety gates, and downstream page acceptance criteria.
+- Wrote machine-readable handoff artifact `source-map-public-safety-policy.json` in the project scratch directory for downstream workers.
+- Source evidence inspected: private corpus checkout HEAD `4659608`, clean working tree, 207 deep-dive files, 1,741 manifest rows, 55 aggregate repo records, and 55 connectedness feature rows.
+- Validation: `scripts/lint-wiki.sh` passed: 147 content pages checked.
