@@ -6,6 +6,8 @@ type: query
 tags: [survey, work-management, context-engineering, formal-methods, code-quality, benchmark]
 sources: [queries/llm-readable-spec-files.md, raw/articles/spec-dataset-evolution-kanban-design-2026-05-04.md, raw/articles/spec-dataset-evolution-kanban-error-repair-2026-05-05.md]
 kanban_board: spec-dataset-evolution
+private_corpus_repo: https://github.com/ericfode/spec-dataset-evolution-corpus
+wiki_ingest_board: spec-deep-dive-wiki-ingest
 ---
 
 # Spec Dataset Evolution Research Project
@@ -26,6 +28,12 @@ It connects to [[context-engineering]], [[work-management-primitives]], and
 work-management contracts, and evaluation surfaces at once.
 Decorative prose is cheaper to write; it also has the structural integrity of a
 soufflé in CI.
+
+## Private corpus and wiki ingest
+
+The working private corpus is now in `https://github.com/ericfode/spec-dataset-evolution-corpus` and local checkout `/Users/ericfode/src/spec-dataset-evolution-corpus`. It contains the private raw-file research archive, provenance manifests, dedup outputs, analysis frames, and authored deep-dive dossiers.
+
+Public wiki ingestion is tracked separately in [[spec-deep-dive-wiki-ingest-project]] on Kanban board `spec-deep-dive-wiki-ingest`. That project should synthesize deep dives into wiki pages without dumping wholesale raw copied specs into the public wiki.
 
 ## Output contract
 

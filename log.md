@@ -1210,3 +1210,9 @@
 - Updated [[spec-dataset-evolution-research-project|queries/spec-dataset-evolution-research-project.md]] sources and operational repair notes.
 - Recorded root cause: default Kanban workers crash-looped because the globally enabled Basis plugin used top-level `anyOf` in tool parameter schemas rejected by OpenAI Codex.
 - Recorded repair: local Basis plugin source commit `0061d32` made the schemas Codex-compatible; `SPEC-DATA-JCODE` completed, `SPEC-DATA-21` was manually closed after verified artifacts, and `SPEC-DATA-22` intentionally blocked on unresolved human/adjudicated audit labels.
+
+## [2026-05-05] update | private spec corpus and wiki-ingest project
+- Created and pushed private GitHub repository `ericfode/spec-dataset-evolution-corpus` for the spec dataset pilot corpus.
+- The private corpus includes 1,741 artifact occurrence rows, 1,676 private raw-file copies, provenance manifests, dedup outputs, authored deep-dive dossiers, and validation scripts; 65 hard-quarantined raw rows remain metadata-only.
+- Created Hermes Kanban board `spec-deep-dive-wiki-ingest` with tasks `SPEC-WIKI-00` through `SPEC-WIKI-06` to ingest public-safe deep dives into the wiki.
+- Added [[spec-deep-dive-wiki-ingest-project]] and linked it from [[spec-dataset-evolution-research-project]].
