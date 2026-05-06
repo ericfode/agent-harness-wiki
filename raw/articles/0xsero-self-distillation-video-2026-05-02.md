@@ -2,7 +2,9 @@
 title: "0xSero Self-Distillation Video Lead"
 author: "0xSero / Deep Learning with Yacine"
 url: https://x.com/0xSero/status/2050692154524156374/video/1?s=46
+canonical_url: https://twitter.com/0xSero/status/2050692154524156374
 ingested: 2026-05-02
+rechecked: 2026-05-06
 source_type: social-video
 ---
 
@@ -75,6 +77,7 @@ The video description identifies the session as an interview with Jonas Hübotte
 
 ## Retrieval notes
 
-- `web_extract` and `web_search` were unavailable because Firecrawl was not configured.
+- `web_extract` and `web_search` were unavailable because Firecrawl was not configured at the 2026-05-02 ingest.
 - `xurl` was not installed on this machine at ingest time, so the X post was resolved through public syndication/oEmbed endpoints rather than authenticated X API calls.
 - `yt-dlp` and `youtube-transcript-api` were installed into the active Python environment to retrieve YouTube metadata and transcript material.
+- **2026-05-06 recheck:** the user-supplied canonical URL `https://twitter.com/0xSero/status/2050692154524156374` returned HTTP 200 from `publish.twitter.com/oembed` with author `0xSero`, the same post text, and the same canonical URL. The `cdn.syndication.twimg.com/tweet-result` fallback returned HTTP 200 with an empty `{}` body, so oEmbed remains the useful public source for this post.

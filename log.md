@@ -1274,3 +1274,8 @@
 - Public-safety filter: project-specific public detail was held back or reduced to category-only mention for 13 surveyed directories because of local hidden settings, sensitive social/reputational framing, empty or skeletal evidence, private corpus contents, local deployment/model-runner configuration, raw logs/prompts/trajectories, evaluator-like materials, generated artifacts, or creative material needing human curation.
 - Updated [[index|index.md]] News and Queries sections for the new nightly desk page; content-page count moved 155 → 156.
 - Lint result: `scripts/lint-wiki.sh` passed: 156 content pages checked.
+
+## [2026-05-06] update | 0xSero self-distillation post recheck
+- Rechecked the user-supplied canonical X/Twitter URL `https://twitter.com/0xSero/status/2050692154524156374` against public oEmbed metadata.
+- Updated the existing raw source note [[0xsero-self-distillation-video-2026-05-02|raw/articles/0xsero-self-distillation-video-2026-05-02.md]] rather than creating a duplicate page; the post had already been ingested on 2026-05-02 and linked to [[on-policy-self-distillation]].
+- No index-page count change: this was a raw-source metadata update, not a new content page.
