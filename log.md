@@ -1222,3 +1222,33 @@
 - Wrote machine-readable handoff artifact `source-map-public-safety-policy.json` in the project scratch directory for downstream workers.
 - Source evidence inspected: private corpus checkout HEAD `4659608`, clean working tree, 207 deep-dive files, 1,741 manifest rows, 55 aggregate repo records, and 55 connectedness feature rows.
 - Validation: `scripts/lint-wiki.sh` passed: 147 content pages checked.
+
+## [2026-05-05] query | spec deep-dive priority case studies
+- Created three public-safe case pages from the private corpus priority dossiers:
+  - [[spec-deep-dive-case-jcode]] — `1jehuang/jcode` as a post-LLM coding-agent harness with distributed spec surfaces and high code/spec connectedness.
+  - [[spec-deep-dive-case-droidagent]] — DroidAgent as agent-generated mobile-GUI behavioral specs connected to traces, reports, and replay scripts.
+  - [[spec-deep-dive-case-j8-ambiguity]] — corrected J8/J8Spec ambiguity trail preserving negative evidence and the pre-AI J8Spec executable-spec control.
+- Updated [[spec-deep-dive-wiki-ingest-project]], [[spec-dataset-evolution-research-project]], and [[index]] for inbound links and page count.
+- Source evidence used: `reports/deep-dives/jcode.md`, `reports/deep-dives/jcode-analysis.json`, `reports/jcode_first_calibration_seed.md`, `reports/deep-dives/droidagent.md`, and `reports/deep-dives/j8-agent.md` from the private corpus checkout at HEAD `4659608`.
+- Public-safety boundary: synthesis and metadata only; no raw private corpus bodies or long upstream excerpts copied into the wiki.
+- Validation: `scripts/lint-wiki.sh` passed: 153 content pages checked. During lint repair, [[index]] was reconciled with sibling cohort pages already present in the shared worktree, and the agent-native cohort frontmatter was normalized to existing wiki source pages.
+
+## [2026-05-05] query | spec deep-dive agent-native / Spec Kit / Kiro cohort
+- Created [[spec-deep-dive-cohort-agent-native-spec-kit-kiro]] from private corpus cohorts `SPEC-REPO-03`, `SPEC-REPO-04`, `SPEC-REPO-08`, `SPEC-REPO-11`, and `SPEC-REPO-20` template-lineage reports.
+- Preserved the template-vs-independent-spec distinction: 19 relevant selected dossier occurrences, 15 generated-scaffold rows, 11 edited-project-contract rows, and 14 fail-closed independent-authority weights in the lineage mapping.
+- Source evidence used: `reports/deep-dives/SPEC-REPO-03/index.md`, `reports/deep-dives/SPEC-REPO-04/index.md`, `reports/deep-dives/SPEC-REPO-08/index.md`, `reports/deep-dives/SPEC-REPO-11/index.md`, and `reports/deep-dives/SPEC-REPO-20/TEMPLATE_LINEAGE_MODEL.md` from the private corpus checkout at HEAD `4659608`.
+- Public-safety boundary: synthesis and metadata only; no raw private corpus bodies or long upstream excerpts copied into the wiki.
+
+## [2026-05-05] query | spec deep-dive RFC, ADR, and executable-contract cohort
+- Created [[spec-deep-dive-cohort-rfc-adr-executable-contracts]] from private corpus cohorts `SPEC-REPO-05`, `SPEC-REPO-06`, `SPEC-REPO-18`, `SPEC-REPO-19`, and the `SPEC-REPO-16` export gate.
+- Distinguished RFC/proposal governance records from executable and formal contracts: OpenAPI, Proto, Smithy, AsyncAPI, GraphQL, Thrift, TLA+, and Dafny are modeled as machine-readable or checkable artifacts rather than ordinary Markdown product specs.
+- Preserved caveats: ADR discovery is incomplete, `asyncapi/spec` and `smithy-lang/smithy` remain hard-quarantined for raw content, and non-GitHub public forges retain host-specific discovery and license/review limits.
+- Updated [[spec-deep-dive-wiki-ingest-project]], [[spec-dataset-evolution-research-project]], and [[index]] for cohort cross-links and the shared 153-page count.
+- Validation: `scripts/lint-wiki.sh` passed: 153 content pages checked; `git diff --check -- <edited wiki paths>` passed for [[index]], [[log]], [[spec-dataset-evolution-research-project]], [[spec-deep-dive-wiki-ingest-project]], and [[spec-deep-dive-cohort-rfc-adr-executable-contracts]].
+
+## [2026-05-05] query | spec deep-dive exact spec.md and standards cohort
+- Created [[spec-deep-dive-cohort-exact-spec-md-and-standards]] from private corpus cohorts `SPEC-REPO-01`, `SPEC-REPO-07`, and related standards records in `SPEC-REPO-18` and `SPEC-REPO-19`.
+- Distinguished exact lower-case `spec.md` as a discovery handle from repository authority shape: OCI runtime/distribution, Compose Spec, HCL, and Cloud Foundry Service Broker distribute authority across prose, schemas, conformance tests, implementation code, profile material, release tags, and governance.
+- Mature baseline evidence from OCI runtime, OpenTelemetry, Protocol Buffers, and gRPC was summarized as metadata and synthesis only; no private raw corpus bodies or long upstream excerpts were copied into the wiki.
+- Updated [[index]] and reused existing cross-links from [[spec-deep-dive-wiki-ingest-project]] and [[spec-dataset-evolution-research-project]] so the new cohort page participates in the shared ingest graph.
+- Validation: `scripts/lint-wiki.sh` passed: 153 content pages checked.

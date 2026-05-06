@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-05 | Total pages: 147
+> Last updated: 2026-05-05 | Total pages: 153
 
 ## News
 
@@ -142,6 +142,12 @@
 - [[llm-readable-spec-files]] — Research synthesis on `spec.md` files that LLM agents can follow, verify, and refine without collapsing into vague prompt residue.
 - [[spec-dataset-evolution-research-project]] — Kanban-backed research design for collecting public `spec.md` and spec-like files, preserving repo references, and measuring spec evolution, AI-era timing, project pressures, code/spec ratios, and code connectedness.
 - [[spec-deep-dive-wiki-ingest-project]] — Kanban-backed ingest project for turning the private spec corpus and authored deep-dive dossiers into public-safe wiki pages without publishing raw copied specs.
+- [[spec-deep-dive-case-jcode]] — Priority case study for `1jehuang/jcode` as a post-LLM coding-agent harness with distributed spec surfaces and high code/spec connectedness.
+- [[spec-deep-dive-case-droidagent]] — Priority case study for DroidAgent as an agent-generated mobile-GUI behavioral-spec and executable-replay bridge.
+- [[spec-deep-dive-case-j8-ambiguity]] — Public-safe ambiguity trail separating the corrected `jcode` target from the `j8agent` namespace collision and useful pre-AI J8Spec control.
+- [[spec-deep-dive-cohort-exact-spec-md-and-standards]] — Public-safe cohort synthesis for exact `spec.md`, standards repositories, mature protocol corpora, and executable/formal specification surfaces.
+- [[spec-deep-dive-cohort-agent-native-spec-kit-kiro]] — Public-safe cohort synthesis for agent-native specification systems, Spec Kit / `.specify`, `.kiro/specs`, templates, and lineage caveats.
+- [[spec-deep-dive-cohort-rfc-adr-executable-contracts]] — Public-safe cohort synthesis separating RFC/proposal governance records from executable and formal contract artifacts across GitHub and non-GitHub standards repositories.
 - [[moldable-operations-studio-architecture-spec]] — A concrete state-model and projection spec for turning the harness into a moldable operations studio.
 - [[moldable-operations-studio-schema-pass]] — Concrete event, object, checkpoint, view, and promotion schemas for the moldable operations studio.
 - [[moldable-operations-studio-wireframes]] — Concrete screen models and interaction loops for the wallboard, graph, evidence, queue, canvas, and pocket surfaces.

@@ -328,6 +328,31 @@ Key state after the repair:
 The remaining blocked task is therefore an intentional research gate, not a
 Kanban runtime failure.
 
+## Public deep-dive ingest wave
+
+The private corpus is now being rendered into public-safe wiki synthesis through
+[[spec-deep-dive-wiki-ingest-project]]. The first priority case pages are:
+
+- [[spec-deep-dive-case-jcode]] — post-LLM coding-agent harness with distributed
+  spec surfaces and high code/spec connectedness;
+- [[spec-deep-dive-case-droidagent]] — agent-generated mobile-GUI behavioral
+  scenarios connected to traces, reports, and replay scripts;
+- [[spec-deep-dive-case-j8-ambiguity]] — ambiguity trail separating the corrected
+  `jcode` target from `j8agent` name collision evidence and the pre-AI J8Spec
+  executable-spec control.
+
+The first cohort pages are:
+
+- [[spec-deep-dive-cohort-exact-spec-md-and-standards]] — exact `spec.md`, mature
+  standards, and protocol repositories;
+- [[spec-deep-dive-cohort-agent-native-spec-kit-kiro]] — agent-native specs,
+  Spec Kit / `.specify`, Kiro, and template-lineage caveats;
+- [[spec-deep-dive-cohort-rfc-adr-executable-contracts]] — RFC/proposal governance
+  records and executable/formal contract artifacts.
+
+These pages preserve repo URLs, corpus-relative source paths, caveats, and
+metadata-only publication boundaries rather than exporting raw corpus bodies.
+
 ## Definition of done for the design phase
 
 The design phase is complete when the Kanban board contains the project anchor,

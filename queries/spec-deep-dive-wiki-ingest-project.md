@@ -249,6 +249,29 @@ SPEC-WIKI-05
 SPEC-WIKI-06
 ```
 
+## SPEC-WIKI-01 priority case pages
+
+The first public-safe case-study wave produced three focused pages:
+
+| Page | Main private corpus sources | Public-safe emphasis |
+|---|---|---|
+| [[spec-deep-dive-case-jcode]] | `reports/deep-dives/jcode.md`, `reports/deep-dives/jcode-analysis.json`, `reports/jcode_first_calibration_seed.md` | Post-LLM coding-agent harness; distributed spec surfaces; high code/spec connectedness; raw export remains review-required. |
+| [[spec-deep-dive-case-droidagent]] | `reports/deep-dives/droidagent.md` | Agent-generated mobile-GUI behavioral scenarios; task/report/script connectedness; weak ordinary repo-history signal. |
+| [[spec-deep-dive-case-j8-ambiguity]] | `reports/deep-dives/j8-agent.md` plus the corrected jcode dossier/seed | Negative evidence for `J8 Agent`; `j8agent` namespace collision; `j8spec/j8spec` as a useful pre-AI executable-spec control, not the corrected priority target. |
+
+These pages intentionally publish synthesis and source metadata only. They do not
+copy raw private corpus bodies or long upstream passages.
+
+## Cohort pages
+
+The first cohort synthesis pages are:
+
+| Page | Main private corpus sources | Public-safe emphasis |
+|---|---|---|
+| [[spec-deep-dive-cohort-exact-spec-md-and-standards]] | `SPEC-REPO-01`, `SPEC-REPO-07`, `SPEC-REPO-18`, `SPEC-REPO-19`, aggregate records | Exact `spec.md` as a discovery signal; mature standards/protocol repositories; formal and executable specification surfaces. |
+| [[spec-deep-dive-cohort-agent-native-spec-kit-kiro]] | `SPEC-REPO-03`, `SPEC-REPO-04`, `SPEC-REPO-08`, `SPEC-REPO-11`, `SPEC-REPO-20` | Agent-native spec directories, Spec Kit / `.specify`, `.kiro/specs`, prompt-template families, and template-lineage caveats. |
+| [[spec-deep-dive-cohort-rfc-adr-executable-contracts]] | `SPEC-REPO-05`, `SPEC-REPO-06`, `SPEC-REPO-18`, `SPEC-REPO-19`, `SPEC-REPO-16` export gate | RFC/proposal governance records versus OpenAPI/Proto/Smithy/AsyncAPI/GraphQL/Thrift/TLA+/Dafny executable or formal contracts. |
+
 ## Acceptance criteria
 
 The ingest project is complete when:
