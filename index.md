@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-06 | Total pages: 156
+> Last updated: 2026-05-06 | Total pages: 157
 
 ## News
 
@@ -43,6 +43,7 @@
 - [[graph-of-skills]] — Dependency-aware retrieval layer for large executable skill libraries.
 - [[hermes-agent]] — Persistent self-improving agent centered on searchable memory, skills, and multi-surface continuity.
 - [[judgeflow]] — Block-level workflow-diagnosis system for targeted repair and promotion decisions.
+- [[last-harness-youll-ever-build]] — Sylph.AI framework paper proposing an inner Harness Evolution Loop and outer Meta-Evolution Loop for automating harness engineering.
 - [[leetproof]] — Certified program synthesis framework with a multi-modal verifier pipeline.
 - [[mathcode]] — Terminal mathematical coding agent that translates natural-language problems into Lean proofs with reusable theorem and axiom stores.
 - [[memento-skills]] — Self-evolving agent framework that treats skills as writable memory and learns by rewriting them.

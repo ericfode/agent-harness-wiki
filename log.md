@@ -1279,3 +1279,10 @@
 - Rechecked the user-supplied canonical X/Twitter URL `https://twitter.com/0xSero/status/2050692154524156374` against public oEmbed metadata.
 - Updated the existing raw source note [[0xsero-self-distillation-video-2026-05-02|raw/articles/0xsero-self-distillation-video-2026-05-02.md]] rather than creating a duplicate page; the post had already been ingested on 2026-05-02 and linked to [[on-policy-self-distillation]].
 - No index-page count change: this was a raw-source metadata update, not a new content page.
+
+## [2026-05-06] ingest | The Last Harness You'll Ever Build
+- Resolved the user-supplied screenshot to arXiv:2604.21003v3, [[arxiv-seong-2026-last-harness-youll-ever-build|raw/papers/arxiv-seong-2026-last-harness-youll-ever-build.md]], by grounding metadata through the arXiv Atom API and section text through the arXiv HTML page after `web_extract` reported Firecrawl was not configured.
+- Created [[last-harness-youll-ever-build]] as a source-quality-aware entity page with a Mermaid architecture sketch and evidence/caveat table.
+- Updated [[harness-engineering]] and [[self-evolving-workflows]] so the new paper is linked from the existing harness-engineering graph rather than sitting as a decorative orphan.
+- Updated [[index|index.md]] to list the new entity page; content-page count moved 156 → 157.
+- Validation: `scripts/lint-wiki.sh` passed: 157 content pages checked.

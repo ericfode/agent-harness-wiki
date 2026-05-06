@@ -1,10 +1,10 @@
 ---
 title: Harness Engineering
 created: 2026-04-07
-updated: 2026-05-02
+updated: 2026-05-06
 type: concept
 tags: [orchestration, context-engineering, tool-execution, survey]
-sources: [raw/articles/openai-harness-engineering.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-harness-design-long-running-apps.md, raw/papers/arxiv-chezelles-2024-browsergym-ecosystem.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-xie-2024-osworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md]
+sources: [raw/articles/openai-harness-engineering.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-harness-design-long-running-apps.md, raw/papers/arxiv-chezelles-2024-browsergym-ecosystem.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-xie-2024-osworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md, raw/papers/arxiv-seong-2026-last-harness-youll-ever-build.md]
 ---
 
 # Harness Engineering
@@ -23,6 +23,11 @@ OpenAI's framing is especially blunt: when the agent fails, ask what capability 
 - Make branches, checkpoints, and runtime evidence navigable in the operator surface instead of burying them in transcript prose; see [[non-linear-interface-options-for-next-harness]].
 - Design error messages as remediation hints for future agent turns.
 - Shape verifier and tool feedback so it can become replayable learning material, not only terminal scolding.
+
+## Automated harness engineering
+[[last-harness-youll-ever-build|The Last Harness You'll Ever Build]] gives this discipline its next recursive turn: if prompts, tools, traces, evaluators, orchestration logic, hooks, and model routing are all harness artifacts, then the harness can itself become the object of an evaluator-governed evolution loop. The paper's useful move is to make the evaluator and evolution agent explicit, then lift the whole improvement loop into a meta-evolution blueprint.
+
+The caveat is equally important: the version read is a framework proposal, not an empirical result. Its design should be read beside [[self-evolving-workflows]] and [[evaluation-and-review-loops]], then tested through convergence speed, final pass rate, robustness, and regression control rather than accepted as a slogan with a diagram.
 
 ## Formal turn
 The next turn of the discipline is not simply more scaffolding but more checkable semantics. The current arXiv pass suggests two especially relevant directions: [[formal-methods-for-agent-harnesses]] for intent surfaces and specification ladders, and [[probabilistic-epistemic-updates]] for stating what the harness and the agent are actually justified in believing at each step.
