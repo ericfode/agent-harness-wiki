@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-05 | Total pages: 154
+> Last updated: 2026-05-05 | Total pages: 155
 
 ## News
 
@@ -136,6 +136,7 @@
 - [[gas-city-operator-policy-and-formal-bridge]] — Focused rendering of the typed operator-policy runtime and the newer recipe/workflow/policy bridge work.
 - [[grounding-moldable-operations-studio-ideas-in-real-research]] — Concrete HCI, provenance, security, and distributed-systems research that makes the studio ideas implementable rather than merely tasteful.
 - [[high-impact-artifacts-for-multiplayer-harness-design]] — Prioritized inspection list of the pages and sources that most strongly constrain multiplayer harness design.
+- [[hidden-state-jepa-reasoning-shortcuts]] — Literature-grounded verdict on Gemma/open-model hidden-state JEPA shortcuts for jumping from pre-thinking to post-thinking states, with diagram, quality table, experiment plan, and no-go criteria.
 - [[how-to-build-a-multiplayer-harness-network]] — Implementation ordering and adapter strategy for a federated multiplayer harness that other harnesses can jack into.
 - [[node-card-and-minimum-adapter-contract]] — Concrete node-card document and minimum honest adapter interface by which foreign harnesses can join the collaboration fabric.
 - [[legacy-distributed-systems-ideas-for-moldable-operations-studio]] — Old distributed-systems control-plane ideas that still look oddly underused in developer-facing harnesses.

@@ -1,7 +1,7 @@
 ---
 title: Wiki Schema
 created: 2026-04-07
-updated: 2026-04-14
+updated: 2026-05-05
 type: schema
 tags: [meta, schema]
 ---
@@ -171,6 +171,18 @@ Side-by-side analyses. Include:
 - Dimensions of comparison (table format preferred)
 - Verdict or synthesis
 - Sources
+
+## Paper and Literature Summary Standard
+
+Any substantive paper summary, literature packet, or arXiv-backed query must include:
+- **At least one diagram** showing the paper's method, system architecture, evidence flow, or relationship to adjacent work. Mermaid is preferred; ASCII is acceptable when Mermaid would obscure the point.
+- **A source table** with paper title/ID or URL, year, core claim, method or evidence, evaluation surface, quality/directness assessment, and caveats.
+- **Separated layers**: paper claims, observed evidence, synthesis, and open questions must not be collapsed into one persuasive paragraph.
+- **Quality language**: distinguish high-quality direct evidence, high-quality adjacent evidence, emerging preprints, talks/blogs, secondary summaries, and unverified leads.
+- **Negative evidence**: failed searches, missing primary sources, unverifiable model-card claims, and known limitations should be recorded rather than silently omitted.
+- **Acceptance posture**: when a paper summary supports an implementation recommendation, include the benchmark, verifier, or no-go criterion that would falsify the recommendation.
+
+A literature deep dive that lacks a diagram or quality/source table is a draft, not a finished wiki artifact.
 
 ## Update Policy
 

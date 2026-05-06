@@ -1258,3 +1258,10 @@
 - Cross-linked the aggregate index from [[spec-dataset-evolution-research-project]], [[spec-deep-dive-wiki-ingest-project]], [[index]], and the priority case/cohort pages.
 - Preserved the private corpus as a source pointer only: aggregate counts, corpus-relative source paths, repo URLs, connectedness/compliance summaries, and caveats are public; raw private corpus bodies remain unpublished.
 - Validation: `scripts/lint-wiki.sh` passed: 154 content pages checked.
+
+## [2026-05-05] query | hidden-state JEPA reasoning shortcuts
+- Created raw literature packet [[hidden-state-jepa-reasoning-shortcut-literature-2026-05-05|raw/papers/hidden-state-jepa-reasoning-shortcut-literature-2026-05-05.md]] from direct arXiv Atom metadata, Hugging Face model API checks, existing [[neural-native-programming]] notes, and [[on-policy-self-distillation]].
+- Created query page [[hidden-state-jepa-reasoning-shortcuts]] answering whether Gemma 4/open models can learn a JEPA-like pre-thinking to post-thinking latent shortcut.
+- Confirmed via Hugging Face API that public Gemma 4 entries exist for E2B, E4B, 26B-A4B, and 31B variants; the answer recommends E2B/E4B or Qwen3-4B for first experiments.
+- Raised the wiki standard in [[SCHEMA|SCHEMA.md]] so substantive paper/literature summaries now require at least one diagram plus a source/quality/caveat table.
+- Updated [[index]] to list the new query page and bump content-page count from 154 to 155.
