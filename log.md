@@ -1265,3 +1265,12 @@
 - Confirmed via Hugging Face API that public Gemma 4 entries exist for E2B, E4B, 26B-A4B, and 31B variants; the answer recommends E2B/E4B or Qwen3-4B for first experiments.
 - Raised the wiki standard in [[SCHEMA|SCHEMA.md]] so substantive paper/literature summaries now require at least one diagram plus a source/quality/caveat table.
 - Updated [[index]] to list the new query page and bump content-page count from 154 to 155.
+
+## [2026-05-06] query | nightly src projects desk
+- Created raw survey note [[nightly-src-projects-desk-2026-05-06|raw/articles/nightly-src-projects-desk-2026-05-06.md]] and query page [[nightly-src-projects-desk-2026-05-06]] for the nightly local-projects desk.
+- Published verdict: Basis/spec-code grounding and test-writing environments lead tonight, with tinygrad/Gemma benches, `handterm`, Dungeon Steward, `FACEMUSIC`, orchestration side rooms, and privacy-gated corpus work summarized only where inspectable evidence supported public claims.
+- Generated editorial illustration `queries/news-assets/2026-05-06-project-desk-hero.svg` locally after the configured image backend reported missing `FAL_KEY`; no fake screenshots were used.
+- Survey automation status: exactly 10 top-level Hermes survey lanes covered all 38 top-level directories under `/Users/ericfode/src`; the lanes ran as 6 + 4, and all lane summaries reported successful recursive 3-way delegation for purpose/docs, live-work evidence, and safety/public-summary review.
+- Public-safety filter: project-specific public detail was held back or reduced to category-only mention for 13 surveyed directories because of local hidden settings, sensitive social/reputational framing, empty or skeletal evidence, private corpus contents, local deployment/model-runner configuration, raw logs/prompts/trajectories, evaluator-like materials, generated artifacts, or creative material needing human curation.
+- Updated [[index|index.md]] News and Queries sections for the new nightly desk page; content-page count moved 155 → 156.
+- Lint result: `scripts/lint-wiki.sh` passed: 156 content pages checked.

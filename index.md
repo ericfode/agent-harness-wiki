@@ -2,10 +2,11 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-05 | Total pages: 155
+> Last updated: 2026-05-06 | Total pages: 156
 
 ## News
 
+- [[nightly-src-projects-desk-2026-05-06]] — Nightly local-projects desk: Basis/spec-code grounding and testing environments lead, with tinygrad/Gemma benches, handterm, Dungeon Steward, FACEMUSIC, orchestration side rooms, and privacy-gated corpus work surveyed under the public-safety filter.
 - [[nightly-src-projects-desk-2026-05-03]] — Nightly local-projects desk: test-writing environments lead, with Dungeon Steward, FACEMUSIC, Codex orchestration benches, openai-symphony, NNPL, and Gemma/tinygrad side rooms surveyed under the public-safety filter.
 - [[nightly-src-projects-desk-2026-05-02]] — Nightly local-projects desk: testing-RL and evidence environments move to the front, with FACEMUSIC, Dungeon Steward, Gas City, NNPL, and Gemma/tinygrad benches surveyed under the public-safety filter.
 - [[nightly-src-projects-desk-2026-04-21]] — First nightly local-projects desk: safe publishable work across the active src tree, from harness control planes to game/UI/runtime experiments.
@@ -113,6 +114,7 @@
 
 ## Queries
 
+- [[nightly-src-projects-desk-2026-05-06]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by Basis/spec-code grounding, testing environments, tinygrad/Gemma benches, terminal/game/interface craft work, and orchestration side rooms.
 - [[nightly-src-projects-desk-2026-05-03]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by test-writing environments, game/interface polish, orchestration benches, NNPL boundaries, and Gemma/tinygrad sandboxes.
 - [[nightly-src-projects-desk-2026-05-02]] — Nightly local-projects desk summarizing the safe publishable movement across the local src tree, led by testing-RL/evidence work, FACEMUSIC, Dungeon Steward, Gas City, NNPL, and Gemma/tinygrad benches.
 - [[nightly-src-projects-desk-2026-04-21]] — First nightly local-projects desk summarizing the safe publishable work currently moving across the src tree.

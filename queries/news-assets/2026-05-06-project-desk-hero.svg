@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Editorial illustration for the 2026-05-06 nightly source-projects desk</title>
+  <desc id="desc">Symbolic newsroom table with ten survey lanes: specification reducers, testing environments, terminal work, game/interface projects, orchestration ledgers, private corpus gates, Gemma/tinygrad benches, and research side rooms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.55" stop-color="#172033"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="50%" cy="18%" r="60%">
+      <stop offset="0" stop-color="#f8e7b2" stop-opacity="0.48"/>
+      <stop offset="0.35" stop-color="#c59b57" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="table" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b3347"/>
+      <stop offset="1" stop-color="#121827"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <style>
+      .stroke{stroke:#d8c48a;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .thin{stroke:#8fb9ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none;opacity:.82}
+      .cyan{stroke:#72e0d1;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .gold{stroke:#e6c36a;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .red{stroke:#ff8d82;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .fill-panel{fill:#1d2537;stroke:#53617d;stroke-width:3}
+      .paper{fill:#263249;stroke:#8fa0c2;stroke-width:3}
+      .muted{opacity:.62}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#lamp)"/>
+  <ellipse cx="800" cy="740" rx="660" ry="110" fill="#02040a" opacity=".48" filter="url(#soft)"/>
+
+  <!-- back wall: quiet evidence grid -->
+  <g opacity=".18">
+    <path d="M160 180H1440M160 260H1440M160 340H1440" class="thin"/>
+    <path d="M260 110V400M420 110V400M580 110V400M740 110V400M900 110V400M1060 110V400M1220 110V400M1380 110V400" class="thin"/>
+    <circle cx="420" cy="260" r="10" fill="#72e0d1"/>
+    <circle cx="900" cy="180" r="10" fill="#e6c36a"/>
+    <circle cx="1220" cy="340" r="10" fill="#ff8d82"/>
+  </g>
+
+  <!-- table -->
+  <path d="M155 620 C350 530 1240 530 1445 620 L1310 790 C1040 855 570 855 290 790 Z" fill="url(#table)" stroke="#48536b" stroke-width="4"/>
+  <path d="M230 635 C445 585 1155 585 1375 635" class="thin" opacity=".45"/>
+
+  <!-- Ten survey trays, unlabeled by design -->
+  <g transform="translate(230 575)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <path d="M22 50 L45 28 L82 43 L57 62 Z" class="gold"/>
+    <path d="M46 28 V13 M82 43 L98 31" class="cyan"/>
+  </g>
+  <g transform="translate(360 545)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <path d="M28 55 C38 25 70 22 82 48" class="cyan"/>
+    <path d="M38 48 l12 12 l30 -34" class="gold"/>
+  </g>
+  <g transform="translate(490 525)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <rect x="22" y="23" width="66" height="38" rx="6" fill="#0f1522" stroke="#72e0d1" stroke-width="4"/>
+    <path d="M34 37 h40 M34 48 h28" class="thin"/>
+  </g>
+  <g transform="translate(620 515)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <rect x="26" y="17" width="36" height="50" rx="5" fill="#2d2338" stroke="#e6c36a" stroke-width="4"/>
+    <path d="M71 30 l20 12 l-20 12 l-20 -12 Z" class="cyan"/>
+    <circle cx="44" cy="42" r="9" fill="#ff8d82" opacity=".8"/>
+  </g>
+  <g transform="translate(750 510)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <path d="M38 58 C20 50 21 27 39 20 C57 13 78 24 77 45 C76 61 54 68 38 58 Z" fill="#202a40" stroke="#8fb9ff" stroke-width="4"/>
+    <path d="M76 24 C94 30 100 47 90 62" class="red"/>
+    <path d="M18 62 C40 42 69 42 95 22" class="gold"/>
+  </g>
+  <g transform="translate(880 515)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <path d="M24 20 h58 v42 h-58 Z" fill="#151c2d" stroke="#8fa0c2" stroke-width="3"/>
+    <circle cx="36" cy="32" r="6" fill="#72e0d1"/>
+    <circle cx="70" cy="32" r="6" fill="#e6c36a"/>
+    <circle cx="54" cy="52" r="6" fill="#ff8d82"/>
+    <path d="M42 32H64 M66 36L58 48 M50 49L40 36" class="thin"/>
+  </g>
+  <g transform="translate(1010 525)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <path d="M24 27 h44 a12 12 0 0 1 12 12 v22 h-56 Z" fill="#2a344a" stroke="#e6c36a" stroke-width="4"/>
+    <path d="M76 38 h15 v23 h-15" class="red"/>
+    <path d="M38 27 v-9 h28 v9" class="cyan"/>
+  </g>
+  <g transform="translate(1140 545)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <path d="M22 58 C32 35 45 25 57 25 C75 25 88 43 92 62" class="thin"/>
+    <path d="M30 58 C52 44 70 44 90 58" class="cyan"/>
+    <path d="M55 19 l8 14 l-16 0 Z" fill="#e6c36a" opacity=".9"/>
+  </g>
+  <g transform="translate(1270 575)">
+    <rect x="0" y="0" width="110" height="80" rx="14" class="fill-panel"/>
+    <path d="M30 58 C42 36 58 25 80 20" class="gold"/>
+    <path d="M31 58 a18 13 0 1 0 34 0 a18 13 0 1 0 -34 0" class="red"/>
+    <path d="M71 28 c20 8 24 28 12 42" class="cyan"/>
+  </g>
+
+  <!-- central evidence prism -->
+  <g transform="translate(0 -10)">
+    <path d="M695 300 L800 235 L905 300 L800 365 Z" fill="#1f2a40" stroke="#d8c48a" stroke-width="5"/>
+    <path d="M800 235 V365" class="stroke" opacity=".55"/>
+    <path d="M695 300 H905" class="stroke" opacity=".55"/>
+    <path d="M575 285 C630 275 660 282 695 300" class="cyan"/>
+    <path d="M905 300 C955 276 1008 276 1055 292" class="gold"/>
+    <path d="M905 300 C955 333 1008 340 1060 325" class="red"/>
+    <rect x="515" y="250" width="58" height="80" rx="8" class="paper"/>
+    <rect x="1060" y="248" width="58" height="80" rx="8" class="paper"/>
+    <rect x="1130" y="270" width="58" height="80" rx="8" class="paper" opacity=".85"/>
+    <rect x="444" y="270" width="58" height="80" rx="8" class="paper" opacity=".85"/>
+  </g>
+
+  <!-- side privacy shield -->
+  <g transform="translate(1230 205)">
+    <path d="M70 0 L130 25 V82 C130 123 100 153 70 166 C40 153 10 123 10 82 V25 Z" fill="#172235" stroke="#8fb9ff" stroke-width="5"/>
+    <path d="M45 83 l18 18 l38 -52" class="gold"/>
+  </g>
+
+  <!-- small dots: surveyed directories -->
+  <g opacity=".75">
+    <circle cx="265" cy="725" r="5" fill="#72e0d1"/>
+    <circle cx="315" cy="742" r="5" fill="#e6c36a"/>
+    <circle cx="365" cy="733" r="5" fill="#ff8d82"/>
+    <circle cx="415" cy="748" r="5" fill="#72e0d1"/>
+    <circle cx="465" cy="724" r="5" fill="#8fb9ff"/>
+    <circle cx="515" cy="744" r="5" fill="#72e0d1"/>
+    <circle cx="565" cy="730" r="5" fill="#e6c36a"/>
+    <circle cx="615" cy="752" r="5" fill="#ff8d82"/>
+    <circle cx="665" cy="730" r="5" fill="#8fb9ff"/>
+    <circle cx="715" cy="744" r="5" fill="#72e0d1"/>
+    <circle cx="765" cy="726" r="5" fill="#e6c36a"/>
+    <circle cx="815" cy="752" r="5" fill="#ff8d82"/>
+    <circle cx="865" cy="730" r="5" fill="#8fb9ff"/>
+    <circle cx="915" cy="744" r="5" fill="#72e0d1"/>
+    <circle cx="965" cy="726" r="5" fill="#e6c36a"/>
+    <circle cx="1015" cy="752" r="5" fill="#ff8d82"/>
+    <circle cx="1065" cy="730" r="5" fill="#8fb9ff"/>
+    <circle cx="1115" cy="744" r="5" fill="#72e0d1"/>
+    <circle cx="1165" cy="726" r="5" fill="#e6c36a"/>
+    <circle cx="1215" cy="752" r="5" fill="#ff8d82"/>
+    <circle cx="1265" cy="730" r="5" fill="#8fb9ff"/>
+    <circle cx="1315" cy="744" r="5" fill="#72e0d1"/>
+  </g>
+</svg>
