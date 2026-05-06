@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-05 | Total pages: 153
+> Last updated: 2026-05-05 | Total pages: 154
 
 ## News
 
@@ -142,6 +142,7 @@
 - [[llm-readable-spec-files]] — Research synthesis on `spec.md` files that LLM agents can follow, verify, and refine without collapsing into vague prompt residue.
 - [[spec-dataset-evolution-research-project]] — Kanban-backed research design for collecting public `spec.md` and spec-like files, preserving repo references, and measuring spec evolution, AI-era timing, project pressures, code/spec ratios, and code connectedness.
 - [[spec-deep-dive-wiki-ingest-project]] — Kanban-backed ingest project for turning the private spec corpus and authored deep-dive dossiers into public-safe wiki pages without publishing raw copied specs.
+- [[spec-deep-dive-index]] — Aggregate public-safe index for the spec deep-dive wave, linking priority cases, cohorts, source-basis counts, public-safety caveats, and remaining gates.
 - [[spec-deep-dive-case-jcode]] — Priority case study for `1jehuang/jcode` as a post-LLM coding-agent harness with distributed spec surfaces and high code/spec connectedness.
 - [[spec-deep-dive-case-droidagent]] — Priority case study for DroidAgent as an agent-generated mobile-GUI behavioral-spec and executable-replay bridge.
 - [[spec-deep-dive-case-j8-ambiguity]] — Public-safe ambiguity trail separating the corrected `jcode` target from the `j8agent` namespace collision and useful pre-AI J8Spec control.

@@ -123,3 +123,9 @@ and `agent-generated-spec`. Use it as the canonical contrast to
 [[spec-deep-dive-case-jcode]]: `jcode` has high connectedness through living
 architecture docs and prompt/instruction files; DroidAgent has high connectedness
 through generated task traces and replay scripts.
+
+## Deep-dive navigation
+
+- Aggregate index: [[spec-deep-dive-index]]
+- Priority cases: [[spec-deep-dive-case-jcode]], [[spec-deep-dive-case-droidagent]], [[spec-deep-dive-case-j8-ambiguity]]
+- Cohort pages: [[spec-deep-dive-cohort-exact-spec-md-and-standards]], [[spec-deep-dive-cohort-agent-native-spec-kit-kiro]], [[spec-deep-dive-cohort-rfc-adr-executable-contracts]]

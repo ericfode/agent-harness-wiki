@@ -33,7 +33,7 @@ soufflé in CI.
 
 The working private corpus is now in `https://github.com/ericfode/spec-dataset-evolution-corpus` and local checkout `/Users/ericfode/src/spec-dataset-evolution-corpus`. It contains the private raw-file research archive, provenance manifests, dedup outputs, analysis frames, and authored deep-dive dossiers.
 
-Public wiki ingestion is tracked separately in [[spec-deep-dive-wiki-ingest-project]] on Kanban board `spec-deep-dive-wiki-ingest`. That project should synthesize deep dives into wiki pages without dumping wholesale raw copied specs into the public wiki.
+Public wiki ingestion is tracked separately in [[spec-deep-dive-wiki-ingest-project]] on Kanban board `spec-deep-dive-wiki-ingest`; its aggregate public-safe navigation page is [[spec-deep-dive-index]]. That project should synthesize deep dives into wiki pages without dumping wholesale raw copied specs into the public wiki.
 
 ## Output contract
 
@@ -331,7 +331,8 @@ Kanban runtime failure.
 ## Public deep-dive ingest wave
 
 The private corpus is now being rendered into public-safe wiki synthesis through
-[[spec-deep-dive-wiki-ingest-project]]. The first priority case pages are:
+[[spec-deep-dive-wiki-ingest-project]]. The aggregate map is
+[[spec-deep-dive-index]], and the first priority case pages are:
 
 - [[spec-deep-dive-case-jcode]] — post-LLM coding-agent harness with distributed
   spec surfaces and high code/spec connectedness;

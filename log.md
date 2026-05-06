@@ -1252,3 +1252,9 @@
 - Mature baseline evidence from OCI runtime, OpenTelemetry, Protocol Buffers, and gRPC was summarized as metadata and synthesis only; no private raw corpus bodies or long upstream excerpts were copied into the wiki.
 - Updated [[index]] and reused existing cross-links from [[spec-deep-dive-wiki-ingest-project]] and [[spec-dataset-evolution-research-project]] so the new cohort page participates in the shared ingest graph.
 - Validation: `scripts/lint-wiki.sh` passed: 153 content pages checked.
+
+## [2026-05-05] query | spec deep-dive aggregate index
+- Created [[spec-deep-dive-index]] as the public-safe aggregate index for the private spec corpus deep-dive wave.
+- Cross-linked the aggregate index from [[spec-dataset-evolution-research-project]], [[spec-deep-dive-wiki-ingest-project]], [[index]], and the priority case/cohort pages.
+- Preserved the private corpus as a source pointer only: aggregate counts, corpus-relative source paths, repo URLs, connectedness/compliance summaries, and caveats are public; raw private corpus bodies remain unpublished.
+- Validation: `scripts/lint-wiki.sh` passed: 154 content pages checked.

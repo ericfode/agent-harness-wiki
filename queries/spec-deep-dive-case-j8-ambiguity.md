@@ -110,3 +110,9 @@ Use this page as an ambiguity-control case. The label should be:
 
 This contrast is useful precisely because it is not tidy. Tidy evidence is lovely,
 but ambiguous evidence is where the dataset learns to stop hallucinating.
+
+## Deep-dive navigation
+
+- Aggregate index: [[spec-deep-dive-index]]
+- Priority cases: [[spec-deep-dive-case-jcode]], [[spec-deep-dive-case-droidagent]], [[spec-deep-dive-case-j8-ambiguity]]
+- Cohort pages: [[spec-deep-dive-cohort-exact-spec-md-and-standards]], [[spec-deep-dive-cohort-agent-native-spec-kit-kiro]], [[spec-deep-dive-cohort-rfc-adr-executable-contracts]]

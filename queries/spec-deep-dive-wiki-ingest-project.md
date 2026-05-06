@@ -79,7 +79,7 @@ corpus-relative unless an absolute project scratch path is explicitly named.
 | `SPEC-WIKI-02` exact `spec.md` and mature standards | `SPEC-REPO-01`, `SPEC-REPO-07`, `SPEC-REPO-18`, `SPEC-REPO-19`, aggregate records | Cohort page distinguishing exact `spec.md`, standards/protocol repos, and mature baselines. |
 | `SPEC-WIKI-03` agent-native / Spec Kit / Kiro | `SPEC-REPO-03`, `SPEC-REPO-04`, `SPEC-REPO-08`, `SPEC-REPO-11`, `SPEC-REPO-20` | Cohort page for `.kiro`, `.agent-os`, `.specify`, Spec Kit, templates, and generated scaffolds. |
 | `SPEC-WIKI-04` RFC / ADR / executable contracts | `SPEC-REPO-05`, `SPEC-REPO-06`, `SPEC-REPO-18`, `SPEC-REPO-19`, connectedness features | Cohort page separating prose governance corpora from machine-readable contracts. |
-| `SPEC-WIKI-05` aggregate index | `AGGREGATE.md`, `aggregate_repo_records.jsonl`, `corpus_file_manifest.jsonl`, all cohort pages | Public-safe index page with source map, cohort links, top findings, caveats, and remaining gates. |
+| `SPEC-WIKI-05` aggregate index | `AGGREGATE.md`, `aggregate_repo_records.jsonl`, `corpus_file_manifest.jsonl`, all cohort pages | Public-safe index page [[spec-deep-dive-index]] with source map, cohort links, top findings, caveats, and remaining gates. |
 | `SPEC-WIKI-06` public-safety review | All wiki pages produced by the ingest wave plus `SPEC-REPO-16` compliance gate | Review page or handoff confirming lint, public-safety policy adherence, and push verification. |
 
 ## Naming conventions
@@ -272,11 +272,22 @@ The first cohort synthesis pages are:
 | [[spec-deep-dive-cohort-agent-native-spec-kit-kiro]] | `SPEC-REPO-03`, `SPEC-REPO-04`, `SPEC-REPO-08`, `SPEC-REPO-11`, `SPEC-REPO-20` | Agent-native spec directories, Spec Kit / `.specify`, `.kiro/specs`, prompt-template families, and template-lineage caveats. |
 | [[spec-deep-dive-cohort-rfc-adr-executable-contracts]] | `SPEC-REPO-05`, `SPEC-REPO-06`, `SPEC-REPO-18`, `SPEC-REPO-19`, `SPEC-REPO-16` export gate | RFC/proposal governance records versus OpenAPI/Proto/Smithy/AsyncAPI/GraphQL/Thrift/TLA+/Dafny executable or formal contracts. |
 
+## Aggregate index
+
+The `SPEC-WIKI-05` aggregate page is [[spec-deep-dive-index]]. It links the
+priority cases, cohort pages, aggregate source-basis counts, artifact-family
+taxonomy, connectedness flags, compliance posture, and remaining gates. It uses
+`reports/AGGREGATE.md`, `reports/deep-dives/AGGREGATE.md`,
+`data/aggregate_repo_records.jsonl`, `data/corpus_file_manifest.jsonl`,
+`data/connectedness_features.jsonl`, `SPEC-REPO-16`, and `SPEC-REPO-20` as
+private-corpus evidence while preserving the publication boundary: synthesis and
+metadata out; raw corpus bodies stay private.
+
 ## Acceptance criteria
 
 The ingest project is complete when:
 
-1. The wiki has a public-safe deep-dive index page.
+1. The wiki has a public-safe deep-dive index page: [[spec-deep-dive-index]].
 2. Priority case studies and cohorts have either dedicated pages or clearly named
    sections with source paths and caveats.
 3. The original [[spec-dataset-evolution-research-project]] links to the private
