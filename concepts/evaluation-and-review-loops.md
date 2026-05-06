@@ -1,10 +1,10 @@
 ---
 title: Evaluation and Review Loops
 created: 2026-04-07
-updated: 2026-05-02
+updated: 2026-05-06
 type: concept
 tags: [subagents, code-quality, orchestration]
-sources: [raw/articles/openai-harness-engineering.md, raw/articles/openai-introducing-codex-app.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-three-agent-harness-infoq.md, raw/articles/anthropic-claude-code-overview.md, raw/articles/yegge-gas-town-emergency-user-manual.md, raw/articles/yegge-vibe-maintainer.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/papers/arxiv-chuang-2026-proxy-state-based-evaluation.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md]
+sources: [raw/articles/openai-harness-engineering.md, raw/articles/openai-introducing-codex-app.md, raw/articles/anthropic-effective-harnesses.md, raw/articles/anthropic-three-agent-harness-infoq.md, raw/articles/anthropic-claude-code-overview.md, raw/articles/yegge-gas-town-emergency-user-manual.md, raw/articles/yegge-vibe-maintainer.md, raw/papers/arxiv-trivedi-2024-appworld.md, raw/papers/arxiv-pan-2024-swe-gym.md, raw/papers/arxiv-chuang-2026-proxy-state-based-evaluation.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md, raw/papers/arxiv-singh-2026-agentic-imodels.md]
 ---
 
 # Evaluation and Review Loops
@@ -28,6 +28,9 @@ The newer benchmark literature adds a more concrete substrate for review loops: 
 [[on-policy-self-distillation]] raises the bar for what a review loop should emit. A useful evaluator should not merely return `pass` or `fail`; it should preserve compiler errors, runtime exceptions, failed-test traces, reviewer comments, judge rationales, and user follow-up replies in a form that can condition later agent behavior. Even when no weight update happens, these richer artifacts improve recovery and future context assembly.
 
 This does not remove the need for adversarial distance. A self-distilled teacher is still the same model with more context, so independent tests and reviewers remain the authority; their feedback simply becomes more reusable.
+
+## Simulatability tests
+[[agentic-imodels]] suggests another review primitive: evaluate whether an agent can answer held-out operational questions from an artifact representation alone. In that paper the artifact is a fitted model's `__str__` output, but the pattern generalizes to tool outputs, issue summaries, trace digests, and failure reports. If an evaluator cannot reconstruct the relevant behavior from the artifact, the artifact is not agent-readable in any operational sense.
 
 ## Main trade-off
 Good review loops cost more in tokens, time, and operator design. They also add coordination overhead. But without them, long-running systems drift toward premature victory, hidden regressions, and PR pileups. This is why evaluation belongs inside [[harness-engineering]] rather than as an afterthought bolted onto release time.

@@ -1286,3 +1286,10 @@
 - Updated [[harness-engineering]] and [[self-evolving-workflows]] so the new paper is linked from the existing harness-engineering graph rather than sitting as a decorative orphan.
 - Updated [[index|index.md]] to list the new entity page; content-page count moved 156 → 157.
 - Validation: `scripts/lint-wiki.sh` passed: 157 content pages checked.
+
+## [2026-05-06] ingest | Agentic-imodels
+- Resolved the user-supplied arXiv URL `https://arxiv.org/abs/2605.03808` to arXiv:2605.03808v1, [[arxiv-singh-2026-agentic-imodels|raw/papers/arxiv-singh-2026-agentic-imodels.md]], by grounding metadata through the arXiv Atom API and source text through the arXiv e-print package after `web_extract` reported Firecrawl was not configured and arXiv HTML returned 404.
+- Created [[agentic-imodels]] as a source-quality-aware entity page with an autoresearch-loop diagram, evidence/caveat table, BLADE result summary, and reward-hacking boundary.
+- Updated [[context-engineering]], [[evaluation-and-review-loops]], and [[self-evolving-workflows]] so agent-facing simulatability tests are linked into the harness graph.
+- Updated [[index|index.md]] to list the new entity page; content-page count moved 157 → 158.
+- Validation: `scripts/lint-wiki.sh` passed: 158 content pages checked.

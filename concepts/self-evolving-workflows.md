@@ -4,7 +4,7 @@ created: 2026-04-09
 updated: 2026-05-06
 type: concept
 tags: [work-management, memory, orchestration, context-engineering]
-sources: [raw/papers/arxiv-zhang-2024-aflow.md, raw/papers/arxiv-li-2024-autoflow.md, raw/papers/arxiv-wang-2024-agent-workflow-memory.md, raw/papers/arxiv-ma-2026-judgeflow.md, raw/papers/arxiv-xu-2025-robustflow.md, raw/papers/arxiv-rhodes-2026-compiled-memory.md, raw/papers/arxiv-shen-2026-skillfoundry.md, raw/papers/arxiv-zhang-2026-evoskills.md, raw/papers/arxiv-wang-2026-skillx.md, raw/papers/arxiv-zhou-2026-memento-skills.md, raw/papers/arxiv-huo-2026-atommem.md, raw/papers/arxiv-ye-2026-meta-context-engineering.md, raw/papers/arxiv-liu-2026-graph-of-skills.md, raw/articles/gas-city-but-its-just-codex-repo-2026-04-09.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md, raw/papers/arxiv-seong-2026-last-harness-youll-ever-build.md]
+sources: [raw/papers/arxiv-zhang-2024-aflow.md, raw/papers/arxiv-li-2024-autoflow.md, raw/papers/arxiv-wang-2024-agent-workflow-memory.md, raw/papers/arxiv-ma-2026-judgeflow.md, raw/papers/arxiv-xu-2025-robustflow.md, raw/papers/arxiv-rhodes-2026-compiled-memory.md, raw/papers/arxiv-shen-2026-skillfoundry.md, raw/papers/arxiv-zhang-2026-evoskills.md, raw/papers/arxiv-wang-2026-skillx.md, raw/papers/arxiv-zhou-2026-memento-skills.md, raw/papers/arxiv-huo-2026-atommem.md, raw/papers/arxiv-ye-2026-meta-context-engineering.md, raw/papers/arxiv-liu-2026-graph-of-skills.md, raw/articles/gas-city-but-its-just-codex-repo-2026-04-09.md, raw/articles/0xsero-self-distillation-video-2026-05-02.md, raw/papers/arxiv-seong-2026-last-harness-youll-ever-build.md, raw/papers/arxiv-singh-2026-agentic-imodels.md]
 ---
 
 # Self-Evolving Workflows
@@ -21,6 +21,7 @@ The literature now splits into several distinct evolution surfaces:
 - **Compiled instructions** — systems such as [[compiled-memory|Compiled Memory]] rewrite the operative instruction structure itself rather than only retrieving more context.
 - **Learnable control routines** — systems such as [[atommem|AtomMem]], [[memskill|MemSkill]], and Meta Context Engineering turn previously static memory or context pipelines into learnable procedures.
 - **Harness-level evolution** — [[last-harness-youll-ever-build|The Last Harness You'll Ever Build]] lifts the evolvable artifact from a workflow or skill to the full agent harness: prompts, tools, observation structures, evaluators, orchestration rules, hooks, and model configuration.
+- **Agent-facing tool evolution** — [[agentic-imodels]] uses coding agents to evolve tabular model classes whose string representations are deliberately simulatable by LLMs, showing that self-evolution can target the tool interface an agent will later consume.
 - **Model policy or adapter weights** — [[on-policy-self-distillation]] updates the agent policy directly from trajectories and feedback, rather than only revising prompts, procedures, skills, or graph topology.
 
 These are related but not identical. A reflection buffer is not automatically a workflow language, and a skill library is not automatically a control plane, though papers are often tempted to claim both before breakfast.

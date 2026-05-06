@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-06 | Total pages: 157
+> Last updated: 2026-05-06 | Total pages: 158
 
 ## News
 
@@ -18,6 +18,7 @@
 - [[agentboard]] — Analytical evaluation board for multi-turn agents with progress metrics across many task settings.
 - [[agentevolver]] — Broader self-evolving-agent framework built around self-questioning, self-navigation, and self-attribution.
 - [[agentgym]] — Multi-environment suite for evolving LLM agents across diverse tasks rather than one narrow world.
+- [[agentic-imodels]] — Autoresearch system that evolves agent-readable tabular model classes with LLM-graded simulatability and downstream BLADE gains.
 - [[appworld]] — Controllable multi-app world with state-based grading for interactive coding and tool-use agents.
 - [[atommem]] — Learnable memory-control system that decomposes memory management into atomic operations.
 - [[atropos]] — Hermes-facing RL environment and rollout substrate for multi-turn tool-calling agent tasks.
