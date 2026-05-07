@@ -1293,3 +1293,12 @@
 - Updated [[context-engineering]], [[evaluation-and-review-loops]], and [[self-evolving-workflows]] so agent-facing simulatability tests are linked into the harness graph.
 - Updated [[index|index.md]] to list the new entity page; content-page count moved 157 → 158.
 - Validation: `scripts/lint-wiki.sh` passed: 158 content pages checked.
+
+## [2026-05-07] query | nightly src projects desk
+- Created raw survey note [[nightly-src-projects-desk-2026-05-07|raw/articles/nightly-src-projects-desk-2026-05-07.md]] and query page [[nightly-src-projects-desk-2026-05-07]] for the nightly local-projects desk.
+- Published verdict: spec-code grounding, test-writing environments, and `tinygrad-gemma` lead tonight, with terminal/game/interface craft projects, NNPL benches, and orchestration side rooms summarized only where inspectable evidence supported public-safe claims.
+- Generated editorial illustration `queries/news-assets/2026-05-07-project-desk-hero.svg` locally after the configured image backend reported missing `FAL_KEY`; no fake screenshots were used, and the SVG parsed as valid XML.
+- Survey automation status: exactly 10 top-level Hermes survey lanes ran as 3 + 3 + 3 + 1, and all 10 lane summaries reported successful recursive 3-way delegation for purpose/docs, live-work evidence, and safety/public-summary review. A controller post-dispatch audit covered two hidden top-level directories as a read-only supplement so the total lane count remained exactly ten; total coverage was 38 top-level directories.
+- Public-safety filter: project-specific public detail was held back or reduced to category-only mention for hidden local settings, one sensitive social-claim notebook, empty or skeletal directories, local deployment/model-runner folders, private corpus contents, internal workflow/assistant configuration, scratch/meta workspaces, raw logs/prompts/trajectories, evaluator-like payloads, benchmark outputs, model/checkpoint artifacts, and creative material needing human curation.
+- Updated [[index|index.md]] News and Queries sections for the new nightly desk page; content-page count moved 158 → 159.
+- Lint result: `scripts/lint-wiki.sh` passed: 159 content pages checked.
