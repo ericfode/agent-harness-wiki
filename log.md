@@ -1302,3 +1302,12 @@
 - Public-safety filter: project-specific public detail was held back or reduced to category-only mention for hidden local settings, one sensitive social-claim notebook, empty or skeletal directories, local deployment/model-runner folders, private corpus contents, internal workflow/assistant configuration, scratch/meta workspaces, raw logs/prompts/trajectories, evaluator-like payloads, benchmark outputs, model/checkpoint artifacts, and creative material needing human curation.
 - Updated [[index|index.md]] News and Queries sections for the new nightly desk page; content-page count moved 158 → 159.
 - Lint result: `scripts/lint-wiki.sh` passed: 159 content pages checked.
+
+## [2026-05-08] query | nightly src projects desk
+- Created raw survey note [[nightly-src-projects-desk-2026-05-08|raw/articles/nightly-src-projects-desk-2026-05-08.md]] and query page [[nightly-src-projects-desk-2026-05-08]] for the nightly local-projects desk.
+- Published verdict: spec-code grounding and test-writing environments still lead, with `tinygrad-gemma`, NNPL benches, `handterm`, Dungeon Steward, privacy-sensitive interface/simulation work, and orchestration side rooms summarized only where inspectable evidence supported public-safe claims.
+- Generated editorial illustration `queries/news-assets/2026-05-08-project-desk-hero.svg` locally after the configured image backend reported missing `FAL_KEY`; no fake screenshots were used, and the SVG parsed as valid XML.
+- Survey automation status: exactly 10 top-level Hermes survey lanes ran as 3 + 3 + 3 + 1 across all 38 top-level directories under the local src tree, including hidden directories. All 10 lane summaries reported successful recursive 3-way delegation for purpose/docs, live-work evidence, and safety/public-summary review.
+- Public-safety filter: project-specific public detail was held back or reduced to category-only mention for hidden local settings, a sensitive social-claim notebook, empty or skeletal directories, local deployment/model-runner folders, private corpus bodies, internal workflow/assistant configuration, scratch/meta workspaces, generated artifacts, prompt/log/trajectory materials, evaluator-like payloads, benchmark raw outputs, model/checkpoint artifacts, privacy-sensitive capture data, and creative material needing human curation.
+- Updated [[index|index.md]] News and Queries sections for the new nightly desk page; content-page count moved 159 → 160.
+- Lint result: `scripts/lint-wiki.sh` passed after the page, index, and log edits: 160 content pages checked.

@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
+  <title id="title">Nightly source projects desk, 2026-05-08</title>
+  <desc id="desc">Editorial illustration: spec-code blocks, guarded testing benches, Gemma/tinygrad tensor work, terminal and deckbuilder craft, and orchestration ledgers behind privacy shields.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.55" stop-color="#172033"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#312e81"/>
+      <stop offset="0.5" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#164e63"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#020617" flood-opacity="0.55"/>
+    </filter>
+    <style>
+      .line{stroke:#94a3b8;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#64748b;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .label{font:600 24px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#e5e7eb;letter-spacing:.03em}
+      .small{font:500 16px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#cbd5e1;letter-spacing:.02em}
+      .tiny{font:500 13px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#94a3b8;letter-spacing:.02em}
+      .panel{fill:#0f172a;stroke:#334155;stroke-width:3;rx:18;filter:url(#soft)}
+      .glow{fill:#38bdf8;opacity:.16}
+      .paper{fill:#f8fafc;stroke:#cbd5e1;stroke-width:3;rx:8}
+      .amber{fill:#f59e0b}.green{fill:#22c55e}.cyan{fill:#06b6d4}.violet{fill:#8b5cf6}.red{fill:#ef4444}.slate{fill:#334155}.ink{fill:#0f172a}
+    </style>
+  </defs>
+
+  <rect width="1400" height="800" fill="url(#bg)"/>
+  <circle cx="1110" cy="160" r="260" class="glow"/>
+  <circle cx="305" cy="150" r="190" fill="#8b5cf6" opacity=".09"/>
+  <path d="M70 590 C240 520 400 545 565 594 C755 650 925 630 1095 575 C1200 541 1290 535 1350 570" fill="none" stroke="#38bdf8" stroke-opacity=".18" stroke-width="5"/>
+
+  <rect x="95" y="535" width="1210" height="145" rx="34" fill="url(#desk)" filter="url(#soft)"/>
+  <rect x="145" y="575" width="1110" height="42" rx="21" fill="#020617" opacity=".36"/>
+
+  <!-- Spec-code grounding cluster -->
+  <g transform="translate(95 115)">
+    <rect class="panel" x="0" y="0" width="250" height="330"/>
+    <text class="label" x="30" y="42">Spec ↔ Code</text>
+    <rect class="paper" x="32" y="72" width="84" height="112"/>
+    <line class="thin" x1="48" y1="96" x2="100" y2="96"/>
+    <line class="thin" x1="48" y1="120" x2="92" y2="120"/>
+    <line class="thin" x1="48" y1="144" x2="104" y2="144"/>
+    <rect x="144" y="70" width="62" height="62" rx="10" fill="#1d4ed8" stroke="#93c5fd" stroke-width="3"/>
+    <rect x="144" y="148" width="62" height="62" rx="10" fill="#0f766e" stroke="#99f6e4" stroke-width="3"/>
+    <rect x="144" y="226" width="62" height="62" rx="10" fill="#581c87" stroke="#c4b5fd" stroke-width="3"/>
+    <path class="line" d="M116 126 C133 113 131 101 144 101"/>
+    <path class="line" d="M116 142 C134 154 130 178 144 179"/>
+    <path class="line" d="M116 160 C133 200 128 248 144 257"/>
+    <circle cx="217" cy="101" r="5" class="green"/>
+    <circle cx="217" cy="179" r="5" class="green"/>
+    <circle cx="217" cy="257" r="5" class="amber"/>
+    <text class="small" x="32" y="306">provenance pins, not fog</text>
+  </g>
+
+  <!-- Testing RL guarded bench -->
+  <g transform="translate(380 92)">
+    <rect class="panel" x="0" y="0" width="270" height="360"/>
+    <text class="label" x="28" y="42">Test Benches</text>
+    <rect x="38" y="90" width="190" height="92" rx="14" fill="#111827" stroke="#475569" stroke-width="3"/>
+    <circle cx="76" cy="136" r="16" class="green"/>
+    <circle cx="126" cy="136" r="16" class="red"/>
+    <circle cx="176" cy="136" r="16" class="amber"/>
+    <path class="line" d="M58 220 h150"/>
+    <rect x="70" y="246" width="112" height="74" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="4"/>
+    <path d="M92 246 v-20 c0-28 68-28 68 0 v20" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+    <text class="small" x="41" y="206">hidden evaluator kept hidden</text>
+    <text class="tiny" x="72" y="292">temporal boundary</text>
+  </g>
+
+  <!-- Gemma/tinygrad workbench -->
+  <g transform="translate(690 105)">
+    <rect class="panel" x="0" y="0" width="285" height="335"/>
+    <text class="label" x="28" y="42">Gemma / tinygrad</text>
+    <g transform="translate(38 82)">
+      <rect x="0" y="0" width="60" height="60" rx="10" fill="#0369a1" stroke="#7dd3fc" stroke-width="3"/>
+      <rect x="76" y="0" width="60" height="60" rx="10" fill="#0f766e" stroke="#5eead4" stroke-width="3"/>
+      <rect x="152" y="0" width="60" height="60" rx="10" fill="#7c3aed" stroke="#c4b5fd" stroke-width="3"/>
+      <rect x="38" y="76" width="60" height="60" rx="10" fill="#1d4ed8" stroke="#93c5fd" stroke-width="3"/>
+      <rect x="114" y="76" width="60" height="60" rx="10" fill="#0e7490" stroke="#67e8f9" stroke-width="3"/>
+      <path class="thin" d="M30 60 L68 76 M106 60 L68 76 M106 60 L144 76 M182 60 L144 76"/>
+    </g>
+    <rect x="42" y="238" width="198" height="46" rx="10" fill="#020617" stroke="#475569" stroke-width="3"/>
+    <polyline points="58,268 91,257 124,261 157,246 194,252 226,240" fill="none" stroke="#22c55e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="tiny" x="56" y="311">evidence graph, not speed theater</text>
+  </g>
+
+  <!-- Craft/game/interface -->
+  <g transform="translate(1010 125)">
+    <rect class="panel" x="0" y="0" width="260" height="310"/>
+    <text class="label" x="26" y="42">Craft &amp; Feel</text>
+    <rect x="34" y="76" width="190" height="92" rx="14" fill="#020617" stroke="#38bdf8" stroke-width="4"/>
+    <path d="M56 106 h56 M56 132 h112" stroke="#67e8f9" stroke-width="5" stroke-linecap="round"/>
+    <g transform="translate(42 204) rotate(-8)">
+      <rect width="58" height="82" rx="9" fill="#312e81" stroke="#c4b5fd" stroke-width="3"/>
+      <circle cx="29" cy="30" r="13" fill="#f59e0b"/>
+    </g>
+    <g transform="translate(112 196) rotate(6)">
+      <rect width="58" height="82" rx="9" fill="#065f46" stroke="#86efac" stroke-width="3"/>
+      <path d="M18 50 h22 M29 26 v48" stroke="#d1fae5" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <text class="small" x="36" y="290">terminal, deck, interface</text>
+  </g>
+
+  <!-- Orchestration ledger and privacy shields in background -->
+  <g transform="translate(250 520)">
+    <rect x="0" y="0" width="190" height="92" rx="18" fill="#0f172a" stroke="#64748b" stroke-width="3"/>
+    <text class="small" x="24" y="33">ledgers</text>
+    <path class="thin" d="M28 52 H160 M28 70 H136"/>
+    <path d="M156 18 l32 12 v32 c0 25-14 43-32 52-18-9-32-27-32-52V30z" fill="#0f766e" stroke="#5eead4" stroke-width="3" opacity=".92"/>
+  </g>
+  <g transform="translate(915 528)">
+    <path d="M70 0 l70 25 v78 c0 44-31 72-70 92-39-20-70-48-70-92V25z" fill="#1e293b" stroke="#93c5fd" stroke-width="4" filter="url(#soft)"/>
+    <circle cx="70" cy="82" r="24" fill="#0ea5e9" opacity=".75"/>
+    <rect x="57" y="78" width="26" height="30" rx="6" fill="#e0f2fe"/>
+    <path d="M61 78 v-10 c0-16 18-20 18 0v10" fill="none" stroke="#e0f2fe" stroke-width="6" stroke-linecap="round"/>
+    <text class="tiny" x="16" y="166">private drawers stay closed</text>
+  </g>
+
+  <text class="label" x="95" y="742">Nightly Src Projects Desk · 2026-05-08</text>
+  <text class="small" x="95" y="772">Evidence surfaces, guarded evaluators, model benches, and craft rooms under a public-safety filter.</text>
+</svg>

@@ -2,10 +2,11 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-07 | Total pages: 159
+> Last updated: 2026-05-08 | Total pages: 160
 
 ## News
 
+- [[nightly-src-projects-desk-2026-05-08]] — Nightly local-projects desk: spec-code grounding and testing environments still lead, with tinygrad/Gemma benches, terminal/game/interface craft, orchestration side rooms, and private/local artifacts held under the public-safety filter.
 - [[nightly-src-projects-desk-2026-05-07]] — Nightly local-projects desk: spec-code grounding, testing environments, and tinygrad/Gemma work lead, with craft/game/interface projects and orchestration side rooms surveyed under the public-safety filter.
 - [[nightly-src-projects-desk-2026-05-06]] — Nightly local-projects desk: Basis/spec-code grounding and testing environments lead, with tinygrad/Gemma benches, handterm, Dungeon Steward, FACEMUSIC, orchestration side rooms, and privacy-gated corpus work surveyed under the public-safety filter.
 - [[nightly-src-projects-desk-2026-05-03]] — Nightly local-projects desk: test-writing environments lead, with Dungeon Steward, FACEMUSIC, Codex orchestration benches, openai-symphony, NNPL, and Gemma/tinygrad side rooms surveyed under the public-safety filter.
@@ -117,6 +118,7 @@
 
 ## Queries
 
+- [[nightly-src-projects-desk-2026-05-08]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by spec-code grounding, testing environments, tinygrad/Gemma work, terminal/game/interface craft, and orchestration side rooms.
 - [[nightly-src-projects-desk-2026-05-07]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by spec-code grounding, testing environments, tinygrad/Gemma work, terminal/game/interface craft, and orchestration side rooms.
 - [[nightly-src-projects-desk-2026-05-06]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by Basis/spec-code grounding, testing environments, tinygrad/Gemma benches, terminal/game/interface craft work, and orchestration side rooms.
 - [[nightly-src-projects-desk-2026-05-03]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by test-writing environments, game/interface polish, orchestration benches, NNPL boundaries, and Gemma/tinygrad sandboxes.
