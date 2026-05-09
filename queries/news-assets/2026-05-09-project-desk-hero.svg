@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" role="img" aria-labelledby="title desc">
+  <title id="title">Nightly source projects desk editorial illustration, 2026-05-09</title>
+  <desc id="desc">Symbolic editorial art showing a calm night desk with specification blocks, test benches, Gemma/tinygrad tensor rigs, simulation traces, game and terminal craft surfaces, orchestration ledgers, and privacy shields.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.52" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" x2="1">
+      <stop offset="0" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="0.5" cy="0.25" r="0.65">
+      <stop offset="0" stop-color="#fde68a" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fde68a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <style>
+      .line{stroke:#c7d2fe;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none;opacity:.78}
+      .thin{stroke:#93c5fd;stroke-width:2;stroke-linecap:round;fill:none;opacity:.7}
+      .card{fill:#172554;stroke:#93c5fd;stroke-width:3;rx:16;opacity:.96}
+      .paper{fill:#f8fafc;stroke:#cbd5e1;stroke-width:3;rx:12}
+      .green{fill:#064e3b;stroke:#5eead4;stroke-width:3;rx:14}
+      .amber{fill:#451a03;stroke:#fbbf24;stroke-width:3;rx:14}
+      .violet{fill:#312e81;stroke:#a5b4fc;stroke-width:3;rx:14}
+      .redact{fill:#020617;stroke:#64748b;stroke-width:3;rx:12;opacity:.92}
+      .label{font:600 24px ui-monospace, SFMono-Regular, Menlo, monospace;fill:#e0e7ff;letter-spacing:.04em}
+      .small{font:500 17px ui-monospace, SFMono-Regular, Menlo, monospace;fill:#bae6fd}
+      .darktext{font:700 19px ui-monospace, SFMono-Regular, Menlo, monospace;fill:#0f172a}
+    </style>
+  </defs>
+  <rect width="1400" height="700" fill="url(#bg)"/>
+  <ellipse cx="710" cy="245" rx="570" ry="250" fill="url(#lamp)" filter="url(#soft)"/>
+  <g opacity=".35">
+    <circle cx="116" cy="92" r="2.8" fill="#e0e7ff"/><circle cx="226" cy="52" r="2.3" fill="#e0f2fe"/><circle cx="1290" cy="80" r="2.5" fill="#e0e7ff"/><circle cx="1115" cy="150" r="2" fill="#e0f2fe"/><circle cx="960" cy="54" r="2.2" fill="#e0e7ff"/>
+    <path class="thin" d="M82 174 C210 116 298 122 404 168"/>
+    <path class="thin" d="M1030 124 C1116 92 1210 98 1328 154"/>
+  </g>
+  <rect x="95" y="510" width="1210" height="82" rx="26" fill="url(#desk)" opacity=".9"/>
+  <rect x="140" y="548" width="1120" height="20" rx="10" fill="#0f172a" opacity=".45"/>
+
+  <!-- central ledger / editor desk -->
+  <g transform="translate(512 142)">
+    <rect class="paper" x="0" y="0" width="376" height="268"/>
+    <text class="darktext" x="28" y="42">SURVEY BASIS</text>
+    <path d="M28 70 H338" stroke="#94a3b8" stroke-width="3"/>
+    <g stroke="#334155" stroke-width="2" opacity=".9">
+      <path d="M32 104 H326"/><path d="M32 136 H326"/><path d="M32 168 H326"/><path d="M32 200 H326"/>
+    </g>
+    <g fill="#0f766e">
+      <circle cx="50" cy="103" r="7"/><circle cx="50" cy="135" r="7"/><circle cx="50" cy="167" r="7"/><circle cx="50" cy="199" r="7"/>
+    </g>
+    <text class="small" x="82" y="110" fill="#0f172a">docs • git • mtimes</text>
+    <text class="small" x="82" y="142" fill="#0f172a">10 lanes × 3 teams</text>
+    <text class="small" x="82" y="174" fill="#0f172a">safety filter</text>
+    <text class="small" x="82" y="206" fill="#0f172a">public copy only</text>
+  </g>
+
+  <!-- spec blocks -->
+  <g transform="translate(120 184)">
+    <rect class="violet" x="0" y="0" width="275" height="168"/>
+    <text class="label" x="24" y="42">SPEC / BASIS</text>
+    <rect x="26" y="70" width="76" height="52" rx="8" fill="#e0e7ff" opacity=".9"/>
+    <rect x="118" y="70" width="58" height="52" rx="8" fill="#bfdbfe" opacity=".85"/>
+    <rect x="192" y="70" width="56" height="52" rx="8" fill="#99f6e4" opacity=".85"/>
+    <path class="thin" d="M102 96 H118 M176 96 H192"/>
+    <text class="small" x="31" y="150">claims with provenance</text>
+  </g>
+
+  <!-- testing bench -->
+  <g transform="translate(1000 178)">
+    <rect class="green" x="0" y="0" width="280" height="174"/>
+    <text class="label" x="24" y="43">TEST BENCH</text>
+    <path class="line" d="M38 118 L78 82 L120 126 L165 70 L228 118"/>
+    <rect x="36" y="72" width="205" height="70" rx="10" fill="none" stroke="#5eead4" stroke-width="3" opacity=".55"/>
+    <text class="small" x="32" y="156">hidden refs stay hidden</text>
+  </g>
+
+  <!-- tensor rig -->
+  <g transform="translate(392 438)">
+    <rect class="amber" x="0" y="0" width="245" height="120"/>
+    <text class="label" x="22" y="39">GEMMA / JIT</text>
+    <g stroke="#fbbf24" stroke-width="3" fill="none" opacity=".85">
+      <rect x="32" y="61" width="34" height="34"/><rect x="78" y="61" width="34" height="34"/><rect x="124" y="61" width="34" height="34"/><rect x="170" y="61" width="34" height="34"/>
+      <path d="M66 78 H78 M112 78 H124 M158 78 H170"/>
+    </g>
+  </g>
+
+  <!-- simulation rig -->
+  <g transform="translate(665 438)">
+    <rect class="green" x="0" y="0" width="250" height="120"/>
+    <text class="label" x="22" y="39">SIMULATION</text>
+    <path class="line" d="M42 92 C85 40 128 120 170 65 S224 87 226 55"/>
+    <circle cx="42" cy="92" r="7" fill="#5eead4"/><circle cx="170" cy="65" r="7" fill="#5eead4"/>
+  </g>
+
+  <!-- game/terminal craft -->
+  <g transform="translate(160 418)">
+    <rect class="card" x="0" y="0" width="205" height="140"/>
+    <text class="label" x="20" y="39">CRAFT</text>
+    <rect x="26" y="62" width="62" height="48" rx="7" fill="#e0e7ff" opacity=".9"/>
+    <rect x="112" y="62" width="62" height="48" rx="7" fill="#93c5fd" opacity=".9"/>
+    <path d="M38 80 H78 M38 96 H68 M124 80 H164 M124 96 H154" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- orchestration ledgers -->
+  <g transform="translate(940 418)">
+    <rect class="violet" x="0" y="0" width="280" height="140"/>
+    <text class="label" x="22" y="39">LEDGERS</text>
+    <path class="thin" d="M44 82 H238 M44 108 H238"/>
+    <circle cx="62" cy="82" r="8" fill="#a5b4fc"/><circle cx="145" cy="108" r="8" fill="#a5b4fc"/><circle cx="220" cy="82" r="8" fill="#a5b4fc"/>
+    <path class="thin" d="M62 82 C98 120 122 120 145 108 C176 92 190 82 220 82"/>
+  </g>
+
+  <!-- privacy shields -->
+  <g transform="translate(1110 315)">
+    <rect class="redact" x="0" y="0" width="145" height="70"/>
+    <text class="small" x="22" y="43">WITHHELD</text>
+  </g>
+  <g transform="translate(240 330)">
+    <rect class="redact" x="0" y="0" width="145" height="70"/>
+    <text class="small" x="22" y="43">PRIVATE</text>
+  </g>
+
+  <!-- connecting threads -->
+  <path class="line" d="M396 269 C462 232 494 230 512 246"/>
+  <path class="line" d="M888 246 C940 228 972 230 1000 260"/>
+  <path class="thin" d="M632 438 C654 410 670 410 700 410 C738 410 760 412 792 438"/>
+  <path class="thin" d="M395 488 C430 486 460 488 512 438"/>
+  <path class="thin" d="M888 438 C910 476 925 486 940 488"/>
+
+  <text class="small" x="102" y="636">generated editorial illustration · symbolic repo evidence, not a screenshot</text>
+  <text class="small" x="1010" y="636">2026-05-09 nightly desk</text>
+</svg>
