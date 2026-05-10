@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Nightly source projects desk, 2026-05-10</title>
+  <desc id="desc">Symbolic editorial art showing ten survey lanes flowing into a source desk with formal proofs, test gates, tensor benches, simulation traces, terminal craft, and safety shutters.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.52" stop-color="#121827"/>
+      <stop offset="1" stop-color="#071015"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#263041"/>
+      <stop offset="1" stop-color="#1a2332"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .label { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #d8e1f0; font-size: 22px; letter-spacing: .04em; }
+      .tiny { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #aebbd0; font-size: 15px; }
+      .micro { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #8fa0b8; font-size: 12px; }
+      .panel { fill: #111827; stroke: #334155; stroke-width: 2; rx: 14; }
+      .lane { stroke: #64748b; stroke-width: 2; opacity: .6; }
+      .accent { stroke: #6ee7b7; fill: none; }
+      .warn { stroke: #fbbf24; fill: none; }
+      .blue { stroke: #7dd3fc; fill: none; }
+      .violet { stroke: #c4b5fd; fill: none; }
+      .redact { fill: #0f172a; stroke: #475569; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity="0.22">
+    <path d="M90 105 C260 40, 430 160, 600 96 S950 54, 1110 124" fill="none" stroke="#243447" stroke-width="2"/>
+    <path d="M70 565 C250 500, 360 620, 560 550 S930 500, 1130 590" fill="none" stroke="#23364a" stroke-width="2"/>
+    <circle cx="1000" cy="88" r="54" fill="none" stroke="#1f3a50"/>
+    <circle cx="1040" cy="590" r="74" fill="none" stroke="#1f3a50"/>
+  </g>
+
+  <text x="72" y="72" class="label">NIGHTLY SRC PROJECTS DESK · 2026-05-10</text>
+  <text x="74" y="102" class="tiny">10 lane identities · read-only evidence · public-safety shutters closed where necessary</text>
+
+  <g transform="translate(70 145)">
+    <text x="0" y="-18" class="tiny">survey lanes</text>
+    <g>
+      <line class="lane" x1="0" y1="0" x2="270" y2="210"/>
+      <line class="lane" x1="0" y1="36" x2="270" y2="218"/>
+      <line class="lane" x1="0" y1="72" x2="270" y2="226"/>
+      <line class="lane" x1="0" y1="108" x2="270" y2="234"/>
+      <line class="lane" x1="0" y1="144" x2="270" y2="242"/>
+      <line class="lane" x1="0" y1="180" x2="270" y2="250"/>
+      <line class="lane" x1="0" y1="216" x2="270" y2="258"/>
+      <line class="lane" x1="0" y1="252" x2="270" y2="266"/>
+      <line class="lane" x1="0" y1="288" x2="270" y2="274"/>
+      <line class="lane" x1="0" y1="324" x2="270" y2="282"/>
+    </g>
+    <g class="tiny">
+      <text x="0" y="5">01</text><text x="0" y="41">02</text><text x="0" y="77">03</text><text x="0" y="113">04</text><text x="0" y="149">05</text>
+      <text x="0" y="185">06</text><text x="0" y="221">07</text><text x="0" y="257">08</text><text x="0" y="293">09</text><text x="0" y="329">10</text>
+    </g>
+    <g opacity="0.9">
+      <circle cx="54" cy="0" r="7" fill="#7dd3fc"/><circle cx="54" cy="36" r="7" fill="#6ee7b7"/><circle cx="54" cy="72" r="7" fill="#c4b5fd"/>
+      <circle cx="54" cy="108" r="7" fill="#fbbf24"/><circle cx="54" cy="144" r="7" fill="#7dd3fc"/><circle cx="54" cy="180" r="7" fill="#6ee7b7"/>
+      <circle cx="54" cy="216" r="7" fill="#c4b5fd"/><circle cx="54" cy="252" r="7" fill="#fbbf24"/><circle cx="54" cy="288" r="7" fill="#7dd3fc"/><circle cx="54" cy="324" r="7" fill="#6ee7b7"/>
+    </g>
+  </g>
+
+  <g transform="translate(340 250)">
+    <rect x="0" y="0" width="520" height="210" rx="24" fill="url(#desk)" stroke="#475569" stroke-width="2"/>
+    <rect x="30" y="28" width="130" height="58" class="panel"/>
+    <text x="48" y="62" class="tiny">SPEC</text>
+    <path class="accent" stroke-width="3" d="M42 76 L72 76 L86 48 L112 78 L144 78"/>
+
+    <rect x="196" y="28" width="130" height="58" class="panel"/>
+    <text x="216" y="62" class="tiny">TEST GATE</text>
+    <path class="warn" stroke-width="3" d="M216 76 L246 50 L276 76 L308 44"/>
+
+    <rect x="360" y="28" width="130" height="58" class="panel"/>
+    <text x="382" y="62" class="tiny">LEAN</text>
+    <path class="violet" stroke-width="3" d="M382 78 Q424 36 468 78"/>
+
+    <rect x="30" y="120" width="130" height="58" class="panel"/>
+    <text x="47" y="154" class="tiny">GEMMA</text>
+    <g stroke="#7dd3fc" stroke-width="1.5" opacity=".85">
+      <path d="M47 164 H145"/><path d="M47 150 H145"/><path d="M62 132 V174"/><path d="M88 132 V174"/><path d="M114 132 V174"/><path d="M140 132 V174"/>
+    </g>
+
+    <rect x="196" y="120" width="130" height="58" class="panel"/>
+    <text x="220" y="154" class="tiny">NNPL</text>
+    <path class="blue" stroke-width="2.5" d="M214 164 C236 128, 282 194, 308 140"/>
+    <circle cx="214" cy="164" r="4" fill="#7dd3fc"/><circle cx="308" cy="140" r="4" fill="#7dd3fc"/>
+
+    <rect x="360" y="120" width="130" height="58" class="panel"/>
+    <text x="382" y="154" class="tiny">SIM/TERM</text>
+    <path class="accent" stroke-width="2.5" d="M378 166 C394 130, 418 130, 434 166 S474 202, 486 136"/>
+  </g>
+
+  <g transform="translate(910 168)">
+    <text x="0" y="-20" class="tiny">public-safety shutters</text>
+    <rect x="0" y="0" width="210" height="330" rx="18" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <g transform="translate(22 28)">
+      <rect class="redact" x="0" y="0" width="166" height="26" rx="5"/><text class="micro" x="12" y="18">SECRETS</text>
+      <rect class="redact" x="0" y="42" width="166" height="26" rx="5"/><text class="micro" x="12" y="60">PROMPTS / LOGS</text>
+      <rect class="redact" x="0" y="84" width="166" height="26" rx="5"/><text class="micro" x="12" y="102">CHECKPOINTS</text>
+      <rect class="redact" x="0" y="126" width="166" height="26" rx="5"/><text class="micro" x="12" y="144">BIOMETRICS</text>
+      <rect class="redact" x="0" y="168" width="166" height="26" rx="5"/><text class="micro" x="12" y="186">PRIVATE CORPUS</text>
+      <rect class="redact" x="0" y="210" width="166" height="26" rx="5"/><text class="micro" x="12" y="228">RAW BENCHES</text>
+      <rect x="0" y="260" width="166" height="28" rx="6" fill="#052e24" stroke="#34d399"/>
+      <text class="micro" x="12" y="279" fill="#bbf7d0">PUBLIC SUMMARY</text>
+    </g>
+  </g>
+
+  <g transform="translate(340 502)" filter="url(#softGlow)">
+    <path d="M0 0 H520" stroke="#334155" stroke-width="2"/>
+    <text x="0" y="38" class="tiny">lead: gas-city · another-harness · basis-hermes · testing-rl · tinygrad-gemma</text>
+    <text x="0" y="66" class="tiny">bench: nnpl boundaries · kettlebellsim · handterm · symphony</text>
+  </g>
+</svg>

@@ -2,10 +2,11 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-09 | Total pages: 161
+> Last updated: 2026-05-10 | Total pages: 162
 
 ## News
 
+- [[nightly-src-projects-desk-2026-05-10]] — Nightly local-projects desk: harness/control-plane work, spec-code reducers, test-generation environments, tinygrad/Gemma and NNPL benches, simulation/terminal craft, and safety-filtered side rooms surveyed under the public-safety filter.
 - [[nightly-src-projects-desk-2026-05-09]] — Nightly local-projects desk: spec-code grounding, test-generation environments, tinygrad/Gemma benches, fresh kettlebell simulation work, craft/game/interface projects, and orchestration side rooms surveyed under the public-safety filter.
 - [[nightly-src-projects-desk-2026-05-08]] — Nightly local-projects desk: spec-code grounding and testing environments still lead, with tinygrad/Gemma benches, terminal/game/interface craft, orchestration side rooms, and private/local artifacts held under the public-safety filter.
 - [[nightly-src-projects-desk-2026-05-07]] — Nightly local-projects desk: spec-code grounding, testing environments, and tinygrad/Gemma work lead, with craft/game/interface projects and orchestration side rooms surveyed under the public-safety filter.
@@ -119,6 +120,7 @@
 
 ## Queries
 
+- [[nightly-src-projects-desk-2026-05-10]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by harness/control-plane work, spec-code reducers, test-generation environments, tinygrad/Gemma and NNPL benches, simulation/terminal craft, and safety-filtered side rooms.
 - [[nightly-src-projects-desk-2026-05-09]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by spec-code grounding, test-generation environments, tinygrad/Gemma benches, fresh simulation work, craft/interface projects, and orchestration side rooms.
 - [[nightly-src-projects-desk-2026-05-08]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by spec-code grounding, testing environments, tinygrad/Gemma work, terminal/game/interface craft, and orchestration side rooms.
 - [[nightly-src-projects-desk-2026-05-07]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by spec-code grounding, testing environments, tinygrad/Gemma work, terminal/game/interface craft, and orchestration side rooms.
