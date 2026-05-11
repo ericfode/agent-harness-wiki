@@ -1,7 +1,7 @@
 ---
 title: Basis Source Basis and Safety Gate
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-05-11
 type: query
 tags: [safety, context-engineering, code-quality, formal-methods, work-management]
 sources: [raw/articles/basis-project-deep-dive-2026-05-10.md, queries/basis-project-index.md, queries/spec-deep-dive-wiki-ingest-project.md, concepts/safety-and-permissions.md]
@@ -19,7 +19,7 @@ It is the boring page. Boring pages are where systems remain housebroken.
 
 | Claim scope | Source | Public-safe use | Hard limit |
 |---|---|---|---|
-| Core Basis architecture | `/Users/ericfode/src/basis` safe files and [[nightly-src-projects-desk-2026-05-10]] | commit state, tests, compile/format gate, safe file/module responsibilities | no raw provider streams or local run payloads |
+| Core Basis architecture | `/Users/ericfode/src/basis` safe files and [[queries/nightly-src-projects-desk-2026-05-10|nightly-src-projects-desk-2026-05-10]] | commit state, tests, compile/format gate, safe file/module responsibilities | no raw provider streams or local run payloads |
 | Hermes plugin bridge | `/Users/ericfode/src/basis-hermes` safe files and repair note evidence | tool names, schema posture, tests, dashboard/API route names | no arbitrary local file contents or private dashboard outputs |
 | Jcode reducer/control plane | `/Users/ericfode/src/basis-jcode/components/spec-basis-reducer` source/tests plus `.basis` counts | architecture, test status, run names/counts, dashboard loopback status | no `.basis` packet/log/prompt/NDJSON bodies |
 | Spec corpus relation | [[spec-dataset-evolution-research-project]] and [[spec-deep-dive-index]] | aggregate counts, provenance policy, public-safe synthesis | no raw copied corpus specs |

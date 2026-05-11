@@ -1,7 +1,7 @@
 ---
 title: Work Management Primitives
 created: 2026-04-07
-updated: 2026-05-02
+updated: 2026-05-11
 type: concept
 tags: [work-management, orchestration, error-recovery]
 sources: [raw/articles/yegge-welcome-to-gas-town.md, raw/articles/yegge-gas-town-clown-show-to-v1.md, raw/articles/yegge-vibe-maintainer.md, raw/articles/anthropic-effective-harnesses.md]
@@ -51,4 +51,4 @@ The architecture synthesis for treating verifiers and evidence as harness object
 - **Constraint/path solver offloads**: Hybrid concolic testing approaches show that solving path constraints can be offloaded to external solvers, freeing the agent to handle higher-level logic.
 
 
-See also [[nightly-src-projects-desk-2026-04-21]] for a periodic survey of active projects across the local source tree.
+See also [[queries/nightly-src-projects-desk-2026-04-21|nightly-src-projects-desk-2026-04-21]] for a periodic survey of active projects across the local source tree.

@@ -35,7 +35,17 @@ sed -n '/^### /,/^## /p' SCHEMA.md | rg -o '^- `([^`]+)`' -r '$1' | sort -u > "$
 for f in "${content_files[@]}"; do
   basename "$f" .md
 done | sort -u > "$all_pages_file"
-rg -o '\[\[[^]]+\]\]' index.md | sed 's/\[\[//;s/\]\]//' | sort -u > "$index_pages_file"
+python3 - <<'PY' | sort -u > "$index_pages_file"
+from pathlib import Path
+import re
+
+text = Path('index.md').read_text(encoding='utf-8')
+for match in re.findall(r'\[\[([^\]]+)\]\]', text):
+    target = match.split('|', 1)[0].split('#', 1)[0].strip()
+    if not target:
+        continue
+    print(Path(target).stem)
+PY
 
 declared_count=$(sed -n 's/^> Last updated: .* | Total pages: \([0-9][0-9]*\)$/\1/p' index.md | head -n 1)
 if [ -z "$declared_count" ]; then

@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / ".quartz-site" / "content"
 
-ROOT_FILES = ["index.md", "SCHEMA.md", "log.md", "README.md"]
+ROOT_FILES = ["index.md", "projects.md", "news.md", "SCHEMA.md", "log.md", "README.md"]
 TREE_DIRS = ["entities", "concepts", "comparisons", "queries", "raw"]
 DATE_KEYS = {"date", "created", "updated", "modified", "published", "ingested"}
 FRONTMATTER_LINE_RE = re.compile(r"^(\s*)([^:#\n][^:]*):(\s*)(.+?)\s*$")

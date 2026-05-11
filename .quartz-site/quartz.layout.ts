@@ -1,6 +1,40 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
+const curatedExplorerOptions = {
+  title: "Browse",
+  folderDefaultState: "collapsed" as const,
+  filterFn: (node: any) => {
+    const hidden = new Set(["tags", "raw", "log", "schema", "readme"])
+    const key = String(node.slugSegment || node.displayName || "").toLowerCase()
+    return !hidden.has(key)
+  },
+  sortFn: (a: any, b: any) => {
+    const priorities: Record<string, number> = {
+      index: 0,
+      projects: 1,
+      news: 2,
+      "project-list": 3,
+      "project-update-log": 4,
+      queries: 5,
+      entities: 6,
+      concepts: 7,
+      comparisons: 8,
+    }
+    const aKey = String(a.slugSegment || a.displayName || "").toLowerCase()
+    const bKey = String(b.slugSegment || b.displayName || "").toLowerCase()
+    const aRank = priorities[aKey] ?? (a.isFolder ? 20 : 30)
+    const bRank = priorities[bKey] ?? (b.isFolder ? 20 : 30)
+    const ranked = aRank - bRank
+    if (ranked !== 0) return ranked
+    if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+    return a.displayName.localeCompare(b.displayName, undefined, {
+      numeric: true,
+      sensitivity: "base",
+    })
+  },
+}
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -37,7 +71,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer(curatedExplorerOptions),
   ],
   right: [
     Component.Graph(),
@@ -61,7 +95,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer(curatedExplorerOptions),
   ],
   right: [],
 }

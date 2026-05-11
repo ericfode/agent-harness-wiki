@@ -1017,9 +1017,9 @@
 
 ## [2026-04-21] update | nightly src projects desk kickoff
 - Added 1 raw survey note grounding a public-safe snapshot of the local `/Users/ericfode/src` tree:
-  - [[nightly-src-projects-desk-2026-04-21|raw/articles/nightly-src-projects-desk-2026-04-21.md]]
+  - [[raw/articles/nightly-src-projects-desk-2026-04-21|raw/articles/nightly-src-projects-desk-2026-04-21.md]]
 - Added 1 new query page for the first nightly project-news brief:
-  - [[nightly-src-projects-desk-2026-04-21|queries/nightly-src-projects-desk-2026-04-21.md]]
+  - [[queries/nightly-src-projects-desk-2026-04-21|queries/nightly-src-projects-desk-2026-04-21.md]]
 - Added a generated editorial illustration under `queries/news-assets/` and wired it into the new desk page.
 - Updated [[index|index.md]] with a new `News` section and a corresponding query listing while bumping the header date/page count.
 
@@ -1105,7 +1105,7 @@
 - Ran `scripts/lint-wiki.sh` and a programmatic deep audit (Python scan of all 140 content pages).
 - Discovered: 2 orphan pages, 141 broken aspirational wikilinks across 9 query pages.
 - Repairs applied:
-  - Added inbound links to [[nightly-src-projects-desk-2026-04-21]] from [[work-management-primitives]] and to [[codex-app-server-provider-vs-runtime-bridge]] from [[hermes-agent]].
+  - Added inbound links to [[queries/nightly-src-projects-desk-2026-04-21|nightly-src-projects-desk-2026-04-21]] from [[work-management-primitives]] and to [[codex-app-server-provider-vs-runtime-bridge]] from [[hermes-agent]].
   - Demoted 141 broken wikilinks to plain text per [[SCHEMA|SCHEMA.md]] wishful-link rule in:
     - [[sci-fi-audit-for-moldable-operations-studio]]
     - [[grounding-moldable-operations-studio-ideas-in-real-research]]
@@ -1120,7 +1120,7 @@
 - Final lint: pass, 140 content pages checked, 0 errors.
 
 ## [2026-05-02] query | nightly src projects desk
-- Created raw survey note [[nightly-src-projects-desk-2026-05-02|raw/articles/nightly-src-projects-desk-2026-05-02.md]] and public query page [[nightly-src-projects-desk-2026-05-02|queries/nightly-src-projects-desk-2026-05-02.md]].
+- Created raw survey note [[raw/articles/nightly-src-projects-desk-2026-05-02|raw/articles/nightly-src-projects-desk-2026-05-02.md]] and public query page [[queries/nightly-src-projects-desk-2026-05-02|queries/nightly-src-projects-desk-2026-05-02.md]].
 - Generated local editorial SVG illustration at `queries/news-assets/2026-05-02-project-desk-hero.svg` after the configured image backend reported `FAL_KEY` was unavailable; no fake screenshots were used.
 - Survey automation status: exactly 10 top-level Hermes survey lanes covered all 27 top-level directories under `/Users/ericfode/src`; each lane reported deeper three-way delegation was available and used. A first all-at-once 10-task batch was rejected by the runtime concurrency cap, so the lanes ran as two batches of five.
 - Public-safety filter: project-specific details were held back for 10 surveyed directories because of sensitive identity/reputational material, mixed creative material needing curation, credential/private deployment signals, internal supervisor/evaluator material, scratch wrappers, empty directories, or skeletal non-project evidence.
@@ -1176,7 +1176,7 @@
 - Updated [[index|index.md]] to include the new concept page and bump total pages from 142 to 143.
 
 ## [2026-05-03] query | nightly src projects desk
-- Created raw survey note [[nightly-src-projects-desk-2026-05-03|raw/articles/nightly-src-projects-desk-2026-05-03.md]] and public query page [[nightly-src-projects-desk-2026-05-03|queries/nightly-src-projects-desk-2026-05-03.md]].
+- Created raw survey note [[raw/articles/nightly-src-projects-desk-2026-05-03|raw/articles/nightly-src-projects-desk-2026-05-03.md]] and public query page [[queries/nightly-src-projects-desk-2026-05-03|queries/nightly-src-projects-desk-2026-05-03.md]].
 - Generated editorial illustration `queries/news-assets/2026-05-03-project-desk-hero.svg` locally after the configured image backend reported missing `FAL_KEY`; no fake screenshots were used.
 - Survey automation status: exactly 10 top-level Hermes survey lanes covered all 30 top-level directories under `/Users/ericfode/src`; a first 10-lane batch was rejected by the runtime concurrency cap (`max_concurrent_children=6`), so the lanes ran as 6 + 4. Lane summaries reported orchestrator-style project splits and focused purpose/docs, live-work, and safety passes, with one project child handled directly rather than recursively.
 - Public-safety filter: project-specific public detail was held back or reduced to category-only mention for 10 surveyed directories because of sensitive identity/reputational framing, local agent settings, empty/skeletal evidence, credential/private deployment signals, uncommitted internal workbenches, mixed creative material needing curation, hidden evaluator/supervisor surfaces, or prompt-bearing workflow residue.
@@ -1267,7 +1267,7 @@
 - Updated [[index]] to list the new query page and bump content-page count from 154 to 155.
 
 ## [2026-05-06] query | nightly src projects desk
-- Created raw survey note [[nightly-src-projects-desk-2026-05-06|raw/articles/nightly-src-projects-desk-2026-05-06.md]] and query page [[nightly-src-projects-desk-2026-05-06]] for the nightly local-projects desk.
+- Created raw survey note [[raw/articles/nightly-src-projects-desk-2026-05-06|raw/articles/nightly-src-projects-desk-2026-05-06.md]] and query page [[queries/nightly-src-projects-desk-2026-05-06|nightly-src-projects-desk-2026-05-06]] for the nightly local-projects desk.
 - Published verdict: Basis/spec-code grounding and test-writing environments lead tonight, with tinygrad/Gemma benches, `handterm`, Dungeon Steward, `FACEMUSIC`, orchestration side rooms, and privacy-gated corpus work summarized only where inspectable evidence supported public claims.
 - Generated editorial illustration `queries/news-assets/2026-05-06-project-desk-hero.svg` locally after the configured image backend reported missing `FAL_KEY`; no fake screenshots were used.
 - Survey automation status: exactly 10 top-level Hermes survey lanes covered all 38 top-level directories under `/Users/ericfode/src`; the lanes ran as 6 + 4, and all lane summaries reported successful recursive 3-way delegation for purpose/docs, live-work evidence, and safety/public-summary review.
@@ -1295,7 +1295,7 @@
 - Validation: `scripts/lint-wiki.sh` passed: 158 content pages checked.
 
 ## [2026-05-07] query | nightly src projects desk
-- Created raw survey note [[nightly-src-projects-desk-2026-05-07|raw/articles/nightly-src-projects-desk-2026-05-07.md]] and query page [[nightly-src-projects-desk-2026-05-07]] for the nightly local-projects desk.
+- Created raw survey note [[raw/articles/nightly-src-projects-desk-2026-05-07|raw/articles/nightly-src-projects-desk-2026-05-07.md]] and query page [[queries/nightly-src-projects-desk-2026-05-07|nightly-src-projects-desk-2026-05-07]] for the nightly local-projects desk.
 - Published verdict: spec-code grounding, test-writing environments, and `tinygrad-gemma` lead tonight, with terminal/game/interface craft projects, NNPL benches, and orchestration side rooms summarized only where inspectable evidence supported public-safe claims.
 - Generated editorial illustration `queries/news-assets/2026-05-07-project-desk-hero.svg` locally after the configured image backend reported missing `FAL_KEY`; no fake screenshots were used, and the SVG parsed as valid XML.
 - Survey automation status: exactly 10 top-level Hermes survey lanes ran as 3 + 3 + 3 + 1, and all 10 lane summaries reported successful recursive 3-way delegation for purpose/docs, live-work evidence, and safety/public-summary review. A controller post-dispatch audit covered two hidden top-level directories as a read-only supplement so the total lane count remained exactly ten; total coverage was 38 top-level directories.
@@ -1304,7 +1304,7 @@
 - Lint result: `scripts/lint-wiki.sh` passed: 159 content pages checked.
 
 ## [2026-05-08] query | nightly src projects desk
-- Created raw survey note [[nightly-src-projects-desk-2026-05-08|raw/articles/nightly-src-projects-desk-2026-05-08.md]] and query page [[nightly-src-projects-desk-2026-05-08]] for the nightly local-projects desk.
+- Created raw survey note [[raw/articles/nightly-src-projects-desk-2026-05-08|raw/articles/nightly-src-projects-desk-2026-05-08.md]] and query page [[queries/nightly-src-projects-desk-2026-05-08|nightly-src-projects-desk-2026-05-08]] for the nightly local-projects desk.
 - Published verdict: spec-code grounding and test-writing environments still lead, with `tinygrad-gemma`, NNPL benches, `handterm`, Dungeon Steward, privacy-sensitive interface/simulation work, and orchestration side rooms summarized only where inspectable evidence supported public-safe claims.
 - Generated editorial illustration `queries/news-assets/2026-05-08-project-desk-hero.svg` locally after the configured image backend reported missing `FAL_KEY`; no fake screenshots were used, and the SVG parsed as valid XML.
 - Survey automation status: exactly 10 top-level Hermes survey lanes ran as 3 + 3 + 3 + 1 across all 38 top-level directories under the local src tree, including hidden directories. All 10 lane summaries reported successful recursive 3-way delegation for purpose/docs, live-work evidence, and safety/public-summary review.
@@ -1313,7 +1313,7 @@
 - Lint result: `scripts/lint-wiki.sh` passed after the page, index, and log edits: 160 content pages checked.
 
 ## [2026-05-09] query | nightly src projects desk
-- Created raw survey note [[nightly-src-projects-desk-2026-05-09|raw/articles/nightly-src-projects-desk-2026-05-09.md]] and query page [[nightly-src-projects-desk-2026-05-09]] for the nightly local-projects desk.
+- Created raw survey note [[raw/articles/nightly-src-projects-desk-2026-05-09|raw/articles/nightly-src-projects-desk-2026-05-09.md]] and query page [[queries/nightly-src-projects-desk-2026-05-09|nightly-src-projects-desk-2026-05-09]] for the nightly local-projects desk.
 - Published verdict: spec-code grounding and test-generation environments still lead, with `tinygrad-gemma`, Gemma/tinygrad optimization benches, fresh `kettlebellsim` simulation work, Dungeon Steward, `handterm`, privacy-sensitive interface work, NNPL benches, and orchestration side rooms summarized only where inspectable evidence supported public-safe claims.
 - Generated editorial illustration `queries/news-assets/2026-05-09-project-desk-hero.svg` locally as symbolic SVG art; no fake screenshots were used.
 - Survey automation status: exactly 10 top-level Hermes survey lanes ran as 3 + 3 + 3 + 1 across all 38 top-level directories under the local src tree, including hidden directories. All 10 lane summaries reported three-way delegation for purpose/docs, live-work evidence, and safety/public-summary review, plus a further three-way leaf recursion where the runtime allowed it; further recursion ended at leaf workers because of the configured depth cap.
@@ -1322,7 +1322,7 @@
 - Lint result: `scripts/lint-wiki.sh` passed after the page, index, and log edits: 161 content pages checked.
 
 ## [2026-05-10] query | nightly src projects desk
-- Created raw survey note [[nightly-src-projects-desk-2026-05-10|raw/articles/nightly-src-projects-desk-2026-05-10.md]] and query page [[nightly-src-projects-desk-2026-05-10]] for the nightly local-projects desk.
+- Created raw survey note [[raw/articles/nightly-src-projects-desk-2026-05-10|raw/articles/nightly-src-projects-desk-2026-05-10.md]] and query page [[queries/nightly-src-projects-desk-2026-05-10|nightly-src-projects-desk-2026-05-10]] for the nightly local-projects desk.
 - Published verdict: harness/control-plane work, spec-code reducers, test-generation environments, `tinygrad-gemma`, NNPL boundary experiments, `kettlebellsim`, `handterm`, and selected side rooms lead tonight only where inspectable evidence supported public-safe claims.
 - Generated editorial illustration `queries/news-assets/2026-05-10-project-desk-hero.svg` locally as symbolic SVG art; the SVG parsed as valid XML and no fake screenshots were used.
 - Survey automation status: exactly 10 top-level Hermes survey lane identities ran in one batch across all 38 top-level directories under the local src tree, including hidden directories. All 10 lane summaries reported three-way delegation for purpose/docs, live-work evidence, and safety/public-summary review, plus one further three-way leaf recursion; further recursion ended at the configured depth cap. A controller read-only audit corrected a lane spelling slip for the actual `nnpl-*` directories while preserving the top-level lane count of exactly 10.
@@ -1336,10 +1336,16 @@
 - Public-safety boundary: `.basis` run bodies, prompts, NDJSON streams, packet bodies, validation bodies, logs, dashboard payloads, and private corpus bodies remain unpublished; wiki pages use synthesis, counts, safe filenames, test results, caveats, and plans only.
 
 ## [2026-05-11] query | nightly src projects desk
-- Created raw survey note [[nightly-src-projects-desk-2026-05-11|raw/articles/nightly-src-projects-desk-2026-05-11.md]] and query page [[nightly-src-projects-desk-2026-05-11]] for the nightly local-projects desk.
+- Created raw survey note [[raw/articles/nightly-src-projects-desk-2026-05-11|raw/articles/nightly-src-projects-desk-2026-05-11.md]] and query page [[queries/nightly-src-projects-desk-2026-05-11|nightly-src-projects-desk-2026-05-11]] for the nightly local-projects desk.
 - Published verdict: test-generation environments, Basis/spec-code work, `gemma-dungeon`, `tinygrad-gemma`, NNPL boundary experiments, `kettlebellsim`, `handterm`, and selected orchestration side rooms lead tonight only where inspectable evidence supported public-safe claims.
 - Generated editorial illustration `queries/news-assets/2026-05-11-project-desk-hero.svg` locally as symbolic SVG art; the SVG parsed as valid XML and no fake screenshots were used.
 - Survey automation status: exactly 10 top-level Hermes survey lane identities ran in one batch across all 39 top-level directories under the local src tree, including hidden directories. All 10 lane summaries reported three-way delegation for purpose/docs/manifests, live-work evidence, and public-safety review, plus one further three-way leaf recursion; further recursion ended at leaf checks/depth limits. A controller read-only audit re-enumerated the tree and found no missing top-level directory.
 - Public-safety filter: project-specific public detail was held back or reduced to category-only mention for hidden local settings, hidden-only or empty directories, one sensitive social-claim notebook, local deployment/model-runner folders, private corpus bodies, prompt/agent/skill instruction bodies, scratch/meta workspaces, generated media, raw logs/prompts/trajectories, evaluator-like payloads, hidden references/oracles, benchmark raw outputs, model/checkpoint artifacts, biometric/capture data, creative story/canon drafts, service configuration, raw test/counterexample bodies, cache/build/vendor directories, and too-skeletal placeholders.
 - Updated [[index|index.md]] News and Queries sections for the new nightly desk page; content-page count moved 166 → 167.
 - Lint result: `scripts/lint-wiki.sh` passed after the page, index, and log edits: 167 content pages checked.
+
+## [2026-05-11] update | website navigation and missing page routing
+- Added [[project-list]] and [[project-update-log]] as curated public-safe landing pages for active project lines and personal project update logs.
+- Added root website doors [[projects|projects.md]] and [[news|news.md]], and updated [[index|index.md]] with a Start Here block plus a shorter News section.
+- Path-qualified ambiguous nightly desk links so query pages resolve to `queries/*` instead of colliding with raw source notes.
+- Added Quartz trailing-slash redirect aliases and a cleaner Explorer configuration so Basis pages, news, and projects are easier to reach from the published site.

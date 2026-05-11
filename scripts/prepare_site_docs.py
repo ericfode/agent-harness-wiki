@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / ".site-docs"
 
-ROOT_FILES = ["index.md", "SCHEMA.md", "log.md", "README.md"]
+ROOT_FILES = ["index.md", "projects.md", "news.md", "SCHEMA.md", "log.md", "README.md"]
 TREE_DIRS = ["entities", "concepts", "comparisons", "queries", "raw"]
 STATIC_DIRS = ["site_assets"]
 

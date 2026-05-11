@@ -9,12 +9,14 @@ Published site:
 
 Structure:
 - `SCHEMA.md` — wiki conventions and tag taxonomy
-- `index.md` — top-level content catalog
+- `index.md` — full top-level content catalog
+- `projects.md` — compact public-facing project doorway
+- `news.md` — compact public-facing update/news doorway
 - `log.md` — chronological ingest and maintenance history
 - `entities/` — concrete systems and projects
 - `concepts/` — reusable ideas and architectural patterns
 - `comparisons/` — side-by-side evaluations
-- `queries/` — synthesized answers, research passes, and design notes
+- `queries/` — synthesized answers, research passes, project lists, update logs, and design notes
 - `raw/` — immutable source notes and assets
 
 The current domain centers on agent harness engineering, including Codex CLI, Claude Code, Hermes Agent, Gas Town / Gas City, formal semantics for harnesses, and newer topics such as neural-native programming.

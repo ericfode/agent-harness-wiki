@@ -19,7 +19,7 @@ The inspection treated Basis as a cluster of three active surfaces:
 | Basis Hermes | `/Users/ericfode/src/basis-hermes` | Hermes plugin and dashboard bridge exposing deterministic reducer/validator tools | Public-safe integration summary |
 | Basis Jcode | `/Users/ericfode/src/basis-jcode/components/spec-basis-reducer` | Jcode-native headless reducer/control-plane experiment with `.basis` run ledgers | Architecture and counts only; raw run state withheld |
 
-Existing wiki context came from [[nightly-src-projects-desk-2026-05-10]], [[nightly-src-projects-desk-2026-05-09]], [[nightly-src-projects-desk-2026-05-08]], [[spec-dataset-evolution-research-project]], and [[spec-deep-dive-index]].
+Existing wiki context came from [[queries/nightly-src-projects-desk-2026-05-10|nightly-src-projects-desk-2026-05-10]], [[queries/nightly-src-projects-desk-2026-05-09|nightly-src-projects-desk-2026-05-09]], [[queries/nightly-src-projects-desk-2026-05-08|nightly-src-projects-desk-2026-05-08]], [[spec-dataset-evolution-research-project]], and [[spec-deep-dive-index]].
 
 ## Core Basis evidence
 

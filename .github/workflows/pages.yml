@@ -44,6 +44,9 @@ jobs:
         working-directory: .quartz-site
         run: npx quartz build
 
+      - name: Add Quartz trailing-slash aliases
+        run: python scripts/add_quartz_trailing_slash_aliases.py
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
