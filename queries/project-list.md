@@ -16,6 +16,8 @@ For chronology rather than project grouping, see [[project-update-log]]. For the
 ## Basis and spec-code grounding
 
 - [[basis-project-index]] — Basis project corner: core reducer, Hermes bridge, Jcode control-plane experiment, gates, plans, and publication boundary.
+- [[basis-reduce-workbench]] — recovered Basis.Reduce page: source review, projection-impact decisions, generated UI artifacts, and spec-pathology experiment lane.
+- [[basis-imagine-workbench]] — recovered Basis.Imagine page: dedicated imaginer UI, future-tradeoff comparison, app-server-backed lenses, and proposal-only caveats.
 - [[basis-architecture-and-plans]] — architecture and near-term implementation plan for treating specs as structured state custody rather than Markdown decoration.
 - [[basis-experiment-status]] — current gates, experiment posture, and recommended next slices.
 - [[basis-source-basis-and-safety-gate]] — what the Basis pages may cite and what they must not publish.

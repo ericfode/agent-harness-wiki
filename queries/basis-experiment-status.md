@@ -1,10 +1,10 @@
 ---
 title: Basis Experiment Status
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-05-11
 type: query
 tags: [survey, benchmark, work-management, code-quality, safety]
-sources: [raw/articles/basis-project-deep-dive-2026-05-10.md, queries/basis-project-index.md, queries/spec-dataset-evolution-research-project.md, queries/spec-deep-dive-index.md]
+sources: [raw/articles/basis-project-deep-dive-2026-05-10.md, raw/articles/basis-reduce-imagine-codex-log-sift-2026-05-11.md, queries/basis-project-index.md, queries/basis-reduce-workbench.md, queries/basis-imagine-workbench.md, queries/spec-dataset-evolution-research-project.md, queries/spec-deep-dive-index.md]
 ---
 
 # Basis Experiment Status
@@ -13,9 +13,12 @@ sources: [raw/articles/basis-project-deep-dive-2026-05-10.md, queries/basis-proj
 
 | Experiment | Hypothesis | Evidence inspected | Current status | Next public milestone |
 |---|---|---|---|---|
-| Core Basis reducer runtime | Overcomplete prose specs can be reduced toward structured state with provenance and explicit projection targets. | `/Users/ericfode/src/basis`, HEAD `a5544e0`; `spec.md`; reducer/imaginer specs; Elixir source/tests. | Active. Tests and compile pass; formatter gate red. | Fix format gate, split first `Basis.Run.Server` boundary. |
+| Core Basis reducer runtime | Overcomplete prose specs can be reduced toward structured state with provenance and explicit projection targets. | `/Users/ericfode/src/basis`, HEAD `a5544e0`; `spec.md`; reducer/imaginer specs; Elixir source/tests. | Active baseline. Root is not where the recovered Reduce/Imagine spikes live. | Keep core gates green; consolidate recovered work through reviewable branches. |
+| [[basis-reduce-workbench|Basis.Reduce workbench]] | Source-backed review UI can expose sentence evidence, projection impact, and decision actions without accepting model output as truth. | `/Users/ericfode/.codex/worktrees/4e6b/basis`, branch `codex/inspect-reducer-eval`, HEAD `ceb8df8`; generated UI assets; reducer control contract. | Branch is tracked and recent UI commits are coherent; pathology study is untracked. | Decide whether to commit/split/prune `spec-pathology-study/`; preserve control-contract gate. |
+| [[basis-imagine-workbench|Basis.Imagine workbench]] | Plan-space futures can be compared as proposal-only implementation choices before human acceptance. | `/Users/ericfode/.codex/worktrees/95ae/basis`, branch `codex/start-imaginer`; `imaginer.html`; `future-tradeoffs.js`; runtime/provider/test diffs. | Active dirty spike. Mix tests and JS checks pass, but patch is large and unreviewed. | Stabilize into a reviewable patch; keep Packet Schema First as default unless evidence beats it. |
 | Basis Hermes plugin | Basis reduction can be exposed as Hermes tools without provider-schema breakage. | `/Users/ericfode/src/basis-hermes`, HEAD `0061d32`; plugin manifest; Python reducer; dashboard API; tests. | Strongest clean integration surface. Python and JS gates pass. | Add public/synthetic golden examples and stable packet contract docs. |
-| Jcode self-convergence | Model/human worker packets can drive a resumable reducer loop with validation, convergence judgement, dashboard attention, and explicit acceptance. | `/Users/ericfode/src/basis-jcode/components/spec-basis-reducer`; HEAD `4b1e621`; `.basis/self-convergence` inspected by counts only. | Richest experiment, but dirty/ahead and public-sensitive. 26 tests pass. | Resolve dirty state; generate public-safe run summary without packet bodies. |
+| Jcode self-convergence | Model/human worker packets can drive a resumable reducer loop with validation, convergence judgement, dashboard attention, and explicit acceptance. | `/Users/ericfode/src/basis-jcode/components/spec-basis-reducer`; HEAD `4b1e621`; `.basis/self-convergence` inspected by counts only. | Richest prior experiment, but dirty/ahead and public-sensitive. 26 tests pass. | Resolve dirty state; generate public-safe run summary without packet bodies. |
+| Spec-pathology study | Reducer/imaginer usefulness should be tested by behavior, process cost, intervention controls, and competence floors. | Untracked `components/spec-basis-reducer/experiments/spec-pathology-study/`; reward state and JSON score reports. | Important but not canonical. Large wave is complete but inconclusive because clean control failed below competence floor. | Add competence-floor gate; repeat only after baseline builders can pass the locked evaluator. |
 | Smoke fixture reducer | The control plane can validate packet contracts without live model calls. | `.basis/smoke` names/counts and test suite. | Useful deterministic fixture lane. | Keep as regression gate; do not delete existing smoke run casually. |
 | Spec-code grounding pressure | Basis records should help connect specs to code/tests/diffs, not merely look structured. | [[spec-dataset-evolution-research-project]], [[spec-deep-dive-index]], local `steward` design repo. | Design-stage external pressure. | Run a small public/synthetic connectedness benchmark with Basis records as features. |
 
@@ -28,6 +31,9 @@ Good signs:
 - the core Basis contract is crisp about proposal versus acceptance;
 - `basis-hermes` is clean and test-passing;
 - Codex tool-schema compatibility was repaired and recorded;
+- [[basis-reduce-workbench]] has a tracked review/decision UI branch with a passing control-binding gate;
+- the spec-pathology study measures final behavior, process cost, reducer prediction, placebo/noisy/wrong controls, and competence-floor failure separately;
+- [[basis-imagine-workbench]] has a dedicated imaginer URL, future-tradeoff model, and app-server-backed lens/runtime hooks;
 - `basis-jcode` has meaningful test coverage for production packet provenance, convergence, repair, dashboard decisions, and acceptance boundaries;
 - the self-convergence run has enough artifact structure to be worth studying internally.
 

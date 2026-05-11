@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-11 | Total pages: 169
+> Last updated: 2026-05-11 | Total pages: 171
 
 ## Start Here
 
@@ -137,9 +137,11 @@
 - [[queries/nightly-src-projects-desk-2026-05-02|nightly-src-projects-desk-2026-05-02]] — Nightly local-projects desk summarizing the safe publishable movement across the local src tree, led by testing-RL/evidence work, FACEMUSIC, Dungeon Steward, Gas City, NNPL, and Gemma/tinygrad benches.
 - [[queries/nightly-src-projects-desk-2026-04-21|nightly-src-projects-desk-2026-04-21]] — First nightly local-projects desk summarizing the safe publishable work currently moving across the src tree.
 - [[basis-project-index]] — Project corner for Basis: the core reducer, Hermes bridge, Jcode control-plane experiment, current gates, plans, and public-safety boundary.
+- [[basis-reduce-workbench]] — Recovered Basis.Reduce workbench page covering source review, projection-impact decisions, generated UI artifacts, and the spec-pathology experiment lane.
+- [[basis-imagine-workbench]] — Recovered Basis.Imagine workbench page covering the dedicated imaginer UI, future-tradeoff analysis, app-server-backed lenses, and proposal-only caveats.
 - [[basis-architecture-and-plans]] — Architecture and implementation plan for Basis as structured spec-state custody rather than a Markdown transformer.
-- [[basis-experiment-status]] — Current experiment/status board for core Basis, basis-hermes, basis-jcode self-convergence, fixture smoke, and Steward pressure.
-- [[basis-source-basis-and-safety-gate]] — Source evidence and publication rules for the Basis wiki corner, especially around `.basis` run artifacts and dashboard state.
+- [[basis-experiment-status]] — Current experiment/status board for core Basis, basis-hermes, basis-jcode self-convergence, reducer pathology study, and imaginer tradeoff work.
+- [[basis-source-basis-and-safety-gate]] — Source evidence and publication rules for the Basis wiki corner, especially around `.basis` run artifacts, Codex logs, generated images, and dashboard state.
 - [[another-harness-and-atropos]] — Fit analysis for whether a thinner Codex-native harness should adopt Atropos now, later, or not at all, including why current run history stays derived rather than canonical.
 - [[another-harness-atropos-environment-schema]] — Concrete repo-artifact-first episode and reward schema for a later Atropos sidecar in another-harness.
 - [[another-harness-model-docs-drift-checker]] — Why the repo's first Lean-backed docs/model drift fence targets the attempt-vs-stream grounding distinction instead of pretending to compare everything.

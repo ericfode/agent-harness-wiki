@@ -1349,3 +1349,10 @@
 - Added root website doors [[projects|projects.md]] and [[news|news.md]], and updated [[index|index.md]] with a Start Here block plus a shorter News section.
 - Path-qualified ambiguous nightly desk links so query pages resolve to `queries/*` instead of colliding with raw source notes.
 - Added Quartz trailing-slash redirect aliases and a cleaner Explorer configuration so Basis pages, news, and projects are easier to reach from the published site.
+
+## [2026-05-11] update | Basis Reduce and Imagine wiki recovery
+- Recovered Codex/worktree provenance for [[basis-reduce-workbench]] and [[basis-imagine-workbench]] from safe branch metadata, filenames, test outcomes, aggregate experiment reports, and generated UI artifacts.
+- Created public-safe raw evidence note [[raw/articles/basis-reduce-imagine-codex-log-sift-2026-05-11|raw/articles/basis-reduce-imagine-codex-log-sift-2026-05-11.md]].
+- Added four recovered/generated UI assets under `queries/news-assets/` for Basis.Reduce and Basis.Imagine, each labeled as an artifact rather than accepted runtime state.
+- Updated [[basis-project-index]], [[basis-experiment-status]], [[basis-source-basis-and-safety-gate]], [[project-list]], [[projects|projects.md]], [[news|news.md]], and [[index|index.md]] so Basis.Reduce, Basis.Imagine, projects, and news have obvious entry points.
+- Public-safety boundary: raw Codex JSONL bodies, app-server turn bodies, prompts, packet bodies, dashboard state payloads, hidden evaluator/oracle bodies, and private candidate dumps remain unpublished.

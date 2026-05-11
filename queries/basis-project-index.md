@@ -1,10 +1,10 @@
 ---
 title: Basis Project Index
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-05-11
 type: query
 tags: [survey, formal-methods, context-engineering, work-management, code-quality, safety]
-sources: [raw/articles/basis-project-deep-dive-2026-05-10.md, queries/nightly-src-projects-desk-2026-05-10.md, queries/nightly-src-projects-desk-2026-05-09.md, queries/spec-dataset-evolution-research-project.md, queries/spec-deep-dive-index.md]
+sources: [raw/articles/basis-project-deep-dive-2026-05-10.md, raw/articles/basis-reduce-imagine-codex-log-sift-2026-05-11.md, queries/nightly-src-projects-desk-2026-05-10.md, queries/nightly-src-projects-desk-2026-05-09.md, queries/spec-dataset-evolution-research-project.md, queries/spec-deep-dive-index.md]
 ---
 
 # Basis Project Index
@@ -30,6 +30,8 @@ This corner is public-safe synthesis. It does not publish `.basis` run bodies, p
 
 ## Navigation
 
+- [[basis-reduce-workbench]] — recovered Basis.Reduce workbench, UI artifacts, control-gate status, and spec-pathology experiment lane.
+- [[basis-imagine-workbench]] — recovered Basis.Imagine workbench, future-tradeoff UI, app-server-backed lenses, and proposal-only caveats.
 - [[basis-architecture-and-plans]] — architecture, planned boundaries, and near-term work.
 - [[basis-experiment-status]] — experiments currently running or implied by repo state.
 - [[basis-source-basis-and-safety-gate]] — evidence table, safety boundary, and publication rules.
@@ -44,7 +46,8 @@ This corner is public-safe synthesis. It does not publish `.basis` run bodies, p
 | What is the cleanest surface? | `basis-hermes`, because it is clean, test-passing, and installed as the Hermes plugin surface. |
 | What is the richest experiment? | `basis-jcode` self-convergence, because it exercises ledgers, worker packets, validation, UI projection, and acceptance decisions. |
 | What is the main caution? | The richest evidence is inside private `.basis` run trees and dashboard state; public pages should summarize architecture/counts, not bodies. |
-| What is currently red? | Core `basis` has a formatter gate failure in `lib/basis/run/server.ex`. Tests and compile pass. |
+| What is currently red? | Core `basis` still needs consolidation; the recovered reducer pathology study is untracked, and the imaginer worktree is dirty with a large active diff. |
+| What was missing from the wiki? | [[basis-reduce-workbench]] and [[basis-imagine-workbench]], now recovered from Codex logs/worktrees with generated UI artifacts and safety caveats. |
 
 ## Why this matters
 
@@ -67,4 +70,4 @@ That separation is the system's taste. Collapse it and the project becomes a ver
 
 ## Status sentence
 
-As of 2026-05-10, Basis is an active spec-code reducer/control-plane line with one clean Hermes bridge, one clean but formatter-red Elixir core, and one dirty/ahead Jcode experiment whose tests pass but whose raw run artifacts must remain private until audited.
+As of 2026-05-11, Basis is an active spec-code reducer/control-plane line with one clean Hermes bridge, a reducer workbench branch whose recent review/decision UI commits are tracked, an untracked but substantial spec-pathology experiment lane, and a dirty imaginer worktree that has separate future-tradeoff/architecture surfaces but must remain proposal-only until reviewed.
