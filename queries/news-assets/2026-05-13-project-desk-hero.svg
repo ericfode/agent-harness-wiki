@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Nightly source projects desk, 2026-05-13</title>
+  <desc id="desc">Symbolic editorial illustration: ten survey lanes converge through safety shutters toward a small set of public project clusters: testing, Gemma and tinygrad, Basis and provenance, terminal craft, card game work, orchestration, and research benches.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10131d"/>
+      <stop offset="0.52" stop-color="#16202c"/>
+      <stop offset="1" stop-color="#0b0e15"/>
+    </linearGradient>
+    <linearGradient id="lane" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ee7f9" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#facc15" stop-opacity="0.46"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .small { font: 18px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #cbd5e1; }
+      .label { font: 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #f8fafc; font-weight: 700; }
+      .quiet { font: 16px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #94a3b8; }
+      .micro { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #64748b; }
+      .card { fill: #111827; stroke: #334155; stroke-width: 2; rx: 18; }
+      .safe { fill: #172554; stroke: #38bdf8; stroke-width: 2; }
+      .hold { fill: #261019; stroke: #fb7185; stroke-width: 2; }
+      .lead { fill: #13251a; stroke: #86efac; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.24">
+    <path d="M0 534 C190 482 292 586 466 526 C632 468 774 548 956 494 C1088 455 1150 479 1200 460" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M0 104 C214 162 310 57 468 107 C622 154 734 88 914 134 C1054 170 1144 124 1200 114" fill="none" stroke="#facc15" stroke-width="2"/>
+  </g>
+
+  <text x="56" y="62" class="label">Nightly src desk / 2026-05-13</text>
+  <text x="56" y="92" class="quiet">Inspectable evidence only. Ten lanes in; private drawer contents out.</text>
+
+  <g transform="translate(52 128)">
+    <rect class="card" x="0" y="0" width="210" height="372"/>
+    <text x="24" y="40" class="label">10 lanes</text>
+    <text x="24" y="70" class="quiet">41 top-level dirs</text>
+    <g transform="translate(26 100)">
+      <g>
+        <rect x="0" y="0" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="26" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="52" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="78" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="104" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="130" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="156" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="182" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="208" width="154" height="12" rx="6" fill="url(#lane)"/>
+        <rect x="0" y="234" width="154" height="12" rx="6" fill="url(#lane)"/>
+      </g>
+      <text x="0" y="290" class="micro">docs • status • safety</text>
+    </g>
+  </g>
+
+  <g transform="translate(322 118)">
+    <rect class="safe" x="0" y="0" width="220" height="392" rx="22"/>
+    <text x="32" y="44" class="label">safety shutters</text>
+    <text x="32" y="74" class="quiet">not redaction theater</text>
+    <g stroke="#38bdf8" stroke-width="4" opacity="0.68">
+      <line x1="34" y1="116" x2="186" y2="116"/>
+      <line x1="34" y1="154" x2="186" y2="154"/>
+      <line x1="34" y1="192" x2="186" y2="192"/>
+      <line x1="34" y1="230" x2="186" y2="230"/>
+      <line x1="34" y1="268" x2="186" y2="268"/>
+    </g>
+    <text x="32" y="334" class="small">secrets</text>
+    <text x="32" y="360" class="small">logs / prompts</text>
+  </g>
+
+  <g transform="translate(610 90)" filter="url(#softGlow)">
+    <rect class="lead" x="0" y="0" width="224" height="96" rx="18"/>
+    <text x="24" y="40" class="label">testing-rl</text>
+    <text x="24" y="68" class="quiet">verifier evidence</text>
+  </g>
+  <g transform="translate(868 92)">
+    <rect class="lead" x="0" y="0" width="230" height="96" rx="18"/>
+    <text x="24" y="40" class="label">tinygrad-gemma</text>
+    <text x="24" y="68" class="quiet">Gemma runtime bench</text>
+  </g>
+  <g transform="translate(600 226)">
+    <rect class="lead" x="0" y="0" width="198" height="96" rx="18"/>
+    <text x="24" y="40" class="label">handterm</text>
+    <text x="24" y="68" class="quiet">clean Rust craft</text>
+  </g>
+  <g transform="translate(830 226)">
+    <rect class="lead" x="0" y="0" width="246" height="96" rx="18"/>
+    <text x="24" y="40" class="label">Dungeon Steward</text>
+    <text x="24" y="68" class="quiet">Godot card loop</text>
+  </g>
+
+  <g transform="translate(590 370)">
+    <rect class="card" x="0" y="0" width="156" height="86" rx="16"/>
+    <text x="20" y="36" class="small">Basis</text>
+    <text x="20" y="62" class="micro">spec packets</text>
+  </g>
+  <g transform="translate(766 370)">
+    <rect class="card" x="0" y="0" width="156" height="86" rx="16"/>
+    <text x="20" y="36" class="small">NNPL</text>
+    <text x="20" y="62" class="micro">boundary IR</text>
+  </g>
+  <g transform="translate(942 370)">
+    <rect class="card" x="0" y="0" width="156" height="86" rx="16"/>
+    <text x="20" y="36" class="small">Symphony</text>
+    <text x="20" y="62" class="micro">workspaces</text>
+  </g>
+
+  <g transform="translate(594 510)">
+    <rect class="hold" x="0" y="0" width="512" height="58" rx="16"/>
+    <text x="24" y="36" class="small">withheld: local configs, corpora, logs, prompts, checkpoints, generated payloads</text>
+  </g>
+
+  <g stroke="#94a3b8" stroke-width="2" opacity="0.45" fill="none">
+    <path d="M262 314 C294 310 300 310 322 310"/>
+    <path d="M542 178 C570 164 584 150 610 138"/>
+    <path d="M542 210 C680 170 760 154 868 140"/>
+    <path d="M542 250 C570 252 578 260 600 274"/>
+    <path d="M542 286 C690 290 746 284 830 274"/>
+  </g>
+</svg>

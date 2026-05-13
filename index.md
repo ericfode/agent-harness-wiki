@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-11 | Total pages: 171
+> Last updated: 2026-05-13 | Total pages: 172
 
 ## Start Here
 
@@ -11,12 +11,14 @@
 - [[queries/project-list|Project List]] — active public-safe project lines grouped by theme.
 - [[queries/project-update-log|Project Update Log]] — chronological nightly source-project update archive.
 - [[basis-project-index]] — dedicated Basis project corner.
-- [[queries/nightly-src-projects-desk-2026-05-11|Latest nightly desk]] — current source-project survey.
+- [[queries/nightly-src-projects-desk-2026-05-13|Latest nightly desk]] — current source-project survey.
 
 ## News
 
 - [[queries/project-update-log|Project Update Log]] — chronological archive of nightly public-safe project updates.
-- [[queries/nightly-src-projects-desk-2026-05-11|Latest nightly source-project desk]] — current source-tree survey.
+- [[queries/nightly-src-projects-desk-2026-05-13|Latest nightly source-project desk]] — current source-tree survey.
+- [[queries/nightly-src-projects-desk-2026-05-11|2026-05-11 nightly source-project desk]] — test-generation, Basis/spec-code, Gemma/tinygrad, symbolic game state, NNPL, simulation, and terminal craft.
+- [[queries/nightly-src-projects-desk-2026-05-10|2026-05-10 nightly source-project desk]] — harness/control-plane work, spec reducers, test-generation environments, tinygrad/Gemma, and NNPL.
 - [[queries/project-list|Project List]] — active public-safe project lines grouped by theme.
 - [[basis-project-index]] — Basis project corner for reducer, Hermes bridge, Jcode experiment, gates, and publication boundaries.
 
@@ -127,6 +129,7 @@
 
 - [[queries/project-list|Project List]] — Curated public-safe list of active project lines grouped by Basis/spec-code, verifier environments, harness control planes, moldable operations, and neural-native research.
 - [[queries/project-update-log|Project Update Log]] — Chronological archive of public-safe nightly source-project update logs.
+- [[queries/nightly-src-projects-desk-2026-05-13|nightly-src-projects-desk-2026-05-13]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by verifier/test-generation work, Gemma/tinygrad runtime benches, terminal and game craft, Basis/Steward provenance work, orchestration side rooms, NNPL benches, and safety-filtered omissions.
 - [[queries/nightly-src-projects-desk-2026-05-11|nightly-src-projects-desk-2026-05-11]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by test-generation environments, Basis/spec-code work, Gemma/tinygrad and symbolic game-state benches, NNPL boundary experiments, simulation/terminal craft, and safety-filtered side rooms.
 - [[queries/nightly-src-projects-desk-2026-05-10|nightly-src-projects-desk-2026-05-10]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by harness/control-plane work, spec-code reducers, test-generation environments, tinygrad/Gemma and NNPL benches, simulation/terminal craft, and safety-filtered side rooms.
 - [[queries/nightly-src-projects-desk-2026-05-09|nightly-src-projects-desk-2026-05-09]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by spec-code grounding, test-generation environments, tinygrad/Gemma benches, fresh simulation work, craft/interface projects, and orchestration side rooms.
