@@ -89,9 +89,60 @@ def ensure_frontmatter_title(path: Path, text: str) -> str:
     return f"---\ntitle: {json.dumps(title)}\n---\n\n{text.lstrip()}"
 
 
+def escape_currency_dollars_for_quartz(src: Path, text: str) -> str:
+    """Prevent Quartz/KaTeX from treating East Bay currency as inline math.
+
+    The Oakland church pages contain many ordinary currency ranges such as
+    ``$438,838–$997,359``. Quartz's Latex transformer sees the first ``$`` as a
+    math delimiter and merrily eats the price text. This keeps source Markdown
+    readable while escaping dollars only in the prepared Quartz content tree.
+    Code fences and inline code are left alone.
+    """
+    try:
+        rel = src.relative_to(ROOT).as_posix()
+    except ValueError:
+        rel = src.as_posix()
+    if not rel.startswith("east-bay-catholic-property-monitor/"):
+        return text
+
+    out: list[str] = []
+    in_fence = False
+    fence_marker = ""
+    for line in text.splitlines(keepends=True):
+        stripped = line.lstrip()
+        if stripped.startswith(("```", "~~~")):
+            marker = stripped[:3]
+            if not in_fence:
+                in_fence = True
+                fence_marker = marker
+            elif marker == fence_marker:
+                in_fence = False
+                fence_marker = ""
+            out.append(line)
+            continue
+        if in_fence:
+            out.append(line)
+            continue
+
+        pieces = re.split(r"(`+[^`]*`+)", line)
+        for i, piece in enumerate(pieces):
+            if i % 2 == 1:
+                out.append(piece)
+                continue
+            escaped: list[str] = []
+            for j, ch in enumerate(piece):
+                if ch == "$" and (j == 0 or piece[j - 1] != "\\"):
+                    escaped.append("\\$")
+                else:
+                    escaped.append(ch)
+            out.append("".join(escaped))
+    return "".join(out)
+
+
 def transform_markdown(src: Path) -> str:
     text = read_text(src)
-    return ensure_frontmatter_title(src, text)
+    text = ensure_frontmatter_title(src, text)
+    return escape_currency_dollars_for_quartz(src, text)
 
 
 def reset_output_dir() -> None:
