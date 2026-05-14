@@ -1365,3 +1365,8 @@
 - Public-safety filter: project-specific public detail was held back or reduced to category-only mention for hidden local settings, internal security-scan artifacts, hidden-only or empty directories, one sensitive social-claim notebook, local deployment/model-runner folders, private corpus bodies, prompt/agent/skill instruction bodies, scratch/meta workspaces, generated media, raw logs/prompts/trajectories, evaluator-like payloads, hidden references/oracles, benchmark raw outputs, model/checkpoint artifacts, biometric/capture data, creative story/canon drafts, service configuration, raw test/counterexample bodies, cache/build/vendor directories, and too-skeletal placeholders.
 - Updated [[index|index.md]] News and Queries sections for the new nightly desk page; content-page count moved 171 → 172. Existing untracked `.hermes/` material in the wiki worktree remained untouched and uncommitted.
 - Lint result: `scripts/lint-wiki.sh` passed after the new page, index, and log edits: 172 content pages checked.
+
+## [2026-05-13] update | East Bay property monitor website publishing
+- Added the focused East Bay Catholic property monitor to the Quartz publishing content tree and linked it from [[index|index.md]] Start Here navigation.
+- Published target page: East Bay Catholic Property Sales Monitor under `east-bay-catholic-property-monitor/queries/`.
+- Preserved the main harness-wiki content count at 172; the property monitor remains a focused sub-vault rather than part of the main harness taxonomy.

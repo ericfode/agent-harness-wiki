@@ -8,6 +8,7 @@
 
 - [Projects](projects.md) — small public-facing doorway to the curated project list and Basis corner.
 - [News](news.md) — small public-facing doorway to the latest project update logs.
+- [East Bay Catholic Property Monitor](east-bay-catholic-property-monitor/queries/east-bay-catholic-property-sales-monitor/) — focused local watch on Oakland Catholic church closures, sale signals, and estimated prices.
 - [[queries/project-list|Project List]] — active public-safe project lines grouped by theme.
 - [[queries/project-update-log|Project Update Log]] — chronological nightly source-project update archive.
 - [[basis-project-index]] — dedicated Basis project corner.
