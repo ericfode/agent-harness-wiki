@@ -1,5 +1,22 @@
 # East Bay Catholic Property Monitor Log
 
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic project visual index](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-project-visual-index.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
+
 > Chronological record of actions in this focused sub-vault. Append-only.
 > Format: `## [YYYY-MM-DD] action | subject`.
 
@@ -30,3 +47,11 @@
 - Alert level: Red. Verita docket #2867 / Exhibit G is recorded as a primary court-docket signal for potential disposition/collateralization of named Oakland closure sites.
 - Updated [[east-bay-catholic-property-sales-monitor]], [[diocese-of-oakland]], [[oakland-catholic-church-price-screen-2026-05-13]], and the affected Oakland dossiers.
 - Price posture remains disciplined: no public asking price, confirmed buyer, broker listing, or sale price; affected ranges remain `agent estimate` screens.
+
+## [2026-05-14] update | visual coverage and price-bubble map
+- Added generated visual blocks to every Markdown page in the Oakland church sub-vault: dossier cards for site pages, shared price-bubble map, rank chart, method diagrams, schema diagram, and raw-note visual wrappers.
+- Added [[oakland-catholic-church-price-screen-2026-05-13]] map/rank visuals with bubbles scaled by midpoint of the current core `agent estimate`; no visual is an asking price, appraisal, or sale confirmation.
+- Generated durable local SVG assets under the sub-vault asset tree and cached OpenStreetMap/Nominatim coordinates for the 19 Oakland site dossiers.
+## [2026-05-14] update | section landing pages with visuals
+- Added visual section landing pages for [[entities/index|entities]], [[concepts/index|concepts]], [[comparisons/index|comparisons]], [[queries/index|queries]], [[raw/index|raw evidence]], and [[raw/articles/index|raw articles]] so folder routes are no longer blank auto-indexes.
+- Updated [[index|index.md]] to distinguish 24 curated content pages from 36 authored Markdown pages.

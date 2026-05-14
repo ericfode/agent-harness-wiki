@@ -1,13 +1,32 @@
 ---
 title: St. Paschal Baylon Campus, Oakland
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: entity
 tags: [diocese-oakland, real-estate, valuation, parish-closure, candidate-site, alert]
 sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/articles/oakland-catholic-church-dossier-expansion-2026-05-13.md, raw/articles/nightly-east-bay-catholic-property-monitor-2026-05-13.md]
 ---
 
 # St. Paschal Baylon Campus, Oakland
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Visual dossier card for St. Paschal Baylon Campus, Oakland](east-bay-catholic-property-monitor/assets/visuals/site-card-saint-paschal-baylon-oakland.svg)
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+> Visuals are navigation aids generated from dossier fields and OpenStreetMap/Nominatim coordinates; price labels remain `agent estimate` unless the text says otherwise.
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## Status
 

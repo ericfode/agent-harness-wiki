@@ -1,13 +1,30 @@
 ---
 title: East Bay Catholic Property Sales Monitor
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: query
 tags: [diocese-oakland, bankruptcy, parish-closure, real-estate, candidate-site, valuation, court-docket, alert]
 sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/articles/oakland-catholic-church-dossier-expansion-2026-05-13.md, raw/articles/nightly-east-bay-catholic-property-monitor-2026-05-13.md]
 ---
 
 # East Bay Catholic Property Sales Monitor
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic project visual index](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-project-visual-index.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## ALERT — 2026-05-13 court-docket property disposition signal
 

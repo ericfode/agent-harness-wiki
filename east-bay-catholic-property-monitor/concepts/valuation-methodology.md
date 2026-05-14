@@ -1,13 +1,30 @@
 ---
 title: Oakland Church Valuation Methodology
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: concept
 tags: [valuation, real-estate, candidate-site]
 sources: [raw/articles/oakland-catholic-church-dossier-expansion-2026-05-13.md]
 ---
 
 # Oakland Church Valuation Methodology
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Valuation method flow](east-bay-catholic-property-monitor/assets/visuals/valuation-method-flow.svg)
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## Purpose
 

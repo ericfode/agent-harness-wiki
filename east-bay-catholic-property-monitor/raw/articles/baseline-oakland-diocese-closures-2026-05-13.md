@@ -8,6 +8,25 @@ tags: [diocese-oakland, bankruptcy, parish-closure, real-estate, news]
 
 # Baseline Oakland Diocese Closures and Property-Sale Watch
 
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Raw source note visual wrapper](east-bay-catholic-property-monitor/assets/visuals/source-basis-visual-wrapper.svg)
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+> Presentation wrapper added 2026-05-14. The source-capture body below remains the evidentiary surface; images are non-evidentiary navigation aids.
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
+
 ## Sources captured
 
 - Diocese of Oakland, "Aligning our reality with our mission," 2026-04-28: https://www.oakdiocese.org/aligning-our-reality-with-our-mission/

@@ -1,13 +1,32 @@
 ---
 title: St. Anthony – Mary Help of Christians Parish Office / St. Anthony site
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: entity
 tags: [diocese-oakland, real-estate, valuation]
 sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/articles/oakland-catholic-church-dossier-expansion-2026-05-13.md]
 ---
 
 # St. Anthony – Mary Help of Christians Parish Office / St. Anthony site
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Visual dossier card for St. Anthony – Mary Help of Christians Parish Office / St. Anthony site](east-bay-catholic-property-monitor/assets/visuals/site-card-saint-anthony-mary-help-parish-office.svg)
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+> Visuals are navigation aids generated from dossier fields and OpenStreetMap/Nominatim coordinates; price labels remain `agent estimate` unless the text says otherwise.
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## Status
 

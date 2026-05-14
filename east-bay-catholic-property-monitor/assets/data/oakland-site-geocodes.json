@@ -1,0 +1,192 @@
+{
+  "cathedral-parish-of-christ-the-light": {
+    "display_name": "The Cathedral of Christ the Light, 2121, Harrison Street, Financial District, Downtown Oakland, Oakland, Alameda County, California, 94612, United States",
+    "lat": 37.8101697,
+    "lon": -122.2632615,
+    "osm_id": 10864077,
+    "osm_type": "relation",
+    "query": "2121 Harrison Street, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "divine-mercy-parish-st-lawrence-otoole": {
+    "display_name": "3725, High Street, Laurel, Oakland Hills, Oakland, Alameda County, California, 94613, United States",
+    "lat": 37.7890628,
+    "lon": -122.1925668,
+    "osm_id": 475803785,
+    "osm_type": "way",
+    "query": "3725 High Street, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "mary-help-of-christians-oakland": {
+    "display_name": "2611, East 9th Street, Jingletown, East Oakland, Oakland, Alameda County, California, 94601, United States",
+    "lat": 37.7776392,
+    "lon": -122.2359848,
+    "osm_id": 412506582,
+    "osm_type": "way",
+    "query": "2611 E 9th Street, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "our-lady-of-lourdes-oakland": {
+    "display_name": "2808, Lakeshore Avenue, Cleveland Heights, Downtown Oakland, Oakland, Alameda County, California, 94606, United States",
+    "lat": 37.807986,
+    "lon": -122.2489927,
+    "osm_id": 154966457,
+    "osm_type": "way",
+    "query": "2808 Lakeshore Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "sacred-heart-oakland": {
+    "display_name": "Sacred Heart Roman Catholic Church, 4025, Martin Luther King Junior Way, Longfellow, North Oakland, Oakland, Alameda County, California, 94609, United States",
+    "lat": 37.8300969,
+    "lon": -122.2687348,
+    "osm_id": 232201433,
+    "osm_type": "way",
+    "query": "4025 Martin Luther King Jr. Way, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-andrew-kim-korean-pastoral-center-oakland": {
+    "display_name": "6226, Camden Street, Seminary Park, Oakland, Alameda County, California, 94613, United States",
+    "lat": 37.773581,
+    "lon": -122.1824243,
+    "osm_id": 477516112,
+    "osm_type": "way",
+    "query": "6226 Camden Street, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-anthony-mary-help-parish-office": {
+    "display_name": "1535, 16th Avenue, San Antonio, Oakland, Alameda County, California, 94606, United States",
+    "lat": 37.7898989,
+    "lon": -122.2432697,
+    "osm_id": 330832955,
+    "osm_type": "way",
+    "query": "1535 16th Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-augustine-oakland": {
+    "display_name": "Saint Augustine Catholic Church, 400, Alcatraz Avenue, North Oakland, Oakland, Alameda County, California, 94705, United States",
+    "lat": 37.850945,
+    "lon": -122.2576429,
+    "osm_id": 128110768,
+    "osm_type": "way",
+    "query": "400 Alcatraz Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-benedict-oakland": {
+    "display_name": "Saint Benedicts Roman Catholic Church, 2245, 82nd Avenue, Oakland, Alameda County, California, 94621, United States",
+    "lat": 37.7605655,
+    "lon": -122.1701156,
+    "osm_id": 473155420,
+    "osm_type": "way",
+    "query": "2245 82nd Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-bernard-oakland": {
+    "display_name": "1620, 62nd Avenue, East Oakland, Oakland, Alameda County, California, 94621, United States",
+    "lat": 37.7646243,
+    "lon": -122.1961312,
+    "osm_id": 6362488,
+    "osm_type": "way",
+    "query": "1620 62nd Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-columba-oakland": {
+    "display_name": "6401, San Pablo Avenue, North Oakland, Oakland, Alameda County, California, 94608, United States",
+    "lat": 37.8466409,
+    "lon": -122.2855627,
+    "osm_id": 148284749,
+    "osm_type": "way",
+    "query": "6401 San Pablo Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-elizabeth-oakland": {
+    "display_name": "Franciscan Friars, 1500, 34th Avenue, Fruitvale, East Oakland, Oakland, Alameda County, California, 94601, United States",
+    "lat": 37.778126,
+    "lon": -122.2224948,
+    "osm_id": 552695708,
+    "osm_type": "way",
+    "query": "1500 34th Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-jarlath-oakland": {
+    "display_name": "Saint Jarlaths Roman Catholic Church, 2620, Pleasant Street, Dimond District, Oakland, Alameda County, California, 94601, United States",
+    "lat": 37.7973614,
+    "lon": -122.2168803,
+    "osm_id": 477272039,
+    "osm_type": "way",
+    "query": "2620 Pleasant Street, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-leo-the-great-oakland": {
+    "display_name": "4238, Howe Street, Piedmont Avenue, North Oakland, Oakland, Alameda County, California, 94609, United States",
+    "lat": 37.8287077,
+    "lon": -122.2506539,
+    "osm_id": 256124858,
+    "osm_type": "way",
+    "query": "4238 Howe Street, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-louis-bertrand-oakland": {
+    "display_name": "1410, 100th Avenue, Oakland, Alameda County, California, 94603, United States",
+    "lat": 37.7427641,
+    "lon": -122.168916,
+    "osm_id": 1254845326,
+    "osm_type": "way",
+    "query": "1410 100th Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-margaret-mary-oakland": {
+    "display_name": "1219, Excelsior Avenue, Oakland, Alameda County, California, 94602, United States",
+    "lat": 37.804029,
+    "lon": -122.2314221,
+    "osm_id": 314953852,
+    "osm_type": "way",
+    "query": "1219 Excelsior Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-paschal-baylon-oakland": {
+    "display_name": "3700, Dorisa Avenue, Oakland, Alameda County, California, 94577, United States",
+    "lat": 37.75752,
+    "lon": -122.1457004,
+    "osm_id": 471638601,
+    "osm_type": "way",
+    "query": "3700 Dorisa Avenue, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-patrick-oakland": {
+    "display_name": "1023, Peralta Street, South Prescott, West Oakland, Oakland, Alameda County, California, 94607, United States",
+    "lat": 37.8088992,
+    "lon": -122.2962385,
+    "osm_id": 221426713,
+    "osm_type": "way",
+    "query": "1023 Peralta Street, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  },
+  "saint-theresa-oakland": {
+    "display_name": "Saint Theresa Roman Catholic Church, 30, Mandalay Road, Oakland, Alameda County, California, 94618, United States",
+    "lat": 37.8379823,
+    "lon": -122.231635,
+    "osm_id": 358819724,
+    "osm_type": "node",
+    "query": "30 Mandalay Road, Oakland, Oakland, CA",
+    "retrieved": "2026-05-14",
+    "source": "OpenStreetMap/Nominatim via Hermes maps skill"
+  }
+}

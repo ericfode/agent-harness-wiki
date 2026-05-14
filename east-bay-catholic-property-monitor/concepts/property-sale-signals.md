@@ -1,13 +1,30 @@
 ---
 title: Property Sale Signals
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: concept
 tags: [real-estate, court-docket, city-planning, valuation, alert]
 sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/articles/nightly-east-bay-catholic-property-monitor-2026-05-13.md]
 ---
 
 # Property Sale Signals
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Property-sale signal ladder](east-bay-catholic-property-monitor/assets/visuals/property-sale-signal-ladder.svg)
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## Evidence hierarchy
 

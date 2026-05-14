@@ -1,12 +1,29 @@
 ---
 title: East Bay Catholic Property Monitor Schema
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: schema
 tags: [meta, schema]
 ---
 
 # East Bay Catholic Property Monitor Schema
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Sub-vault structure diagram](east-bay-catholic-property-monitor/assets/visuals/schema-content-map.svg)
+
+![Oakland Catholic project visual index](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-project-visual-index.svg)
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## Domain
 
@@ -22,6 +39,7 @@ This is a focused LLM Wiki sub-vault under `~/wiki` so the local real-estate wat
 - Raw sources live under `raw/articles/` or `raw/dockets/` and are immutable after capture.
 - Curated pages live under `entities/`, `concepts/`, `comparisons/`, and `queries/`.
 - Every content page must have YAML frontmatter with `title`, `created`, `updated`, `type`, `tags`, and `sources`.
+- Every rendered project page should include at least one non-evidentiary visual block (`<!-- oakland-visuals:start -->`) so the public surface is navigable by eye; raw evidence bodies remain authoritative over visual aids.
 - Use Obsidian-style wikilinks for cross-references; every curated page should have at least two outbound links unless there are fewer than two relevant curated pages.
 - Update `index.md` and append `log.md` after every run.
 - Separate observed facts from estimates, rumors, and inference.
@@ -35,7 +53,7 @@ This is a focused LLM Wiki sub-vault under `~/wiki` so the local real-estate wat
 title: Page Title
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-type: entity | concept | comparison | query
+type: entity | concept | comparison | query | index | schema | raw-source-note
 tags: [from taxonomy below]
 sources: [raw/articles/source-name.md]
 ---

@@ -1,10 +1,28 @@
 # East Bay Catholic Property Monitor Index
 
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic project visual index](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-project-visual-index.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
+
 > Focused LLM Wiki sub-vault for the East Bay Catholic church/site closure and property-sale watch.
-> Last updated: 2026-05-13 | Total pages: 24
+> Last updated: 2026-05-14 | Curated content pages: 24 | Authored Markdown pages: 36
 
 ## Entities
 
+- [[entities/index|Entities section landing]] — Visual landing for all Oakland site dossiers.
 - [[diocese-of-oakland]] — Debtor/diocese whose bankruptcy, MAP closures, and real-estate funding pressures drive the watch.
 - [[cathedral-parish-of-christ-the-light]] — Oakland Catholic site dossier with closure status, parcel envelope, sale signals, and preliminary price screen.
 - [[divine-mercy-parish-st-lawrence-otoole]] — Oakland Catholic site dossier with closure status, parcel envelope, sale signals, and preliminary price screen.
@@ -28,13 +46,20 @@
 
 ## Concepts
 
+- [[concepts/index|Concepts section landing]] — Visual landing for signal and valuation method pages.
 - [[property-sale-signals]] — Evidence hierarchy for deciding when a closed church/site is actually moving toward sale and when to notify Eric.
 - [[valuation-methodology]] — Repeatable low-confidence method for Oakland church parcel screens and estimated acquisition ranges.
 
 ## Comparisons
 
+- [[comparisons/index|Comparisons section landing]] — Visual landing for ranked screens and map views.
 - [[oakland-catholic-church-price-screen-2026-05-13]] — Ranked Oakland Catholic church price screen using the current dossier estimates.
 
 ## Queries
 
+- [[queries/index|Queries section landing]] — Visual landing for active monitor queries.
 - [[east-bay-catholic-property-sales-monitor]] — Current baseline, all-Oakland dossier list, financial dynamics, alert thresholds, and nightly monitoring checklist.
+## Raw evidence
+
+- [[raw/index|Raw evidence section landing]] — Visual landing for captured source notes.
+- [[raw/articles/index|Raw articles section landing]] — Captured article/docket-search notes with non-evidentiary visual wrappers.

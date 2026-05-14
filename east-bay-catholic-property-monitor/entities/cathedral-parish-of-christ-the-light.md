@@ -1,13 +1,32 @@
 ---
 title: Cathedral Parish of Christ the Light
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: entity
 tags: [diocese-oakland, real-estate, valuation, court-docket]
 sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/articles/oakland-catholic-church-dossier-expansion-2026-05-13.md, raw/articles/nightly-east-bay-catholic-property-monitor-2026-05-13.md]
 ---
 
 # Cathedral Parish of Christ the Light
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Visual dossier card for Cathedral Parish of Christ the Light](east-bay-catholic-property-monitor/assets/visuals/site-card-cathedral-parish-of-christ-the-light.svg)
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+> Visuals are navigation aids generated from dossier fields and OpenStreetMap/Nominatim coordinates; price labels remain `agent estimate` unless the text says otherwise.
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## Status
 

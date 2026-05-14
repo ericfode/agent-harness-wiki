@@ -8,6 +8,25 @@ tags: [diocese-oakland, bankruptcy, parish-closure, real-estate, court-docket, v
 
 # Nightly East Bay Catholic Property Monitor — 2026-05-13
 
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Raw source note visual wrapper](east-bay-catholic-property-monitor/assets/visuals/source-basis-visual-wrapper.svg)
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+> Presentation wrapper added 2026-05-14. The source-capture body below remains the evidentiary surface; images are non-evidentiary navigation aids.
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
+
 ## Alert level
 
 **Red.** A bankruptcy plan-supplement filing now names specific church/parish sites as anticipated real property to be sold or collateralized to fund the Diocese of Oakland plan. This is not a public broker listing and does not give an asking price or sale price, but it is a primary court-docket property-disposition signal.

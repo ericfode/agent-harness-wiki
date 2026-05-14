@@ -1,13 +1,32 @@
 ---
 title: Diocese of Oakland
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: entity
 tags: [diocese-oakland, bankruptcy, parish-closure, real-estate, court-docket, alert]
 sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/articles/nightly-east-bay-catholic-property-monitor-2026-05-13.md]
 ---
 
 # Diocese of Oakland
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Property-sale signal ladder](east-bay-catholic-property-monitor/assets/visuals/property-sale-signal-ladder.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+> Diocese-level visuals summarize the monitored Oakland site set; they are not appraisals or sale confirmations.
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## Overview
 

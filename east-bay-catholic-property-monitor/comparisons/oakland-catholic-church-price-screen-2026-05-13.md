@@ -1,13 +1,30 @@
 ---
 title: Oakland Catholic Church Price Screen — 2026-05-13
 created: 2026-05-13
-updated: 2026-05-13
+updated: 2026-05-14
 type: comparison
 tags: [valuation, real-estate, candidate-site, diocese-oakland, court-docket, alert]
 sources: [raw/articles/oakland-catholic-church-dossier-expansion-2026-05-13.md, raw/articles/nightly-east-bay-catholic-property-monitor-2026-05-13.md]
 ---
 
 # Oakland Catholic Church Price Screen — 2026-05-13
+
+<!-- oakland-visuals:start -->
+## Visuals
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+
+![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
+
+![Oakland Catholic project visual index](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-project-visual-index.svg)
+
+<!-- oakland-visuals:end -->
+
+
+
+
+
+
 
 ## Reading posture
 
