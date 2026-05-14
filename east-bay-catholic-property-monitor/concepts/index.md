@@ -36,5 +36,6 @@ sources: [raw/articles/oakland-catholic-church-dossier-expansion-2026-05-13.md]
 
 ## Concept pages
 
+- [[funding-structures-for-oakland-church-reuse]] — Source-backed structures for outside-funded acquisition, renovation, private live/work conversion, and public event/community reuse.
 - [[property-sale-signals]] — Evidence hierarchy for sale/disposition signals.
 - [[valuation-methodology]] — Low-confidence valuation-screen method and price-label discipline.

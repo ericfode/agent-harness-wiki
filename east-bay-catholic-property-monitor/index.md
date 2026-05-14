@@ -56,6 +56,7 @@
 ## Concepts
 
 - [[concepts/index|Concepts section landing]] — Visual landing for signal and valuation method pages.
+- [[funding-structures-for-oakland-church-reuse]] — Outside-funded acquisition and renovation structures for private live/work conversion and public event/community reuse.
 - [[property-sale-signals]] — Evidence hierarchy for deciding when a closed church/site is actually moving toward sale and when to notify Eric.
 - [[valuation-methodology]] — Repeatable low-confidence method for Oakland church parcel screens and estimated acquisition ranges.
 

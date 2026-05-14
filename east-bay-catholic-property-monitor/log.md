@@ -1,5 +1,10 @@
 # East Bay Catholic Property Monitor Log
 
+## [2026-05-14] update | outside-funded reuse structures
+- Added `concepts/funding-structures-for-oakland-church-reuse.md`, a source-backed funding-structure map for two scenarios: private/live-work conversion and public event/community reuse.
+- Identified fundable structures: income-producing historic component, renovation mortgage path, Mills Act preservation residence, nonprofit/CAST-style cultural real estate trust, CLT/co-op/CIT community ownership, NMTC+HTC community facility stack, public-private lease/option, affordable housing plus preserved sanctuary, and for-profit venue with community notes.
+- Added concrete source anchors for NPS historic tax credits, Oakland Mills Act, SB 4, Oakland ACAH, Community Vision, LISC, NFF, SBA 504, IBank, CalCAP, Regulation Crowdfunding, CAST, OakCLT, Artist Space Trust, EBPREC/SFF, Melrose Baptist Church, Brooklyn Presbyterian/1433 12th Avenue, Buena Vista Terrace, and Henry J. Kaiser Convention Center.
+
 <!-- oakland-visuals:start -->
 ## Visuals
 
