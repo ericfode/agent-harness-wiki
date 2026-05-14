@@ -9,6 +9,7 @@ wiki pages eyes. A note without eyes is a spreadsheet wearing a cassock.
 from __future__ import annotations
 
 import html
+import importlib
 import json
 import math
 import os
@@ -16,19 +17,25 @@ import re
 import subprocess
 import sys
 import time
+import urllib.request
 from dataclasses import dataclass
 from datetime import date
+from io import BytesIO
 from pathlib import Path
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets" / "visuals"
+MAP_ASSETS = ROOT / "assets" / "maps"
 DATA = ROOT / "assets" / "data"
+TILE_CACHE = DATA / "map-tile-cache"
 MAPS_CLIENT = Path("/Users/ericfode/.hermes/skills/productivity/maps/scripts/maps_client.py")
 TODAY = os.environ.get("VISUAL_UPDATE_DATE", date.today().isoformat())
 
 ASSETS.mkdir(parents=True, exist_ok=True)
+MAP_ASSETS.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
+TILE_CACHE.mkdir(parents=True, exist_ok=True)
 
 CLOSURE_WORDS = ("closure announced", "court-listed", "sale signal", "disposition")
 
@@ -237,6 +244,286 @@ def price_radius(site: Site, max_mid: float, base=7, scale=33) -> float:
     return base + math.sqrt(site.mid / max_mid) * scale
 
 
+def mercator_world_pixel(lat: float, lon: float, zoom: int) -> tuple[float, float]:
+    """Web-Mercator global pixel coordinate for slippy-map tiles."""
+    sin_lat = math.sin(math.radians(max(min(lat, 85.05112878), -85.05112878)))
+    scale = 256 * (2 ** zoom)
+    x = (lon + 180.0) / 360.0 * scale
+    y = (0.5 - math.log((1 + sin_lat) / (1 - sin_lat)) / (4 * math.pi)) * scale
+    return x, y
+
+
+def choose_tile_zoom(sites: list[Site], width: int, height: int, padding: int = 170) -> int:
+    pts = [(s.lat, s.lon) for s in sites if s.lat is not None and s.lon is not None]
+    lats = [p[0] for p in pts]
+    lons = [p[1] for p in pts]
+    for zoom in range(17, 8, -1):
+        pix = [mercator_world_pixel(lat, lon, zoom) for lat, lon in pts]
+        xs = [p[0] for p in pix]
+        ys = [p[1] for p in pix]
+        if max(xs) - min(xs) <= width - padding * 2 and max(ys) - min(ys) <= height - padding * 2:
+            return zoom
+    return 11
+
+
+def tile_url(x: int, y: int, zoom: int) -> str:
+    # CARTO's Positron tiles are OSM-derived, keyless, and readable under dense markers.
+    shard = "abc"[(x + y + zoom) % 3]
+    return f"https://{shard}.basemaps.cartocdn.com/light_all/{zoom}/{x}/{y}.png"
+
+
+def fetch_tile(x: int, y: int, zoom: int) -> bytes:
+    cache_path = TILE_CACHE / str(zoom) / str(x) / f"{y}.png"
+    if cache_path.exists():
+        return cache_path.read_bytes()
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    req = urllib.request.Request(
+        tile_url(x, y, zoom),
+        headers={"User-Agent": "Hermes Oakland church price-bubble map / small static wiki render"},
+    )
+    with urllib.request.urlopen(req, timeout=30) as response:
+        data = response.read()
+    cache_path.write_bytes(data)
+    time.sleep(0.12)
+    return data
+
+
+def load_font(size: int, bold: bool = False):
+    ImageFont = importlib.import_module("PIL.ImageFont")
+
+    candidates = [
+        "DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf",
+        "/System/Library/Fonts/Supplemental/Arial Bold.ttf" if bold else "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/Library/Fonts/Arial Bold.ttf" if bold else "/Library/Fonts/Arial.ttf",
+    ]
+    for candidate in candidates:
+        try:
+            return ImageFont.truetype(candidate, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
+def static_map_canvas(sites: list[Site], width: int, height: int):
+    Image = importlib.import_module("PIL.Image")
+
+    zoom = choose_tile_zoom(sites, width, height)
+    pts = [(s.lat, s.lon) for s in sites if s.lat is not None and s.lon is not None]
+    center_lat = (min(p[0] for p in pts) + max(p[0] for p in pts)) / 2
+    center_lon = (min(p[1] for p in pts) + max(p[1] for p in pts)) / 2
+    center_x, center_y = mercator_world_pixel(center_lat, center_lon, zoom)
+    left = center_x - width / 2
+    top = center_y - height / 2
+    first_tile_x = math.floor(left / 256)
+    last_tile_x = math.floor((left + width) / 256)
+    first_tile_y = math.floor(top / 256)
+    last_tile_y = math.floor((top + height) / 256)
+
+    canvas = Image.new("RGB", (width, height), "#eef2f7")
+    for tx in range(first_tile_x, last_tile_x + 1):
+        for ty in range(first_tile_y, last_tile_y + 1):
+            try:
+                tile = Image.open(BytesIO(fetch_tile(tx, ty, zoom))).convert("RGB")
+            except Exception as exc:
+                print(f"WARN: map tile failed z{zoom}/{tx}/{ty}: {exc}", file=sys.stderr)
+                continue
+            px = round(tx * 256 - left)
+            py = round(ty * 256 - top)
+            canvas.paste(tile, (px, py))
+    return canvas, zoom, left, top
+
+
+def draw_centered_text(draw, xy: tuple[float, float], text: str, font, fill: str) -> None:
+    try:
+        bbox = draw.textbbox((0, 0), text, font=font)
+        w, h = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    except Exception:
+        w, h = draw.textlength(text, font=font), 12
+    draw.text((xy[0] - w / 2, xy[1] - h / 2 - 1), text, font=font, fill=fill)
+
+
+def generate_static_tile_map(sites: list[Site]) -> None:
+    """Generate a real basemap PNG with price-scaled bubbles.
+
+    The previous SVG was intentionally schematic; the user was quite right that
+    it made Oakland look as though it had been surveyed by a poet with a ruler.
+    This one uses live OSM-derived map tiles, then commits the rendered result.
+    """
+    try:
+        Image = importlib.import_module("PIL.Image")
+        ImageDraw = importlib.import_module("PIL.ImageDraw")
+    except Exception as exc:
+        raise SystemExit("Pillow is required for tile-backed map rendering") from exc
+
+    width, height = 1600, 1080
+    canvas, zoom, left, top = static_map_canvas(sites, width, height)
+    overlay = Image.new("RGBA", canvas.size, (255, 255, 255, 0))
+    draw = ImageDraw.Draw(overlay)
+    max_mid = max(s.mid for s in sites)
+    ranked = sorted(sites, key=lambda s: s.mid, reverse=True)
+    index = {s.slug: i + 1 for i, s in enumerate(ranked)}
+    font_title = load_font(38, True)
+    font_sub = load_font(20, False)
+    font_label = load_font(18, True)
+    font_small = load_font(15, False)
+    font_tiny = load_font(13, False)
+
+    # Header and attribution panels.
+    draw.rounded_rectangle((34, 28, 1118, 122), radius=24, fill=(255, 255, 255, 232), outline=(203, 213, 225, 255), width=2)
+    draw.text((60, 45), "Oakland Catholic church price-bubble map", font=font_title, fill="#0f172a")
+    draw.text((62, 91), "Real OSM/CARTO basemap; bubble area follows midpoint of current core agent estimate.", font=font_sub, fill="#334155")
+
+    # Draw largest bubbles first so smaller sites remain clickable/legible.
+    for s in sorted(sites, key=lambda site: site.mid, reverse=True):
+        assert s.lat is not None and s.lon is not None
+        px, py = mercator_world_pixel(s.lat, s.lon, zoom)
+        x, y = px - left, py - top
+        r = price_radius(s, max_mid, base=10, scale=34)
+        c = color_for(s)
+        rgb = tuple(int(c[i:i+2], 16) for i in (1, 3, 5))
+        draw.ellipse((x-r, y-r, x+r, y+r), fill=rgb + (142,), outline=(15, 23, 42, 230), width=3)
+        draw.ellipse((x-13, y-13, x+13, y+13), fill=(15, 23, 42, 238))
+        draw_centered_text(draw, (x, y), str(index[s.slug]), font_label, "#ffffff")
+
+    # Right-side ranked legend.
+    panel = (1136, 80, 1570, 1018)
+    draw.rounded_rectangle(panel, radius=26, fill=(255, 255, 255, 238), outline=(148, 163, 184, 255), width=2)
+    draw.text((1162, 110), "Ranked by midpoint", font=font_sub, fill="#0f172a")
+    y = 150
+    for i, s in enumerate(ranked, start=1):
+        c = color_for(s)
+        rgb = tuple(int(c[j:j+2], 16) for j in (1, 3, 5))
+        title = s.title.replace("Catholic Church", "").replace("Parish", "").replace("Oakland", "").strip(" ,/")
+        if len(title) > 37:
+            title = title[:34] + "…"
+        draw.ellipse((1165, y-11, 1187, y+11), fill=rgb + (210,), outline=(15, 23, 42, 255), width=2)
+        draw.text((1198, y-15), f"{i}. {title}", font=font_label, fill="#0f172a")
+        draw.text((1198, y+8), f"mid {fmt_money(s.mid)} · {s.risk_class}", font=font_tiny, fill="#475569")
+        y += 43
+
+    # Bubble scale and source note.
+    draw.rounded_rectangle((46, 923, 782, 1040), radius=20, fill=(255, 255, 255, 224), outline=(203, 213, 225, 255), width=2)
+    draw.text((70, 945), "Bubble scale", font=font_label, fill="#0f172a")
+    for j, val in enumerate([250_000, 1_000_000, 3_000_000, max_mid]):
+        r = 10 + math.sqrt(val / max_mid) * 34
+        x = 205 + j * 150
+        draw.ellipse((x-r, 982-r, x+r, 982+r), fill=(51, 65, 85, 42), outline=(51, 65, 85, 180), width=2)
+        draw_centered_text(draw, (x, 1030), fmt_money(val), font_tiny, "#334155")
+    draw.text((46, 1052), "© OpenStreetMap contributors © CARTO · price labels are agent estimates, not appraisals or asking prices", font=font_tiny, fill="#334155")
+
+    out = Image.alpha_composite(canvas.convert("RGBA"), overlay)
+    out.save(ASSETS / "oakland-catholic-price-bubble-map.png", "PNG", optimize=True)
+
+
+def generate_leaflet_map(sites: list[Site]) -> None:
+    rows = []
+    for s in sorted(sites, key=lambda site: site.mid, reverse=True):
+        rows.append({
+            "slug": s.slug,
+            "title": s.title,
+            "address": s.address,
+            "status": s.status,
+            "riskClass": s.risk_class,
+            "estimate": s.estimate_text,
+            "midpoint": s.mid,
+            "midpointLabel": fmt_money(s.mid),
+            "lat": s.lat,
+            "lon": s.lon,
+            "color": color_for(s),
+        })
+    max_mid = max(s.mid for s in sites)
+    payload = json.dumps({"updated": TODAY, "maxMidpoint": max_mid, "sites": rows}, ensure_ascii=False)
+    html_text = f"""<!doctype html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <title>Oakland Catholic price-bubble map</title>
+  <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\" integrity=\"sha256-p4NxAoJBhIINfQ6xO4O3mddPfM/sB9MQZWZsS9j6F9w=\" crossorigin=\"\" />
+  <style>
+    .leaflet-container {{ overflow: hidden; position: relative; outline-offset: 1px; }}
+    .leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container, .leaflet-pane > svg, .leaflet-pane > canvas, .leaflet-zoom-box, .leaflet-image-layer, .leaflet-layer {{ position: absolute; left: 0; top: 0; }}
+    .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow {{ user-select: none; -webkit-user-drag: none; }}
+    .leaflet-container img.leaflet-tile {{ max-width: none !important; max-height: none !important; }}
+    .leaflet-zoom-animated {{ transform-origin: 0 0; }}
+    .leaflet-interactive {{ cursor: pointer; }}
+    .leaflet-control-container .leaflet-top, .leaflet-control-container .leaflet-bottom {{ position: absolute; z-index: 1000; pointer-events: none; }}
+    .leaflet-top {{ top: 0; }} .leaflet-right {{ right: 0; }} .leaflet-bottom {{ bottom: 0; }} .leaflet-left {{ left: 0; }}
+    .leaflet-control {{ position: relative; z-index: 800; pointer-events: auto; float: left; clear: both; }}
+    .leaflet-right .leaflet-control {{ float: right; }}
+    .leaflet-top .leaflet-control {{ margin-top: 10px; }} .leaflet-bottom .leaflet-control {{ margin-bottom: 10px; }}
+    .leaflet-left .leaflet-control {{ margin-left: 10px; }} .leaflet-right .leaflet-control {{ margin-right: 10px; }}
+    .leaflet-bar a {{ display:block; width:26px; height:26px; line-height:26px; text-align:center; text-decoration:none; background:white; color:#0f172a; border-bottom:1px solid #cbd5e1; }}
+    .leaflet-bar a:first-child {{ border-top-left-radius:4px; border-top-right-radius:4px; }} .leaflet-bar a:last-child {{ border-bottom-left-radius:4px; border-bottom-right-radius:4px; border-bottom:0; }}
+    .leaflet-control-attribution {{ background:rgba(255,255,255,.82); color:#334155; font-size:11px; padding:2px 6px; }}
+    .leaflet-popup-pane {{ z-index: 700; }} .leaflet-marker-pane {{ z-index: 600; }} .leaflet-overlay-pane {{ z-index: 400; }} .leaflet-tile-pane {{ z-index: 200; }}
+    html, body, #map {{ margin: 0; width: 100%; height: 100%; min-height: 640px; background: #e2e8f0; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif; }}
+    .title-card {{ position:absolute; z-index:500; top:18px; left:18px; max-width:640px; background:rgba(255,255,255,.94); border:1px solid #cbd5e1; border-radius:18px; padding:14px 18px; box-shadow:0 12px 30px rgba(15,23,42,.18); }}
+    .title-card h1 {{ margin:0 0 4px; font:700 24px Georgia,serif; color:#0f172a; }}
+    .title-card p {{ margin:0; color:#334155; font-size:14px; line-height:1.35; }}
+    .legend {{ position:absolute; z-index:500; top:18px; right:18px; width:330px; max-height:calc(100% - 72px); overflow:auto; background:rgba(255,255,255,.94); border:1px solid #cbd5e1; border-radius:18px; padding:14px 16px; box-shadow:0 12px 30px rgba(15,23,42,.18); }}
+    .legend h2 {{ margin:0 0 10px; font-size:17px; color:#0f172a; }}
+    .site-row {{ display:grid; grid-template-columns:22px 1fr; gap:9px; padding:7px 0; border-top:1px solid #e2e8f0; }}
+    .dot {{ width:16px; height:16px; margin-top:3px; border-radius:999px; border:2px solid #0f172a; }}
+    .site-name {{ color:#0f172a; font-weight:700; font-size:13px; }}
+    .site-meta {{ color:#475569; font-size:12px; line-height:1.3; }}
+    .rank-label {{ background:#0f172a; color:white; border-radius:999px; border:2px solid white; box-shadow:0 2px 8px rgba(15,23,42,.35); font-weight:800; font-size:12px; text-align:center; line-height:22px; width:22px; height:22px; }}
+    .leaflet-popup-content {{ min-width:240px; }}
+    .popup-title {{ font-weight:800; color:#0f172a; margin-bottom:4px; }}
+    .popup-meta {{ color:#334155; line-height:1.35; }}
+    .popup-meta a {{ color:#2563eb; }}
+    @media (max-width: 900px) {{ .legend {{ left:12px; right:12px; bottom:12px; top:auto; width:auto; max-height:170px; border-radius:14px; padding:10px 12px; }} .title-card {{ top:12px; left:12px; right:12px; max-width:none; border-radius:14px; padding:10px 12px; }} .title-card h1 {{ font-size:18px; }} .title-card p {{ font-size:12px; }} html, body, #map {{ min-height:680px; }} .site-row {{ padding:4px 0; }} }}
+  </style>
+</head>
+<body>
+  <div id=\"map\"></div>
+  <section class=\"title-card\">
+    <h1>Oakland Catholic price-bubble map</h1>
+    <p>Leaflet/CARTO/OpenStreetMap basemap. Bubbles scale by midpoint of the current core <code>agent estimate</code>; no bubble is an asking price, appraisal, or sale confirmation.</p>
+  </section>
+  <aside class=\"legend\" id=\"legend\"><h2>Ranked by midpoint</h2></aside>
+  <script src=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\" integrity=\"sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=\" crossorigin=\"\"></script>
+  <script>
+    const data = {payload};
+    const map = L.map('map', {{ scrollWheelZoom: false, preferCanvas: true }});
+    L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}.png', {{
+      maxZoom: 19,
+      attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>'
+    }}).addTo(map);
+    const bounds = [];
+    const legend = document.getElementById('legend');
+    const radiusFor = midpoint => 7 + Math.sqrt(midpoint / data.maxMidpoint) * 26;
+    data.sites.forEach((site, index) => {{
+      const latlng = [site.lat, site.lon];
+      bounds.push(latlng);
+      const marker = L.circleMarker(latlng, {{
+        radius: radiusFor(site.midpoint),
+        color: '#0f172a', weight: 2,
+        fillColor: site.color, fillOpacity: .62
+      }}).addTo(map);
+      marker.bindPopup(`<div class=\"popup-title\">${{index+1}}. ${{site.title}}</div><div class=\"popup-meta\">${{site.address}}<br><strong>${{site.estimate}}</strong><br>${{site.riskClass}}<br><a target=\"_blank\" rel=\"noreferrer\" href=\"https://www.google.com/maps/search/?api=1&query=${{site.lat}},${{site.lon}}\">Open in Google Maps</a></div>`);
+      L.marker(latlng, {{
+        interactive: false,
+        icon: L.divIcon({{ className: 'rank-label', html: String(index+1), iconSize: [22,22], iconAnchor: [11,11] }})
+      }}).addTo(map);
+      const row = document.createElement('div');
+      row.className = 'site-row';
+      row.innerHTML = `<span class=\"dot\" style=\"background:${{site.color}}\"></span><div><div class=\"site-name\">${{index+1}}. ${{site.title}}</div><div class=\"site-meta\">mid ${{site.midpointLabel}} · ${{site.riskClass}}</div></div>`;
+      row.addEventListener('mouseenter', () => marker.openPopup());
+      legend.appendChild(row);
+    }});
+    const fitOptions = window.innerWidth < 900
+      ? {{ paddingTopLeft: [28, 112], paddingBottomRight: [28, 178], maxZoom: 13 }}
+      : {{ paddingTopLeft: [44, 96], paddingBottomRight: [390, 44], maxZoom: 13 }};
+    map.fitBounds(bounds, fitOptions);
+  </script>
+</body>
+</html>
+"""
+    write(MAP_ASSETS / "oakland-catholic-price-bubble-map.htm", html_text)
+
+
 def svg_wrap(width: int, height: int, body: str, title: str = "") -> str:
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{esc(title)}">
   <defs>
@@ -268,55 +555,6 @@ def svg_wrap(width: int, height: int, body: str, title: str = "") -> str:
 </svg>
 '''
 
-
-def generate_map(sites: list[Site]) -> None:
-    width, height = 1500, 980
-    pr = Projector(sites, width, height)
-    max_mid = max(s.mid for s in sites)
-    ranked = sorted(sites, key=lambda s: s.mid, reverse=True)
-    body: list[str] = []
-    body.append('<rect width="1500" height="980" rx="0" fill="#f8fafc"/>')
-    body.append('<path d="M0,0 H360 C315,160 310,250 340,345 C380,470 285,590 315,730 C340,850 260,930 210,980 H0 Z" fill="#bfdbfe" opacity="0.72"/>')
-    body.append('<path d="M70,100 H1110 V900 H70 Z" fill="#fff7ed" stroke="#cbd5e1" stroke-width="2"/>')
-    # Light schematic ridgelines/arterials.
-    body.append('<path d="M220,835 C370,720 425,610 520,520 C655,390 740,300 940,160" fill="none" stroke="#fed7aa" stroke-width="16" stroke-linecap="round" opacity="0.45"/>')
-    body.append('<path d="M160,740 C345,660 540,590 725,450 C820,375 910,280 1055,185" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="8 10" opacity="0.70"/>')
-    body.append('<path d="M145,225 C300,285 440,350 610,385 C770,420 885,470 1055,590" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="8 10" opacity="0.55"/>')
-    body.append('<text x="58" y="58" class="title">Oakland Catholic church price-bubble map</text>')
-    body.append('<text x="60" y="86" class="subtitle">Bubble area follows midpoint of current core `agent estimate`; these are not asking prices or appraisals.</text>')
-    body.append('<text x="110" y="150" class="small">San Francisco Bay / port edge</text>')
-    body.append('<text x="825" y="160" class="small">Oakland hills →</text>')
-    # Bubbles and number labels.
-    index = {s.slug: i + 1 for i, s in enumerate(ranked)}
-    for s in sorted(sites, key=lambda s: s.mid):
-        x, y = pr.xy(s)
-        r = price_radius(s, max_mid)
-        col = color_for(s)
-        body.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="{col}" fill-opacity="0.64" stroke="#0f172a" stroke-width="1.7"/>')
-        body.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="12" fill="#0f172a"/>')
-        body.append(f'<text x="{x:.1f}" y="{y+4:.1f}" text-anchor="middle" class="num">{index[s.slug]}</text>')
-    # Legend panel.
-    body.append('<rect x="1140" y="104" width="315" height="793" rx="20" fill="white" filter="url(#shadow)"/>')
-    body.append('<text x="1165" y="145" class="subtitle" font-weight="800">Ranked by midpoint</text>')
-    y = 178
-    for i, s in enumerate(ranked, start=1):
-        col = color_for(s)
-        body.append(f'<circle cx="1172" cy="{y-5}" r="8" fill="{col}" fill-opacity="0.75" stroke="#0f172a"/>')
-        title = s.title.replace("Catholic Church", "").replace("Parish", "").replace("Oakland", "").strip(" ,/")
-        if len(title) > 34:
-            title = title[:31] + "…"
-        body.append(f'<text x="1188" y="{y}" class="label">{i}. {esc(title)}</text>')
-        body.append(f'<text x="1188" y="{y+17}" class="tiny">mid {fmt_money(s.mid)} · {esc(s.risk_class)}</text>')
-        y += 36
-    # Bubble scale.
-    body.append('<text x="60" y="925" class="small">Scale examples:</text>')
-    for j, val in enumerate([250_000, 1_000_000, 3_000_000, max_mid]):
-        pseudo = type("Pseudo", (), {"mid": val})()
-        r = 7 + math.sqrt(val / max_mid) * 33
-        x = 180 + j * 180
-        body.append(f'<circle cx="{x}" cy="920" r="{r:.1f}" fill="#334155" fill-opacity="0.18" stroke="#334155"/>')
-        body.append(f'<text x="{x}" y="970" text-anchor="middle" class="tiny">{fmt_money(val)}</text>')
-    write(ASSETS / "oakland-catholic-price-bubble-map.svg", svg_wrap(width, height, "\n".join(body), "Oakland Catholic church price bubble map"))
 
 
 def generate_rank_chart(sites: list[Site]) -> None:
@@ -527,7 +765,8 @@ def generate_source_basis_card() -> None:
 
 
 def generate_all_assets(sites: list[Site]) -> None:
-    generate_map(sites)
+    generate_static_tile_map(sites)
+    generate_leaflet_map(sites)
     generate_rank_chart(sites)
     generate_project_index(sites)
     generate_site_cards(sites)
@@ -539,14 +778,31 @@ def generate_all_assets(sites: list[Site]) -> None:
 
 def rel_image(page: Path, asset_name: str) -> str:
     # Quartz's `shortest` link resolver treats resource URLs as vault-root-ish
-    # slugs; the stable source form is therefore the content-root path. Page-
-    # relative links look tidy in Markdown but render one directory too high in
-    # Quartz. Tidy falsehoods: still false.
+    # slugs; the stable source form is therefore the content-root path for
+    # Markdown images. Raw HTML embeds are not rewritten, so they use a real
+    # page-relative path via rel_embed(). One resolver would be too merciful.
     return f"{ROOT.name}/assets/visuals/{asset_name}"
+
+
+def rel_embed(page: Path, rel_asset: str) -> str:
+    target = ROOT / rel_asset
+    return os.path.relpath(target, page.parent).replace(os.sep, "/")
 
 
 def image_line(page: Path, asset_name: str, alt: str) -> str:
     return f"![{alt}]({rel_image(page, asset_name)})"
+
+
+def interactive_map_iframe(page: Path) -> str:
+    # Quartz rewrites local .html src attributes just like Markdown links, so
+    # the iframe targets a checked-in .htm twin; old-fashioned, but with a proper
+    # text/html MIME type on static hosts. A small price for less occult routing.
+    src = f"{ROOT.name}/assets/maps/oakland-catholic-price-bubble-map.htm"
+    return (
+        f'<iframe title="Interactive Oakland Catholic price-bubble map" src="{src}" '
+        'loading="lazy" width="100%" height="680" '
+        'style="border:1px solid #cbd5e1;border-radius:18px;max-width:100%;background:#e2e8f0;"></iframe>'
+    )
 
 
 def update_frontmatter_date(text: str) -> str:
@@ -565,13 +821,13 @@ def update_frontmatter_date(text: str) -> str:
 def visual_block_for(page: Path, site_by_slug: dict[str, Site]) -> str:
     rel = page.relative_to(ROOT).as_posix()
     slug = page.stem
-    lines = ["<!-- oakland-visuals:start -->", "## Visuals", ""]
+    lines = ["<!-- oakland-visuals:start -->", "## Visuals", "", interactive_map_iframe(page), ""]
     if slug in site_by_slug:
         site = site_by_slug[slug]
         lines += [
             image_line(page, f"site-card-{slug}.svg", f"Visual dossier card for {site.title}"),
             "",
-            image_line(page, "oakland-catholic-price-bubble-map.svg", "Oakland Catholic church price-bubble map"),
+            image_line(page, "oakland-catholic-price-bubble-map.png", "Oakland Catholic church price-bubble map"),
             "",
             image_line(page, "oakland-catholic-site-price-rank.svg", "Oakland Catholic core-site price rank"),
             "",
@@ -579,7 +835,7 @@ def visual_block_for(page: Path, site_by_slug: dict[str, Site]) -> str:
         ]
     elif rel == "entities/diocese-of-oakland.md":
         lines += [
-            image_line(page, "oakland-catholic-price-bubble-map.svg", "Oakland Catholic church price-bubble map"),
+            image_line(page, "oakland-catholic-price-bubble-map.png", "Oakland Catholic church price-bubble map"),
             "",
             image_line(page, "property-sale-signal-ladder.svg", "Property-sale signal ladder"),
             "",
@@ -591,7 +847,7 @@ def visual_block_for(page: Path, site_by_slug: dict[str, Site]) -> str:
         lines += [
             image_line(page, "valuation-method-flow.svg", "Valuation method flow"),
             "",
-            image_line(page, "oakland-catholic-price-bubble-map.svg", "Oakland Catholic church price-bubble map"),
+            image_line(page, "oakland-catholic-price-bubble-map.png", "Oakland Catholic church price-bubble map"),
             "",
             image_line(page, "oakland-catholic-site-price-rank.svg", "Oakland Catholic core-site price rank"),
         ]
@@ -599,7 +855,7 @@ def visual_block_for(page: Path, site_by_slug: dict[str, Site]) -> str:
         lines += [
             image_line(page, "property-sale-signal-ladder.svg", "Property-sale signal ladder"),
             "",
-            image_line(page, "oakland-catholic-price-bubble-map.svg", "Oakland Catholic church price-bubble map"),
+            image_line(page, "oakland-catholic-price-bubble-map.png", "Oakland Catholic church price-bubble map"),
             "",
             image_line(page, "oakland-catholic-site-price-rank.svg", "Oakland Catholic core-site price rank"),
         ]
@@ -609,13 +865,13 @@ def visual_block_for(page: Path, site_by_slug: dict[str, Site]) -> str:
             "",
             image_line(page, "oakland-catholic-project-visual-index.svg", "Oakland Catholic project visual index"),
             "",
-            image_line(page, "oakland-catholic-price-bubble-map.svg", "Oakland Catholic church price-bubble map"),
+            image_line(page, "oakland-catholic-price-bubble-map.png", "Oakland Catholic church price-bubble map"),
         ]
     elif rel.startswith("raw/articles/"):
         lines += [
             image_line(page, "source-basis-visual-wrapper.svg", "Raw source note visual wrapper"),
             "",
-            image_line(page, "oakland-catholic-price-bubble-map.svg", "Oakland Catholic church price-bubble map"),
+            image_line(page, "oakland-catholic-price-bubble-map.png", "Oakland Catholic church price-bubble map"),
             "",
             image_line(page, "oakland-catholic-site-price-rank.svg", "Oakland Catholic core-site price rank"),
             "",
@@ -623,7 +879,7 @@ def visual_block_for(page: Path, site_by_slug: dict[str, Site]) -> str:
         ]
     elif rel.startswith("comparisons/"):
         lines += [
-            image_line(page, "oakland-catholic-price-bubble-map.svg", "Oakland Catholic church price-bubble map"),
+            image_line(page, "oakland-catholic-price-bubble-map.png", "Oakland Catholic church price-bubble map"),
             "",
             image_line(page, "oakland-catholic-site-price-rank.svg", "Oakland Catholic core-site price rank"),
             "",
@@ -631,7 +887,7 @@ def visual_block_for(page: Path, site_by_slug: dict[str, Site]) -> str:
         ]
     else:
         lines += [
-            image_line(page, "oakland-catholic-price-bubble-map.svg", "Oakland Catholic church price-bubble map"),
+            image_line(page, "oakland-catholic-price-bubble-map.png", "Oakland Catholic church price-bubble map"),
             "",
             image_line(page, "oakland-catholic-project-visual-index.svg", "Oakland Catholic project visual index"),
             "",
@@ -699,7 +955,14 @@ def append_log() -> None:
 """.strip()
     if "visual coverage and price-bubble map" not in text:
         text = text.rstrip() + "\n\n" + entry + "\n"
-        write(path, text)
+    tile_entry = f"""
+## [{TODAY}] update | real basemap price-bubble map
+- Replaced the schematic Oakland price map with a real OpenStreetMap/CARTO tile-backed PNG and an embedded Leaflet interactive map on every Oakland project page.
+- The map still uses the current dossier `agent estimate` midpoint for bubble area; it remains a navigational screen, not an appraisal or asking-price claim.
+""".strip()
+    if "real basemap price-bubble map" not in text:
+        text = text.rstrip() + "\n\n" + tile_entry + "\n"
+    write(path, text)
 
 
 def write_site_data(sites: list[Site]) -> None:
@@ -726,16 +989,20 @@ def verify(sites: list[Site]) -> None:
     missing = []
     too_few = []
     broken = []
+    missing_interactive = []
     for page in sorted(ROOT.rglob("*.md")):
         if ".quartz-site" in page.parts:
             continue
         text = read(page)
         image_links = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", text)
+        iframe_links = re.findall(r"<iframe\b[^>]*\bsrc=\"([^\"]+)\"", text)
         if not image_links:
             missing.append(page.relative_to(ROOT).as_posix())
         if len(image_links) < 3:
             too_few.append(f"{page.relative_to(ROOT).as_posix()} ({len(image_links)})")
-        for link in image_links:
+        if not any("oakland-catholic-price-bubble-map.htm" in link for link in iframe_links):
+            missing_interactive.append(page.relative_to(ROOT).as_posix())
+        for link in image_links + iframe_links:
             if re.match(r"^[a-z]+://", link):
                 continue
             if link.startswith(f"{ROOT.name}/"):
@@ -748,8 +1015,10 @@ def verify(sites: list[Site]) -> None:
         raise SystemExit("Pages still lacking images: " + ", ".join(missing))
     if too_few:
         raise SystemExit("Pages with fewer than three images: " + ", ".join(too_few))
+    if missing_interactive:
+        raise SystemExit("Pages lacking interactive map iframe: " + ", ".join(missing_interactive))
     if broken:
-        raise SystemExit("Broken local image links: " + ", ".join(broken))
+        raise SystemExit("Broken local image/embed links: " + ", ".join(broken))
     # XML sanity: parse all generated SVGs with stdlib.
     import xml.etree.ElementTree as ET
     for svg in sorted(ASSETS.glob("*.svg")):
@@ -759,8 +1028,10 @@ def verify(sites: list[Site]) -> None:
         "site_count": len(sites),
         "markdown_pages_with_images": sum(1 for p in ROOT.rglob("*.md") if "![" in read(p)),
         "minimum_images_per_markdown_page": 3,
+        "interactive_iframe_required": True,
         "svg_assets": len(list(ASSETS.glob("*.svg"))),
-        "map": str((ASSETS / "oakland-catholic-price-bubble-map.svg").relative_to(ROOT)),
+        "static_tile_map": str((ASSETS / "oakland-catholic-price-bubble-map.png").relative_to(ROOT)),
+        "interactive_map": str((MAP_ASSETS / "oakland-catholic-price-bubble-map.htm").relative_to(ROOT)),
     }, indent=2))
 
 

@@ -12,15 +12,24 @@ sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/arti
 <!-- oakland-visuals:start -->
 ## Visuals
 
+<iframe title="Interactive Oakland Catholic price-bubble map" src="east-bay-catholic-property-monitor/assets/maps/oakland-catholic-price-bubble-map.htm" loading="lazy" width="100%" height="680" style="border:1px solid #cbd5e1;border-radius:18px;max-width:100%;background:#e2e8f0;"></iframe>
+
 ![Visual dossier card for St. Elizabeth Parish, Oakland](east-bay-catholic-property-monitor/assets/visuals/site-card-saint-elizabeth-oakland.svg)
 
-![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.png)
 
 ![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
 
 > Visuals are navigation aids generated from dossier fields and OpenStreetMap/Nominatim coordinates; price labels remain `agent estimate` unless the text says otherwise.
 
 <!-- oakland-visuals:end -->
+
+
+
+
+
+
+
 
 
 

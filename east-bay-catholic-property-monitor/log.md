@@ -3,13 +3,22 @@
 <!-- oakland-visuals:start -->
 ## Visuals
 
-![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+<iframe title="Interactive Oakland Catholic price-bubble map" src="east-bay-catholic-property-monitor/assets/maps/oakland-catholic-price-bubble-map.htm" loading="lazy" width="100%" height="680" style="border:1px solid #cbd5e1;border-radius:18px;max-width:100%;background:#e2e8f0;"></iframe>
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.png)
 
 ![Oakland Catholic project visual index](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-project-visual-index.svg)
 
 ![Oakland Catholic core-site price rank](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-site-price-rank.svg)
 
 <!-- oakland-visuals:end -->
+
+
+
+
+
+
+
 
 
 
@@ -55,3 +64,7 @@
 ## [2026-05-14] update | section landing pages with visuals
 - Added visual section landing pages for [[entities/index|entities]], [[concepts/index|concepts]], [[comparisons/index|comparisons]], [[queries/index|queries]], [[raw/index|raw evidence]], and [[raw/articles/index|raw articles]] so folder routes are no longer blank auto-indexes.
 - Updated [[index|index.md]] to distinguish 24 curated content pages from 36 authored Markdown pages.
+
+## [2026-05-14] update | real basemap price-bubble map
+- Replaced the schematic Oakland price map with a real OpenStreetMap/CARTO tile-backed PNG and an embedded Leaflet interactive map on every Oakland project page.
+- The map still uses the current dossier `agent estimate` midpoint for bubble area; it remains a navigational screen, not an appraisal or asking-price claim.

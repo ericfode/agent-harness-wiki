@@ -12,7 +12,9 @@ sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/arti
 <!-- oakland-visuals:start -->
 ## Visuals
 
-![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.svg)
+<iframe title="Interactive Oakland Catholic price-bubble map" src="east-bay-catholic-property-monitor/assets/maps/oakland-catholic-price-bubble-map.htm" loading="lazy" width="100%" height="680" style="border:1px solid #cbd5e1;border-radius:18px;max-width:100%;background:#e2e8f0;"></iframe>
+
+![Oakland Catholic church price-bubble map](east-bay-catholic-property-monitor/assets/visuals/oakland-catholic-price-bubble-map.png)
 
 ![Property-sale signal ladder](east-bay-catholic-property-monitor/assets/visuals/property-sale-signal-ladder.svg)
 
@@ -21,6 +23,13 @@ sources: [raw/articles/baseline-oakland-diocese-closures-2026-05-13.md, raw/arti
 > Diocese-level visuals summarize the monitored Oakland site set; they are not appraisals or sale confirmations.
 
 <!-- oakland-visuals:end -->
+
+
+
+
+
+
+
 
 
 

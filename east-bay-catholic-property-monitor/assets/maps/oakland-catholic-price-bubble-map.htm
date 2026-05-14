@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oakland Catholic price-bubble map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ6xO4O3mddPfM/sB9MQZWZsS9j6F9w=" crossorigin="" />
+  <style>
+    .leaflet-container { overflow: hidden; position: relative; outline-offset: 1px; }
+    .leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container, .leaflet-pane > svg, .leaflet-pane > canvas, .leaflet-zoom-box, .leaflet-image-layer, .leaflet-layer { position: absolute; left: 0; top: 0; }
+    .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow { user-select: none; -webkit-user-drag: none; }
+    .leaflet-container img.leaflet-tile { max-width: none !important; max-height: none !important; }
+    .leaflet-zoom-animated { transform-origin: 0 0; }
+    .leaflet-interactive { cursor: pointer; }
+    .leaflet-control-container .leaflet-top, .leaflet-control-container .leaflet-bottom { position: absolute; z-index: 1000; pointer-events: none; }
+    .leaflet-top { top: 0; } .leaflet-right { right: 0; } .leaflet-bottom { bottom: 0; } .leaflet-left { left: 0; }
+    .leaflet-control { position: relative; z-index: 800; pointer-events: auto; float: left; clear: both; }
+    .leaflet-right .leaflet-control { float: right; }
+    .leaflet-top .leaflet-control { margin-top: 10px; } .leaflet-bottom .leaflet-control { margin-bottom: 10px; }
+    .leaflet-left .leaflet-control { margin-left: 10px; } .leaflet-right .leaflet-control { margin-right: 10px; }
+    .leaflet-bar a { display:block; width:26px; height:26px; line-height:26px; text-align:center; text-decoration:none; background:white; color:#0f172a; border-bottom:1px solid #cbd5e1; }
+    .leaflet-bar a:first-child { border-top-left-radius:4px; border-top-right-radius:4px; } .leaflet-bar a:last-child { border-bottom-left-radius:4px; border-bottom-right-radius:4px; border-bottom:0; }
+    .leaflet-control-attribution { background:rgba(255,255,255,.82); color:#334155; font-size:11px; padding:2px 6px; }
+    .leaflet-popup-pane { z-index: 700; } .leaflet-marker-pane { z-index: 600; } .leaflet-overlay-pane { z-index: 400; } .leaflet-tile-pane { z-index: 200; }
+    html, body, #map { margin: 0; width: 100%; height: 100%; min-height: 640px; background: #e2e8f0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .title-card { position:absolute; z-index:500; top:18px; left:18px; max-width:640px; background:rgba(255,255,255,.94); border:1px solid #cbd5e1; border-radius:18px; padding:14px 18px; box-shadow:0 12px 30px rgba(15,23,42,.18); }
+    .title-card h1 { margin:0 0 4px; font:700 24px Georgia,serif; color:#0f172a; }
+    .title-card p { margin:0; color:#334155; font-size:14px; line-height:1.35; }
+    .legend { position:absolute; z-index:500; top:18px; right:18px; width:330px; max-height:calc(100% - 72px); overflow:auto; background:rgba(255,255,255,.94); border:1px solid #cbd5e1; border-radius:18px; padding:14px 16px; box-shadow:0 12px 30px rgba(15,23,42,.18); }
+    .legend h2 { margin:0 0 10px; font-size:17px; color:#0f172a; }
+    .site-row { display:grid; grid-template-columns:22px 1fr; gap:9px; padding:7px 0; border-top:1px solid #e2e8f0; }
+    .dot { width:16px; height:16px; margin-top:3px; border-radius:999px; border:2px solid #0f172a; }
+    .site-name { color:#0f172a; font-weight:700; font-size:13px; }
+    .site-meta { color:#475569; font-size:12px; line-height:1.3; }
+    .rank-label { background:#0f172a; color:white; border-radius:999px; border:2px solid white; box-shadow:0 2px 8px rgba(15,23,42,.35); font-weight:800; font-size:12px; text-align:center; line-height:22px; width:22px; height:22px; }
+    .leaflet-popup-content { min-width:240px; }
+    .popup-title { font-weight:800; color:#0f172a; margin-bottom:4px; }
+    .popup-meta { color:#334155; line-height:1.35; }
+    .popup-meta a { color:#2563eb; }
+    @media (max-width: 900px) { .legend { left:12px; right:12px; bottom:12px; top:auto; width:auto; max-height:170px; border-radius:14px; padding:10px 12px; } .title-card { top:12px; left:12px; right:12px; max-width:none; border-radius:14px; padding:10px 12px; } .title-card h1 { font-size:18px; } .title-card p { font-size:12px; } html, body, #map { min-height:680px; } .site-row { padding:4px 0; } }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <section class="title-card">
+    <h1>Oakland Catholic price-bubble map</h1>
+    <p>Leaflet/CARTO/OpenStreetMap basemap. Bubbles scale by midpoint of the current core <code>agent estimate</code>; no bubble is an asking price, appraisal, or sale confirmation.</p>
+  </section>
+  <aside class="legend" id="legend"><h2>Ranked by midpoint</h2></aside>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const data = {"updated": "2026-05-14", "maxMidpoint": 6150000.0, "sites": [{"slug": "cathedral-parish-of-christ-the-light", "title": "Cathedral Parish of Christ the Light", "address": "2121 Harrison Street, Oakland", "status": "active / not on 2026 closure list; CCCEB settlement/ownership-transfer signal", "riskClass": "estate-structure watch", "estimate": "$3.8M–$8.5M (mid $5.8M)", "midpoint": 6150000.0, "midpointLabel": "$6.2M", "lat": 37.8101697, "lon": -122.2632615, "color": "#2563eb"}, {"slug": "saint-paschal-baylon-oakland", "title": "St. Paschal Baylon Campus, Oakland", "address": "3700 Dorisa Avenue, Oakland", "status": "closure announced; pastor-level sale signal; court-listed potential whole-site disposition/collateralization", "riskClass": "closure/court watch", "estimate": "$2M–$4.6M (mid $3.1M)", "midpoint": 3300000.0, "midpointLabel": "$3.3M", "lat": 37.75752, "lon": -122.1457004, "color": "#c2410c"}, {"slug": "saint-theresa-oakland", "title": "St. Theresa Parish, Oakland", "address": "30 Mandalay Road, Oakland", "status": "active / not on 2026 closure list", "riskClass": "active/low", "estimate": "$1.3M–$3.1M (mid $2.1M)", "midpoint": 2200000.0, "midpointLabel": "$2.2M", "lat": 37.8379823, "lon": -122.231635, "color": "#0f766e"}, {"slug": "saint-leo-the-great-oakland", "title": "St. Leo the Great, Oakland", "address": "4238 Howe Street, Oakland", "status": "active / not on 2026 closure list; parish-house parcel court-listed", "riskClass": "watch", "estimate": "$1.2M–$2.7M (mid $1.8M)", "midpoint": 1950000.0, "midpointLabel": "$1.9M", "lat": 37.8287077, "lon": -122.2506539, "color": "#d97706"}, {"slug": "saint-louis-bertrand-oakland", "title": "St. Louis Bertrand Parish, Oakland", "address": "1410 100th Avenue, Oakland", "status": "active / not on 2026 closure list", "riskClass": "active/low", "estimate": "$1M–$2.4M (mid $1.6M)", "midpoint": 1700000.0, "midpointLabel": "$1.7M", "lat": 37.7427641, "lon": -122.168916, "color": "#0f766e"}, {"slug": "divine-mercy-parish-st-lawrence-otoole", "title": "Divine Mercy Parish / St. Lawrence O’Toole", "address": "3725 High Street, Oakland", "status": "active receiving/cluster parish; not itself on closure list", "riskClass": "active/low", "estimate": "$1M–$2.3M (mid $1.6M)", "midpoint": 1650000.0, "midpointLabel": "$1.6M", "lat": 37.7890628, "lon": -122.1925668, "color": "#0f766e"}, {"slug": "sacred-heart-oakland", "title": "Sacred Heart Parish, Oakland", "address": "4025 Martin Luther King Jr. Way, Oakland", "status": "closure announced; court-listed potential whole-site disposition/collateralization", "riskClass": "closure/court watch", "estimate": "$831,861–$1.9M (mid $1.3M)", "midpoint": 1365930.5, "midpointLabel": "$1.4M", "lat": 37.8300969, "lon": -122.2687348, "color": "#c2410c"}, {"slug": "saint-elizabeth-oakland", "title": "St. Elizabeth Parish, Oakland", "address": "1500 34th Avenue, Oakland", "status": "active / not on 2026 closure list", "riskClass": "active/low", "estimate": "$820,752–$1.9M (mid $1.3M)", "midpoint": 1360376.0, "midpointLabel": "$1.4M", "lat": 37.778126, "lon": -122.2224948, "color": "#0f766e"}, {"slug": "our-lady-of-lourdes-oakland", "title": "Our Lady of Lourdes Parish, Oakland", "address": "2808 Lakeshore Avenue, Oakland", "status": "closure announced; court-listed potential debtor-owned parcel disposition/collateralization", "riskClass": "closure/court watch", "estimate": "$775,960–$1.8M (mid $1.2M)", "midpoint": 1287980.0, "midpointLabel": "$1.3M", "lat": 37.807986, "lon": -122.2489927, "color": "#c2410c"}, {"slug": "saint-columba-oakland", "title": "St. Columba Parish, Oakland", "address": "6401 San Pablo Avenue, Oakland", "status": "active / not on 2026 closure list", "riskClass": "active/low", "estimate": "$766,227–$1.7M (mid $1.2M)", "midpoint": 1233113.5, "midpointLabel": "$1.2M", "lat": 37.8466409, "lon": -122.2855627, "color": "#0f766e"}, {"slug": "saint-jarlath-oakland", "title": "St. Jarlath Parish, Oakland", "address": "2620 Pleasant Street, Oakland", "status": "active / not on 2026 closure list", "riskClass": "active/low", "estimate": "$577,013–$1.3M (mid $891,747)", "midpoint": 938506.5, "midpointLabel": "$939k", "lat": 37.7973614, "lon": -122.2168803, "color": "#0f766e"}, {"slug": "saint-patrick-oakland", "title": "St. Patrick Catholic Church, Oakland", "address": "1023 Peralta Street, Oakland", "status": "closure announced; court-listed potential whole-site disposition/collateralization", "riskClass": "closure/court watch", "estimate": "$438,838–$997,359 (mid $678,204)", "midpoint": 718098.5, "midpointLabel": "$718k", "lat": 37.8088992, "lon": -122.2962385, "color": "#c2410c"}, {"slug": "saint-andrew-kim-korean-pastoral-center-oakland", "title": "St. Andrew Kim Korean Pastoral Center, Oakland", "address": "6226 Camden Street, Oakland", "status": "closure announced; court-listed potential whole-site disposition/collateralization", "riskClass": "closure/court watch", "estimate": "$380,522–$864,822 (mid $588,079)", "midpoint": 622672.0, "midpointLabel": "$623k", "lat": 37.773581, "lon": -122.1824243, "color": "#c2410c"}, {"slug": "saint-bernard-oakland", "title": "St. Bernard Parish, Oakland", "address": "1620 62nd Avenue, Oakland", "status": "active / not on 2026 closure list", "riskClass": "active/low", "estimate": "$318,983–$724,962 (mid $492,974)", "midpoint": 521972.5, "midpointLabel": "$522k", "lat": 37.7646243, "lon": -122.1961312, "color": "#0f766e"}, {"slug": "mary-help-of-christians-oakland", "title": "Mary Help of Christians, Oakland", "address": "2611 E 9th Street, Oakland", "status": "closure announced; court-listed potential whole-site disposition/collateralization", "riskClass": "closure/court watch", "estimate": "$286,100–$650,228 (mid $442,155)", "midpoint": 468164.0, "midpointLabel": "$468k", "lat": 37.7776392, "lon": -122.2359848, "color": "#c2410c"}, {"slug": "saint-augustine-oakland", "title": "St. Augustine Parish, Oakland", "address": "400 Alcatraz Avenue, Oakland", "status": "closure announced; court-listed potential whole-site disposition/collateralization", "riskClass": "closure/court watch", "estimate": "$267,263–$607,415 (mid $413,042)", "midpoint": 437339.0, "midpointLabel": "$437k", "lat": 37.850945, "lon": -122.2576429, "color": "#c2410c"}, {"slug": "saint-anthony-mary-help-parish-office", "title": "St. Anthony – Mary Help of Christians Parish Office / St. Anthony site", "address": "1535 16th Avenue, Oakland", "status": "active parish office / not separately named for closure", "riskClass": "active/low", "estimate": "$227,631–$517,343 (mid $351,793)", "midpoint": 372487.0, "midpointLabel": "$372k", "lat": 37.7898989, "lon": -122.2432697, "color": "#0f766e"}, {"slug": "saint-benedict-oakland", "title": "St. Benedict Parish, Oakland", "address": "2245 82nd Avenue, Oakland", "status": "active / not on 2026 closure list", "riskClass": "active/low", "estimate": "$211,865–$481,511 (mid $327,428)", "midpoint": 346688.0, "midpointLabel": "$347k", "lat": 37.7605655, "lon": -122.1701156, "color": "#0f766e"}, {"slug": "saint-margaret-mary-oakland", "title": "St. Margaret Mary Parish, Oakland", "address": "1219 Excelsior Avenue, Oakland", "status": "active / not on 2026 closure list", "riskClass": "active/low", "estimate": "$110,162–$250,369 (mid $170,251)", "midpoint": 180265.5, "midpointLabel": "$180k", "lat": 37.804029, "lon": -122.2314221, "color": "#0f766e"}]};
+    const map = L.map('map', { scrollWheelZoom: false, preferCanvas: true });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+    const bounds = [];
+    const legend = document.getElementById('legend');
+    const radiusFor = midpoint => 7 + Math.sqrt(midpoint / data.maxMidpoint) * 26;
+    data.sites.forEach((site, index) => {
+      const latlng = [site.lat, site.lon];
+      bounds.push(latlng);
+      const marker = L.circleMarker(latlng, {
+        radius: radiusFor(site.midpoint),
+        color: '#0f172a', weight: 2,
+        fillColor: site.color, fillOpacity: .62
+      }).addTo(map);
+      marker.bindPopup(`<div class="popup-title">${index+1}. ${site.title}</div><div class="popup-meta">${site.address}<br><strong>${site.estimate}</strong><br>${site.riskClass}<br><a target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=${site.lat},${site.lon}">Open in Google Maps</a></div>`);
+      L.marker(latlng, {
+        interactive: false,
+        icon: L.divIcon({ className: 'rank-label', html: String(index+1), iconSize: [22,22], iconAnchor: [11,11] })
+      }).addTo(map);
+      const row = document.createElement('div');
+      row.className = 'site-row';
+      row.innerHTML = `<span class="dot" style="background:${site.color}"></span><div><div class="site-name">${index+1}. ${site.title}</div><div class="site-meta">mid ${site.midpointLabel} · ${site.riskClass}</div></div>`;
+      row.addEventListener('mouseenter', () => marker.openPopup());
+      legend.appendChild(row);
+    });
+    const fitOptions = window.innerWidth < 900
+      ? { paddingTopLeft: [28, 112], paddingBottomRight: [28, 178], maxZoom: 13 }
+      : { paddingTopLeft: [44, 96], paddingBottomRight: [390, 44], maxZoom: 13 };
+    map.fitBounds(bounds, fitOptions);
+  </script>
+</body>
+</html>
