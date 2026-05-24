@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Symbolic editorial illustration for the 2026-05-24 nightly source-projects desk</title>
+  <desc id="desc">Ten survey lanes feed into a public-safety filter, then into symbolic clusters for JEPA/world-model research, verifier work, model runtime, formal/spec provenance, terminal craft, simulation, and privacy-sensitive interface research. This is editorial art, not a screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121826"/>
+      <stop offset="0.52" stop-color="#162133"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6d365"/>
+      <stop offset="1" stop-color="#fda085"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c084fc"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .lane{fill:none;stroke:#334155;stroke-width:8;stroke-linecap:round;opacity:.86}.lane.hot{stroke:#38bdf8}.lane.warm{stroke:#fbbf24}.lane.violet{stroke:#a78bfa}.thin{stroke-width:3}.ink{fill:#dbeafe}.muted{fill:#94a3b8}.panel{fill:#111827;stroke:#334155;stroke-width:3}.safe{fill:#0f172a;stroke:#f59e0b;stroke-width:5}.node{fill:#1e293b;stroke:#64748b;stroke-width:3}.label{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:28px;font-weight:700;letter-spacing:.03em}.small{font-size:18px;font-weight:600;letter-spacing:.08em}.micro{font-size:14px;font-weight:700;letter-spacing:.09em}.noTextMark{font-family:ui-sans-serif,system-ui,sans-serif}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="120" r="220" fill="#1d2740" opacity=".35"/>
+  <circle cx="260" cy="780" r="260" fill="#172554" opacity=".28"/>
+
+  <!-- ten source lanes -->
+  <g opacity=".92">
+    <path class="lane hot" d="M80 135 C250 135 330 210 505 246"/>
+    <path class="lane" d="M80 200 C260 200 345 235 505 270"/>
+    <path class="lane warm" d="M80 265 C260 265 350 270 505 294"/>
+    <path class="lane violet" d="M80 330 C270 330 360 305 505 318"/>
+    <path class="lane" d="M80 395 C270 395 365 350 505 342"/>
+    <path class="lane hot" d="M80 460 C270 460 365 395 505 366"/>
+    <path class="lane" d="M80 525 C270 525 365 440 505 390"/>
+    <path class="lane warm" d="M80 590 C265 590 355 480 505 414"/>
+    <path class="lane violet" d="M80 655 C250 655 340 515 505 438"/>
+    <path class="lane" d="M80 720 C235 720 325 555 505 462"/>
+    <g class="muted noTextMark">
+      <text x="78" y="92" class="small" fill="#94a3b8">10 SURVEY LANES</text>
+      <circle cx="80" cy="135" r="12" fill="#38bdf8"/><circle cx="80" cy="200" r="12" fill="#475569"/><circle cx="80" cy="265" r="12" fill="#f59e0b"/>
+      <circle cx="80" cy="330" r="12" fill="#a78bfa"/><circle cx="80" cy="395" r="12" fill="#475569"/><circle cx="80" cy="460" r="12" fill="#38bdf8"/>
+      <circle cx="80" cy="525" r="12" fill="#475569"/><circle cx="80" cy="590" r="12" fill="#f59e0b"/><circle cx="80" cy="655" r="12" fill="#a78bfa"/><circle cx="80" cy="720" r="12" fill="#475569"/>
+    </g>
+  </g>
+
+  <!-- safety filter -->
+  <g filter="url(#glow)">
+    <path d="M520 205 L755 205 L690 465 L585 465 Z" class="safe"/>
+    <path d="M560 250 L715 250 L670 420 L610 420 Z" fill="#1e293b" stroke="#fde68a" stroke-width="3" opacity=".88"/>
+    <circle cx="638" cy="332" r="47" fill="none" stroke="#fbbf24" stroke-width="7"/>
+    <path d="M638 287 L638 340 L675 365" fill="none" stroke="#fbbf24" stroke-width="7" stroke-linecap="round"/>
+    <text x="533" y="512" class="small" fill="#fef3c7">PUBLIC-SAFETY FILTER</text>
+  </g>
+
+  <!-- outgoing clusters -->
+  <path class="lane hot thin" d="M735 280 C845 180 970 145 1120 145"/>
+  <path class="lane violet thin" d="M735 330 C875 300 995 300 1130 300"/>
+  <path class="lane warm thin" d="M715 380 C870 440 1015 475 1185 470"/>
+  <path class="lane thin" d="M690 430 C830 600 960 680 1120 705"/>
+
+  <!-- cluster panels -->
+  <g>
+    <rect x="1085" y="85" rx="28" ry="28" width="400" height="165" class="panel"/>
+    <text x="1118" y="130" class="label" fill="#7dd3fc">JEPA / WORLD</text>
+    <g transform="translate(1120 158)">
+      <circle cx="42" cy="36" r="32" fill="none" stroke="#38bdf8" stroke-width="5"/>
+      <circle cx="125" cy="36" r="32" fill="none" stroke="#38bdf8" stroke-width="5"/>
+      <path d="M74 36 L93 36" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+      <rect x="183" y="10" width="52" height="52" rx="8" fill="#1e3a8a" stroke="#93c5fd" stroke-width="4"/>
+      <path d="M263 62 C292 22 325 22 354 62" fill="none" stroke="#93c5fd" stroke-width="5"/>
+    </g>
+    <text x="1118" y="226" class="micro" fill="#94a3b8">LABS · STORY · REPLAY · FALSIFICATION</text>
+  </g>
+
+  <g>
+    <rect x="1110" y="270" rx="28" ry="28" width="360" height="150" class="panel"/>
+    <text x="1140" y="315" class="label" fill="#c4b5fd">FORMAL / SPEC</text>
+    <g transform="translate(1145 338)" fill="none" stroke="#c4b5fd" stroke-width="5" stroke-linecap="round">
+      <path d="M0 55 L46 12 L96 55 L142 12 L188 55"/>
+      <path d="M220 10 L220 68 M200 28 L240 28 M198 50 L242 50"/>
+      <path d="M276 18 L326 18 L326 66 L276 66 Z"/>
+    </g>
+    <text x="1140" y="395" class="micro" fill="#94a3b8">BASIS · LEAN · PROVENANCE</text>
+  </g>
+
+  <g>
+    <rect x="1160" y="445" rx="28" ry="28" width="350" height="150" class="panel"/>
+    <text x="1192" y="490" class="label" fill="#fcd34d">VERIFY / RUNTIME</text>
+    <g transform="translate(1195 508)" fill="none" stroke="#fde68a" stroke-width="5" stroke-linecap="round">
+      <path d="M8 42 L40 74 L100 8"/>
+      <rect x="140" y="8" width="90" height="70" rx="14"/>
+      <path d="M155 28 H215 M155 48 H205"/>
+      <circle cx="275" cy="42" r="31"/>
+      <path d="M254 42 H296 M275 21 V63"/>
+    </g>
+    <text x="1192" y="570" class="micro" fill="#94a3b8">TESTING · GEMMA · TINYGRAD</text>
+  </g>
+
+  <g>
+    <rect x="1075" y="640" rx="28" ry="28" width="410" height="165" class="panel"/>
+    <text x="1110" y="685" class="label" fill="#bae6fd">CRAFT / SIM</text>
+    <g transform="translate(1116 710)" fill="none" stroke="#bae6fd" stroke-width="5" stroke-linecap="round">
+      <rect x="0" y="10" width="112" height="70" rx="10"/>
+      <path d="M18 34 H82 M18 56 H60"/>
+      <path d="M160 75 C185 12 225 12 250 75"/>
+      <circle cx="205" cy="44" r="21"/>
+      <path d="M300 10 C350 18 352 72 306 80 C276 84 262 60 282 40"/>
+    </g>
+    <text x="1110" y="780" class="micro" fill="#94a3b8">TERMINAL · DUNGEON · KETTLEBELL · INTERFACE</text>
+  </g>
+
+  <!-- held-back drawers -->
+  <g opacity=".96">
+    <rect x="515" y="622" width="340" height="170" rx="28" fill="#0b1220" stroke="#475569" stroke-width="3"/>
+    <text x="548" y="668" class="label" fill="#cbd5e1">HELD BACK</text>
+    <g fill="#1f2937" stroke="#64748b" stroke-width="3">
+      <rect x="550" y="700" width="80" height="46" rx="8"/><rect x="650" y="700" width="80" height="46" rx="8"/><rect x="750" y="700" width="80" height="46" rx="8"/>
+    </g>
+    <g fill="#94a3b8"><circle cx="590" cy="723" r="5"/><circle cx="690" cy="723" r="5"/><circle cx="790" cy="723" r="5"/></g>
+    <text x="548" y="772" class="micro" fill="#94a3b8">SECRETS · PROMPTS · RAW RUNS · BIOMETRICS</text>
+  </g>
+
+  <text x="80" y="845" class="small" fill="#64748b">SYMBOLIC EDITORIAL ART — NOT A SCREENSHOT</text>
+</svg>
