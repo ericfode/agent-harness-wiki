@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Symbolic editorial illustration for the 2026-05-29 nightly source-projects desk</title>
+  <desc id="desc">Ten colored survey lanes pass through a translucent safety filter into abstract clusters for orchestration, game prototypes, verifier benches, world-model research, simulation tools, and humane web artifacts. It is symbolic art, not a screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#0b1325"/>
+      <stop offset="1" stop-color="#11142a"/>
+    </linearGradient>
+    <linearGradient id="filter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b6f3e7" stop-opacity="0.18"/>
+      <stop offset="0.5" stop-color="#c8d5ff" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#f6c56e" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .lane { fill: none; stroke-linecap: round; stroke-width: 5; opacity: .9; }
+      .fine { fill: none; stroke-linecap: round; stroke-width: 2.5; opacity: .65; }
+      .node { fill: #9ee8d8; stroke: #e7fff8; stroke-width: 2; }
+      .amber { fill: #f0b35b; stroke: #ffe0a5; stroke-width: 2; }
+      .violet { fill: #8f78c8; stroke: #d6c8ff; stroke-width: 2; }
+      .panel { fill: #101b31; stroke: #35506a; stroke-width: 2; opacity: .96; }
+      .ghost { fill: none; stroke: #dbe8ff; stroke-width: 2; opacity: .38; }
+    </style>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="675" fill="#050914" opacity="0.22"/>
+
+  <!-- ten read-only survey lanes -->
+  <g filter="url(#softGlow)">
+    <path class="lane" stroke="#8ff0df" d="M-30 82 C180 142 355 196 520 286"/>
+    <path class="lane" stroke="#f4b860" d="M-30 137 C186 168 371 219 520 296"/>
+    <path class="lane" stroke="#9b7bd5" d="M-30 196 C190 205 374 239 520 306"/>
+    <path class="lane" stroke="#8ff0df" d="M-30 252 C186 251 378 267 520 316"/>
+    <path class="lane" stroke="#f4b860" d="M-30 311 C176 300 376 292 520 326"/>
+    <path class="lane" stroke="#9b7bd5" d="M-30 366 C181 348 376 327 520 336"/>
+    <path class="lane" stroke="#8ff0df" d="M-30 424 C184 395 370 359 520 346"/>
+    <path class="lane" stroke="#f4b860" d="M-30 482 C180 444 366 394 520 356"/>
+    <path class="lane" stroke="#9b7bd5" d="M-30 538 C174 492 359 430 520 366"/>
+    <path class="lane" stroke="#8ff0df" d="M-30 595 C166 540 351 468 520 376"/>
+  </g>
+
+  <!-- public-safety prism/filter -->
+  <path d="M500 198 L625 250 L625 425 L500 477 Z" fill="url(#filter)" stroke="#d8fff6" stroke-width="2" opacity="0.92"/>
+  <path d="M525 220 L594 260 L594 415 L525 455 Z" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2"/>
+  <path d="M520 337 L720 160" class="fine" stroke="#8ff0df"/>
+  <path d="M520 337 L742 250" class="fine" stroke="#f4b860"/>
+  <path d="M520 337 L760 330" class="fine" stroke="#9b7bd5"/>
+  <path d="M520 337 L742 430" class="fine" stroke="#8ff0df"/>
+  <path d="M520 337 L720 520" class="fine" stroke="#f4b860"/>
+
+  <!-- abstract clusters, deliberately unlabeled -->
+  <g transform="translate(735 85)">
+    <rect class="panel" x="0" y="0" width="145" height="115" rx="20"/>
+    <circle class="node" cx="42" cy="38" r="18"/>
+    <circle class="amber" cx="96" cy="38" r="14"/>
+    <circle class="violet" cx="68" cy="78" r="16"/>
+    <path class="ghost" d="M42 38 L96 38 L68 78 Z"/>
+    <path class="ghost" d="M25 93 H120"/>
+  </g>
+  <g transform="translate(930 80)">
+    <rect class="panel" x="0" y="0" width="132" height="132" rx="18"/>
+    <rect class="amber" x="24" y="28" width="33" height="46" rx="6" transform="rotate(-7 40 51)"/>
+    <rect class="violet" x="53" y="24" width="33" height="50" rx="6" transform="rotate(5 70 49)"/>
+    <path class="ghost" d="M30 98 C54 77 78 77 103 98"/>
+    <path class="ghost" d="M68 72 V100"/>
+  </g>
+  <g transform="translate(735 270)">
+    <rect class="panel" x="0" y="0" width="148" height="122" rx="18"/>
+    <rect class="amber" x="24" y="28" width="34" height="34" rx="6"/>
+    <path d="M31 45 l11 10 l20 -27" fill="none" stroke="#fff2cf" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect class="node" x="82" y="28" width="34" height="34" rx="6"/>
+    <path d="M89 45 l11 10 l20 -27" fill="none" stroke="#eafffb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="ghost" d="M28 86 H120 M28 99 H92"/>
+  </g>
+  <g transform="translate(930 270)">
+    <rect class="panel" x="0" y="0" width="150" height="122" rx="18"/>
+    <circle class="node" cx="36" cy="36" r="9"/><circle class="node" cx="76" cy="32" r="9"/><circle class="amber" cx="111" cy="52" r="9"/>
+    <circle class="violet" cx="52" cy="84" r="9"/><circle class="node" cx="96" cy="88" r="9"/>
+    <path class="ghost" d="M36 36 L76 32 L111 52 L96 88 L52 84 Z M36 36 L52 84 M76 32 L96 88 M52 84 L111 52"/>
+  </g>
+  <g transform="translate(735 470)">
+    <rect class="panel" x="0" y="0" width="148" height="120" rx="18"/>
+    <path d="M24 78 C46 20 82 105 124 44" fill="none" stroke="#f4b860" stroke-width="5" stroke-linecap="round"/>
+    <circle class="node" cx="24" cy="78" r="7"/><circle class="amber" cx="124" cy="44" r="7"/>
+    <path class="ghost" d="M31 97 H116 M31 99 C55 88 82 91 116 99"/>
+  </g>
+  <g transform="translate(930 470)">
+    <rect class="panel" x="0" y="0" width="132" height="120" rx="18"/>
+    <circle cx="53" cy="52" r="32" fill="#172743" stroke="#9ee8d8" stroke-width="3"/>
+    <path d="M53 22 L64 53 L53 82 L42 53 Z" fill="#f0b35b" stroke="#ffe0a5" stroke-width="2"/>
+    <circle cx="53" cy="52" r="5" fill="#e7fff8"/>
+    <path class="ghost" d="M88 29 q18 24 0 48"/>
+  </g>
+
+  <rect x="38" y="38" width="1124" height="599" rx="34" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+</svg>
