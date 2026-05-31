@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-05-29 | Total pages: 177
+> Last updated: 2026-05-31 | Total pages: 178
 
 ## Start Here
 
@@ -12,12 +12,13 @@
 - [[queries/project-list|Project List]] — active public-safe project lines grouped by theme.
 - [[queries/project-update-log|Project Update Log]] — chronological nightly source-project update archive.
 - [[basis-project-index]] — dedicated Basis project corner.
-- [[queries/nightly-src-projects-desk-2026-05-29|Latest nightly desk]] — current source-project survey.
+- [[queries/nightly-src-projects-desk-2026-05-31|Latest nightly desk]] — current source-project survey.
 
 ## News
 
 - [[queries/project-update-log|Project Update Log]] — chronological archive of nightly public-safe project updates.
-- [[queries/nightly-src-projects-desk-2026-05-29|Latest nightly source-project desk]] — current source-tree survey led by Gas City orchestration, Dungeon Steward and Gemma Dungeon, testing-RL, kettlebell simulation validation, JEPA/NNPL research benches, and safety-filtered side rooms.
+- [[queries/nightly-src-projects-desk-2026-05-31|Latest nightly source-project desk]] — current source-tree survey led by Gemma Dungeon, Dungeon Steward, verifier benches, kettlebell simulation validation, Basis/formal side rooms, JEPA/NNPL/tinygrad research benches, and safety-filtered omissions.
+- [[queries/nightly-src-projects-desk-2026-05-29|2026-05-29 nightly source-project desk]] — Gas City orchestration, Dungeon Steward and Gemma Dungeon, testing-RL, kettlebell simulation validation, JEPA/NNPL research benches, and safety-filtered side rooms.
 - [[queries/nightly-src-projects-desk-2026-05-27|2026-05-27 nightly source-project desk]] — Gemma Dungeon, JEPA language/poker benches, testing-RL, a parenting compass artifact, orchestration/control-plane work, and safety-filtered side rooms.
 - [[queries/nightly-src-projects-desk-2026-05-24|2026-05-24 nightly source-project desk]] — source-tree survey led by unconventional JEPA/world-model labs, Story JEPA, typed replay/audit IR work, verifier/runtime benches, and formal/spec side rooms.
 - [[queries/nightly-src-projects-desk-2026-05-16|2026-05-16 nightly source-project desk]] — JEPA poker, symbolic game-state work, verifier benches, model-runtime work, formal/spec side rooms, and craft/simulation rooms.
@@ -135,6 +136,7 @@
 
 - [[queries/project-list|Project List]] — Curated public-safe list of active project lines grouped by Basis/spec-code, verifier environments, harness control planes, moldable operations, and neural-native research.
 - [[queries/project-update-log|Project Update Log]] — Chronological archive of public-safe nightly source-project update logs.
+- [[queries/nightly-src-projects-desk-2026-05-31|nightly-src-projects-desk-2026-05-31]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by Gemma Dungeon, Dungeon Steward, testing-RL/testing-RL-Hermes, kettlebell simulation validation, Basis/formal/provenance side rooms, JEPA/NNPL/tinygrad research benches, and clean side notes under a strict safety filter.
 - [[queries/nightly-src-projects-desk-2026-05-29|nightly-src-projects-desk-2026-05-29]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by Gas City orchestration, Dungeon Steward and Gemma Dungeon, testing-RL, kettlebell simulation validation, JEPA/NNPL research benches, parenting compass, handterm, and side rooms under a strict safety filter.
 - [[queries/nightly-src-projects-desk-2026-05-27|nightly-src-projects-desk-2026-05-27]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by Gemma Dungeon, JEPA language/poker benches, testing-RL, DeerFlow/OpenAI Symphony orchestration, parenting compass, handterm, and side rooms under a strict safety filter.
 - [[queries/nightly-src-projects-desk-2026-05-24|nightly-src-projects-desk-2026-05-24]] — Nightly local-projects desk summarizing safe publishable movement across the local src tree, led by unconventional JEPA/world-model labs, Story JEPA, typed replay/audit IR work, testing-RL, tinygrad-Gemma, Gemma Dungeon, Basis/Hermes spec tooling, and craft/simulation side rooms under a strict safety filter.

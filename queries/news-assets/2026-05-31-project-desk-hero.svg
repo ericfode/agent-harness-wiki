@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Symbolic editorial art for the 2026-05-31 nightly source-projects desk</title>
+  <desc id="desc">Ten survey lanes enter a safety prism and resolve into symbolic clusters for game prototypes, verifier benches, tinygrad and Gemma experiments, JEPA world-model research, simulation, formal proof, and orchestration tooling.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#080b12"/>
+      <stop offset="0.55" stop-color="#101623"/>
+      <stop offset="1" stop-color="#071016"/>
+    </linearGradient>
+    <linearGradient id="lane" x1="0" x2="1">
+      <stop offset="0" stop-color="#3f6f99" stop-opacity="0.10"/>
+      <stop offset="0.55" stop-color="#86d3ff" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#c6f4ff" stop-opacity="0.72"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#b6f0ff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#b6f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .wire{fill:none;stroke:#8ddfff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+      .thin{fill:none;stroke:#d5f7ff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.58}
+      .panel{fill:#111827;stroke:#4d6d84;stroke-width:2;opacity:.95}
+      .paper{fill:#d7e3d8;stroke:#5a7467;stroke-width:2}
+      .amber{fill:#f0b55a;stroke:#7f5d2c;stroke-width:2}
+      .rose{fill:#d66c83;stroke:#6c3545;stroke-width:2}
+      .green{fill:#75c17d;stroke:#355f3b;stroke-width:2}
+      .blue{fill:#74a8d8;stroke:#36536e;stroke-width:2}
+      .violet{fill:#a88bd8;stroke:#55456d;stroke-width:2}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="450" r="390" fill="url(#glow)" opacity="0.28"/>
+
+  <!-- ten survey lanes -->
+  <g filter="url(#softGlow)">
+    <path class="wire" stroke="url(#lane)" d="M120 155 C370 170 480 270 650 385"/>
+    <path class="wire" stroke="url(#lane)" d="M120 220 C385 225 500 295 662 405"/>
+    <path class="wire" stroke="url(#lane)" d="M120 285 C390 290 525 320 674 425"/>
+    <path class="wire" stroke="url(#lane)" d="M120 350 C405 355 540 355 686 445"/>
+    <path class="wire" stroke="url(#lane)" d="M120 415 C415 415 555 400 698 465"/>
+    <path class="wire" stroke="url(#lane)" d="M120 485 C415 485 555 500 698 485"/>
+    <path class="wire" stroke="url(#lane)" d="M120 555 C405 550 540 530 686 505"/>
+    <path class="wire" stroke="url(#lane)" d="M120 625 C390 615 525 560 674 525"/>
+    <path class="wire" stroke="url(#lane)" d="M120 690 C385 675 500 595 662 545"/>
+    <path class="wire" stroke="url(#lane)" d="M120 755 C370 730 480 620 650 565"/>
+  </g>
+
+  <!-- safety prism -->
+  <polygon points="720,315 900,405 900,555 720,645 610,520 610,440" fill="#101b24" stroke="#c6f4ff" stroke-width="3" opacity="0.94"/>
+  <path class="thin" d="M720 315 L720 645 M610 440 L900 555 M610 520 L900 405"/>
+  <circle cx="720" cy="480" r="72" fill="none" stroke="#f1d48a" stroke-width="3" opacity=".78"/>
+  <path class="thin" stroke="#f1d48a" d="M684 480 L712 508 L760 444"/>
+
+  <!-- output clusters -->
+  <g>
+    <!-- dungeon cards -->
+    <g transform="translate(1035 105) rotate(-8)">
+      <rect class="panel" x="0" y="0" width="112" height="154" rx="12"/>
+      <path class="amber" d="M30 122 L56 42 L82 122 Z" opacity=".9"/>
+      <circle class="rose" cx="56" cy="78" r="18"/>
+    </g>
+    <g transform="translate(1115 130) rotate(10)">
+      <rect class="panel" x="0" y="0" width="112" height="154" rx="12"/>
+      <path class="blue" d="M28 110 Q56 36 84 110 Z" opacity=".92"/>
+      <path class="thin" d="M38 110 L74 110 M46 86 L66 86"/>
+    </g>
+
+    <!-- neural chip -->
+    <g transform="translate(1225 300)">
+      <rect x="0" y="0" width="165" height="126" rx="20" fill="#182535" stroke="#87d6ff" stroke-width="3"/>
+      <g opacity=".75">
+        <path class="thin" d="M24 36 H142 M24 63 H142 M24 90 H142 M50 18 V108 M83 18 V108 M116 18 V108"/>
+        <circle class="green" cx="50" cy="63" r="10"/>
+        <circle class="violet" cx="83" cy="36" r="10"/>
+        <circle class="amber" cx="116" cy="90" r="10"/>
+      </g>
+      <g stroke="#87d6ff" stroke-width="3" opacity=".7">
+        <path d="M-20 24 H0 M-20 54 H0 M-20 84 H0 M165 24 H185 M165 54 H185 M165 84 H185"/>
+      </g>
+    </g>
+
+    <!-- kettlebell and motion arc -->
+    <g transform="translate(1040 545)">
+      <path class="thin" stroke="#f1d48a" d="M20 145 C72 18 180 18 232 145"/>
+      <path fill="#1b2b30" stroke="#9fe6d0" stroke-width="4" d="M88 95 Q88 58 126 58 Q164 58 164 95 L150 95 Q150 72 126 72 Q102 72 102 95 Z"/>
+      <path fill="#23353a" stroke="#9fe6d0" stroke-width="4" d="M74 106 Q126 70 178 106 Q202 142 184 184 Q168 220 126 220 Q84 220 68 184 Q50 142 74 106 Z"/>
+      <circle class="amber" cx="232" cy="145" r="8"/>
+    </g>
+
+    <!-- proof / formal blocks -->
+    <g transform="translate(1330 540)">
+      <rect class="paper" x="0" y="0" width="130" height="190" rx="10"/>
+      <rect class="blue" x="20" y="24" width="90" height="16" rx="4"/>
+      <rect class="green" x="20" y="55" width="64" height="16" rx="4"/>
+      <rect class="violet" x="20" y="86" width="80" height="16" rx="4"/>
+      <rect class="amber" x="20" y="117" width="54" height="16" rx="4"/>
+      <path class="thin" stroke="#1f333b" d="M30 158 L55 174 L102 138" opacity=".9"/>
+    </g>
+  </g>
+
+  <!-- workflow graph lower center -->
+  <g transform="translate(595 700)" filter="url(#softGlow)">
+    <circle class="blue" cx="0" cy="0" r="16"/>
+    <circle class="green" cx="85" cy="-40" r="16"/>
+    <circle class="amber" cx="172" cy="0" r="16"/>
+    <circle class="violet" cx="85" cy="44" r="16"/>
+    <circle class="rose" cx="250" cy="-36" r="16"/>
+    <path class="wire" d="M16 -8 L69 -32 M16 8 L69 36 M101 -32 L156 -8 M101 36 L156 8 M188 -8 L234 -28"/>
+    <rect x="282" y="-58" width="110" height="44" rx="8" fill="#14202b" stroke="#c6f4ff" stroke-width="2"/>
+    <path class="thin" d="M302 -36 L322 -24 L365 -49"/>
+  </g>
+
+  <!-- held-back shadow shelves -->
+  <g opacity=".48">
+    <rect x="1010" y="760" width="360" height="42" rx="18" fill="#1a1218" stroke="#75505c" stroke-width="2"/>
+    <circle cx="1045" cy="781" r="10" fill="#d66c83"/>
+    <circle cx="1080" cy="781" r="10" fill="#d66c83"/>
+    <circle cx="1115" cy="781" r="10" fill="#d66c83"/>
+    <path class="thin" stroke="#d9a6b4" d="M1150 781 H1320"/>
+  </g>
+
+  <!-- left lane terminals without readable text -->
+  <g opacity=".82">
+    <rect x="70" y="115" width="135" height="680" rx="24" fill="#0d1720" stroke="#304a5b" stroke-width="2"/>
+    <g fill="#6fbce0">
+      <circle cx="120" cy="155" r="6"/><circle cx="120" cy="220" r="6"/><circle cx="120" cy="285" r="6"/><circle cx="120" cy="350" r="6"/><circle cx="120" cy="415" r="6"/>
+      <circle cx="120" cy="485" r="6"/><circle cx="120" cy="555" r="6"/><circle cx="120" cy="625" r="6"/><circle cx="120" cy="690" r="6"/><circle cx="120" cy="755" r="6"/>
+    </g>
+  </g>
+</svg>
